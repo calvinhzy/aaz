@@ -10,3 +10,6 @@
 
 - [sentinel](/Commands/sentinel/readme.md)
 : Manage Microsoft Sentinel.
+
+- [storage-mover](/Commands/storage-mover/readme.md)
+: Manage top-level Storage Mover resource.

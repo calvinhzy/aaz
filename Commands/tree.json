@@ -3839,6 +3839,711 @@
         "names": [
           "sentinel"
         ]
+      },
+      "storage-mover": {
+        "commandGroups": {
+          "agent": {
+            "commands": {
+              "create": {
+                "help": {
+                  "short": "Creates an agent resource."
+                },
+                "names": [
+                  "storage-mover",
+                  "agent",
+                  "create"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-07-01-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/agents/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-07-01-preview"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "delete": {
+                "help": {
+                  "short": "Deletes an agent resource."
+                },
+                "names": [
+                  "storage-mover",
+                  "agent",
+                  "delete"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-07-01-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/agents/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-07-01-preview"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "list": {
+                "help": {
+                  "short": "Lists all agents in a Storage Mover."
+                },
+                "names": [
+                  "storage-mover",
+                  "agent",
+                  "list"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-07-01-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/agents",
+                        "plane": "mgmt-plane",
+                        "version": "2022-07-01-preview"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "show": {
+                "help": {
+                  "short": "Gets an agent resource."
+                },
+                "names": [
+                  "storage-mover",
+                  "agent",
+                  "show"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-07-01-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/agents/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-07-01-preview"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "update": {
+                "help": {
+                  "short": "Updates an agent resource."
+                },
+                "names": [
+                  "storage-mover",
+                  "agent",
+                  "update"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-07-01-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/agents/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-07-01-preview"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage agent resource, which references a hybrid compute machine that can run jobs."
+            },
+            "names": [
+              "storage-mover",
+              "agent"
+            ]
+          },
+          "endpoint": {
+            "commands": {
+              "create": {
+                "help": {
+                  "short": "Creates an endpoint resource."
+                },
+                "names": [
+                  "storage-mover",
+                  "endpoint",
+                  "create"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-07-01-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/endpoints/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-07-01-preview"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "delete": {
+                "help": {
+                  "short": "Deletes an endpoint resource."
+                },
+                "names": [
+                  "storage-mover",
+                  "endpoint",
+                  "delete"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-07-01-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/endpoints/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-07-01-preview"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "list": {
+                "help": {
+                  "short": "Lists all endpoints in a Storage Mover."
+                },
+                "names": [
+                  "storage-mover",
+                  "endpoint",
+                  "list"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-07-01-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/endpoints",
+                        "plane": "mgmt-plane",
+                        "version": "2022-07-01-preview"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "show": {
+                "help": {
+                  "short": "Gets an endpoint resource."
+                },
+                "names": [
+                  "storage-mover",
+                  "endpoint",
+                  "show"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-07-01-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/endpoints/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-07-01-preview"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "update": {
+                "help": {
+                  "short": "Updates an endpoint resource."
+                },
+                "names": [
+                  "storage-mover",
+                  "endpoint",
+                  "update"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-07-01-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/endpoints/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-07-01-preview"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage endpoint resource, which represents a data transfer source or destination."
+            },
+            "names": [
+              "storage-mover",
+              "endpoint"
+            ]
+          },
+          "job-definition": {
+            "commands": {
+              "create": {
+                "help": {
+                  "short": "Creates a job definition resource."
+                },
+                "names": [
+                  "storage-mover",
+                  "job-definition",
+                  "create"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-07-01-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/projects/{}/jobdefinitions/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-07-01-preview"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "delete": {
+                "help": {
+                  "short": "Deletes a job definition resource."
+                },
+                "names": [
+                  "storage-mover",
+                  "job-definition",
+                  "delete"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-07-01-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/projects/{}/jobdefinitions/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-07-01-preview"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "list": {
+                "help": {
+                  "short": "Lists all job definitions in a project."
+                },
+                "names": [
+                  "storage-mover",
+                  "job-definition",
+                  "list"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-07-01-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/projects/{}/jobdefinitions",
+                        "plane": "mgmt-plane",
+                        "version": "2022-07-01-preview"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "show": {
+                "help": {
+                  "short": "Gets a job definition resource."
+                },
+                "names": [
+                  "storage-mover",
+                  "job-definition",
+                  "show"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-07-01-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/projects/{}/jobdefinitions/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-07-01-preview"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "start-job": {
+                "help": {
+                  "short": "Requests an agent to start a new instance of this job definition, generating a new job run resource."
+                },
+                "names": [
+                  "storage-mover",
+                  "job-definition",
+                  "start-job"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-07-01-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/projects/{}/jobdefinitions/{}/startjob",
+                        "plane": "mgmt-plane",
+                        "version": "2022-07-01-preview"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "stop-job": {
+                "help": {
+                  "short": "Requests the agent of any active instance of this job definition to stop."
+                },
+                "names": [
+                  "storage-mover",
+                  "job-definition",
+                  "stop-job"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-07-01-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/projects/{}/jobdefinitions/{}/stopjob",
+                        "plane": "mgmt-plane",
+                        "version": "2022-07-01-preview"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "update": {
+                "help": {
+                  "short": "Updates a job definition resource."
+                },
+                "names": [
+                  "storage-mover",
+                  "job-definition",
+                  "update"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-07-01-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/projects/{}/jobdefinitions/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-07-01-preview"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage job definition resource, which contains configuration for a single unit of managed data transfer."
+            },
+            "names": [
+              "storage-mover",
+              "job-definition"
+            ]
+          },
+          "job-run": {
+            "commands": {
+              "list": {
+                "help": {
+                  "short": "Lists all job runs in a job definition."
+                },
+                "names": [
+                  "storage-mover",
+                  "job-run",
+                  "list"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-07-01-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/projects/{}/jobdefinitions/{}/jobruns",
+                        "plane": "mgmt-plane",
+                        "version": "2022-07-01-preview"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "show": {
+                "help": {
+                  "short": "Gets a job run resource."
+                },
+                "names": [
+                  "storage-mover",
+                  "job-run",
+                  "show"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-07-01-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/projects/{}/jobdefinitions/{}/jobruns/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-07-01-preview"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage job run resource"
+            },
+            "names": [
+              "storage-mover",
+              "job-run"
+            ]
+          },
+          "project": {
+            "commands": {
+              "create": {
+                "help": {
+                  "short": "Creates a project resource."
+                },
+                "names": [
+                  "storage-mover",
+                  "project",
+                  "create"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-07-01-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/projects/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-07-01-preview"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "delete": {
+                "help": {
+                  "short": "Deletes a project resource."
+                },
+                "names": [
+                  "storage-mover",
+                  "project",
+                  "delete"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-07-01-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/projects/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-07-01-preview"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "list": {
+                "help": {
+                  "short": "Lists all projects in a Storage Mover."
+                },
+                "names": [
+                  "storage-mover",
+                  "project",
+                  "list"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-07-01-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/projects",
+                        "plane": "mgmt-plane",
+                        "version": "2022-07-01-preview"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "show": {
+                "help": {
+                  "short": "Gets a project resource."
+                },
+                "names": [
+                  "storage-mover",
+                  "project",
+                  "show"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-07-01-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/projects/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-07-01-preview"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "update": {
+                "help": {
+                  "short": "Updates a project resource."
+                },
+                "names": [
+                  "storage-mover",
+                  "project",
+                  "update"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-07-01-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/projects/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-07-01-preview"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage project resource, which is a logical grouping of related jobs."
+            },
+            "names": [
+              "storage-mover",
+              "project"
+            ]
+          }
+        },
+        "commands": {
+          "create": {
+            "help": {
+              "short": "Creates a top-level Storage Mover resource."
+            },
+            "names": [
+              "storage-mover",
+              "create"
+            ],
+            "versions": [
+              {
+                "name": "2022-07-01-preview",
+                "resources": [
+                  {
+                    "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}",
+                    "plane": "mgmt-plane",
+                    "version": "2022-07-01-preview"
+                  }
+                ]
+              }
+            ]
+          },
+          "delete": {
+            "help": {
+              "short": "Deletes a Storage Mover resource."
+            },
+            "names": [
+              "storage-mover",
+              "delete"
+            ],
+            "versions": [
+              {
+                "name": "2022-07-01-preview",
+                "resources": [
+                  {
+                    "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}",
+                    "plane": "mgmt-plane",
+                    "version": "2022-07-01-preview"
+                  }
+                ]
+              }
+            ]
+          },
+          "list": {
+            "help": {
+              "short": "Lists all Storage Movers in a subscription."
+            },
+            "names": [
+              "storage-mover",
+              "list"
+            ],
+            "versions": [
+              {
+                "name": "2022-07-01-preview",
+                "resources": [
+                  {
+                    "id": "/subscriptions/{}/providers/microsoft.storagemover/storagemovers",
+                    "plane": "mgmt-plane",
+                    "version": "2022-07-01-preview"
+                  },
+                  {
+                    "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers",
+                    "plane": "mgmt-plane",
+                    "version": "2022-07-01-preview"
+                  }
+                ]
+              }
+            ]
+          },
+          "show": {
+            "help": {
+              "short": "Gets a Storage Mover resource."
+            },
+            "names": [
+              "storage-mover",
+              "show"
+            ],
+            "versions": [
+              {
+                "name": "2022-07-01-preview",
+                "resources": [
+                  {
+                    "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}",
+                    "plane": "mgmt-plane",
+                    "version": "2022-07-01-preview"
+                  }
+                ]
+              }
+            ]
+          },
+          "update": {
+            "help": {
+              "short": "Updates a top-level Storage Mover resource."
+            },
+            "names": [
+              "storage-mover",
+              "update"
+            ],
+            "versions": [
+              {
+                "name": "2022-07-01-preview",
+                "resources": [
+                  {
+                    "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}",
+                    "plane": "mgmt-plane",
+                    "version": "2022-07-01-preview"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "help": {
+          "short": "Manage top-level Storage Mover resource."
+        },
+        "names": [
+          "storage-mover"
+        ]
       }
     },
     "names": [
