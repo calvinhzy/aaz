@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='utf-8'?>
+<CodeGen plane="mgmt-plane">
+  <resource id="/providers/microsoft.elasticsan/skus" version="2021-11-20-preview" swagger="mgmt-plane/elasticsan/ResourceProviders/Microsoft.ElasticSan/Paths/L3Byb3ZpZGVycy9NaWNyb3NvZnQuRWxhc3RpY1Nhbi9za3Vz/V/MjAyMS0xMS0yMC1wcmV2aWV3"/>
+  <commandGroup name="elastic-san">
+    <command name="list-sku" version="2021-11-20-preview">
+      <resource id="/providers/microsoft.elasticsan/skus" version="2021-11-20-preview" swagger="mgmt-plane/elasticsan/ResourceProviders/Microsoft.ElasticSan/Paths/L3Byb3ZpZGVycy9NaWNyb3NvZnQuRWxhc3RpY1Nhbi9za3Vz/V/MjAyMS0xMS0yMC1wcmV2aWV3"/>
+      <argGroup name="">
+        <arg type="string" var="$Query.filter" options="filter">
+          <help short="Specify $filter='location eq <location>' to filter on location."/>
+        </arg>
+      </argGroup>
+      <operation operationId="Skus_List">
+        <http path="/providers/Microsoft.ElasticSan/skus">
+          <request method="get">
+            <query>
+              <param type="string" name="$filter" arg="$Query.filter"/>
+              <const readOnly="True" const="True" type="string" name="api-version" required="True">
+                <default value="&quot;2021-11-20-preview&quot;"/>
+                <format minLength="1"/>
+              </const>
+            </query>
+          </request>
+          <response statusCode="200">
+            <body>
+              <json var="$Instance">
+                <schema type="object">
+                  <prop readOnly="True" type="string" name="nextLink"/>
+                  <prop readOnly="True" type="array<object>" name="value">
+                    <item readOnly="True" type="object">
+                      <prop readOnly="True" type="object" name="elasticSan">
+                        <prop readOnly="True" type="integer64" name="iopsPerBaseTiB"/>
+                        <prop readOnly="True" type="integer64" name="maxMBps"/>
+                        <prop readOnly="True" type="integer64" name="maxSizeTiB"/>
+                        <prop readOnly="True" type="integer64" name="maxVolumeGroupCount"/>
+                        <prop readOnly="True" type="integer64" name="mbpsPerBaseTiB"/>
+                        <prop readOnly="True" type="integer64" name="minIncrementSizeTiB"/>
+                        <prop readOnly="True" type="integer64" name="minSizeTiB"/>
+                      </prop>
+                      <prop readOnly="True" type="array<object>" name="locationInfo">
+                        <item readOnly="True" type="object">
+                          <prop readOnly="True" type="string" name="location"/>
+                          <prop readOnly="True" type="array<string>" name="zones">
+                            <item readOnly="True" type="string"/>
+                          </prop>
+                        </item>
+                      </prop>
+                      <prop readOnly="True" type="array<object>" name="sku">
+                        <item readOnly="True" type="object">
+                          <prop readOnly="True" type="string" name="name">
+                            <enum>
+                              <item value="&quot;Premium_LRS&quot;"/>
+                              <item value="&quot;Premium_ZRS&quot;"/>
+                            </enum>
+                          </prop>
+                          <prop readOnly="True" type="string" name="tier">
+                            <enum>
+                              <item value="&quot;Premium&quot;"/>
+                            </enum>
+                          </prop>
+                        </item>
+                      </prop>
+                      <prop readOnly="True" type="object" name="volume">
+                        <prop readOnly="True" type="integer64" name="iopsPerBaseGiB"/>
+                        <prop readOnly="True" type="integer64" name="maxIops"/>
+                        <prop readOnly="True" type="integer64" name="maxMBps"/>
+                        <prop readOnly="True" type="integer64" name="maxSizeGiB"/>
+                        <prop readOnly="True" type="integer64" name="minIncrementSizeGiB"/>
+                        <prop readOnly="True" type="integer64" name="minSizeGiB"/>
+                      </prop>
+                      <prop readOnly="True" type="object" name="volumeGroup">
+                        <prop readOnly="True" type="integer64" name="maxVolumeCount"/>
+                      </prop>
+                    </item>
+                  </prop>
+                </schema>
+              </json>
+            </body>
+          </response>
+          <response isError="True">
+            <body>
+              <json>
+                <schema type="@MgmtErrorFormat"/>
+              </json>
+            </body>
+          </response>
+        </http>
+      </operation>
+      <output type="array" ref="$Instance.value" clientFlatten="True"/>
+    </command>
+  </commandGroup>
+</CodeGen>
