@@ -14,7 +14,7 @@ Manage top-level Storage Mover resource.
 : Manage job definition resource, which contains configuration for a single unit of managed data transfer.
 
 - [job-run](/Commands/storage-mover/job-run/readme.md)
-: Manage job run resource
+: Manage job run resource.
 
 - [project](/Commands/storage-mover/project/readme.md)
 : Manage project resource, which is a logical grouping of related jobs.

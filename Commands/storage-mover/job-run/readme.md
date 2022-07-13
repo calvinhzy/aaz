@@ -1,6 +1,6 @@
 # [Group] _storage-mover job-run_
 
-Manage job run resource
+Manage job run resource.
 
 ## Commands
 

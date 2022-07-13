@@ -4316,7 +4316,7 @@
               }
             },
             "help": {
-              "short": "Manage job run resource"
+              "short": "Manage job run resource."
             },
             "names": [
               "storage-mover",
