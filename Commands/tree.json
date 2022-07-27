@@ -82,6 +82,407 @@
           "change-analysis"
         ]
       },
+      "elastic-san": {
+        "commandGroups": {
+          "volume": {
+            "commands": {
+              "create": {
+                "help": {
+                  "short": "Create a Volume."
+                },
+                "names": [
+                  "elastic-san",
+                  "volume",
+                  "create"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-11-20-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.elasticsan/elasticsans/{}/volumegroups/{}/volumes/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2021-11-20-preview"
+                      }
+                    ],
+                    "stage": "Preview"
+                  }
+                ]
+              },
+              "delete": {
+                "help": {
+                  "short": "Delete a Volume."
+                },
+                "names": [
+                  "elastic-san",
+                  "volume",
+                  "delete"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-11-20-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.elasticsan/elasticsans/{}/volumegroups/{}/volumes/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2021-11-20-preview"
+                      }
+                    ],
+                    "stage": "Preview"
+                  }
+                ]
+              },
+              "list": {
+                "help": {
+                  "short": "List Volumes in a Volume Group."
+                },
+                "names": [
+                  "elastic-san",
+                  "volume",
+                  "list"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-11-20-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.elasticsan/elasticsans/{}/volumegroups/{}/volumes",
+                        "plane": "mgmt-plane",
+                        "version": "2021-11-20-preview"
+                      }
+                    ],
+                    "stage": "Preview"
+                  }
+                ]
+              },
+              "show": {
+                "help": {
+                  "short": "Get a specific Volume."
+                },
+                "names": [
+                  "elastic-san",
+                  "volume",
+                  "show"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-11-20-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.elasticsan/elasticsans/{}/volumegroups/{}/volumes/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2021-11-20-preview"
+                      }
+                    ],
+                    "stage": "Preview"
+                  }
+                ]
+              },
+              "update": {
+                "help": {
+                  "short": "Create a Volume."
+                },
+                "names": [
+                  "elastic-san",
+                  "volume",
+                  "update"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-11-20-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.elasticsan/elasticsans/{}/volumegroups/{}/volumes/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2021-11-20-preview"
+                      }
+                    ],
+                    "stage": "Preview"
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage Elastic San Volume."
+            },
+            "names": [
+              "elastic-san",
+              "volume"
+            ]
+          },
+          "volume-group": {
+            "commands": {
+              "create": {
+                "help": {
+                  "short": "Create a Volume Group."
+                },
+                "names": [
+                  "elastic-san",
+                  "volume-group",
+                  "create"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-11-20-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.elasticsan/elasticsans/{}/volumegroups/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2021-11-20-preview"
+                      }
+                    ],
+                    "stage": "Preview"
+                  }
+                ]
+              },
+              "delete": {
+                "help": {
+                  "short": "Delete a Volume Group."
+                },
+                "names": [
+                  "elastic-san",
+                  "volume-group",
+                  "delete"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-11-20-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.elasticsan/elasticsans/{}/volumegroups/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2021-11-20-preview"
+                      }
+                    ],
+                    "stage": "Preview"
+                  }
+                ]
+              },
+              "list": {
+                "help": {
+                  "short": "List Volume Groups under a SAN."
+                },
+                "names": [
+                  "elastic-san",
+                  "volume-group",
+                  "list"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-11-20-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.elasticsan/elasticsans/{}/volumegroups",
+                        "plane": "mgmt-plane",
+                        "version": "2021-11-20-preview"
+                      }
+                    ],
+                    "stage": "Preview"
+                  }
+                ]
+              },
+              "show": {
+                "help": {
+                  "short": "Get a specific Volume Group."
+                },
+                "names": [
+                  "elastic-san",
+                  "volume-group",
+                  "show"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-11-20-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.elasticsan/elasticsans/{}/volumegroups/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2021-11-20-preview"
+                      }
+                    ],
+                    "stage": "Preview"
+                  }
+                ]
+              },
+              "update": {
+                "help": {
+                  "short": "Update a Volume Group."
+                },
+                "names": [
+                  "elastic-san",
+                  "volume-group",
+                  "update"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-11-20-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.elasticsan/elasticsans/{}/volumegroups/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2021-11-20-preview"
+                      }
+                    ],
+                    "stage": "Preview"
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage Elastic San Volume Group."
+            },
+            "names": [
+              "elastic-san",
+              "volume-group"
+            ]
+          }
+        },
+        "commands": {
+          "create": {
+            "help": {
+              "short": "Create an Elastic SAN."
+            },
+            "names": [
+              "elastic-san",
+              "create"
+            ],
+            "versions": [
+              {
+                "name": "2021-11-20-preview",
+                "resources": [
+                  {
+                    "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.elasticsan/elasticsans/{}",
+                    "plane": "mgmt-plane",
+                    "version": "2021-11-20-preview"
+                  }
+                ],
+                "stage": "Preview"
+              }
+            ]
+          },
+          "delete": {
+            "help": {
+              "short": "Delete an Elastic SAN."
+            },
+            "names": [
+              "elastic-san",
+              "delete"
+            ],
+            "versions": [
+              {
+                "name": "2021-11-20-preview",
+                "resources": [
+                  {
+                    "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.elasticsan/elasticsans/{}",
+                    "plane": "mgmt-plane",
+                    "version": "2021-11-20-preview"
+                  }
+                ],
+                "stage": "Preview"
+              }
+            ]
+          },
+          "list": {
+            "help": {
+              "short": "Get a list of Elastic SANs in a subscription."
+            },
+            "names": [
+              "elastic-san",
+              "list"
+            ],
+            "versions": [
+              {
+                "name": "2021-11-20-preview",
+                "resources": [
+                  {
+                    "id": "/subscriptions/{}/providers/microsoft.elasticsan/elasticsans",
+                    "plane": "mgmt-plane",
+                    "version": "2021-11-20-preview"
+                  },
+                  {
+                    "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.elasticsan/elasticsans",
+                    "plane": "mgmt-plane",
+                    "version": "2021-11-20-preview"
+                  }
+                ],
+                "stage": "Preview"
+              }
+            ]
+          },
+          "list-sku": {
+            "help": {
+              "short": "Get a list of Elastic SAN skus."
+            },
+            "names": [
+              "elastic-san",
+              "list-sku"
+            ],
+            "versions": [
+              {
+                "name": "2021-11-20-preview",
+                "resources": [
+                  {
+                    "id": "/providers/microsoft.elasticsan/skus",
+                    "plane": "mgmt-plane",
+                    "version": "2021-11-20-preview"
+                  }
+                ],
+                "stage": "Preview"
+              }
+            ]
+          },
+          "show": {
+            "help": {
+              "short": "Get an Elastic SAN."
+            },
+            "names": [
+              "elastic-san",
+              "show"
+            ],
+            "versions": [
+              {
+                "name": "2021-11-20-preview",
+                "resources": [
+                  {
+                    "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.elasticsan/elasticsans/{}",
+                    "plane": "mgmt-plane",
+                    "version": "2021-11-20-preview"
+                  }
+                ],
+                "stage": "Preview"
+              }
+            ]
+          },
+          "update": {
+            "help": {
+              "short": "Update an Elastic SAN."
+            },
+            "names": [
+              "elastic-san",
+              "update"
+            ],
+            "versions": [
+              {
+                "name": "2021-11-20-preview",
+                "resources": [
+                  {
+                    "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.elasticsan/elasticsans/{}",
+                    "plane": "mgmt-plane",
+                    "version": "2021-11-20-preview"
+                  }
+                ],
+                "stage": "Preview"
+              }
+            ]
+          }
+        },
+        "help": {
+          "short": "Manage Elastic SAN."
+        },
+        "names": [
+          "elastic-san"
+        ]
+      },
       "monitor": {
         "commandGroups": {
           "log-analytics": {
