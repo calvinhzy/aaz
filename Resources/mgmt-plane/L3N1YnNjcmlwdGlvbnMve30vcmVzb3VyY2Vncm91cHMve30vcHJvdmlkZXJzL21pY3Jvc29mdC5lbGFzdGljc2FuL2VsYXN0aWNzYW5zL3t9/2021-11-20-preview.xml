@@ -196,7 +196,7 @@
         <arg type="integer64" var="$parameters.properties.baseSizeTiB" options="base-size-tib" group="Properties">
           <help short="Base size of the Elastic San appliance in TiB."/>
         </arg>
-        <arg type="integer64" var="$parameters.properties.extendedCapacitySizeTiB" options="extended-capacity-size-tib" group="Properties">
+        <arg type="integer64" var="$parameters.properties.extendedCapacitySizeTiB" options="extended-capacity-size-tib extended-size-tib" group="Properties">
           <help short="Extended size of the Elastic San appliance in TiB."/>
         </arg>
         <arg type="object" var="$parameters.properties.sku" options="sku" group="Properties">
@@ -392,7 +392,7 @@
         <arg type="integer64" var="$parameters.properties.baseSizeTiB" options="base-size-tib" group="Properties">
           <help short="Base size of the Elastic San appliance in TiB."/>
         </arg>
-        <arg type="integer64" var="$parameters.properties.extendedCapacitySizeTiB" options="extended-capacity-size-tib" group="Properties">
+        <arg type="integer64" var="$parameters.properties.extendedCapacitySizeTiB" options="extended-capacity-size-tib extended-size-tib" group="Properties">
           <help short="Extended size of the Elastic San appliance in TiB."/>
         </arg>
         <arg nullable="True" type="object" var="$parameters.properties.sku" options="sku" group="Properties">

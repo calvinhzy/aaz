@@ -647,6 +647,7 @@
                                     "type": "integer64",
                                     "var": "$parameters.properties.extendedCapacitySizeTiB",
                                     "options": [
+                                        "extended-size-tib",
                                         "extended-capacity-size-tib"
                                     ],
                                     "group": "Properties",
@@ -1238,6 +1239,7 @@
                                     "type": "integer64",
                                     "var": "$parameters.properties.extendedCapacitySizeTiB",
                                     "options": [
+                                        "extended-size-tib",
                                         "extended-capacity-size-tib"
                                     ],
                                     "group": "Properties",
