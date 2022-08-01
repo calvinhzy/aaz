@@ -4531,6 +4531,2341 @@
         "names": [
           "sentinel"
         ]
+      },
+      "site-recovery": {
+        "commandGroups": {
+          "alert-setting": {
+            "commands": {
+              "create": {
+                "help": {
+                  "short": "Create an email notification(alert) configuration."
+                },
+                "names": [
+                  "site-recovery",
+                  "alert-setting",
+                  "create"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationalertsettings/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "list": {
+                "help": {
+                  "short": "Gets the list of email notification(alert) configurations for the vault."
+                },
+                "names": [
+                  "site-recovery",
+                  "alert-setting",
+                  "list"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationalertsettings",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "show": {
+                "help": {
+                  "short": "Gets the details of the specified email notification(alert) configuration."
+                },
+                "names": [
+                  "site-recovery",
+                  "alert-setting",
+                  "show"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationalertsettings/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "update": {
+                "help": {
+                  "short": "Update an email notification(alert) configuration."
+                },
+                "names": [
+                  "site-recovery",
+                  "alert-setting",
+                  "update"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationalertsettings/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage email notification(alert) configuration."
+            },
+            "names": [
+              "site-recovery",
+              "alert-setting"
+            ]
+          },
+          "eligibility": {
+            "commands": {
+              "list": {
+                "help": {
+                  "short": "Validates whether a given VM can be protected or not in which case returns list of errors."
+                },
+                "names": [
+                  "site-recovery",
+                  "eligibility",
+                  "list"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}/providers/microsoft.recoveryservices/replicationeligibilityresults",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "show-default": {
+                "help": {
+                  "short": "Validates whether a given VM can be protected or not in which case returns default error."
+                },
+                "names": [
+                  "site-recovery",
+                  "eligibility",
+                  "show-default"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}/providers/microsoft.recoveryservices/replicationeligibilityresults/default",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage Azure Site Recovery eligibility for VMs."
+            },
+            "names": [
+              "site-recovery",
+              "eligibility"
+            ]
+          },
+          "event": {
+            "commands": {
+              "list": {
+                "help": {
+                  "short": "Gets the list of Azure Site Recovery events for the vault."
+                },
+                "names": [
+                  "site-recovery",
+                  "event",
+                  "list"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationevents",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "show": {
+                "help": {
+                  "short": "Get the details of an Azure Site recovery event."
+                },
+                "names": [
+                  "site-recovery",
+                  "event",
+                  "show"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationevents/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage Azure Site Recovery event."
+            },
+            "names": [
+              "site-recovery",
+              "event"
+            ]
+          },
+          "fabric": {
+            "commandGroups": {
+              "logical-network": {
+                "commands": {
+                  "list": {
+                    "help": {
+                      "short": "Lists all the logical networks of the Azure Site Recovery fabric."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "logical-network",
+                      "list"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2021-10-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationlogicalnetworks",
+                            "plane": "mgmt-plane",
+                            "version": "2021-10-01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "show": {
+                    "help": {
+                      "short": "Gets the details of a logical network."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "logical-network",
+                      "show"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2021-10-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationlogicalnetworks/{}",
+                            "plane": "mgmt-plane",
+                            "version": "2021-10-01"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "help": {
+                  "short": "Manage logical networks of the Azure Site Recovery fabric."
+                },
+                "names": [
+                  "site-recovery",
+                  "fabric",
+                  "logical-network"
+                ]
+              },
+              "network": {
+                "commands": {
+                  "list": {
+                    "help": {
+                      "short": "Lists the networks available for a fabric."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "network",
+                      "list"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2021-10-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationnetworks",
+                            "plane": "mgmt-plane",
+                            "version": "2021-10-01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "show": {
+                    "help": {
+                      "short": "Gets the details of a network."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "network",
+                      "show"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2021-10-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationnetworks/{}",
+                            "plane": "mgmt-plane",
+                            "version": "2021-10-01"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "help": {
+                  "short": "Manage networks of the Azure Site Recovery fabric."
+                },
+                "names": [
+                  "site-recovery",
+                  "fabric",
+                  "network"
+                ]
+              },
+              "network-mapping": {
+                "commands": {
+                  "create": {
+                    "help": {
+                      "short": "Create an ASR network mapping."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "network-mapping",
+                      "create"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2021-10-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationnetworks/{}/replicationnetworkmappings/{}",
+                            "plane": "mgmt-plane",
+                            "version": "2021-10-01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "delete": {
+                    "help": {
+                      "short": "Delete a network mapping."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "network-mapping",
+                      "delete"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2021-10-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationnetworks/{}/replicationnetworkmappings/{}",
+                            "plane": "mgmt-plane",
+                            "version": "2021-10-01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "list": {
+                    "help": {
+                      "short": "Lists all ASR network mappings for the specified network."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "network-mapping",
+                      "list"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2021-10-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationnetworks/{}/replicationnetworkmappings",
+                            "plane": "mgmt-plane",
+                            "version": "2021-10-01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "show": {
+                    "help": {
+                      "short": "Gets the details of an ASR network mapping."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "network-mapping",
+                      "show"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2021-10-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationnetworks/{}/replicationnetworkmappings/{}",
+                            "plane": "mgmt-plane",
+                            "version": "2021-10-01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "update": {
+                    "help": {
+                      "short": "Update an ASR network mapping."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "network-mapping",
+                      "update"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2021-10-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationnetworks/{}/replicationnetworkmappings/{}",
+                            "plane": "mgmt-plane",
+                            "version": "2021-10-01"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "help": {
+                  "short": "Manage network mapping of ASR fabric."
+                },
+                "names": [
+                  "site-recovery",
+                  "fabric",
+                  "network-mapping"
+                ]
+              },
+              "recovery-services-provider": {
+                "commands": {
+                  "create": {
+                    "help": {
+                      "short": "Create a recovery services provider."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "recovery-services-provider",
+                      "create"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2021-10-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationrecoveryservicesproviders/{}",
+                            "plane": "mgmt-plane",
+                            "version": "2021-10-01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "delete": {
+                    "help": {
+                      "short": "Removes/delete(unregister) a recovery services provider from the vault."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "recovery-services-provider",
+                      "delete"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2021-10-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationrecoveryservicesproviders/{}/remove",
+                            "plane": "mgmt-plane",
+                            "version": "2021-10-01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "list": {
+                    "help": {
+                      "short": "Lists the registered recovery services providers for the specified fabric."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "recovery-services-provider",
+                      "list"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2021-10-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationrecoveryservicesproviders",
+                            "plane": "mgmt-plane",
+                            "version": "2021-10-01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "purge": {
+                    "help": {
+                      "short": "Purge(force delete) a recovery services provider from the vault."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "recovery-services-provider",
+                      "purge"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2021-10-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationrecoveryservicesproviders/{}",
+                            "plane": "mgmt-plane",
+                            "version": "2021-10-01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "refresh": {
+                    "help": {
+                      "short": "Refresh the information from the recovery services provider."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "recovery-services-provider",
+                      "refresh"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2021-10-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationrecoveryservicesproviders/{}/refreshprovider",
+                            "plane": "mgmt-plane",
+                            "version": "2021-10-01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "show": {
+                    "help": {
+                      "short": "Gets the details of registered recovery services provider."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "recovery-services-provider",
+                      "show"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2021-10-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationrecoveryservicesproviders/{}",
+                            "plane": "mgmt-plane",
+                            "version": "2021-10-01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "update": {
+                    "help": {
+                      "short": "Update a recovery services provider."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "recovery-services-provider",
+                      "update"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2021-10-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationrecoveryservicesproviders/{}",
+                            "plane": "mgmt-plane",
+                            "version": "2021-10-01"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "help": {
+                  "short": "Manage recovery services provider."
+                },
+                "names": [
+                  "site-recovery",
+                  "fabric",
+                  "recovery-services-provider"
+                ]
+              },
+              "storage-classification": {
+                "commands": {
+                  "list": {
+                    "help": {
+                      "short": "Lists the storage classifications available in the specified fabric."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "storage-classification",
+                      "list"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2021-10-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationstorageclassifications",
+                            "plane": "mgmt-plane",
+                            "version": "2021-10-01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "show": {
+                    "help": {
+                      "short": "Gets the details of the specified storage classification."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "storage-classification",
+                      "show"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2021-10-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationstorageclassifications/{}",
+                            "plane": "mgmt-plane",
+                            "version": "2021-10-01"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "help": {
+                  "short": "Manage Storage Classification."
+                },
+                "names": [
+                  "site-recovery",
+                  "fabric",
+                  "storage-classification"
+                ]
+              },
+              "storage-classification-mapping": {
+                "commands": {
+                  "create": {
+                    "help": {
+                      "short": "The operation to create a storage classification mapping."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "storage-classification-mapping",
+                      "create"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2021-10-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationstorageclassifications/{}/replicationstorageclassificationmappings/{}",
+                            "plane": "mgmt-plane",
+                            "version": "2021-10-01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "delete": {
+                    "help": {
+                      "short": "The operation to delete a storage classification mapping."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "storage-classification-mapping",
+                      "delete"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2021-10-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationstorageclassifications/{}/replicationstorageclassificationmappings/{}",
+                            "plane": "mgmt-plane",
+                            "version": "2021-10-01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "list": {
+                    "help": {
+                      "short": "Lists the storage classification mappings for the fabric."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "storage-classification-mapping",
+                      "list"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2021-10-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationstorageclassifications/{}/replicationstorageclassificationmappings",
+                            "plane": "mgmt-plane",
+                            "version": "2021-10-01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "show": {
+                    "help": {
+                      "short": "Gets the details of the specified storage classification mapping."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "storage-classification-mapping",
+                      "show"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2021-10-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationstorageclassifications/{}/replicationstorageclassificationmappings/{}",
+                            "plane": "mgmt-plane",
+                            "version": "2021-10-01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "update": {
+                    "help": {
+                      "short": "The operation to create a storage classification mapping."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "storage-classification-mapping",
+                      "update"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2021-10-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationstorageclassifications/{}/replicationstorageclassificationmappings/{}",
+                            "plane": "mgmt-plane",
+                            "version": "2021-10-01"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "help": {
+                  "short": "Mange storage classification mapping."
+                },
+                "names": [
+                  "site-recovery",
+                  "fabric",
+                  "storage-classification-mapping"
+                ]
+              },
+              "vcenter": {
+                "commands": {
+                  "create": {
+                    "help": {
+                      "short": "Create a vCenter object."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "vcenter",
+                      "create"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2021-10-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationvcenters/{}",
+                            "plane": "mgmt-plane",
+                            "version": "2021-10-01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "delete": {
+                    "help": {
+                      "short": "Remove(unregister) a registered vCenter server from the vault."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "vcenter",
+                      "delete"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2021-10-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationvcenters/{}",
+                            "plane": "mgmt-plane",
+                            "version": "2021-10-01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "list": {
+                    "help": {
+                      "short": "Lists the vCenter servers registered in a fabric."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "vcenter",
+                      "list"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2021-10-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationvcenters",
+                            "plane": "mgmt-plane",
+                            "version": "2021-10-01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "show": {
+                    "help": {
+                      "short": "Gets the details of a registered vCenter server(Add vCenter server)."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "vcenter",
+                      "show"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2021-10-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationvcenters/{}",
+                            "plane": "mgmt-plane",
+                            "version": "2021-10-01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "update": {
+                    "help": {
+                      "short": "Update a vCenter object."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "vcenter",
+                      "update"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2021-10-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationvcenters/{}",
+                            "plane": "mgmt-plane",
+                            "version": "2021-10-01"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "help": {
+                  "short": "Manage vCenter."
+                },
+                "names": [
+                  "site-recovery",
+                  "fabric",
+                  "vcenter"
+                ]
+              }
+            },
+            "commands": {
+              "check-consistency": {
+                "help": {
+                  "short": "Perform a consistency check on the fabric."
+                },
+                "names": [
+                  "site-recovery",
+                  "fabric",
+                  "check-consistency"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/checkconsistency",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "create": {
+                "help": {
+                  "short": "Create an Azure Site Recovery fabric (for e.g. Hyper-V site)."
+                },
+                "names": [
+                  "site-recovery",
+                  "fabric",
+                  "create"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "delete": {
+                "help": {
+                  "short": "Delete an Azure Site Recovery fabric."
+                },
+                "names": [
+                  "site-recovery",
+                  "fabric",
+                  "delete"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/remove",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "list": {
+                "help": {
+                  "short": "Gets a list of the Azure Site Recovery fabrics in the vault."
+                },
+                "names": [
+                  "site-recovery",
+                  "fabric",
+                  "list"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "migrate-to-aad": {
+                "help": {
+                  "short": "Migrate an Azure Site Recovery fabric to AAD."
+                },
+                "names": [
+                  "site-recovery",
+                  "fabric",
+                  "migrate-to-aad"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/migratetoaad",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "purge": {
+                "help": {
+                  "short": "Purge(force delete) an Azure Site Recovery fabric."
+                },
+                "names": [
+                  "site-recovery",
+                  "fabric",
+                  "purge"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "reassociate-gateway": {
+                "help": {
+                  "short": "Move replications from a process server to another process server."
+                },
+                "names": [
+                  "site-recovery",
+                  "fabric",
+                  "reassociate-gateway"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/reassociategateway",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "renew-certificate": {
+                "help": {
+                  "short": "Renews the connection certificate for the ASR replication fabric."
+                },
+                "names": [
+                  "site-recovery",
+                  "fabric",
+                  "renew-certificate"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/renewcertificate",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "show": {
+                "help": {
+                  "short": "Gets the details of an Azure Site Recovery fabric."
+                },
+                "names": [
+                  "site-recovery",
+                  "fabric",
+                  "show"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "update": {
+                "help": {
+                  "short": "Update an Azure Site Recovery fabric (for e.g. Hyper-V site)."
+                },
+                "names": [
+                  "site-recovery",
+                  "fabric",
+                  "update"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage Azure Site Recovery fabric (for e.g. Hyper-V site)."
+            },
+            "names": [
+              "site-recovery",
+              "fabric"
+            ]
+          },
+          "job": {
+            "commands": {
+              "cancel": {
+                "help": {
+                  "short": "Cancel an Azure Site Recovery job."
+                },
+                "names": [
+                  "site-recovery",
+                  "job",
+                  "cancel"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationjobs/{}/cancel",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "export": {
+                "help": {
+                  "short": "Export the details of the Azure Site Recovery jobs of the vault."
+                },
+                "names": [
+                  "site-recovery",
+                  "job",
+                  "export"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationjobs/export",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "list": {
+                "help": {
+                  "short": "Gets the list of Azure Site Recovery Jobs for the vault."
+                },
+                "names": [
+                  "site-recovery",
+                  "job",
+                  "list"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationjobs",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "restart": {
+                "help": {
+                  "short": "Restart an Azure Site Recovery job."
+                },
+                "names": [
+                  "site-recovery",
+                  "job",
+                  "restart"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationjobs/{}/restart",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "resume": {
+                "help": {
+                  "short": "Resume an Azure Site Recovery job."
+                },
+                "names": [
+                  "site-recovery",
+                  "job",
+                  "resume"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationjobs/{}/resume",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "show": {
+                "help": {
+                  "short": "Get the details of an Azure Site Recovery job."
+                },
+                "names": [
+                  "site-recovery",
+                  "job",
+                  "show"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationjobs/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage an Azure Site Recovery job."
+            },
+            "names": [
+              "site-recovery",
+              "job"
+            ]
+          },
+          "migration-item": {
+            "commands": {
+              "list-for-vault": {
+                "help": {
+                  "short": "Lists the replication migration items in a vault."
+                },
+                "names": [
+                  "site-recovery",
+                  "migration-item",
+                  "list-for-vault"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationmigrationitems",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage replication migration items"
+            },
+            "names": [
+              "site-recovery",
+              "migration-item"
+            ]
+          },
+          "network": {
+            "commands": {
+              "list-for-vault": {
+                "help": {
+                  "short": "Lists the networks available in a vault."
+                },
+                "names": [
+                  "site-recovery",
+                  "network",
+                  "list-for-vault"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationnetworks",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage networks."
+            },
+            "names": [
+              "site-recovery",
+              "network"
+            ]
+          },
+          "network-mapping": {
+            "commands": {
+              "list-for-vault": {
+                "help": {
+                  "short": "Lists all ASR network mappings in the vault."
+                },
+                "names": [
+                  "site-recovery",
+                  "network-mapping",
+                  "list-for-vault"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationnetworkmappings",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage network mapping"
+            },
+            "names": [
+              "site-recovery",
+              "network-mapping"
+            ]
+          },
+          "policy": {
+            "commands": {
+              "create": {
+                "help": {
+                  "short": "The operation to create a replication policy."
+                },
+                "names": [
+                  "site-recovery",
+                  "policy",
+                  "create"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationpolicies/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "delete": {
+                "help": {
+                  "short": "The operation to delete a replication policy."
+                },
+                "names": [
+                  "site-recovery",
+                  "policy",
+                  "delete"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationpolicies/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "list": {
+                "help": {
+                  "short": "Lists the replication policies for a vault."
+                },
+                "names": [
+                  "site-recovery",
+                  "policy",
+                  "list"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationpolicies",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "show": {
+                "help": {
+                  "short": "Gets the details of a replication policy."
+                },
+                "names": [
+                  "site-recovery",
+                  "policy",
+                  "show"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationpolicies/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "update": {
+                "help": {
+                  "short": "Update a replication policy."
+                },
+                "names": [
+                  "site-recovery",
+                  "policy",
+                  "update"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationpolicies/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage replication policy."
+            },
+            "names": [
+              "site-recovery",
+              "policy"
+            ]
+          },
+          "protected-item": {
+            "commands": {
+              "list": {
+                "help": {
+                  "short": "Gets the list of ASR replication protected items in the vault."
+                },
+                "names": [
+                  "site-recovery",
+                  "protected-item",
+                  "list"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationprotecteditems",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage protected item."
+            },
+            "names": [
+              "site-recovery",
+              "protected-item"
+            ]
+          },
+          "protection-container": {
+            "commands": {
+              "list": {
+                "help": {
+                  "short": "Lists the protection containers in a vault."
+                },
+                "names": [
+                  "site-recovery",
+                  "protection-container",
+                  "list"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationprotectioncontainers",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage protection container"
+            },
+            "names": [
+              "site-recovery",
+              "protection-container"
+            ]
+          },
+          "protection-container-mapping": {
+            "commands": {
+              "list": {
+                "help": {
+                  "short": "Lists the protection container mappings in the vault."
+                },
+                "names": [
+                  "site-recovery",
+                  "protection-container-mapping",
+                  "list"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationprotectioncontainermappings",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage protection container mapping"
+            },
+            "names": [
+              "site-recovery",
+              "protection-container-mapping"
+            ]
+          },
+          "protection-intent": {
+            "commands": {
+              "create": {
+                "help": {
+                  "short": "The operation to create an ASR replication protection intent item."
+                },
+                "names": [
+                  "site-recovery",
+                  "protection-intent",
+                  "create"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationprotectionintents/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "list": {
+                "help": {
+                  "short": "Gets the list of ASR replication protection intent objects in the vault."
+                },
+                "names": [
+                  "site-recovery",
+                  "protection-intent",
+                  "list"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationprotectionintents",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "show": {
+                "help": {
+                  "short": "Gets the details of an ASR replication protection intent."
+                },
+                "names": [
+                  "site-recovery",
+                  "protection-intent",
+                  "show"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationprotectionintents/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "update": {
+                "help": {
+                  "short": "Update an ASR replication protection intent item."
+                },
+                "names": [
+                  "site-recovery",
+                  "protection-intent",
+                  "update"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationprotectionintents/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage protection intent."
+            },
+            "names": [
+              "site-recovery",
+              "protection-intent"
+            ]
+          },
+          "recovery-plan": {
+            "commands": {
+              "create": {
+                "help": {
+                  "short": "The operation to create a recovery plan."
+                },
+                "names": [
+                  "site-recovery",
+                  "recovery-plan",
+                  "create"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationrecoveryplans/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "delete": {
+                "help": {
+                  "short": "Delete a recovery plan."
+                },
+                "names": [
+                  "site-recovery",
+                  "recovery-plan",
+                  "delete"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationrecoveryplans/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "failover-cancel": {
+                "help": {
+                  "short": "The operation to cancel the failover of a recovery plan."
+                },
+                "names": [
+                  "site-recovery",
+                  "recovery-plan",
+                  "failover-cancel"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationrecoveryplans/{}/failovercancel",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "failover-commit": {
+                "help": {
+                  "short": "The operation to commit the failover of a recovery plan."
+                },
+                "names": [
+                  "site-recovery",
+                  "recovery-plan",
+                  "failover-commit"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationrecoveryplans/{}/failovercommit",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "list": {
+                "help": {
+                  "short": "Lists the recovery plans in the vault."
+                },
+                "names": [
+                  "site-recovery",
+                  "recovery-plan",
+                  "list"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationrecoveryplans",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "planned-failover": {
+                "help": {
+                  "short": "The operation to start the planned failover of a recovery plan."
+                },
+                "names": [
+                  "site-recovery",
+                  "recovery-plan",
+                  "planned-failover"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationrecoveryplans/{}/plannedfailover",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "re-protect": {
+                "help": {
+                  "short": "The operation to reprotect(reverse replicate) a recovery plan."
+                },
+                "names": [
+                  "site-recovery",
+                  "recovery-plan",
+                  "re-protect"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationrecoveryplans/{}/reprotect",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "show": {
+                "help": {
+                  "short": "Gets the details of the recovery plan."
+                },
+                "names": [
+                  "site-recovery",
+                  "recovery-plan",
+                  "show"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationrecoveryplans/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "test-failover": {
+                "help": {
+                  "short": "The operation to start the test failover of a recovery plan."
+                },
+                "names": [
+                  "site-recovery",
+                  "recovery-plan",
+                  "test-failover"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationrecoveryplans/{}/testfailover",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "test-failover-cleanup": {
+                "help": {
+                  "short": "The operation to cleanup test failover of a recovery plan."
+                },
+                "names": [
+                  "site-recovery",
+                  "recovery-plan",
+                  "test-failover-cleanup"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationrecoveryplans/{}/testfailovercleanup",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "unplanned-failover": {
+                "help": {
+                  "short": "The operation to start the unplanned failover of a recovery plan."
+                },
+                "names": [
+                  "site-recovery",
+                  "recovery-plan",
+                  "unplanned-failover"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationrecoveryplans/{}/unplannedfailover",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "update": {
+                "help": {
+                  "short": "Update a recovery plan."
+                },
+                "names": [
+                  "site-recovery",
+                  "recovery-plan",
+                  "update"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationrecoveryplans/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage recovery plan."
+            },
+            "names": [
+              "site-recovery",
+              "recovery-plan"
+            ]
+          },
+          "recovery-services-provider": {
+            "commands": {
+              "list": {
+                "help": {
+                  "short": "Lists the registered recovery services providers in the vault."
+                },
+                "names": [
+                  "site-recovery",
+                  "recovery-services-provider",
+                  "list"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationrecoveryservicesproviders",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage recovery services provider."
+            },
+            "names": [
+              "site-recovery",
+              "recovery-services-provider"
+            ]
+          },
+          "storage-classification": {
+            "commands": {
+              "list": {
+                "help": {
+                  "short": "Lists the storage classifications in the vault."
+                },
+                "names": [
+                  "site-recovery",
+                  "storage-classification",
+                  "list"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationstorageclassifications",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage storage classification"
+            },
+            "names": [
+              "site-recovery",
+              "storage-classification"
+            ]
+          },
+          "storage-classification-mapping": {
+            "commands": {
+              "list": {
+                "help": {
+                  "short": "Lists the storage classification mappings in the vault."
+                },
+                "names": [
+                  "site-recovery",
+                  "storage-classification-mapping",
+                  "list"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationstorageclassificationmappings",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage storage classification mapping."
+            },
+            "names": [
+              "site-recovery",
+              "storage-classification-mapping"
+            ]
+          },
+          "supported-operating-system": {
+            "commands": {
+              "show": {
+                "help": {
+                  "short": "Show ASR supported operating system"
+                },
+                "names": [
+                  "site-recovery",
+                  "supported-operating-system",
+                  "show"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationsupportedoperatingsystems",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage supported operating system."
+            },
+            "names": [
+              "site-recovery",
+              "supported-operating-system"
+            ]
+          },
+          "vault-health": {
+            "commands": {
+              "refresh-default": {
+                "help": {
+                  "short": "Refresh default for ASR vault health."
+                },
+                "names": [
+                  "site-recovery",
+                  "vault-health",
+                  "refresh-default"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationvaulthealth/default/refresh",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "show": {
+                "help": {
+                  "short": "Gets the health details of the vault."
+                },
+                "names": [
+                  "site-recovery",
+                  "vault-health",
+                  "show"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationvaulthealth",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage vault health."
+            },
+            "names": [
+              "site-recovery",
+              "vault-health"
+            ]
+          },
+          "vault-setting": {
+            "commands": {
+              "create": {
+                "help": {
+                  "short": "The operation to configure vault setting."
+                },
+                "names": [
+                  "site-recovery",
+                  "vault-setting",
+                  "create"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationvaultsettings/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "list": {
+                "help": {
+                  "short": "Gets the list of vault setting. This includes the Migration Hub connection settings."
+                },
+                "names": [
+                  "site-recovery",
+                  "vault-setting",
+                  "list"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationvaultsettings",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "show": {
+                "help": {
+                  "short": "Gets the vault setting. This includes the Migration Hub connection settings."
+                },
+                "names": [
+                  "site-recovery",
+                  "vault-setting",
+                  "show"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationvaultsettings/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "update": {
+                "help": {
+                  "short": "The operation to configure vault setting."
+                },
+                "names": [
+                  "site-recovery",
+                  "vault-setting",
+                  "update"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationvaultsettings/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage replication vault setting."
+            },
+            "names": [
+              "site-recovery",
+              "vault-setting"
+            ]
+          },
+          "vcenter": {
+            "commands": {
+              "list": {
+                "help": {
+                  "short": "Lists the vCenter servers registered in the vault."
+                },
+                "names": [
+                  "site-recovery",
+                  "vcenter",
+                  "list"
+                ],
+                "versions": [
+                  {
+                    "name": "2021-10-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationvcenters",
+                        "plane": "mgmt-plane",
+                        "version": "2021-10-01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage vcenter"
+            },
+            "names": [
+              "site-recovery",
+              "vcenter"
+            ]
+          }
+        },
+        "help": {
+          "short": "Manage Azure Site Recovery(ASR)."
+        },
+        "names": [
+          "site-recovery"
+        ]
       }
     },
     "names": [

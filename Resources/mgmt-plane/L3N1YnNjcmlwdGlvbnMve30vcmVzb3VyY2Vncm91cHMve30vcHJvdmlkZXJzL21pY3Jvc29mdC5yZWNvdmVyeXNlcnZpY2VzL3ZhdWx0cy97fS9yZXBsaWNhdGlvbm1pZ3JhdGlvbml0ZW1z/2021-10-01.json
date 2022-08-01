@@ -1,0 +1,939 @@
+{
+    "plane": "mgmt-plane",
+    "resources": [
+        {
+            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationmigrationitems",
+            "version": "2021-10-01",
+            "swagger": "mgmt-plane/recoveryservicessiterecovery/ResourceProviders/Microsoft.RecoveryServices/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuUmVjb3ZlcnlTZXJ2aWNlcy92YXVsdHMve3Jlc291cmNlTmFtZX0vcmVwbGljYXRpb25NaWdyYXRpb25JdGVtcw==/V/MjAyMS0xMC0wMQ=="
+        }
+    ],
+    "commandGroups": [
+        {
+            "name": "site-recovery migration-item",
+            "commands": [
+                {
+                    "name": "list-for-vault",
+                    "version": "2021-10-01",
+                    "resources": [
+                        {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationmigrationitems",
+                            "version": "2021-10-01",
+                            "swagger": "mgmt-plane/recoveryservicessiterecovery/ResourceProviders/Microsoft.RecoveryServices/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuUmVjb3ZlcnlTZXJ2aWNlcy92YXVsdHMve3Jlc291cmNlTmFtZX0vcmVwbGljYXRpb25NaWdyYXRpb25JdGVtcw==/V/MjAyMS0xMC0wMQ=="
+                        }
+                    ],
+                    "argGroups": [
+                        {
+                            "name": "",
+                            "args": [
+                                {
+                                    "type": "ResourceGroupName",
+                                    "var": "$Path.resourceGroupName",
+                                    "options": [
+                                        "g",
+                                        "resource-group"
+                                    ],
+                                    "required": true
+                                },
+                                {
+                                    "type": "string",
+                                    "var": "$Path.resourceName",
+                                    "options": [
+                                        "resource-name"
+                                    ],
+                                    "required": true,
+                                    "help": {
+                                        "short": "The name of the recovery services vault."
+                                    }
+                                },
+                                {
+                                    "type": "SubscriptionId",
+                                    "var": "$Path.subscriptionId",
+                                    "options": [
+                                        "subscription"
+                                    ],
+                                    "required": true
+                                },
+                                {
+                                    "type": "string",
+                                    "var": "$Query.filter",
+                                    "options": [
+                                        "filter"
+                                    ],
+                                    "help": {
+                                        "short": "OData filter options."
+                                    }
+                                },
+                                {
+                                    "type": "string",
+                                    "var": "$Query.skipToken",
+                                    "options": [
+                                        "skip-token"
+                                    ],
+                                    "help": {
+                                        "short": "The pagination token."
+                                    }
+                                },
+                                {
+                                    "type": "string",
+                                    "var": "$Query.takeToken",
+                                    "options": [
+                                        "take-token"
+                                    ],
+                                    "help": {
+                                        "short": "The page size."
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "operations": [
+                        {
+                            "operationId": "ReplicationMigrationItems_List",
+                            "http": {
+                                "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationMigrationItems",
+                                "request": {
+                                    "method": "get",
+                                    "path": {
+                                        "params": [
+                                            {
+                                                "type": "string",
+                                                "name": "resourceGroupName",
+                                                "arg": "$Path.resourceGroupName",
+                                                "required": true
+                                            },
+                                            {
+                                                "type": "string",
+                                                "name": "resourceName",
+                                                "arg": "$Path.resourceName",
+                                                "required": true
+                                            },
+                                            {
+                                                "type": "string",
+                                                "name": "subscriptionId",
+                                                "arg": "$Path.subscriptionId",
+                                                "required": true
+                                            }
+                                        ]
+                                    },
+                                    "query": {
+                                        "params": [
+                                            {
+                                                "type": "string",
+                                                "name": "$filter",
+                                                "arg": "$Query.filter"
+                                            },
+                                            {
+                                                "type": "string",
+                                                "name": "skipToken",
+                                                "arg": "$Query.skipToken"
+                                            },
+                                            {
+                                                "type": "string",
+                                                "name": "takeToken",
+                                                "arg": "$Query.takeToken"
+                                            }
+                                        ],
+                                        "consts": [
+                                            {
+                                                "readOnly": true,
+                                                "const": true,
+                                                "default": {
+                                                    "value": "2021-10-01"
+                                                },
+                                                "type": "string",
+                                                "name": "api-version",
+                                                "required": true
+                                            }
+                                        ]
+                                    }
+                                },
+                                "responses": [
+                                    {
+                                        "statusCode": [
+                                            200
+                                        ],
+                                        "body": {
+                                            "json": {
+                                                "var": "$Instance",
+                                                "schema": {
+                                                    "type": "object",
+                                                    "props": [
+                                                        {
+                                                            "type": "string",
+                                                            "name": "nextLink"
+                                                        },
+                                                        {
+                                                            "type": "array<object>",
+                                                            "name": "value",
+                                                            "item": {
+                                                                "type": "object",
+                                                                "props": [
+                                                                    {
+                                                                        "readOnly": true,
+                                                                        "type": "ResourceId",
+                                                                        "name": "id",
+                                                                        "format": {
+                                                                            "template": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.RecoveryServices/vaults/{}/replicationFabrics/{}/replicationProtectionContainers/{}/replicationMigrationItems/{}"
+                                                                        }
+                                                                    },
+                                                                    {
+                                                                        "type": "ResourceLocation",
+                                                                        "name": "location"
+                                                                    },
+                                                                    {
+                                                                        "readOnly": true,
+                                                                        "type": "string",
+                                                                        "name": "name"
+                                                                    },
+                                                                    {
+                                                                        "type": "object",
+                                                                        "name": "properties",
+                                                                        "props": [
+                                                                            {
+                                                                                "readOnly": true,
+                                                                                "type": "array<string>",
+                                                                                "name": "allowedOperations",
+                                                                                "item": {
+                                                                                    "readOnly": true,
+                                                                                    "type": "string",
+                                                                                    "enum": {
+                                                                                        "items": [
+                                                                                            {
+                                                                                                "value": "DisableMigration"
+                                                                                            },
+                                                                                            {
+                                                                                                "value": "Migrate"
+                                                                                            },
+                                                                                            {
+                                                                                                "value": "StartResync"
+                                                                                            },
+                                                                                            {
+                                                                                                "value": "TestMigrate"
+                                                                                            },
+                                                                                            {
+                                                                                                "value": "TestMigrateCleanup"
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "readOnly": true,
+                                                                                "type": "object",
+                                                                                "name": "currentJob",
+                                                                                "props": [
+                                                                                    {
+                                                                                        "readOnly": true,
+                                                                                        "type": "string",
+                                                                                        "name": "jobId"
+                                                                                    },
+                                                                                    {
+                                                                                        "readOnly": true,
+                                                                                        "type": "string",
+                                                                                        "name": "jobName"
+                                                                                    },
+                                                                                    {
+                                                                                        "readOnly": true,
+                                                                                        "type": "dateTime",
+                                                                                        "name": "startTime"
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "readOnly": true,
+                                                                                "type": "string",
+                                                                                "name": "eventCorrelationId"
+                                                                            },
+                                                                            {
+                                                                                "readOnly": true,
+                                                                                "type": "string",
+                                                                                "name": "health",
+                                                                                "enum": {
+                                                                                    "items": [
+                                                                                        {
+                                                                                            "value": "Critical"
+                                                                                        },
+                                                                                        {
+                                                                                            "value": "None"
+                                                                                        },
+                                                                                        {
+                                                                                            "value": "Normal"
+                                                                                        },
+                                                                                        {
+                                                                                            "value": "Warning"
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "readOnly": true,
+                                                                                "type": "array<object>",
+                                                                                "name": "healthErrors",
+                                                                                "item": {
+                                                                                    "readOnly": true,
+                                                                                    "type": "object",
+                                                                                    "props": [
+                                                                                        {
+                                                                                            "readOnly": true,
+                                                                                            "type": "dateTime",
+                                                                                            "name": "creationTimeUtc"
+                                                                                        },
+                                                                                        {
+                                                                                            "readOnly": true,
+                                                                                            "type": "string",
+                                                                                            "name": "customerResolvability",
+                                                                                            "enum": {
+                                                                                                "items": [
+                                                                                                    {
+                                                                                                        "value": "Allowed"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "value": "NotAllowed"
+                                                                                                    }
+                                                                                                ]
+                                                                                            }
+                                                                                        },
+                                                                                        {
+                                                                                            "readOnly": true,
+                                                                                            "type": "string",
+                                                                                            "name": "entityId"
+                                                                                        },
+                                                                                        {
+                                                                                            "readOnly": true,
+                                                                                            "type": "string",
+                                                                                            "name": "errorCategory"
+                                                                                        },
+                                                                                        {
+                                                                                            "readOnly": true,
+                                                                                            "type": "string",
+                                                                                            "name": "errorCode"
+                                                                                        },
+                                                                                        {
+                                                                                            "readOnly": true,
+                                                                                            "type": "string",
+                                                                                            "name": "errorId"
+                                                                                        },
+                                                                                        {
+                                                                                            "readOnly": true,
+                                                                                            "type": "string",
+                                                                                            "name": "errorLevel"
+                                                                                        },
+                                                                                        {
+                                                                                            "readOnly": true,
+                                                                                            "type": "string",
+                                                                                            "name": "errorMessage"
+                                                                                        },
+                                                                                        {
+                                                                                            "readOnly": true,
+                                                                                            "type": "string",
+                                                                                            "name": "errorSource"
+                                                                                        },
+                                                                                        {
+                                                                                            "readOnly": true,
+                                                                                            "type": "string",
+                                                                                            "name": "errorType"
+                                                                                        },
+                                                                                        {
+                                                                                            "readOnly": true,
+                                                                                            "type": "array<object>",
+                                                                                            "name": "innerHealthErrors",
+                                                                                            "item": {
+                                                                                                "readOnly": true,
+                                                                                                "type": "object",
+                                                                                                "props": [
+                                                                                                    {
+                                                                                                        "readOnly": true,
+                                                                                                        "type": "dateTime",
+                                                                                                        "name": "creationTimeUtc"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "readOnly": true,
+                                                                                                        "type": "string",
+                                                                                                        "name": "customerResolvability",
+                                                                                                        "enum": {
+                                                                                                            "items": [
+                                                                                                                {
+                                                                                                                    "value": "Allowed"
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "value": "NotAllowed"
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "readOnly": true,
+                                                                                                        "type": "string",
+                                                                                                        "name": "entityId"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "readOnly": true,
+                                                                                                        "type": "string",
+                                                                                                        "name": "errorCategory"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "readOnly": true,
+                                                                                                        "type": "string",
+                                                                                                        "name": "errorCode"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "readOnly": true,
+                                                                                                        "type": "string",
+                                                                                                        "name": "errorId"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "readOnly": true,
+                                                                                                        "type": "string",
+                                                                                                        "name": "errorLevel"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "readOnly": true,
+                                                                                                        "type": "string",
+                                                                                                        "name": "errorMessage"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "readOnly": true,
+                                                                                                        "type": "string",
+                                                                                                        "name": "errorSource"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "readOnly": true,
+                                                                                                        "type": "string",
+                                                                                                        "name": "errorType"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "readOnly": true,
+                                                                                                        "type": "string",
+                                                                                                        "name": "possibleCauses"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "readOnly": true,
+                                                                                                        "type": "string",
+                                                                                                        "name": "recommendedAction"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "readOnly": true,
+                                                                                                        "type": "string",
+                                                                                                        "name": "recoveryProviderErrorMessage"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "readOnly": true,
+                                                                                                        "type": "string",
+                                                                                                        "name": "summaryMessage"
+                                                                                                    }
+                                                                                                ]
+                                                                                            }
+                                                                                        },
+                                                                                        {
+                                                                                            "readOnly": true,
+                                                                                            "type": "string",
+                                                                                            "name": "possibleCauses"
+                                                                                        },
+                                                                                        {
+                                                                                            "readOnly": true,
+                                                                                            "type": "string",
+                                                                                            "name": "recommendedAction"
+                                                                                        },
+                                                                                        {
+                                                                                            "readOnly": true,
+                                                                                            "type": "string",
+                                                                                            "name": "recoveryProviderErrorMessage"
+                                                                                        },
+                                                                                        {
+                                                                                            "readOnly": true,
+                                                                                            "type": "string",
+                                                                                            "name": "summaryMessage"
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "readOnly": true,
+                                                                                "type": "string",
+                                                                                "name": "lastTestMigrationStatus"
+                                                                            },
+                                                                            {
+                                                                                "readOnly": true,
+                                                                                "type": "dateTime",
+                                                                                "name": "lastTestMigrationTime"
+                                                                            },
+                                                                            {
+                                                                                "readOnly": true,
+                                                                                "type": "string",
+                                                                                "name": "machineName"
+                                                                            },
+                                                                            {
+                                                                                "readOnly": true,
+                                                                                "type": "string",
+                                                                                "name": "migrationState",
+                                                                                "enum": {
+                                                                                    "items": [
+                                                                                        {
+                                                                                            "value": "DisableMigrationFailed"
+                                                                                        },
+                                                                                        {
+                                                                                            "value": "DisableMigrationInProgress"
+                                                                                        },
+                                                                                        {
+                                                                                            "value": "EnableMigrationFailed"
+                                                                                        },
+                                                                                        {
+                                                                                            "value": "EnableMigrationInProgress"
+                                                                                        },
+                                                                                        {
+                                                                                            "value": "InitialSeedingFailed"
+                                                                                        },
+                                                                                        {
+                                                                                            "value": "InitialSeedingInProgress"
+                                                                                        },
+                                                                                        {
+                                                                                            "value": "MigrationFailed"
+                                                                                        },
+                                                                                        {
+                                                                                            "value": "MigrationInProgress"
+                                                                                        },
+                                                                                        {
+                                                                                            "value": "MigrationSucceeded"
+                                                                                        },
+                                                                                        {
+                                                                                            "value": "None"
+                                                                                        },
+                                                                                        {
+                                                                                            "value": "Replicating"
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "readOnly": true,
+                                                                                "type": "string",
+                                                                                "name": "migrationStateDescription"
+                                                                            },
+                                                                            {
+                                                                                "readOnly": true,
+                                                                                "type": "string",
+                                                                                "name": "policyFriendlyName"
+                                                                            },
+                                                                            {
+                                                                                "readOnly": true,
+                                                                                "type": "string",
+                                                                                "name": "policyId"
+                                                                            },
+                                                                            {
+                                                                                "type": "object",
+                                                                                "name": "providerSpecificDetails",
+                                                                                "props": [
+                                                                                    {
+                                                                                        "type": "string",
+                                                                                        "name": "instanceType",
+                                                                                        "required": true,
+                                                                                        "enum": {
+                                                                                            "items": [
+                                                                                                {
+                                                                                                    "value": "VMwareCbt"
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    }
+                                                                                ],
+                                                                                "discriminators": [
+                                                                                    {
+                                                                                        "property": "instanceType",
+                                                                                        "value": "VMwareCbt",
+                                                                                        "props": [
+                                                                                            {
+                                                                                                "readOnly": true,
+                                                                                                "type": "string",
+                                                                                                "name": "dataMoverRunAsAccountId"
+                                                                                            },
+                                                                                            {
+                                                                                                "readOnly": true,
+                                                                                                "type": "string",
+                                                                                                "name": "firmwareType"
+                                                                                            },
+                                                                                            {
+                                                                                                "readOnly": true,
+                                                                                                "type": "integer32",
+                                                                                                "name": "initialSeedingProgressPercentage"
+                                                                                            },
+                                                                                            {
+                                                                                                "readOnly": true,
+                                                                                                "type": "integer64",
+                                                                                                "name": "initialSeedingRetryCount"
+                                                                                            },
+                                                                                            {
+                                                                                                "readOnly": true,
+                                                                                                "type": "string",
+                                                                                                "name": "lastRecoveryPointId"
+                                                                                            },
+                                                                                            {
+                                                                                                "readOnly": true,
+                                                                                                "type": "dateTime",
+                                                                                                "name": "lastRecoveryPointReceived"
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "string",
+                                                                                                "name": "licenseType"
+                                                                                            },
+                                                                                            {
+                                                                                                "readOnly": true,
+                                                                                                "type": "integer32",
+                                                                                                "name": "migrationProgressPercentage"
+                                                                                            },
+                                                                                            {
+                                                                                                "readOnly": true,
+                                                                                                "type": "string",
+                                                                                                "name": "migrationRecoveryPointId"
+                                                                                            },
+                                                                                            {
+                                                                                                "readOnly": true,
+                                                                                                "type": "string",
+                                                                                                "name": "osType"
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "string",
+                                                                                                "name": "performAutoResync"
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "array<object>",
+                                                                                                "name": "protectedDisks",
+                                                                                                "item": {
+                                                                                                    "type": "object",
+                                                                                                    "props": [
+                                                                                                        {
+                                                                                                            "readOnly": true,
+                                                                                                            "type": "integer64",
+                                                                                                            "name": "capacityInBytes"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "readOnly": true,
+                                                                                                            "type": "string",
+                                                                                                            "name": "diskEncryptionSetId"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "readOnly": true,
+                                                                                                            "type": "string",
+                                                                                                            "name": "diskId"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "readOnly": true,
+                                                                                                            "type": "string",
+                                                                                                            "name": "diskName"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "readOnly": true,
+                                                                                                            "type": "string",
+                                                                                                            "name": "diskPath"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "type": "string",
+                                                                                                            "name": "diskType",
+                                                                                                            "enum": {
+                                                                                                                "items": [
+                                                                                                                    {
+                                                                                                                        "value": "Premium_LRS"
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "value": "StandardSSD_LRS"
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "value": "Standard_LRS"
+                                                                                                                    }
+                                                                                                                ]
+                                                                                                            }
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "readOnly": true,
+                                                                                                            "type": "string",
+                                                                                                            "name": "isOSDisk"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "readOnly": true,
+                                                                                                            "type": "string",
+                                                                                                            "name": "logStorageAccountId"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "readOnly": true,
+                                                                                                            "type": "string",
+                                                                                                            "name": "logStorageAccountSasSecretName"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "readOnly": true,
+                                                                                                            "type": "string",
+                                                                                                            "name": "seedManagedDiskId"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "type": "string",
+                                                                                                            "name": "targetDiskName"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "readOnly": true,
+                                                                                                            "type": "string",
+                                                                                                            "name": "targetManagedDiskId"
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            },
+                                                                                            {
+                                                                                                "readOnly": true,
+                                                                                                "type": "integer32",
+                                                                                                "name": "resyncProgressPercentage"
+                                                                                            },
+                                                                                            {
+                                                                                                "readOnly": true,
+                                                                                                "type": "string",
+                                                                                                "name": "resyncRequired"
+                                                                                            },
+                                                                                            {
+                                                                                                "readOnly": true,
+                                                                                                "type": "integer64",
+                                                                                                "name": "resyncRetryCount"
+                                                                                            },
+                                                                                            {
+                                                                                                "readOnly": true,
+                                                                                                "type": "string",
+                                                                                                "name": "resyncState",
+                                                                                                "enum": {
+                                                                                                    "items": [
+                                                                                                        {
+                                                                                                            "value": "None"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "value": "PreparedForResynchronization"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "value": "StartedResynchronization"
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "object",
+                                                                                                "name": "seedDiskTags",
+                                                                                                "additionalProps": {
+                                                                                                    "item": {
+                                                                                                        "type": "string"
+                                                                                                    }
+                                                                                                }
+                                                                                            },
+                                                                                            {
+                                                                                                "readOnly": true,
+                                                                                                "type": "string",
+                                                                                                "name": "snapshotRunAsAccountId"
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "string",
+                                                                                                "name": "sqlServerLicenseType"
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "string",
+                                                                                                "name": "targetAvailabilitySetId"
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "string",
+                                                                                                "name": "targetAvailabilityZone"
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "string",
+                                                                                                "name": "targetBootDiagnosticsStorageAccountId"
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "object",
+                                                                                                "name": "targetDiskTags",
+                                                                                                "additionalProps": {
+                                                                                                    "item": {
+                                                                                                        "type": "string"
+                                                                                                    }
+                                                                                                }
+                                                                                            },
+                                                                                            {
+                                                                                                "readOnly": true,
+                                                                                                "type": "string",
+                                                                                                "name": "targetGeneration"
+                                                                                            },
+                                                                                            {
+                                                                                                "readOnly": true,
+                                                                                                "type": "string",
+                                                                                                "name": "targetLocation"
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "string",
+                                                                                                "name": "targetNetworkId"
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "object",
+                                                                                                "name": "targetNicTags",
+                                                                                                "additionalProps": {
+                                                                                                    "item": {
+                                                                                                        "type": "string"
+                                                                                                    }
+                                                                                                }
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "string",
+                                                                                                "name": "targetProximityPlacementGroupId"
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "string",
+                                                                                                "name": "targetResourceGroupId"
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "string",
+                                                                                                "name": "targetVmName"
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "string",
+                                                                                                "name": "targetVmSize"
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "object",
+                                                                                                "name": "targetVmTags",
+                                                                                                "additionalProps": {
+                                                                                                    "item": {
+                                                                                                        "type": "string"
+                                                                                                    }
+                                                                                                }
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "array<object>",
+                                                                                                "name": "vmNics",
+                                                                                                "item": {
+                                                                                                    "type": "object",
+                                                                                                    "props": [
+                                                                                                        {
+                                                                                                            "type": "string",
+                                                                                                            "name": "isPrimaryNic"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "type": "string",
+                                                                                                            "name": "isSelectedForMigration"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "readOnly": true,
+                                                                                                            "type": "string",
+                                                                                                            "name": "nicId"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "readOnly": true,
+                                                                                                            "type": "string",
+                                                                                                            "name": "sourceIPAddress"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "readOnly": true,
+                                                                                                            "type": "string",
+                                                                                                            "name": "sourceIPAddressType",
+                                                                                                            "enum": {
+                                                                                                                "items": [
+                                                                                                                    {
+                                                                                                                        "value": "Dynamic"
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "value": "Static"
+                                                                                                                    }
+                                                                                                                ]
+                                                                                                            }
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "readOnly": true,
+                                                                                                            "type": "string",
+                                                                                                            "name": "sourceNetworkId"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "type": "string",
+                                                                                                            "name": "targetIPAddress"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "type": "string",
+                                                                                                            "name": "targetIPAddressType",
+                                                                                                            "enum": {
+                                                                                                                "items": [
+                                                                                                                    {
+                                                                                                                        "value": "Dynamic"
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "value": "Static"
+                                                                                                                    }
+                                                                                                                ]
+                                                                                                            }
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "type": "string",
+                                                                                                            "name": "targetNicName"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "type": "string",
+                                                                                                            "name": "targetSubnetName"
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            },
+                                                                                            {
+                                                                                                "readOnly": true,
+                                                                                                "type": "string",
+                                                                                                "name": "vmwareMachineId"
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "readOnly": true,
+                                                                                "type": "string",
+                                                                                "name": "testMigrateState",
+                                                                                "enum": {
+                                                                                    "items": [
+                                                                                        {
+                                                                                            "value": "None"
+                                                                                        },
+                                                                                        {
+                                                                                            "value": "TestMigrationCleanupInProgress"
+                                                                                        },
+                                                                                        {
+                                                                                            "value": "TestMigrationFailed"
+                                                                                        },
+                                                                                        {
+                                                                                            "value": "TestMigrationInProgress"
+                                                                                        },
+                                                                                        {
+                                                                                            "value": "TestMigrationSucceeded"
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "readOnly": true,
+                                                                                "type": "string",
+                                                                                "name": "testMigrateStateDescription"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "readOnly": true,
+                                                                        "type": "string",
+                                                                        "name": "type"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "type": "array",
+                            "ref": "$Instance.value",
+                            "clientFlatten": true,
+                            "nextLink": "$Instance.nextLink"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

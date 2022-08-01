@@ -1,0 +1,685 @@
+{
+    "plane": "mgmt-plane",
+    "resources": [
+        {
+            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationprotectionintents",
+            "version": "2021-10-01",
+            "swagger": "mgmt-plane/recoveryservicessiterecovery/ResourceProviders/Microsoft.RecoveryServices/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuUmVjb3ZlcnlTZXJ2aWNlcy92YXVsdHMve3Jlc291cmNlTmFtZX0vcmVwbGljYXRpb25Qcm90ZWN0aW9uSW50ZW50cw==/V/MjAyMS0xMC0wMQ=="
+        }
+    ],
+    "commandGroups": [
+        {
+            "name": "site-recovery protection-intent",
+            "commands": [
+                {
+                    "name": "list",
+                    "version": "2021-10-01",
+                    "resources": [
+                        {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationprotectionintents",
+                            "version": "2021-10-01",
+                            "swagger": "mgmt-plane/recoveryservicessiterecovery/ResourceProviders/Microsoft.RecoveryServices/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuUmVjb3ZlcnlTZXJ2aWNlcy92YXVsdHMve3Jlc291cmNlTmFtZX0vcmVwbGljYXRpb25Qcm90ZWN0aW9uSW50ZW50cw==/V/MjAyMS0xMC0wMQ=="
+                        }
+                    ],
+                    "argGroups": [
+                        {
+                            "name": "",
+                            "args": [
+                                {
+                                    "type": "ResourceGroupName",
+                                    "var": "$Path.resourceGroupName",
+                                    "options": [
+                                        "g",
+                                        "resource-group"
+                                    ],
+                                    "required": true
+                                },
+                                {
+                                    "type": "string",
+                                    "var": "$Path.resourceName",
+                                    "options": [
+                                        "resource-name"
+                                    ],
+                                    "required": true,
+                                    "help": {
+                                        "short": "The name of the recovery services vault."
+                                    }
+                                },
+                                {
+                                    "type": "SubscriptionId",
+                                    "var": "$Path.subscriptionId",
+                                    "options": [
+                                        "subscription"
+                                    ],
+                                    "required": true
+                                },
+                                {
+                                    "type": "string",
+                                    "var": "$Query.skipToken",
+                                    "options": [
+                                        "skip-token"
+                                    ],
+                                    "help": {
+                                        "short": "The pagination token."
+                                    }
+                                },
+                                {
+                                    "type": "string",
+                                    "var": "$Query.takeToken",
+                                    "options": [
+                                        "take-token"
+                                    ],
+                                    "help": {
+                                        "short": "The page size."
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "operations": [
+                        {
+                            "operationId": "ReplicationProtectionIntents_List",
+                            "http": {
+                                "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationProtectionIntents",
+                                "request": {
+                                    "method": "get",
+                                    "path": {
+                                        "params": [
+                                            {
+                                                "type": "string",
+                                                "name": "resourceGroupName",
+                                                "arg": "$Path.resourceGroupName",
+                                                "required": true
+                                            },
+                                            {
+                                                "type": "string",
+                                                "name": "resourceName",
+                                                "arg": "$Path.resourceName",
+                                                "required": true
+                                            },
+                                            {
+                                                "type": "string",
+                                                "name": "subscriptionId",
+                                                "arg": "$Path.subscriptionId",
+                                                "required": true
+                                            }
+                                        ]
+                                    },
+                                    "query": {
+                                        "params": [
+                                            {
+                                                "type": "string",
+                                                "name": "skipToken",
+                                                "arg": "$Query.skipToken"
+                                            },
+                                            {
+                                                "type": "string",
+                                                "name": "takeToken",
+                                                "arg": "$Query.takeToken"
+                                            }
+                                        ],
+                                        "consts": [
+                                            {
+                                                "readOnly": true,
+                                                "const": true,
+                                                "default": {
+                                                    "value": "2021-10-01"
+                                                },
+                                                "type": "string",
+                                                "name": "api-version",
+                                                "required": true
+                                            }
+                                        ]
+                                    }
+                                },
+                                "responses": [
+                                    {
+                                        "statusCode": [
+                                            200
+                                        ],
+                                        "body": {
+                                            "json": {
+                                                "var": "$Instance",
+                                                "schema": {
+                                                    "type": "object",
+                                                    "props": [
+                                                        {
+                                                            "type": "string",
+                                                            "name": "nextLink"
+                                                        },
+                                                        {
+                                                            "type": "array<object>",
+                                                            "name": "value",
+                                                            "item": {
+                                                                "type": "object",
+                                                                "props": [
+                                                                    {
+                                                                        "readOnly": true,
+                                                                        "type": "ResourceId",
+                                                                        "name": "id",
+                                                                        "format": {
+                                                                            "template": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.RecoveryServices/vaults/{}/replicationProtectionIntents/{}"
+                                                                        }
+                                                                    },
+                                                                    {
+                                                                        "type": "ResourceLocation",
+                                                                        "name": "location"
+                                                                    },
+                                                                    {
+                                                                        "readOnly": true,
+                                                                        "type": "string",
+                                                                        "name": "name"
+                                                                    },
+                                                                    {
+                                                                        "type": "object",
+                                                                        "name": "properties",
+                                                                        "props": [
+                                                                            {
+                                                                                "readOnly": true,
+                                                                                "type": "string",
+                                                                                "name": "creationTimeUTC"
+                                                                            },
+                                                                            {
+                                                                                "type": "string",
+                                                                                "name": "friendlyName"
+                                                                            },
+                                                                            {
+                                                                                "readOnly": true,
+                                                                                "type": "boolean",
+                                                                                "name": "isActive"
+                                                                            },
+                                                                            {
+                                                                                "readOnly": true,
+                                                                                "type": "string",
+                                                                                "name": "jobId"
+                                                                            },
+                                                                            {
+                                                                                "readOnly": true,
+                                                                                "type": "string",
+                                                                                "name": "jobState"
+                                                                            },
+                                                                            {
+                                                                                "type": "object",
+                                                                                "name": "providerSpecificDetails",
+                                                                                "props": [
+                                                                                    {
+                                                                                        "type": "string",
+                                                                                        "name": "instanceType",
+                                                                                        "required": true,
+                                                                                        "enum": {
+                                                                                            "items": [
+                                                                                                {
+                                                                                                    "value": "A2A"
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    }
+                                                                                ],
+                                                                                "discriminators": [
+                                                                                    {
+                                                                                        "property": "instanceType",
+                                                                                        "value": "A2A",
+                                                                                        "props": [
+                                                                                            {
+                                                                                                "type": "string",
+                                                                                                "name": "agentAutoUpdateStatus",
+                                                                                                "enum": {
+                                                                                                    "items": [
+                                                                                                        {
+                                                                                                            "value": "Disabled"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "value": "Enabled"
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "string",
+                                                                                                "name": "autoProtectionOfDataDisk",
+                                                                                                "enum": {
+                                                                                                    "items": [
+                                                                                                        {
+                                                                                                            "value": "Disabled"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "value": "Enabled"
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "string",
+                                                                                                "name": "automationAccountArmId"
+                                                                                            },
+                                                                                            {
+                                                                                                "default": {
+                                                                                                    "value": "RunAsAccount"
+                                                                                                },
+                                                                                                "type": "string",
+                                                                                                "name": "automationAccountAuthenticationType",
+                                                                                                "enum": {
+                                                                                                    "items": [
+                                                                                                        {
+                                                                                                            "value": "RunAsAccount"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "value": "SystemAssignedIdentity"
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "@DiskEncryptionInfo_read",
+                                                                                                "name": "diskEncryptionInfo"
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "string",
+                                                                                                "name": "fabricObjectId"
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "string",
+                                                                                                "name": "multiVmGroupId"
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "string",
+                                                                                                "name": "multiVmGroupName"
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "string",
+                                                                                                "name": "primaryLocation"
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "@StorageAccountCustomDetails_read",
+                                                                                                "name": "primaryStagingStorageAccount"
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "object",
+                                                                                                "name": "protectionProfile",
+                                                                                                "props": [
+                                                                                                    {
+                                                                                                        "type": "string",
+                                                                                                        "name": "resourceType",
+                                                                                                        "required": true,
+                                                                                                        "enum": {
+                                                                                                            "items": [
+                                                                                                                {
+                                                                                                                    "value": "Existing"
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "value": "New"
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    }
+                                                                                                ],
+                                                                                                "discriminators": [
+                                                                                                    {
+                                                                                                        "property": "resourceType",
+                                                                                                        "value": "Existing",
+                                                                                                        "props": [
+                                                                                                            {
+                                                                                                                "type": "string",
+                                                                                                                "name": "protectionProfileId",
+                                                                                                                "required": true
+                                                                                                            }
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "property": "resourceType",
+                                                                                                        "value": "New",
+                                                                                                        "props": [
+                                                                                                            {
+                                                                                                                "type": "integer32",
+                                                                                                                "name": "appConsistentFrequencyInMinutes"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "type": "integer32",
+                                                                                                                "name": "crashConsistentFrequencyInMinutes"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "type": "string",
+                                                                                                                "name": "multiVmSyncStatus",
+                                                                                                                "required": true,
+                                                                                                                "enum": {
+                                                                                                                    "items": [
+                                                                                                                        {
+                                                                                                                            "value": "Disable"
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                            "value": "Enable"
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "type": "string",
+                                                                                                                "name": "policyName",
+                                                                                                                "required": true
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "type": "integer32",
+                                                                                                                "name": "recoveryPointHistory"
+                                                                                                            }
+                                                                                                        ]
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "object",
+                                                                                                "name": "recoveryAvailabilitySet",
+                                                                                                "props": [
+                                                                                                    {
+                                                                                                        "type": "string",
+                                                                                                        "name": "resourceType",
+                                                                                                        "required": true,
+                                                                                                        "enum": {
+                                                                                                            "items": [
+                                                                                                                {
+                                                                                                                    "value": "Existing"
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    }
+                                                                                                ],
+                                                                                                "discriminators": [
+                                                                                                    {
+                                                                                                        "property": "resourceType",
+                                                                                                        "value": "Existing",
+                                                                                                        "props": [
+                                                                                                            {
+                                                                                                                "type": "string",
+                                                                                                                "name": "recoveryAvailabilitySetId"
+                                                                                                            }
+                                                                                                        ]
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "string",
+                                                                                                "name": "recoveryAvailabilityType",
+                                                                                                "required": true
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "string",
+                                                                                                "name": "recoveryAvailabilityZone"
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "@StorageAccountCustomDetails_read",
+                                                                                                "name": "recoveryBootDiagStorageAccount"
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "string",
+                                                                                                "name": "recoveryLocation"
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "object",
+                                                                                                "name": "recoveryProximityPlacementGroup",
+                                                                                                "props": [
+                                                                                                    {
+                                                                                                        "type": "string",
+                                                                                                        "name": "resourceType",
+                                                                                                        "required": true,
+                                                                                                        "enum": {
+                                                                                                            "items": [
+                                                                                                                {
+                                                                                                                    "value": "Existing"
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    }
+                                                                                                ],
+                                                                                                "discriminators": [
+                                                                                                    {
+                                                                                                        "property": "resourceType",
+                                                                                                        "value": "Existing",
+                                                                                                        "props": [
+                                                                                                            {
+                                                                                                                "type": "string",
+                                                                                                                "name": "recoveryProximityPlacementGroupId"
+                                                                                                            }
+                                                                                                        ]
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "string",
+                                                                                                "name": "recoveryResourceGroupId"
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "string",
+                                                                                                "name": "recoverySubscriptionId"
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "object",
+                                                                                                "name": "recoveryVirtualNetwork",
+                                                                                                "props": [
+                                                                                                    {
+                                                                                                        "type": "string",
+                                                                                                        "name": "resourceType",
+                                                                                                        "required": true,
+                                                                                                        "enum": {
+                                                                                                            "items": [
+                                                                                                                {
+                                                                                                                    "value": "Existing"
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "value": "New"
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    }
+                                                                                                ],
+                                                                                                "discriminators": [
+                                                                                                    {
+                                                                                                        "property": "resourceType",
+                                                                                                        "value": "Existing",
+                                                                                                        "props": [
+                                                                                                            {
+                                                                                                                "type": "string",
+                                                                                                                "name": "recoverySubnetName"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "type": "string",
+                                                                                                                "name": "recoveryVirtualNetworkId",
+                                                                                                                "required": true
+                                                                                                            }
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "property": "resourceType",
+                                                                                                        "value": "New",
+                                                                                                        "props": [
+                                                                                                            {
+                                                                                                                "type": "string",
+                                                                                                                "name": "recoveryVirtualNetworkName"
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "type": "string",
+                                                                                                                "name": "recoveryVirtualNetworkResourceGroupName"
+                                                                                                            }
+                                                                                                        ]
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "array<object>",
+                                                                                                "name": "vmDisks",
+                                                                                                "item": {
+                                                                                                    "type": "object",
+                                                                                                    "props": [
+                                                                                                        {
+                                                                                                            "type": "string",
+                                                                                                            "name": "diskUri",
+                                                                                                            "required": true
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "type": "@StorageAccountCustomDetails_read",
+                                                                                                            "name": "primaryStagingStorageAccountCustomInput"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "type": "object",
+                                                                                                            "name": "recoveryAzureStorageAccountCustomInput",
+                                                                                                            "props": [
+                                                                                                                {
+                                                                                                                    "type": "string",
+                                                                                                                    "name": "resourceType",
+                                                                                                                    "required": true,
+                                                                                                                    "enum": {
+                                                                                                                        "items": [
+                                                                                                                            {
+                                                                                                                                "value": "Existing"
+                                                                                                                            }
+                                                                                                                        ]
+                                                                                                                    }
+                                                                                                                }
+                                                                                                            ],
+                                                                                                            "discriminators": [
+                                                                                                                {
+                                                                                                                    "property": "resourceType",
+                                                                                                                    "value": "Existing",
+                                                                                                                    "props": [
+                                                                                                                        {
+                                                                                                                            "type": "string",
+                                                                                                                            "name": "azureStorageAccountId",
+                                                                                                                            "required": true
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ],
+                                                                                                            "cls": "StorageAccountCustomDetails_read"
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "array<object>",
+                                                                                                "name": "vmManagedDisks",
+                                                                                                "item": {
+                                                                                                    "type": "object",
+                                                                                                    "props": [
+                                                                                                        {
+                                                                                                            "type": "object",
+                                                                                                            "name": "diskEncryptionInfo",
+                                                                                                            "props": [
+                                                                                                                {
+                                                                                                                    "type": "object",
+                                                                                                                    "name": "diskEncryptionKeyInfo",
+                                                                                                                    "props": [
+                                                                                                                        {
+                                                                                                                            "type": "string",
+                                                                                                                            "name": "keyVaultResourceArmId"
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                            "type": "string",
+                                                                                                                            "name": "secretIdentifier"
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "type": "object",
+                                                                                                                    "name": "keyEncryptionKeyInfo",
+                                                                                                                    "props": [
+                                                                                                                        {
+                                                                                                                            "type": "string",
+                                                                                                                            "name": "keyIdentifier"
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                            "type": "string",
+                                                                                                                            "name": "keyVaultResourceArmId"
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ],
+                                                                                                            "cls": "DiskEncryptionInfo_read"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "type": "string",
+                                                                                                            "name": "diskId",
+                                                                                                            "required": true
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "type": "@StorageAccountCustomDetails_read",
+                                                                                                            "name": "primaryStagingStorageAccountCustomInput"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "type": "string",
+                                                                                                            "name": "recoveryDiskEncryptionSetId"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "type": "string",
+                                                                                                            "name": "recoveryReplicaDiskAccountType"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "type": "object",
+                                                                                                            "name": "recoveryResourceGroupCustomInput",
+                                                                                                            "props": [
+                                                                                                                {
+                                                                                                                    "type": "string",
+                                                                                                                    "name": "resourceType",
+                                                                                                                    "required": true,
+                                                                                                                    "enum": {
+                                                                                                                        "items": [
+                                                                                                                            {
+                                                                                                                                "value": "Existing"
+                                                                                                                            }
+                                                                                                                        ]
+                                                                                                                    }
+                                                                                                                }
+                                                                                                            ],
+                                                                                                            "discriminators": [
+                                                                                                                {
+                                                                                                                    "property": "resourceType",
+                                                                                                                    "value": "Existing",
+                                                                                                                    "props": [
+                                                                                                                        {
+                                                                                                                            "type": "string",
+                                                                                                                            "name": "recoveryResourceGroupId"
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "type": "string",
+                                                                                                            "name": "recoveryTargetDiskAccountType"
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "readOnly": true,
+                                                                        "type": "string",
+                                                                        "name": "type"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "type": "array",
+                            "ref": "$Instance.value",
+                            "clientFlatten": true,
+                            "nextLink": "$Instance.nextLink"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

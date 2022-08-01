@@ -1,0 +1,458 @@
+<?xml version='1.0' encoding='utf-8'?>
+<CodeGen plane="mgmt-plane">
+  <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationvcenters/{}" version="2021-10-01" swagger="mgmt-plane/recoveryservicessiterecovery/ResourceProviders/Microsoft.RecoveryServices/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuUmVjb3ZlcnlTZXJ2aWNlcy92YXVsdHMve3Jlc291cmNlTmFtZX0vcmVwbGljYXRpb25GYWJyaWNzL3tmYWJyaWNOYW1lfS9yZXBsaWNhdGlvbnZDZW50ZXJzL3t2Y2VudGVyTmFtZX0=/V/MjAyMS0xMC0wMQ=="/>
+  <commandGroup name="site-recovery fabric vcenter">
+    <command name="show" version="2021-10-01">
+      <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationvcenters/{}" version="2021-10-01" swagger="mgmt-plane/recoveryservicessiterecovery/ResourceProviders/Microsoft.RecoveryServices/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuUmVjb3ZlcnlTZXJ2aWNlcy92YXVsdHMve3Jlc291cmNlTmFtZX0vcmVwbGljYXRpb25GYWJyaWNzL3tmYWJyaWNOYW1lfS9yZXBsaWNhdGlvbnZDZW50ZXJzL3t2Y2VudGVyTmFtZX0=/V/MjAyMS0xMC0wMQ=="/>
+      <argGroup name="">
+        <arg type="string" var="$Path.fabricName" options="fabric-name" required="True" idPart="child_name_1">
+          <help short="Fabric name."/>
+        </arg>
+        <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
+        <arg type="string" var="$Path.resourceName" options="resource-name" required="True" idPart="name">
+          <help short="The name of the recovery services vault."/>
+        </arg>
+        <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
+        <arg type="string" var="$Path.vcenterName" options="vcenter-name name n" required="True" idPart="child_name_2">
+          <help short="vcenter name."/>
+        </arg>
+      </argGroup>
+      <operation operationId="ReplicationvCenters_Get">
+        <http path="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationFabrics/{fabricName}/replicationvCenters/{vcenterName}">
+          <request method="get">
+            <path>
+              <param type="string" name="fabricName" arg="$Path.fabricName" required="True"/>
+              <param type="string" name="resourceGroupName" arg="$Path.resourceGroupName" required="True"/>
+              <param type="string" name="resourceName" arg="$Path.resourceName" required="True"/>
+              <param type="string" name="subscriptionId" arg="$Path.subscriptionId" required="True"/>
+              <param type="string" name="vcenterName" arg="$Path.vcenterName" required="True"/>
+            </path>
+            <query>
+              <const readOnly="True" const="True" type="string" name="api-version" required="True">
+                <default value="&quot;2021-10-01&quot;"/>
+              </const>
+            </query>
+          </request>
+          <response statusCode="200">
+            <body>
+              <json var="$Instance">
+                <schema type="object">
+                  <prop readOnly="True" type="ResourceId" name="id">
+                    <format template="/subscriptions/{}/resourceGroups/{}/providers/Microsoft.RecoveryServices/vaults/{}/replicationFabrics/{}/replicationvCenters/{}"/>
+                  </prop>
+                  <prop type="ResourceLocation" name="location"/>
+                  <prop readOnly="True" type="string" name="name"/>
+                  <prop type="object" name="properties">
+                    <prop type="string" name="discoveryStatus"/>
+                    <prop type="string" name="fabricArmResourceName"/>
+                    <prop type="string" name="friendlyName"/>
+                    <prop type="array<object>" name="healthErrors">
+                      <item type="object">
+                        <prop type="dateTime" name="creationTimeUtc"/>
+                        <prop type="string" name="customerResolvability">
+                          <enum>
+                            <item value="&quot;Allowed&quot;"/>
+                            <item value="&quot;NotAllowed&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="string" name="entityId"/>
+                        <prop type="string" name="errorCategory"/>
+                        <prop type="string" name="errorCode"/>
+                        <prop type="string" name="errorId"/>
+                        <prop type="string" name="errorLevel"/>
+                        <prop type="string" name="errorMessage"/>
+                        <prop type="string" name="errorSource"/>
+                        <prop type="string" name="errorType"/>
+                        <prop type="array<object>" name="innerHealthErrors">
+                          <item type="object">
+                            <prop type="dateTime" name="creationTimeUtc"/>
+                            <prop type="string" name="customerResolvability">
+                              <enum>
+                                <item value="&quot;Allowed&quot;"/>
+                                <item value="&quot;NotAllowed&quot;"/>
+                              </enum>
+                            </prop>
+                            <prop type="string" name="entityId"/>
+                            <prop type="string" name="errorCategory"/>
+                            <prop type="string" name="errorCode"/>
+                            <prop type="string" name="errorId"/>
+                            <prop type="string" name="errorLevel"/>
+                            <prop type="string" name="errorMessage"/>
+                            <prop type="string" name="errorSource"/>
+                            <prop type="string" name="errorType"/>
+                            <prop type="string" name="possibleCauses"/>
+                            <prop type="string" name="recommendedAction"/>
+                            <prop type="string" name="recoveryProviderErrorMessage"/>
+                            <prop type="string" name="summaryMessage"/>
+                          </item>
+                        </prop>
+                        <prop type="string" name="possibleCauses"/>
+                        <prop type="string" name="recommendedAction"/>
+                        <prop type="string" name="recoveryProviderErrorMessage"/>
+                        <prop type="string" name="summaryMessage"/>
+                      </item>
+                    </prop>
+                    <prop type="string" name="infrastructureId"/>
+                    <prop type="string" name="internalId"/>
+                    <prop type="string" name="ipAddress"/>
+                    <prop type="dateTime" name="lastHeartbeat"/>
+                    <prop type="string" name="port"/>
+                    <prop type="string" name="processServerId"/>
+                    <prop type="string" name="runAsAccountId"/>
+                  </prop>
+                  <prop readOnly="True" type="string" name="type"/>
+                </schema>
+              </json>
+            </body>
+          </response>
+        </http>
+      </operation>
+      <output type="object" ref="$Instance" clientFlatten="True"/>
+    </command>
+    <command name="delete" version="2021-10-01" confirmation="Are you sure you want to perform this operation?">
+      <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationvcenters/{}" version="2021-10-01" swagger="mgmt-plane/recoveryservicessiterecovery/ResourceProviders/Microsoft.RecoveryServices/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuUmVjb3ZlcnlTZXJ2aWNlcy92YXVsdHMve3Jlc291cmNlTmFtZX0vcmVwbGljYXRpb25GYWJyaWNzL3tmYWJyaWNOYW1lfS9yZXBsaWNhdGlvbnZDZW50ZXJzL3t2Y2VudGVyTmFtZX0=/V/MjAyMS0xMC0wMQ=="/>
+      <argGroup name="">
+        <arg type="string" var="$Path.fabricName" options="fabric-name" required="True" idPart="child_name_1">
+          <help short="Fabric name."/>
+        </arg>
+        <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
+        <arg type="string" var="$Path.resourceName" options="resource-name" required="True" idPart="name">
+          <help short="The name of the recovery services vault."/>
+        </arg>
+        <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
+        <arg type="string" var="$Path.vcenterName" options="vcenter-name name n" required="True" idPart="child_name_2">
+          <help short="vcenter name."/>
+        </arg>
+      </argGroup>
+      <operation operationId="ReplicationvCenters_Delete">
+        <longRunning finalStateVia="azure-async-operation"/>
+        <http path="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationFabrics/{fabricName}/replicationvCenters/{vcenterName}">
+          <request method="delete">
+            <path>
+              <param type="string" name="fabricName" arg="$Path.fabricName" required="True"/>
+              <param type="string" name="resourceGroupName" arg="$Path.resourceGroupName" required="True"/>
+              <param type="string" name="resourceName" arg="$Path.resourceName" required="True"/>
+              <param type="string" name="subscriptionId" arg="$Path.subscriptionId" required="True"/>
+              <param type="string" name="vcenterName" arg="$Path.vcenterName" required="True"/>
+            </path>
+            <query>
+              <const readOnly="True" const="True" type="string" name="api-version" required="True">
+                <default value="&quot;2021-10-01&quot;"/>
+              </const>
+            </query>
+          </request>
+          <response statusCode="202"/>
+          <response statusCode="204"/>
+        </http>
+      </operation>
+    </command>
+    <command name="create" version="2021-10-01">
+      <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationvcenters/{}" version="2021-10-01" swagger="mgmt-plane/recoveryservicessiterecovery/ResourceProviders/Microsoft.RecoveryServices/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuUmVjb3ZlcnlTZXJ2aWNlcy92YXVsdHMve3Jlc291cmNlTmFtZX0vcmVwbGljYXRpb25GYWJyaWNzL3tmYWJyaWNOYW1lfS9yZXBsaWNhdGlvbnZDZW50ZXJzL3t2Y2VudGVyTmFtZX0=/V/MjAyMS0xMC0wMQ=="/>
+      <argGroup name="">
+        <arg type="string" var="$Path.fabricName" options="fabric-name" required="True" idPart="child_name_1">
+          <help short="Fabric name."/>
+        </arg>
+        <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
+        <arg type="string" var="$Path.resourceName" options="resource-name" required="True" idPart="name">
+          <help short="The name of the recovery services vault."/>
+        </arg>
+        <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
+        <arg type="string" var="$Path.vcenterName" options="vcenter-name name n" required="True" idPart="child_name_2">
+          <help short="vcenter name."/>
+        </arg>
+      </argGroup>
+      <argGroup name="Properties">
+        <arg type="string" var="$addVCenterRequest.properties.friendlyName" options="friendly-name" group="Properties">
+          <help short="The friendly name of the vCenter."/>
+        </arg>
+        <arg type="string" var="$addVCenterRequest.properties.ipAddress" options="ip-address" group="Properties">
+          <help short="The IP address of the vCenter to be discovered."/>
+        </arg>
+        <arg type="string" var="$addVCenterRequest.properties.port" options="port" group="Properties">
+          <help short="The port number for discovery."/>
+        </arg>
+        <arg type="string" var="$addVCenterRequest.properties.processServerId" options="process-server-id" group="Properties">
+          <help short="The process server Id from where the discovery is orchestrated."/>
+        </arg>
+        <arg type="string" var="$addVCenterRequest.properties.runAsAccountId" options="run-as-account-id" group="Properties">
+          <help short="The account Id which has privileges to discover the vCenter."/>
+        </arg>
+      </argGroup>
+      <operation operationId="ReplicationvCenters_Create">
+        <longRunning finalStateVia="azure-async-operation"/>
+        <http path="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationFabrics/{fabricName}/replicationvCenters/{vcenterName}">
+          <request method="put">
+            <path>
+              <param type="string" name="fabricName" arg="$Path.fabricName" required="True"/>
+              <param type="string" name="resourceGroupName" arg="$Path.resourceGroupName" required="True"/>
+              <param type="string" name="resourceName" arg="$Path.resourceName" required="True"/>
+              <param type="string" name="subscriptionId" arg="$Path.subscriptionId" required="True"/>
+              <param type="string" name="vcenterName" arg="$Path.vcenterName" required="True"/>
+            </path>
+            <query>
+              <const readOnly="True" const="True" type="string" name="api-version" required="True">
+                <default value="&quot;2021-10-01&quot;"/>
+              </const>
+            </query>
+            <body>
+              <json>
+                <schema type="object" name="addVCenterRequest" required="True" clientFlatten="True">
+                  <prop type="object" name="properties">
+                    <prop type="string" name="friendlyName" arg="$addVCenterRequest.properties.friendlyName"/>
+                    <prop type="string" name="ipAddress" arg="$addVCenterRequest.properties.ipAddress"/>
+                    <prop type="string" name="port" arg="$addVCenterRequest.properties.port"/>
+                    <prop type="string" name="processServerId" arg="$addVCenterRequest.properties.processServerId"/>
+                    <prop type="string" name="runAsAccountId" arg="$addVCenterRequest.properties.runAsAccountId"/>
+                  </prop>
+                </schema>
+              </json>
+            </body>
+          </request>
+          <response statusCode="200">
+            <body>
+              <json var="$Instance">
+                <schema type="object">
+                  <prop readOnly="True" type="ResourceId" name="id">
+                    <format template="/subscriptions/{}/resourceGroups/{}/providers/Microsoft.RecoveryServices/vaults/{}/replicationFabrics/{}/replicationvCenters/{}"/>
+                  </prop>
+                  <prop type="ResourceLocation" name="location"/>
+                  <prop readOnly="True" type="string" name="name"/>
+                  <prop type="object" name="properties">
+                    <prop type="string" name="discoveryStatus"/>
+                    <prop type="string" name="fabricArmResourceName"/>
+                    <prop type="string" name="friendlyName"/>
+                    <prop type="array<object>" name="healthErrors">
+                      <item type="object">
+                        <prop type="dateTime" name="creationTimeUtc"/>
+                        <prop type="string" name="customerResolvability">
+                          <enum>
+                            <item value="&quot;Allowed&quot;"/>
+                            <item value="&quot;NotAllowed&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="string" name="entityId"/>
+                        <prop type="string" name="errorCategory"/>
+                        <prop type="string" name="errorCode"/>
+                        <prop type="string" name="errorId"/>
+                        <prop type="string" name="errorLevel"/>
+                        <prop type="string" name="errorMessage"/>
+                        <prop type="string" name="errorSource"/>
+                        <prop type="string" name="errorType"/>
+                        <prop type="array<object>" name="innerHealthErrors">
+                          <item type="object">
+                            <prop type="dateTime" name="creationTimeUtc"/>
+                            <prop type="string" name="customerResolvability">
+                              <enum>
+                                <item value="&quot;Allowed&quot;"/>
+                                <item value="&quot;NotAllowed&quot;"/>
+                              </enum>
+                            </prop>
+                            <prop type="string" name="entityId"/>
+                            <prop type="string" name="errorCategory"/>
+                            <prop type="string" name="errorCode"/>
+                            <prop type="string" name="errorId"/>
+                            <prop type="string" name="errorLevel"/>
+                            <prop type="string" name="errorMessage"/>
+                            <prop type="string" name="errorSource"/>
+                            <prop type="string" name="errorType"/>
+                            <prop type="string" name="possibleCauses"/>
+                            <prop type="string" name="recommendedAction"/>
+                            <prop type="string" name="recoveryProviderErrorMessage"/>
+                            <prop type="string" name="summaryMessage"/>
+                          </item>
+                        </prop>
+                        <prop type="string" name="possibleCauses"/>
+                        <prop type="string" name="recommendedAction"/>
+                        <prop type="string" name="recoveryProviderErrorMessage"/>
+                        <prop type="string" name="summaryMessage"/>
+                      </item>
+                    </prop>
+                    <prop type="string" name="infrastructureId"/>
+                    <prop type="string" name="internalId"/>
+                    <prop type="string" name="ipAddress"/>
+                    <prop type="dateTime" name="lastHeartbeat"/>
+                    <prop type="string" name="port"/>
+                    <prop type="string" name="processServerId"/>
+                    <prop type="string" name="runAsAccountId"/>
+                  </prop>
+                  <prop readOnly="True" type="string" name="type"/>
+                </schema>
+              </json>
+            </body>
+          </response>
+          <response statusCode="202"/>
+        </http>
+      </operation>
+      <output type="object" ref="$Instance" clientFlatten="True"/>
+    </command>
+    <command name="update" version="2021-10-01">
+      <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationvcenters/{}" version="2021-10-01" swagger="mgmt-plane/recoveryservicessiterecovery/ResourceProviders/Microsoft.RecoveryServices/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuUmVjb3ZlcnlTZXJ2aWNlcy92YXVsdHMve3Jlc291cmNlTmFtZX0vcmVwbGljYXRpb25GYWJyaWNzL3tmYWJyaWNOYW1lfS9yZXBsaWNhdGlvbnZDZW50ZXJzL3t2Y2VudGVyTmFtZX0=/V/MjAyMS0xMC0wMQ=="/>
+      <argGroup name="">
+        <arg type="string" var="$Path.fabricName" options="fabric-name" required="True" idPart="child_name_1">
+          <help short="Fabric name."/>
+        </arg>
+        <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
+        <arg type="string" var="$Path.resourceName" options="resource-name" required="True" idPart="name">
+          <help short="The name of the recovery services vault."/>
+        </arg>
+        <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
+        <arg type="string" var="$Path.vcenterName" options="vcenter-name name n" required="True" idPart="child_name_2">
+          <help short="vcenter name."/>
+        </arg>
+      </argGroup>
+      <argGroup name="Properties">
+        <arg nullable="True" type="string" var="$addVCenterRequest.properties.friendlyName" options="friendly-name" group="Properties">
+          <help short="The friendly name of the vCenter."/>
+        </arg>
+        <arg nullable="True" type="string" var="$addVCenterRequest.properties.ipAddress" options="ip-address" group="Properties">
+          <help short="The IP address of the vCenter to be discovered."/>
+        </arg>
+        <arg nullable="True" type="string" var="$addVCenterRequest.properties.port" options="port" group="Properties">
+          <help short="The port number for discovery."/>
+        </arg>
+        <arg nullable="True" type="string" var="$addVCenterRequest.properties.processServerId" options="process-server-id" group="Properties">
+          <help short="The process server Id from where the discovery is orchestrated."/>
+        </arg>
+        <arg nullable="True" type="string" var="$addVCenterRequest.properties.runAsAccountId" options="run-as-account-id" group="Properties">
+          <help short="The account Id which has privileges to discover the vCenter."/>
+        </arg>
+      </argGroup>
+      <operation operationId="ReplicationvCenters_Get">
+        <http path="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationFabrics/{fabricName}/replicationvCenters/{vcenterName}">
+          <request method="get">
+            <path>
+              <param type="string" name="fabricName" arg="$Path.fabricName" required="True"/>
+              <param type="string" name="resourceGroupName" arg="$Path.resourceGroupName" required="True"/>
+              <param type="string" name="resourceName" arg="$Path.resourceName" required="True"/>
+              <param type="string" name="subscriptionId" arg="$Path.subscriptionId" required="True"/>
+              <param type="string" name="vcenterName" arg="$Path.vcenterName" required="True"/>
+            </path>
+            <query>
+              <const readOnly="True" const="True" type="string" name="api-version" required="True">
+                <default value="&quot;2021-10-01&quot;"/>
+              </const>
+            </query>
+          </request>
+          <response statusCode="200">
+            <body>
+              <json var="$Instance">
+                <schema type="object" cls="VCenter_read">
+                  <prop readOnly="True" type="ResourceId" name="id">
+                    <format template="/subscriptions/{}/resourceGroups/{}/providers/Microsoft.RecoveryServices/vaults/{}/replicationFabrics/{}/replicationvCenters/{}"/>
+                  </prop>
+                  <prop type="ResourceLocation" name="location"/>
+                  <prop readOnly="True" type="string" name="name"/>
+                  <prop type="object" name="properties">
+                    <prop type="string" name="discoveryStatus"/>
+                    <prop type="string" name="fabricArmResourceName"/>
+                    <prop type="string" name="friendlyName"/>
+                    <prop type="array<object>" name="healthErrors">
+                      <item type="object">
+                        <prop type="dateTime" name="creationTimeUtc"/>
+                        <prop type="string" name="customerResolvability">
+                          <enum>
+                            <item value="&quot;Allowed&quot;"/>
+                            <item value="&quot;NotAllowed&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="string" name="entityId"/>
+                        <prop type="string" name="errorCategory"/>
+                        <prop type="string" name="errorCode"/>
+                        <prop type="string" name="errorId"/>
+                        <prop type="string" name="errorLevel"/>
+                        <prop type="string" name="errorMessage"/>
+                        <prop type="string" name="errorSource"/>
+                        <prop type="string" name="errorType"/>
+                        <prop type="array<object>" name="innerHealthErrors">
+                          <item type="object">
+                            <prop type="dateTime" name="creationTimeUtc"/>
+                            <prop type="string" name="customerResolvability">
+                              <enum>
+                                <item value="&quot;Allowed&quot;"/>
+                                <item value="&quot;NotAllowed&quot;"/>
+                              </enum>
+                            </prop>
+                            <prop type="string" name="entityId"/>
+                            <prop type="string" name="errorCategory"/>
+                            <prop type="string" name="errorCode"/>
+                            <prop type="string" name="errorId"/>
+                            <prop type="string" name="errorLevel"/>
+                            <prop type="string" name="errorMessage"/>
+                            <prop type="string" name="errorSource"/>
+                            <prop type="string" name="errorType"/>
+                            <prop type="string" name="possibleCauses"/>
+                            <prop type="string" name="recommendedAction"/>
+                            <prop type="string" name="recoveryProviderErrorMessage"/>
+                            <prop type="string" name="summaryMessage"/>
+                          </item>
+                        </prop>
+                        <prop type="string" name="possibleCauses"/>
+                        <prop type="string" name="recommendedAction"/>
+                        <prop type="string" name="recoveryProviderErrorMessage"/>
+                        <prop type="string" name="summaryMessage"/>
+                      </item>
+                    </prop>
+                    <prop type="string" name="infrastructureId"/>
+                    <prop type="string" name="internalId"/>
+                    <prop type="string" name="ipAddress"/>
+                    <prop type="dateTime" name="lastHeartbeat"/>
+                    <prop type="string" name="port"/>
+                    <prop type="string" name="processServerId"/>
+                    <prop type="string" name="runAsAccountId"/>
+                  </prop>
+                  <prop readOnly="True" type="string" name="type"/>
+                </schema>
+              </json>
+            </body>
+          </response>
+        </http>
+      </operation>
+      <operation>
+        <instanceUpdate instance="$Instance">
+          <json>
+            <schema type="object" name="addVCenterRequest" required="True" clientFlatten="True">
+              <prop type="object" name="properties">
+                <prop type="string" name="friendlyName" arg="$addVCenterRequest.properties.friendlyName"/>
+                <prop type="string" name="ipAddress" arg="$addVCenterRequest.properties.ipAddress"/>
+                <prop type="string" name="port" arg="$addVCenterRequest.properties.port"/>
+                <prop type="string" name="processServerId" arg="$addVCenterRequest.properties.processServerId"/>
+                <prop type="string" name="runAsAccountId" arg="$addVCenterRequest.properties.runAsAccountId"/>
+              </prop>
+            </schema>
+          </json>
+        </instanceUpdate>
+      </operation>
+      <operation operationId="ReplicationvCenters_Create">
+        <longRunning finalStateVia="azure-async-operation"/>
+        <http path="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationFabrics/{fabricName}/replicationvCenters/{vcenterName}">
+          <request method="put">
+            <path>
+              <param type="string" name="fabricName" arg="$Path.fabricName" required="True"/>
+              <param type="string" name="resourceGroupName" arg="$Path.resourceGroupName" required="True"/>
+              <param type="string" name="resourceName" arg="$Path.resourceName" required="True"/>
+              <param type="string" name="subscriptionId" arg="$Path.subscriptionId" required="True"/>
+              <param type="string" name="vcenterName" arg="$Path.vcenterName" required="True"/>
+            </path>
+            <query>
+              <const readOnly="True" const="True" type="string" name="api-version" required="True">
+                <default value="&quot;2021-10-01&quot;"/>
+              </const>
+            </query>
+            <body>
+              <json ref="$Instance"/>
+            </body>
+          </request>
+          <response statusCode="200">
+            <body>
+              <json var="$Instance">
+                <schema type="@VCenter_read"/>
+              </json>
+            </body>
+          </response>
+          <response statusCode="202"/>
+        </http>
+      </operation>
+      <output type="object" ref="$Instance" clientFlatten="True"/>
+    </command>
+  </commandGroup>
+</CodeGen>

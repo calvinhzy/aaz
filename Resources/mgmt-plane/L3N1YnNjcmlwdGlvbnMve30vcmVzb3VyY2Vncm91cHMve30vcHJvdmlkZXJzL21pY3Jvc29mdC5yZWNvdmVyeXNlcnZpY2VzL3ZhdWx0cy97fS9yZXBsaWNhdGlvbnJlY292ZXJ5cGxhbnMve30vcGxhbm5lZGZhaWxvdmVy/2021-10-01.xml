@@ -1,0 +1,403 @@
+<?xml version='1.0' encoding='utf-8'?>
+<CodeGen plane="mgmt-plane">
+  <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationrecoveryplans/{}/plannedfailover" version="2021-10-01" swagger="mgmt-plane/recoveryservicessiterecovery/ResourceProviders/Microsoft.RecoveryServices/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuUmVjb3ZlcnlTZXJ2aWNlcy92YXVsdHMve3Jlc291cmNlTmFtZX0vcmVwbGljYXRpb25SZWNvdmVyeVBsYW5zL3tyZWNvdmVyeVBsYW5OYW1lfS9wbGFubmVkRmFpbG92ZXI=/V/MjAyMS0xMC0wMQ=="/>
+  <commandGroup name="site-recovery recovery-plan">
+    <command name="planned-failover" version="2021-10-01">
+      <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationrecoveryplans/{}/plannedfailover" version="2021-10-01" swagger="mgmt-plane/recoveryservicessiterecovery/ResourceProviders/Microsoft.RecoveryServices/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuUmVjb3ZlcnlTZXJ2aWNlcy92YXVsdHMve3Jlc291cmNlTmFtZX0vcmVwbGljYXRpb25SZWNvdmVyeVBsYW5zL3tyZWNvdmVyeVBsYW5OYW1lfS9wbGFubmVkRmFpbG92ZXI=/V/MjAyMS0xMC0wMQ=="/>
+      <argGroup name="">
+        <arg type="string" var="$Path.recoveryPlanName" options="recovery-plan-name" required="True">
+          <help short="Recovery plan name."/>
+        </arg>
+        <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True"/>
+        <arg type="string" var="$Path.resourceName" options="resource-name" required="True">
+          <help short="The name of the recovery services vault."/>
+        </arg>
+        <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True"/>
+      </argGroup>
+      <argGroup name="Properties">
+        <arg type="string" var="$input.properties.failoverDirection" options="failover-direction" required="True" group="Properties">
+          <help short="The failover direction."/>
+          <enum>
+            <item name="PrimaryToRecovery" value="&quot;PrimaryToRecovery&quot;"/>
+            <item name="RecoveryToPrimary" value="&quot;RecoveryToPrimary&quot;"/>
+          </enum>
+        </arg>
+        <arg type="array<object>" var="$input.properties.providerSpecificDetails" options="provider-specific-details" group="Properties">
+          <help short="The provider specific properties."/>
+          <item type="object">
+            <arg type="object" var="$input.properties.providerSpecificDetails[].A2A" options="a2-a">
+              <arg type="string" var="$input.properties.providerSpecificDetails[].A2A.cloudServiceCreationOption" options="cloud-service-creation-option">
+                <help short="A value indicating whether to use recovery cloud service for TFO or not."/>
+              </arg>
+              <arg type="string" var="$input.properties.providerSpecificDetails[].A2A.multiVmSyncPointOption" options="multi-vm-sync-point-option">
+                <help short="A value indicating whether multi VM sync enabled VMs should use multi VM sync points for failover."/>
+                <enum>
+                  <item name="UseMultiVmSyncRecoveryPoint" value="&quot;UseMultiVmSyncRecoveryPoint&quot;"/>
+                  <item name="UsePerVmRecoveryPoint" value="&quot;UsePerVmRecoveryPoint&quot;"/>
+                </enum>
+              </arg>
+              <arg type="string" var="$input.properties.providerSpecificDetails[].A2A.recoveryPointType" options="recovery-point-type" required="True">
+                <help short="The recovery point type."/>
+                <enum>
+                  <item name="Latest" value="&quot;Latest&quot;"/>
+                  <item name="LatestApplicationConsistent" value="&quot;LatestApplicationConsistent&quot;"/>
+                  <item name="LatestCrashConsistent" value="&quot;LatestCrashConsistent&quot;"/>
+                  <item name="LatestProcessed" value="&quot;LatestProcessed&quot;"/>
+                </enum>
+              </arg>
+            </arg>
+            <arg type="object" var="$input.properties.providerSpecificDetails[].HyperVReplicaAzure" options="hyper-v-replica-azure">
+              <arg type="string" var="$input.properties.providerSpecificDetails[].HyperVReplicaAzure.primaryKekCertificatePfx" options="primary-kek-certificate-pfx">
+                <help short="The primary KEK certificate PFX."/>
+              </arg>
+              <arg type="string" var="$input.properties.providerSpecificDetails[].HyperVReplicaAzure.recoveryPointType" options="recovery-point-type">
+                <help short="The recovery point type."/>
+                <enum>
+                  <item name="Latest" value="&quot;Latest&quot;"/>
+                  <item name="LatestApplicationConsistent" value="&quot;LatestApplicationConsistent&quot;"/>
+                  <item name="LatestProcessed" value="&quot;LatestProcessed&quot;"/>
+                </enum>
+              </arg>
+              <arg type="string" var="$input.properties.providerSpecificDetails[].HyperVReplicaAzure.secondaryKekCertificatePfx" options="secondary-kek-certificate-pfx">
+                <help short="The secondary KEK certificate PFX."/>
+              </arg>
+            </arg>
+            <arg type="object" var="$input.properties.providerSpecificDetails[].HyperVReplicaAzureFailback" options="hyper-v-replica-azure-failback">
+              <arg type="string" var="$input.properties.providerSpecificDetails[].HyperVReplicaAzureFailback.dataSyncOption" options="data-sync-option" required="True">
+                <help short="The data sync option."/>
+                <enum>
+                  <item name="ForDownTime" value="&quot;ForDownTime&quot;"/>
+                  <item name="ForSynchronization" value="&quot;ForSynchronization&quot;"/>
+                </enum>
+              </arg>
+              <arg type="string" var="$input.properties.providerSpecificDetails[].HyperVReplicaAzureFailback.recoveryVmCreationOption" options="recovery-vm-creation-option" required="True">
+                <help short="The ALR option."/>
+                <enum>
+                  <item name="CreateVmIfNotFound" value="&quot;CreateVmIfNotFound&quot;"/>
+                  <item name="NoAction" value="&quot;NoAction&quot;"/>
+                </enum>
+              </arg>
+            </arg>
+            <arg type="object" var="$input.properties.providerSpecificDetails[].InMage" options="in-mage">
+              <arg type="string" var="$input.properties.providerSpecificDetails[].InMage.recoveryPointType" options="recovery-point-type" required="True">
+                <help short="The recovery point type."/>
+                <enum>
+                  <item name="Custom" value="&quot;Custom&quot;"/>
+                  <item name="LatestTag" value="&quot;LatestTag&quot;"/>
+                  <item name="LatestTime" value="&quot;LatestTime&quot;"/>
+                </enum>
+              </arg>
+            </arg>
+            <arg type="object" var="$input.properties.providerSpecificDetails[].InMageAzureV2" options="in-mage-azure-v2">
+              <arg type="string" var="$input.properties.providerSpecificDetails[].InMageAzureV2.recoveryPointType" options="recovery-point-type" required="True">
+                <help short="The recovery point type."/>
+                <enum>
+                  <item name="Latest" value="&quot;Latest&quot;"/>
+                  <item name="LatestApplicationConsistent" value="&quot;LatestApplicationConsistent&quot;"/>
+                  <item name="LatestCrashConsistent" value="&quot;LatestCrashConsistent&quot;"/>
+                  <item name="LatestProcessed" value="&quot;LatestProcessed&quot;"/>
+                </enum>
+              </arg>
+              <arg type="string" var="$input.properties.providerSpecificDetails[].InMageAzureV2.useMultiVmSyncPoint" options="use-multi-vm-sync-point">
+                <help short="A value indicating whether multi VM sync enabled VMs should use multi VM sync points for failover."/>
+              </arg>
+            </arg>
+            <arg type="object" var="$input.properties.providerSpecificDetails[].InMageRcm" options="in-mage-rcm">
+              <arg type="string" var="$input.properties.providerSpecificDetails[].InMageRcm.recoveryPointType" options="recovery-point-type" required="True">
+                <help short="The recovery point type."/>
+                <enum>
+                  <item name="Latest" value="&quot;Latest&quot;"/>
+                  <item name="LatestApplicationConsistent" value="&quot;LatestApplicationConsistent&quot;"/>
+                  <item name="LatestCrashConsistent" value="&quot;LatestCrashConsistent&quot;"/>
+                  <item name="LatestProcessed" value="&quot;LatestProcessed&quot;"/>
+                </enum>
+              </arg>
+              <arg type="string" var="$input.properties.providerSpecificDetails[].InMageRcm.useMultiVmSyncPoint" options="use-multi-vm-sync-point">
+                <help short="A value indicating whether multi VM sync enabled VMs should use multi VM sync points for failover."/>
+              </arg>
+            </arg>
+            <arg type="object" var="$input.properties.providerSpecificDetails[].InMageRcmFailback" options="in-mage-rcm-failback">
+              <arg type="string" var="$input.properties.providerSpecificDetails[].InMageRcmFailback.recoveryPointType" options="recovery-point-type" required="True">
+                <help short="The recovery point type."/>
+                <enum>
+                  <item name="ApplicationConsistent" value="&quot;ApplicationConsistent&quot;"/>
+                  <item name="CrashConsistent" value="&quot;CrashConsistent&quot;"/>
+                </enum>
+              </arg>
+              <arg type="string" var="$input.properties.providerSpecificDetails[].InMageRcmFailback.useMultiVmSyncPoint" options="use-multi-vm-sync-point">
+                <help short="A value indicating whether multi VM sync enabled VMs should use multi VM sync points for failover."/>
+              </arg>
+            </arg>
+          </item>
+        </arg>
+      </argGroup>
+      <operation operationId="ReplicationRecoveryPlans_PlannedFailover">
+        <longRunning finalStateVia="azure-async-operation"/>
+        <http path="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationRecoveryPlans/{recoveryPlanName}/plannedFailover">
+          <request method="post">
+            <path>
+              <param type="string" name="recoveryPlanName" arg="$Path.recoveryPlanName" required="True"/>
+              <param type="string" name="resourceGroupName" arg="$Path.resourceGroupName" required="True"/>
+              <param type="string" name="resourceName" arg="$Path.resourceName" required="True"/>
+              <param type="string" name="subscriptionId" arg="$Path.subscriptionId" required="True"/>
+            </path>
+            <query>
+              <const readOnly="True" const="True" type="string" name="api-version" required="True">
+                <default value="&quot;2021-10-01&quot;"/>
+              </const>
+            </query>
+            <body>
+              <json>
+                <schema type="object" name="input" required="True" clientFlatten="True">
+                  <prop type="object" name="properties" required="True">
+                    <prop type="string" name="failoverDirection" arg="$input.properties.failoverDirection" required="True">
+                      <enum>
+                        <item value="&quot;PrimaryToRecovery&quot;"/>
+                        <item value="&quot;RecoveryToPrimary&quot;"/>
+                      </enum>
+                    </prop>
+                    <prop type="array<object>" name="providerSpecificDetails" arg="$input.properties.providerSpecificDetails">
+                      <item type="object">
+                        <prop type="string" name="instanceType" required="True">
+                          <enum>
+                            <item arg="$input.properties.providerSpecificDetails[].A2A" value="&quot;A2A&quot;"/>
+                            <item arg="$input.properties.providerSpecificDetails[].HyperVReplicaAzure" value="&quot;HyperVReplicaAzure&quot;"/>
+                            <item arg="$input.properties.providerSpecificDetails[].HyperVReplicaAzureFailback" value="&quot;HyperVReplicaAzureFailback&quot;"/>
+                            <item arg="$input.properties.providerSpecificDetails[].InMage" value="&quot;InMage&quot;"/>
+                            <item arg="$input.properties.providerSpecificDetails[].InMageAzureV2" value="&quot;InMageAzureV2&quot;"/>
+                            <item arg="$input.properties.providerSpecificDetails[].InMageRcm" value="&quot;InMageRcm&quot;"/>
+                            <item arg="$input.properties.providerSpecificDetails[].InMageRcmFailback" value="&quot;InMageRcmFailback&quot;"/>
+                          </enum>
+                        </prop>
+                        <discriminator property="instanceType" value="A2A">
+                          <prop type="string" name="cloudServiceCreationOption" arg="$input.properties.providerSpecificDetails[].A2A.cloudServiceCreationOption"/>
+                          <prop type="string" name="multiVmSyncPointOption" arg="$input.properties.providerSpecificDetails[].A2A.multiVmSyncPointOption">
+                            <enum>
+                              <item value="&quot;UseMultiVmSyncRecoveryPoint&quot;"/>
+                              <item value="&quot;UsePerVmRecoveryPoint&quot;"/>
+                            </enum>
+                          </prop>
+                          <prop type="string" name="recoveryPointType" arg="$input.properties.providerSpecificDetails[].A2A.recoveryPointType" required="True">
+                            <enum>
+                              <item value="&quot;Latest&quot;"/>
+                              <item value="&quot;LatestApplicationConsistent&quot;"/>
+                              <item value="&quot;LatestCrashConsistent&quot;"/>
+                              <item value="&quot;LatestProcessed&quot;"/>
+                            </enum>
+                          </prop>
+                        </discriminator>
+                        <discriminator property="instanceType" value="HyperVReplicaAzure">
+                          <prop type="string" name="primaryKekCertificatePfx" arg="$input.properties.providerSpecificDetails[].HyperVReplicaAzure.primaryKekCertificatePfx"/>
+                          <prop type="string" name="recoveryPointType" arg="$input.properties.providerSpecificDetails[].HyperVReplicaAzure.recoveryPointType">
+                            <enum>
+                              <item value="&quot;Latest&quot;"/>
+                              <item value="&quot;LatestApplicationConsistent&quot;"/>
+                              <item value="&quot;LatestProcessed&quot;"/>
+                            </enum>
+                          </prop>
+                          <prop type="string" name="secondaryKekCertificatePfx" arg="$input.properties.providerSpecificDetails[].HyperVReplicaAzure.secondaryKekCertificatePfx"/>
+                        </discriminator>
+                        <discriminator property="instanceType" value="HyperVReplicaAzureFailback">
+                          <prop type="string" name="dataSyncOption" arg="$input.properties.providerSpecificDetails[].HyperVReplicaAzureFailback.dataSyncOption" required="True">
+                            <enum>
+                              <item value="&quot;ForDownTime&quot;"/>
+                              <item value="&quot;ForSynchronization&quot;"/>
+                            </enum>
+                          </prop>
+                          <prop type="string" name="recoveryVmCreationOption" arg="$input.properties.providerSpecificDetails[].HyperVReplicaAzureFailback.recoveryVmCreationOption" required="True">
+                            <enum>
+                              <item value="&quot;CreateVmIfNotFound&quot;"/>
+                              <item value="&quot;NoAction&quot;"/>
+                            </enum>
+                          </prop>
+                        </discriminator>
+                        <discriminator property="instanceType" value="InMage">
+                          <prop type="string" name="recoveryPointType" arg="$input.properties.providerSpecificDetails[].InMage.recoveryPointType" required="True">
+                            <enum>
+                              <item value="&quot;Custom&quot;"/>
+                              <item value="&quot;LatestTag&quot;"/>
+                              <item value="&quot;LatestTime&quot;"/>
+                            </enum>
+                          </prop>
+                        </discriminator>
+                        <discriminator property="instanceType" value="InMageAzureV2">
+                          <prop type="string" name="recoveryPointType" arg="$input.properties.providerSpecificDetails[].InMageAzureV2.recoveryPointType" required="True">
+                            <enum>
+                              <item value="&quot;Latest&quot;"/>
+                              <item value="&quot;LatestApplicationConsistent&quot;"/>
+                              <item value="&quot;LatestCrashConsistent&quot;"/>
+                              <item value="&quot;LatestProcessed&quot;"/>
+                            </enum>
+                          </prop>
+                          <prop type="string" name="useMultiVmSyncPoint" arg="$input.properties.providerSpecificDetails[].InMageAzureV2.useMultiVmSyncPoint"/>
+                        </discriminator>
+                        <discriminator property="instanceType" value="InMageRcm">
+                          <prop type="string" name="recoveryPointType" arg="$input.properties.providerSpecificDetails[].InMageRcm.recoveryPointType" required="True">
+                            <enum>
+                              <item value="&quot;Latest&quot;"/>
+                              <item value="&quot;LatestApplicationConsistent&quot;"/>
+                              <item value="&quot;LatestCrashConsistent&quot;"/>
+                              <item value="&quot;LatestProcessed&quot;"/>
+                            </enum>
+                          </prop>
+                          <prop type="string" name="useMultiVmSyncPoint" arg="$input.properties.providerSpecificDetails[].InMageRcm.useMultiVmSyncPoint"/>
+                        </discriminator>
+                        <discriminator property="instanceType" value="InMageRcmFailback">
+                          <prop type="string" name="recoveryPointType" arg="$input.properties.providerSpecificDetails[].InMageRcmFailback.recoveryPointType" required="True">
+                            <enum>
+                              <item value="&quot;ApplicationConsistent&quot;"/>
+                              <item value="&quot;CrashConsistent&quot;"/>
+                            </enum>
+                          </prop>
+                          <prop type="string" name="useMultiVmSyncPoint" arg="$input.properties.providerSpecificDetails[].InMageRcmFailback.useMultiVmSyncPoint"/>
+                        </discriminator>
+                      </item>
+                    </prop>
+                  </prop>
+                </schema>
+              </json>
+            </body>
+          </request>
+          <response statusCode="200">
+            <body>
+              <json var="$Instance">
+                <schema type="object">
+                  <prop readOnly="True" type="ResourceId" name="id">
+                    <format template="/subscriptions/{}/resourceGroups/{}/providers/Microsoft.RecoveryServices/vaults/{}/replicationRecoveryPlans/{}"/>
+                  </prop>
+                  <prop type="ResourceLocation" name="location"/>
+                  <prop readOnly="True" type="string" name="name"/>
+                  <prop type="object" name="properties">
+                    <prop type="array<string>" name="allowedOperations">
+                      <item type="string"/>
+                    </prop>
+                    <prop type="object" name="currentScenario">
+                      <prop type="string" name="jobId"/>
+                      <prop type="string" name="scenarioName"/>
+                      <prop type="dateTime" name="startTime"/>
+                    </prop>
+                    <prop type="string" name="currentScenarioStatus"/>
+                    <prop type="string" name="currentScenarioStatusDescription"/>
+                    <prop type="string" name="failoverDeploymentModel"/>
+                    <prop type="string" name="friendlyName"/>
+                    <prop type="array<object>" name="groups">
+                      <item type="object">
+                        <prop type="array<@RecoveryPlanAction_read>" name="endGroupActions">
+                          <item type="@RecoveryPlanAction_read"/>
+                        </prop>
+                        <prop type="string" name="groupType" required="True">
+                          <enum>
+                            <item value="&quot;Boot&quot;"/>
+                            <item value="&quot;Failover&quot;"/>
+                            <item value="&quot;Shutdown&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="array<object>" name="replicationProtectedItems">
+                          <item type="object">
+                            <prop type="string" name="id"/>
+                            <prop type="string" name="virtualMachineId"/>
+                          </item>
+                        </prop>
+                        <prop type="array<object>" name="startGroupActions">
+                          <item type="object" cls="RecoveryPlanAction_read">
+                            <prop type="string" name="actionName" required="True"/>
+                            <prop type="object" name="customDetails" required="True">
+                              <prop type="string" name="instanceType" required="True">
+                                <enum>
+                                  <item value="&quot;AutomationRunbookActionDetails&quot;"/>
+                                  <item value="&quot;ManualActionDetails&quot;"/>
+                                  <item value="&quot;ScriptActionDetails&quot;"/>
+                                </enum>
+                              </prop>
+                              <discriminator property="instanceType" value="AutomationRunbookActionDetails">
+                                <prop type="string" name="fabricLocation" required="True">
+                                  <enum>
+                                    <item value="&quot;Primary&quot;"/>
+                                    <item value="&quot;Recovery&quot;"/>
+                                  </enum>
+                                </prop>
+                                <prop type="string" name="runbookId"/>
+                                <prop type="string" name="timeout"/>
+                              </discriminator>
+                              <discriminator property="instanceType" value="ManualActionDetails">
+                                <prop type="string" name="description"/>
+                              </discriminator>
+                              <discriminator property="instanceType" value="ScriptActionDetails">
+                                <prop type="string" name="fabricLocation" required="True">
+                                  <enum>
+                                    <item value="&quot;Primary&quot;"/>
+                                    <item value="&quot;Recovery&quot;"/>
+                                  </enum>
+                                </prop>
+                                <prop type="string" name="path" required="True"/>
+                                <prop type="string" name="timeout"/>
+                              </discriminator>
+                            </prop>
+                            <prop type="array<string>" name="failoverDirections" required="True">
+                              <item type="string">
+                                <enum>
+                                  <item value="&quot;PrimaryToRecovery&quot;"/>
+                                  <item value="&quot;RecoveryToPrimary&quot;"/>
+                                </enum>
+                              </item>
+                            </prop>
+                            <prop type="array<string>" name="failoverTypes" required="True">
+                              <item type="string">
+                                <enum>
+                                  <item value="&quot;CancelFailover&quot;"/>
+                                  <item value="&quot;ChangePit&quot;"/>
+                                  <item value="&quot;Commit&quot;"/>
+                                  <item value="&quot;CompleteMigration&quot;"/>
+                                  <item value="&quot;DisableProtection&quot;"/>
+                                  <item value="&quot;Failback&quot;"/>
+                                  <item value="&quot;FinalizeFailback&quot;"/>
+                                  <item value="&quot;PlannedFailover&quot;"/>
+                                  <item value="&quot;RepairReplication&quot;"/>
+                                  <item value="&quot;ReverseReplicate&quot;"/>
+                                  <item value="&quot;SwitchProtection&quot;"/>
+                                  <item value="&quot;TestFailover&quot;"/>
+                                  <item value="&quot;TestFailoverCleanup&quot;"/>
+                                  <item value="&quot;UnplannedFailover&quot;"/>
+                                </enum>
+                              </item>
+                            </prop>
+                          </item>
+                        </prop>
+                      </item>
+                    </prop>
+                    <prop type="dateTime" name="lastPlannedFailoverTime"/>
+                    <prop type="dateTime" name="lastTestFailoverTime"/>
+                    <prop type="dateTime" name="lastUnplannedFailoverTime"/>
+                    <prop type="string" name="primaryFabricFriendlyName"/>
+                    <prop type="string" name="primaryFabricId"/>
+                    <prop type="array<object>" name="providerSpecificDetails">
+                      <item type="object">
+                        <prop type="string" name="instanceType" required="True">
+                          <enum>
+                            <item value="&quot;A2A&quot;"/>
+                          </enum>
+                        </prop>
+                        <discriminator property="instanceType" value="A2A">
+                          <prop type="string" name="primaryZone"/>
+                          <prop type="string" name="recoveryZone"/>
+                        </discriminator>
+                      </item>
+                    </prop>
+                    <prop type="string" name="recoveryFabricFriendlyName"/>
+                    <prop type="string" name="recoveryFabricId"/>
+                    <prop type="array<string>" name="replicationProviders">
+                      <item type="string"/>
+                    </prop>
+                  </prop>
+                  <prop readOnly="True" type="string" name="type"/>
+                </schema>
+              </json>
+            </body>
+          </response>
+          <response statusCode="202"/>
+        </http>
+      </operation>
+      <output type="object" ref="$Instance" clientFlatten="True"/>
+    </command>
+  </commandGroup>
+</CodeGen>
