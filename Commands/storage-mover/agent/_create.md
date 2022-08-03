@@ -1,6 +1,6 @@
 # [Command] _storage-mover agent create_
 
-Creates an agent resource.
+Creates an Agent resource, which references a hybrid compute machine that can run jobs.
 
 ## Versions
 

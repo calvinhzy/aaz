@@ -29,24 +29,22 @@
                                     "type": "string",
                                     "var": "$Path.jobDefinitionName",
                                     "options": [
-                                        "d",
                                         "job-definition-name"
                                     ],
                                     "required": true,
                                     "help": {
-                                        "short": "The name of the job definition resource."
+                                        "short": "The name of the Job Definition resource."
                                     }
                                 },
                                 {
                                     "type": "string",
                                     "var": "$Path.projectName",
                                     "options": [
-                                        "p",
                                         "project-name"
                                     ],
                                     "required": true,
                                     "help": {
-                                        "short": "The name of the project resource."
+                                        "short": "The name of the Project resource."
                                     }
                                 },
                                 {
@@ -62,7 +60,6 @@
                                     "type": "string",
                                     "var": "$Path.storageMoverName",
                                     "options": [
-                                        "s",
                                         "storage-mover-name"
                                     ],
                                     "required": true,
@@ -202,11 +199,6 @@
                                                                             {
                                                                                 "readOnly": true,
                                                                                 "type": "integer64",
-                                                                                "name": "bytesDesignatedForTransfer"
-                                                                            },
-                                                                            {
-                                                                                "readOnly": true,
-                                                                                "type": "integer64",
                                                                                 "name": "bytesExcluded"
                                                                             },
                                                                             {
@@ -269,11 +261,6 @@
                                                                             {
                                                                                 "readOnly": true,
                                                                                 "type": "integer64",
-                                                                                "name": "itemsDesignatedForTransfer"
-                                                                            },
-                                                                            {
-                                                                                "readOnly": true,
-                                                                                "type": "integer64",
                                                                                 "name": "itemsExcluded"
                                                                             },
                                                                             {
@@ -304,7 +291,7 @@
                                                                             {
                                                                                 "readOnly": true,
                                                                                 "type": "dateTime",
-                                                                                "name": "lastUpdatedTime"
+                                                                                "name": "lastStatusUpdate"
                                                                             },
                                                                             {
                                                                                 "readOnly": true,

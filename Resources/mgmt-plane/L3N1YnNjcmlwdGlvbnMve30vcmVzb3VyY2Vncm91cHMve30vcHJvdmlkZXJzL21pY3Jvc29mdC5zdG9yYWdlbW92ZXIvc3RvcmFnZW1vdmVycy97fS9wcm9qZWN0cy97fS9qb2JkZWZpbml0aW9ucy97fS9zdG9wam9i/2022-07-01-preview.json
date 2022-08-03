@@ -29,25 +29,22 @@
                                     "type": "string",
                                     "var": "$Path.jobDefinitionName",
                                     "options": [
-                                        "n",
-                                        "name",
                                         "job-definition-name"
                                     ],
                                     "required": true,
                                     "help": {
-                                        "short": "The name of the job definition resource."
+                                        "short": "The name of the Job Definition resource."
                                     }
                                 },
                                 {
                                     "type": "string",
                                     "var": "$Path.projectName",
                                     "options": [
-                                        "p",
                                         "project-name"
                                     ],
                                     "required": true,
                                     "help": {
-                                        "short": "The name of the project resource."
+                                        "short": "The name of the Project resource."
                                     }
                                 },
                                 {
@@ -63,7 +60,6 @@
                                     "type": "string",
                                     "var": "$Path.storageMoverName",
                                     "options": [
-                                        "s",
                                         "storage-mover-name"
                                     ],
                                     "required": true,

@@ -1,6 +1,6 @@
 # [Command] _storage-mover project list_
 
-Lists all projects in a Storage Mover.
+Lists all Projects in a Storage Mover.
 
 ## Versions
 

@@ -6,10 +6,10 @@
       <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/projects/{}" version="2022-07-01-preview" swagger="mgmt-plane/storagemover/ResourceProviders/Microsoft.StorageMover/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuU3RvcmFnZU1vdmVyL3N0b3JhZ2VNb3ZlcnMve3N0b3JhZ2VNb3Zlck5hbWV9L3Byb2plY3RzL3twcm9qZWN0TmFtZX0=/V/MjAyMi0wNy0wMS1wcmV2aWV3"/>
       <argGroup name="">
         <arg type="string" var="$Path.projectName" options="project-name name n" required="True" idPart="child_name_1">
-          <help short="The name of the project resource."/>
+          <help short="The name of the Project resource."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
-        <arg type="string" var="$Path.storageMoverName" options="storage-mover-name s" required="True" idPart="name">
+        <arg type="string" var="$Path.storageMoverName" options="storage-mover-name" required="True" idPart="name">
           <help short="The name of the Storage Mover resource."/>
         </arg>
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
@@ -92,10 +92,10 @@
       <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/projects/{}" version="2022-07-01-preview" swagger="mgmt-plane/storagemover/ResourceProviders/Microsoft.StorageMover/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuU3RvcmFnZU1vdmVyL3N0b3JhZ2VNb3ZlcnMve3N0b3JhZ2VNb3Zlck5hbWV9L3Byb2plY3RzL3twcm9qZWN0TmFtZX0=/V/MjAyMi0wNy0wMS1wcmV2aWV3"/>
       <argGroup name="">
         <arg type="string" var="$Path.projectName" options="project-name name n" required="True" idPart="child_name_1">
-          <help short="The name of the project resource."/>
+          <help short="The name of the Project resource."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
-        <arg type="string" var="$Path.storageMoverName" options="storage-mover-name s" required="True" idPart="name">
+        <arg type="string" var="$Path.storageMoverName" options="storage-mover-name" required="True" idPart="name">
           <help short="The name of the Storage Mover resource."/>
         </arg>
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
@@ -121,6 +121,7 @@
               </const>
             </query>
           </request>
+          <response statusCode="200"/>
           <response statusCode="202"/>
           <response statusCode="204"/>
           <response isError="True">
@@ -137,17 +138,17 @@
       <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/projects/{}" version="2022-07-01-preview" swagger="mgmt-plane/storagemover/ResourceProviders/Microsoft.StorageMover/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuU3RvcmFnZU1vdmVyL3N0b3JhZ2VNb3ZlcnMve3N0b3JhZ2VNb3Zlck5hbWV9L3Byb2plY3RzL3twcm9qZWN0TmFtZX0=/V/MjAyMi0wNy0wMS1wcmV2aWV3"/>
       <argGroup name="">
         <arg type="string" var="$Path.projectName" options="project-name name n" required="True" idPart="child_name_1">
-          <help short="The name of the project resource."/>
+          <help short="The name of the Project resource."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
-        <arg type="string" var="$Path.storageMoverName" options="storage-mover-name s" required="True" idPart="name">
+        <arg type="string" var="$Path.storageMoverName" options="storage-mover-name" required="True" idPart="name">
           <help short="The name of the Storage Mover resource."/>
         </arg>
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
       </argGroup>
       <argGroup name="Properties">
         <arg type="string" var="$project.properties.description" options="description" group="Properties">
-          <help short="A description for the project."/>
+          <help short="A description for the Project."/>
         </arg>
       </argGroup>
       <operation operationId="Projects_CreateOrUpdate">
@@ -237,17 +238,17 @@
       <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/projects/{}" version="2022-07-01-preview" swagger="mgmt-plane/storagemover/ResourceProviders/Microsoft.StorageMover/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuU3RvcmFnZU1vdmVyL3N0b3JhZ2VNb3ZlcnMve3N0b3JhZ2VNb3Zlck5hbWV9L3Byb2plY3RzL3twcm9qZWN0TmFtZX0=/V/MjAyMi0wNy0wMS1wcmV2aWV3"/>
       <argGroup name="">
         <arg type="string" var="$Path.projectName" options="project-name name n" required="True" idPart="child_name_1">
-          <help short="The name of the project resource."/>
+          <help short="The name of the Project resource."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
-        <arg type="string" var="$Path.storageMoverName" options="storage-mover-name s" required="True" idPart="name">
+        <arg type="string" var="$Path.storageMoverName" options="storage-mover-name" required="True" idPart="name">
           <help short="The name of the Storage Mover resource."/>
         </arg>
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
       </argGroup>
       <argGroup name="Properties">
         <arg nullable="True" type="string" var="$project.properties.description" options="description" group="Properties">
-          <help short="A description for the project."/>
+          <help short="A description for the Project."/>
         </arg>
       </argGroup>
       <operation operationId="Projects_Get">

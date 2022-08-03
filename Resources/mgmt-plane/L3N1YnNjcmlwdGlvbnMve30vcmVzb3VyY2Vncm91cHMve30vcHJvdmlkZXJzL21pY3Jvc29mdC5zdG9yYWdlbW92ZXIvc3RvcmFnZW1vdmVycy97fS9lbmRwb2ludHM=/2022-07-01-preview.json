@@ -38,7 +38,6 @@
                                     "type": "string",
                                     "var": "$Path.storageMoverName",
                                     "options": [
-                                        "s",
                                         "storage-mover-name"
                                     ],
                                     "required": true,
@@ -152,6 +151,7 @@
                                                                         "readOnly": true,
                                                                         "type": "object",
                                                                         "name": "properties",
+                                                                        "required": true,
                                                                         "props": [
                                                                             {
                                                                                 "readOnly": true,
@@ -213,6 +213,12 @@
                                                                                     {
                                                                                         "readOnly": true,
                                                                                         "type": "string",
+                                                                                        "name": "export",
+                                                                                        "required": true
+                                                                                    },
+                                                                                    {
+                                                                                        "readOnly": true,
+                                                                                        "type": "string",
                                                                                         "name": "host",
                                                                                         "required": true
                                                                                     },
@@ -233,12 +239,6 @@
                                                                                                 }
                                                                                             ]
                                                                                         }
-                                                                                    },
-                                                                                    {
-                                                                                        "readOnly": true,
-                                                                                        "type": "string",
-                                                                                        "name": "remoteExport",
-                                                                                        "required": true
                                                                                     }
                                                                                 ]
                                                                             }

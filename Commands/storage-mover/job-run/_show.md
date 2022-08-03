@@ -1,6 +1,6 @@
 # [Command] _storage-mover job-run show_
 
-Gets a job run resource.
+Gets a Job Run resource.
 
 ## Versions
 

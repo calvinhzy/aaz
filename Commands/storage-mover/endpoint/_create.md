@@ -1,6 +1,6 @@
 # [Command] _storage-mover endpoint create_
 
-Creates an endpoint resource.
+Creates an Endpoint resource, which represents a data transfer source or destination.
 
 ## Versions
 

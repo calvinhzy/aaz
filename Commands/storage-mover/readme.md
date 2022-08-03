@@ -5,19 +5,19 @@ Manage top-level Storage Mover resource.
 ## Subgroups
 
 - [agent](/Commands/storage-mover/agent/readme.md)
-: Manage agent resource, which references a hybrid compute machine that can run jobs.
+: Manage Agent resource, which references a hybrid compute machine that can run jobs.
 
 - [endpoint](/Commands/storage-mover/endpoint/readme.md)
-: Manage endpoint resource, which represents a data transfer source or destination.
+: Manage Endpoint resource, which represents a data transfer source or destination.
 
 - [job-definition](/Commands/storage-mover/job-definition/readme.md)
-: Manage job definition resource, which contains configuration for a single unit of managed data transfer.
+: Manage Job Definition resource, which contains configuration for a single unit of managed data transfer.
 
 - [job-run](/Commands/storage-mover/job-run/readme.md)
-: Manage job run resource.
+: Manage Job Run resource.
 
 - [project](/Commands/storage-mover/project/readme.md)
-: Manage project resource, which is a logical grouping of related jobs.
+: Manage Project resource, which is a logical grouping of related jobs.
 
 ## Commands
 

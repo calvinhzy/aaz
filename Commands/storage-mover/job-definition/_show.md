@@ -1,6 +1,6 @@
 # [Command] _storage-mover job-definition show_
 
-Gets a job definition resource.
+Gets a Job Definition resource.
 
 ## Versions
 

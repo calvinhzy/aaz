@@ -1,6 +1,6 @@
 # [Command] _storage-mover endpoint list_
 
-Lists all endpoints in a Storage Mover.
+Lists all Endpoints in a Storage Mover.
 
 ## Versions
 

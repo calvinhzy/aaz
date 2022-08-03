@@ -6,10 +6,10 @@
       <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/endpoints/{}" version="2022-07-01-preview" swagger="mgmt-plane/storagemover/ResourceProviders/Microsoft.StorageMover/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuU3RvcmFnZU1vdmVyL3N0b3JhZ2VNb3ZlcnMve3N0b3JhZ2VNb3Zlck5hbWV9L2VuZHBvaW50cy97ZW5kcG9pbnROYW1lfQ==/V/MjAyMi0wNy0wMS1wcmV2aWV3"/>
       <argGroup name="">
         <arg type="string" var="$Path.endpointName" options="endpoint-name name n" required="True" idPart="child_name_1">
-          <help short="The name of the endpoint resource."/>
+          <help short="The name of the Endpoint resource."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
-        <arg type="string" var="$Path.storageMoverName" options="storage-mover-name s" required="True" idPart="name">
+        <arg type="string" var="$Path.storageMoverName" options="storage-mover-name" required="True" idPart="name">
           <help short="The name of the Storage Mover resource."/>
         </arg>
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
@@ -42,7 +42,7 @@
                     <format template="/subscriptions/{}/resourceGroups/{}/providers/Microsoft.StorageMover/storageMovers/{}/endpoints/{}"/>
                   </prop>
                   <prop readOnly="True" type="string" name="name"/>
-                  <prop type="object" name="properties">
+                  <prop type="object" name="properties" required="True">
                     <prop type="string" name="description"/>
                     <prop type="string" name="endpointType" required="True">
                       <enum>
@@ -60,6 +60,7 @@
                       <prop type="string" name="storageAccountResourceId" required="True"/>
                     </discriminator>
                     <discriminator property="endpointType" value="NfsMount">
+                      <prop type="string" name="export" required="True"/>
                       <prop type="string" name="host" required="True"/>
                       <prop type="string" name="nfsVersion">
                         <enum>
@@ -68,7 +69,6 @@
                           <item value="&quot;NFSv4&quot;"/>
                         </enum>
                       </prop>
-                      <prop type="string" name="remoteExport" required="True"/>
                     </discriminator>
                   </prop>
                   <prop readOnly="True" type="object" name="systemData">
@@ -113,10 +113,10 @@
       <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/endpoints/{}" version="2022-07-01-preview" swagger="mgmt-plane/storagemover/ResourceProviders/Microsoft.StorageMover/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuU3RvcmFnZU1vdmVyL3N0b3JhZ2VNb3ZlcnMve3N0b3JhZ2VNb3Zlck5hbWV9L2VuZHBvaW50cy97ZW5kcG9pbnROYW1lfQ==/V/MjAyMi0wNy0wMS1wcmV2aWV3"/>
       <argGroup name="">
         <arg type="string" var="$Path.endpointName" options="endpoint-name name n" required="True" idPart="child_name_1">
-          <help short="The name of the endpoint resource."/>
+          <help short="The name of the Endpoint resource."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
-        <arg type="string" var="$Path.storageMoverName" options="storage-mover-name s" required="True" idPart="name">
+        <arg type="string" var="$Path.storageMoverName" options="storage-mover-name" required="True" idPart="name">
           <help short="The name of the Storage Mover resource."/>
         </arg>
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
@@ -142,6 +142,7 @@
               </const>
             </query>
           </request>
+          <response statusCode="200"/>
           <response statusCode="202"/>
           <response statusCode="204"/>
           <response isError="True">
@@ -158,10 +159,10 @@
       <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/endpoints/{}" version="2022-07-01-preview" swagger="mgmt-plane/storagemover/ResourceProviders/Microsoft.StorageMover/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuU3RvcmFnZU1vdmVyL3N0b3JhZ2VNb3ZlcnMve3N0b3JhZ2VNb3Zlck5hbWV9L2VuZHBvaW50cy97ZW5kcG9pbnROYW1lfQ==/V/MjAyMi0wNy0wMS1wcmV2aWV3"/>
       <argGroup name="">
         <arg type="string" var="$Path.endpointName" options="endpoint-name name n" required="True" idPart="child_name_1">
-          <help short="The name of the endpoint resource."/>
+          <help short="The name of the Endpoint resource."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
-        <arg type="string" var="$Path.storageMoverName" options="storage-mover-name s" required="True" idPart="name">
+        <arg type="string" var="$Path.storageMoverName" options="storage-mover-name" required="True" idPart="name">
           <help short="The name of the Storage Mover resource."/>
         </arg>
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
@@ -176,6 +177,9 @@
           </arg>
         </arg>
         <arg type="object" var="$endpoint.properties.NfsMount" options="nfs-mount" group="Properties">
+          <arg type="string" var="$endpoint.properties.NfsMount.export" options="export" required="True">
+            <help short="The directory being exported from the server."/>
+          </arg>
           <arg type="string" var="$endpoint.properties.NfsMount.host" options="host" required="True">
             <help short="The host name or IP address of the server exporting the file system."/>
           </arg>
@@ -187,12 +191,9 @@
               <item name="NFSv4" value="&quot;NFSv4&quot;"/>
             </enum>
           </arg>
-          <arg type="string" var="$endpoint.properties.NfsMount.remoteExport" options="remote-export" required="True">
-            <help short="The directory being exported from the server."/>
-          </arg>
         </arg>
         <arg type="string" var="$endpoint.properties.description" options="description" group="Properties">
-          <help short="A description for the endpoint."/>
+          <help short="A description for the Endpoint."/>
         </arg>
       </argGroup>
       <operation operationId="Endpoints_CreateOrUpdate">
@@ -217,7 +218,7 @@
             <body>
               <json>
                 <schema type="object" name="endpoint" required="True" clientFlatten="True">
-                  <prop type="object" name="properties">
+                  <prop type="object" name="properties" required="True">
                     <prop type="string" name="description" arg="$endpoint.properties.description"/>
                     <prop type="string" name="endpointType" required="True">
                       <enum>
@@ -230,6 +231,7 @@
                       <prop type="string" name="storageAccountResourceId" arg="$endpoint.properties.AzureStorageBlobContainer.storageAccountResourceId" required="True"/>
                     </discriminator>
                     <discriminator property="endpointType" value="NfsMount">
+                      <prop type="string" name="export" arg="$endpoint.properties.NfsMount.export" required="True"/>
                       <prop type="string" name="host" arg="$endpoint.properties.NfsMount.host" required="True"/>
                       <prop type="string" name="nfsVersion" arg="$endpoint.properties.NfsMount.nfsVersion">
                         <enum>
@@ -238,7 +240,6 @@
                           <item value="&quot;NFSv4&quot;"/>
                         </enum>
                       </prop>
-                      <prop type="string" name="remoteExport" arg="$endpoint.properties.NfsMount.remoteExport" required="True"/>
                     </discriminator>
                   </prop>
                 </schema>
@@ -253,7 +254,7 @@
                     <format template="/subscriptions/{}/resourceGroups/{}/providers/Microsoft.StorageMover/storageMovers/{}/endpoints/{}"/>
                   </prop>
                   <prop readOnly="True" type="string" name="name"/>
-                  <prop type="object" name="properties">
+                  <prop type="object" name="properties" required="True">
                     <prop type="string" name="description"/>
                     <prop type="string" name="endpointType" required="True">
                       <enum>
@@ -271,6 +272,7 @@
                       <prop type="string" name="storageAccountResourceId" required="True"/>
                     </discriminator>
                     <discriminator property="endpointType" value="NfsMount">
+                      <prop type="string" name="export" required="True"/>
                       <prop type="string" name="host" required="True"/>
                       <prop type="string" name="nfsVersion">
                         <enum>
@@ -279,7 +281,6 @@
                           <item value="&quot;NFSv4&quot;"/>
                         </enum>
                       </prop>
-                      <prop type="string" name="remoteExport" required="True"/>
                     </discriminator>
                   </prop>
                   <prop readOnly="True" type="object" name="systemData">
@@ -324,10 +325,10 @@
       <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/endpoints/{}" version="2022-07-01-preview" swagger="mgmt-plane/storagemover/ResourceProviders/Microsoft.StorageMover/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuU3RvcmFnZU1vdmVyL3N0b3JhZ2VNb3ZlcnMve3N0b3JhZ2VNb3Zlck5hbWV9L2VuZHBvaW50cy97ZW5kcG9pbnROYW1lfQ==/V/MjAyMi0wNy0wMS1wcmV2aWV3"/>
       <argGroup name="">
         <arg type="string" var="$Path.endpointName" options="endpoint-name name n" required="True" idPart="child_name_1">
-          <help short="The name of the endpoint resource."/>
+          <help short="The name of the Endpoint resource."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
-        <arg type="string" var="$Path.storageMoverName" options="storage-mover-name s" required="True" idPart="name">
+        <arg type="string" var="$Path.storageMoverName" options="storage-mover-name" required="True" idPart="name">
           <help short="The name of the Storage Mover resource."/>
         </arg>
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
@@ -342,15 +343,15 @@
           </arg>
         </arg>
         <arg type="object" var="$endpoint.properties.NfsMount" options="nfs-mount" group="Properties">
+          <arg type="string" var="$endpoint.properties.NfsMount.export" options="export">
+            <help short="The directory being exported from the server."/>
+          </arg>
           <arg type="string" var="$endpoint.properties.NfsMount.host" options="host">
             <help short="The host name or IP address of the server exporting the file system."/>
           </arg>
-          <arg type="string" var="$endpoint.properties.NfsMount.remoteExport" options="remote-export">
-            <help short="The directory being exported from the server."/>
-          </arg>
         </arg>
         <arg nullable="True" type="string" var="$endpoint.properties.description" options="description" group="Properties">
-          <help short="A description for the endpoint."/>
+          <help short="A description for the Endpoint."/>
         </arg>
       </argGroup>
       <operation operationId="Endpoints_Get">
@@ -381,7 +382,7 @@
                     <format template="/subscriptions/{}/resourceGroups/{}/providers/Microsoft.StorageMover/storageMovers/{}/endpoints/{}"/>
                   </prop>
                   <prop readOnly="True" type="string" name="name"/>
-                  <prop type="object" name="properties">
+                  <prop type="object" name="properties" required="True">
                     <prop type="string" name="description"/>
                     <prop type="string" name="endpointType" required="True">
                       <enum>
@@ -399,6 +400,7 @@
                       <prop type="string" name="storageAccountResourceId" required="True"/>
                     </discriminator>
                     <discriminator property="endpointType" value="NfsMount">
+                      <prop type="string" name="export" required="True"/>
                       <prop type="string" name="host" required="True"/>
                       <prop type="string" name="nfsVersion">
                         <enum>
@@ -407,7 +409,6 @@
                           <item value="&quot;NFSv4&quot;"/>
                         </enum>
                       </prop>
-                      <prop type="string" name="remoteExport" required="True"/>
                     </discriminator>
                   </prop>
                   <prop readOnly="True" type="object" name="systemData">
@@ -450,7 +451,7 @@
         <instanceUpdate instance="$Instance">
           <json>
             <schema type="object" name="endpoint" required="True" clientFlatten="True">
-              <prop type="object" name="properties">
+              <prop type="object" name="properties" required="True">
                 <prop type="string" name="description" arg="$endpoint.properties.description"/>
                 <prop type="string" name="endpointType" required="True">
                   <enum>
@@ -463,8 +464,8 @@
                   <prop type="string" name="storageAccountResourceId" arg="$endpoint.properties.AzureStorageBlobContainer.storageAccountResourceId" required="True"/>
                 </discriminator>
                 <discriminator property="endpointType" value="NfsMount">
+                  <prop type="string" name="export" arg="$endpoint.properties.NfsMount.export" required="True"/>
                   <prop type="string" name="host" arg="$endpoint.properties.NfsMount.host" required="True"/>
-                  <prop type="string" name="remoteExport" arg="$endpoint.properties.NfsMount.remoteExport" required="True"/>
                 </discriminator>
               </prop>
             </schema>

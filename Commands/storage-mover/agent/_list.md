@@ -1,6 +1,6 @@
 # [Command] _storage-mover agent list_
 
-Lists all agents in a Storage Mover.
+Lists all Agents in a Storage Mover.
 
 ## Versions
 

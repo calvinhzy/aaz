@@ -6,7 +6,7 @@
       <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/agents" version="2022-07-01-preview" swagger="mgmt-plane/storagemover/ResourceProviders/Microsoft.StorageMover/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuU3RvcmFnZU1vdmVyL3N0b3JhZ2VNb3ZlcnMve3N0b3JhZ2VNb3Zlck5hbWV9L2FnZW50cw==/V/MjAyMi0wNy0wMS1wcmV2aWV3"/>
       <argGroup name="">
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True"/>
-        <arg type="string" var="$Path.storageMoverName" options="storage-mover-name s" required="True">
+        <arg type="string" var="$Path.storageMoverName" options="storage-mover-name" required="True">
           <help short="The name of the Storage Mover resource."/>
         </arg>
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True"/>
@@ -41,15 +41,15 @@
                         <format template="/subscriptions/{}/resourceGroups/{}/providers/Microsoft.StorageMover/storageMovers/{}/agents/{}"/>
                       </prop>
                       <prop readOnly="True" type="string" name="name"/>
-                      <prop readOnly="True" type="object" name="properties" clientFlatten="True">
+                      <prop readOnly="True" type="object" name="properties" required="True" clientFlatten="True">
                         <prop readOnly="True" type="string" name="agentStatus">
                           <enum>
-                            <item value="&quot;Deprovisioning&quot;"/>
                             <item value="&quot;Executing&quot;"/>
                             <item value="&quot;Offline&quot;"/>
                             <item value="&quot;Online&quot;"/>
-                            <item value="&quot;Provisioning&quot;"/>
+                            <item value="&quot;Registering&quot;"/>
                             <item value="&quot;RequiresAttention&quot;"/>
+                            <item value="&quot;Unregistering&quot;"/>
                           </enum>
                         </prop>
                         <prop readOnly="True" type="string" name="agentVersion"/>
@@ -69,6 +69,7 @@
                             <item value="&quot;Succeeded&quot;"/>
                           </enum>
                         </prop>
+                        <prop readOnly="True" type="integer64" name="uptimeInSeconds"/>
                       </prop>
                       <prop readOnly="True" type="object" name="systemData">
                         <prop readOnly="True" type="dateTime" name="createdAt"/>

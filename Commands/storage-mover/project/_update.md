@@ -1,6 +1,6 @@
 # [Command] _storage-mover project update_
 
-Updates a project resource.
+Updates a Project resource, which is a logical grouping of related jobs.
 
 ## Versions
 

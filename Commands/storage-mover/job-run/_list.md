@@ -1,6 +1,6 @@
 # [Command] _storage-mover job-run list_
 
-Lists all job runs in a job definition.
+Lists all Job Runs in a Job Definition.
 
 ## Versions
 

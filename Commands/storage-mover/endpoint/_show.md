@@ -1,6 +1,6 @@
 # [Command] _storage-mover endpoint show_
 
-Gets an endpoint resource.
+Gets an Endpoint resource.
 
 ## Versions
 

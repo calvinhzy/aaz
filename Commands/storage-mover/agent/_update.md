@@ -1,6 +1,6 @@
 # [Command] _storage-mover agent update_
 
-Updates an agent resource.
+Updates an Agent resource, which references a hybrid compute machine that can run jobs.
 
 ## Versions
 

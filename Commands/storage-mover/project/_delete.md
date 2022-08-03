@@ -1,6 +1,6 @@
 # [Command] _storage-mover project delete_
 
-Deletes a project resource.
+Deletes a Project resource.
 
 ## Versions
 

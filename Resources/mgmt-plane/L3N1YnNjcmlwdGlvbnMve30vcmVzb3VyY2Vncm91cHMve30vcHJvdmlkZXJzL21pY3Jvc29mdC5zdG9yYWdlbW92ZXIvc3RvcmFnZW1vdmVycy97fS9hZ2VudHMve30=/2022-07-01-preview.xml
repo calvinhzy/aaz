@@ -6,10 +6,10 @@
       <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/agents/{}" version="2022-07-01-preview" swagger="mgmt-plane/storagemover/ResourceProviders/Microsoft.StorageMover/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuU3RvcmFnZU1vdmVyL3N0b3JhZ2VNb3ZlcnMve3N0b3JhZ2VNb3Zlck5hbWV9L2FnZW50cy97YWdlbnROYW1lfQ==/V/MjAyMi0wNy0wMS1wcmV2aWV3"/>
       <argGroup name="">
         <arg type="string" var="$Path.agentName" options="agent-name name n" required="True" idPart="child_name_1">
-          <help short="The name of the agent resource."/>
+          <help short="The name of the Agent resource."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
-        <arg type="string" var="$Path.storageMoverName" options="storage-mover-name s" required="True" idPart="name">
+        <arg type="string" var="$Path.storageMoverName" options="storage-mover-name" required="True" idPart="name">
           <help short="The name of the Storage Mover resource."/>
         </arg>
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
@@ -42,15 +42,15 @@
                     <format template="/subscriptions/{}/resourceGroups/{}/providers/Microsoft.StorageMover/storageMovers/{}/agents/{}"/>
                   </prop>
                   <prop readOnly="True" type="string" name="name"/>
-                  <prop type="object" name="properties" clientFlatten="True">
+                  <prop type="object" name="properties" required="True" clientFlatten="True">
                     <prop readOnly="True" type="string" name="agentStatus">
                       <enum>
-                        <item value="&quot;Deprovisioning&quot;"/>
                         <item value="&quot;Executing&quot;"/>
                         <item value="&quot;Offline&quot;"/>
                         <item value="&quot;Online&quot;"/>
-                        <item value="&quot;Provisioning&quot;"/>
+                        <item value="&quot;Registering&quot;"/>
                         <item value="&quot;RequiresAttention&quot;"/>
+                        <item value="&quot;Unregistering&quot;"/>
                       </enum>
                     </prop>
                     <prop readOnly="True" type="string" name="agentVersion"/>
@@ -70,6 +70,7 @@
                         <item value="&quot;Succeeded&quot;"/>
                       </enum>
                     </prop>
+                    <prop readOnly="True" type="integer64" name="uptimeInSeconds"/>
                   </prop>
                   <prop readOnly="True" type="object" name="systemData">
                     <prop readOnly="True" type="dateTime" name="createdAt"/>
@@ -113,10 +114,10 @@
       <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/agents/{}" version="2022-07-01-preview" swagger="mgmt-plane/storagemover/ResourceProviders/Microsoft.StorageMover/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuU3RvcmFnZU1vdmVyL3N0b3JhZ2VNb3ZlcnMve3N0b3JhZ2VNb3Zlck5hbWV9L2FnZW50cy97YWdlbnROYW1lfQ==/V/MjAyMi0wNy0wMS1wcmV2aWV3"/>
       <argGroup name="">
         <arg type="string" var="$Path.agentName" options="agent-name name n" required="True" idPart="child_name_1">
-          <help short="The name of the agent resource."/>
+          <help short="The name of the Agent resource."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
-        <arg type="string" var="$Path.storageMoverName" options="storage-mover-name s" required="True" idPart="name">
+        <arg type="string" var="$Path.storageMoverName" options="storage-mover-name" required="True" idPart="name">
           <help short="The name of the Storage Mover resource."/>
         </arg>
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
@@ -142,6 +143,7 @@
               </const>
             </query>
           </request>
+          <response statusCode="200"/>
           <response statusCode="202"/>
           <response statusCode="204"/>
           <response isError="True">
@@ -158,23 +160,23 @@
       <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/agents/{}" version="2022-07-01-preview" swagger="mgmt-plane/storagemover/ResourceProviders/Microsoft.StorageMover/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuU3RvcmFnZU1vdmVyL3N0b3JhZ2VNb3ZlcnMve3N0b3JhZ2VNb3Zlck5hbWV9L2FnZW50cy97YWdlbnROYW1lfQ==/V/MjAyMi0wNy0wMS1wcmV2aWV3"/>
       <argGroup name="">
         <arg type="string" var="$Path.agentName" options="agent-name name n" required="True" idPart="child_name_1">
-          <help short="The name of the agent resource."/>
+          <help short="The name of the Agent resource."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
-        <arg type="string" var="$Path.storageMoverName" options="storage-mover-name s" required="True" idPart="name">
+        <arg type="string" var="$Path.storageMoverName" options="storage-mover-name" required="True" idPart="name">
           <help short="The name of the Storage Mover resource."/>
         </arg>
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
       </argGroup>
       <argGroup name="Properties">
-        <arg type="string" var="$agent.properties.arcResourceId" options="arc-resource-id" group="Properties">
-          <help short="The fully qualified resource ID of the hybrid compute resource for the agent."/>
+        <arg type="string" var="$agent.properties.arcResourceId" options="arc-resource-id" required="True" group="Properties">
+          <help short="The fully qualified resource ID of the Hybrid Compute resource for the Agent."/>
         </arg>
-        <arg type="string" var="$agent.properties.arcVmUuid" options="arc-vm-uuid" group="Properties">
-          <help short="A GUID for this agent."/>
+        <arg type="string" var="$agent.properties.arcVmUuid" options="arc-vm-uuid" required="True" group="Properties">
+          <help short="The VM UUID of the Hybrid Compute resource for the Agent."/>
         </arg>
         <arg type="string" var="$agent.properties.description" options="description" group="Properties">
-          <help short="A description for the agent."/>
+          <help short="A description for the Agent."/>
         </arg>
       </argGroup>
       <operation operationId="Agents_CreateOrUpdate">
@@ -199,7 +201,7 @@
             <body>
               <json>
                 <schema type="object" name="agent" required="True" clientFlatten="True">
-                  <prop type="object" name="properties" clientFlatten="True">
+                  <prop type="object" name="properties" required="True" clientFlatten="True">
                     <prop type="string" name="arcResourceId" arg="$agent.properties.arcResourceId" required="True"/>
                     <prop type="string" name="arcVmUuid" arg="$agent.properties.arcVmUuid" required="True"/>
                     <prop type="string" name="description" arg="$agent.properties.description"/>
@@ -216,15 +218,15 @@
                     <format template="/subscriptions/{}/resourceGroups/{}/providers/Microsoft.StorageMover/storageMovers/{}/agents/{}"/>
                   </prop>
                   <prop readOnly="True" type="string" name="name"/>
-                  <prop type="object" name="properties" clientFlatten="True">
+                  <prop type="object" name="properties" required="True" clientFlatten="True">
                     <prop readOnly="True" type="string" name="agentStatus">
                       <enum>
-                        <item value="&quot;Deprovisioning&quot;"/>
                         <item value="&quot;Executing&quot;"/>
                         <item value="&quot;Offline&quot;"/>
                         <item value="&quot;Online&quot;"/>
-                        <item value="&quot;Provisioning&quot;"/>
+                        <item value="&quot;Registering&quot;"/>
                         <item value="&quot;RequiresAttention&quot;"/>
+                        <item value="&quot;Unregistering&quot;"/>
                       </enum>
                     </prop>
                     <prop readOnly="True" type="string" name="agentVersion"/>
@@ -244,6 +246,7 @@
                         <item value="&quot;Succeeded&quot;"/>
                       </enum>
                     </prop>
+                    <prop readOnly="True" type="integer64" name="uptimeInSeconds"/>
                   </prop>
                   <prop readOnly="True" type="object" name="systemData">
                     <prop readOnly="True" type="dateTime" name="createdAt"/>
@@ -287,23 +290,23 @@
       <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/agents/{}" version="2022-07-01-preview" swagger="mgmt-plane/storagemover/ResourceProviders/Microsoft.StorageMover/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuU3RvcmFnZU1vdmVyL3N0b3JhZ2VNb3ZlcnMve3N0b3JhZ2VNb3Zlck5hbWV9L2FnZW50cy97YWdlbnROYW1lfQ==/V/MjAyMi0wNy0wMS1wcmV2aWV3"/>
       <argGroup name="">
         <arg type="string" var="$Path.agentName" options="agent-name name n" required="True" idPart="child_name_1">
-          <help short="The name of the agent resource."/>
+          <help short="The name of the Agent resource."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
-        <arg type="string" var="$Path.storageMoverName" options="storage-mover-name s" required="True" idPart="name">
+        <arg type="string" var="$Path.storageMoverName" options="storage-mover-name" required="True" idPart="name">
           <help short="The name of the Storage Mover resource."/>
         </arg>
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
       </argGroup>
       <argGroup name="Properties">
         <arg type="string" var="$agent.properties.arcResourceId" options="arc-resource-id" group="Properties">
-          <help short="The fully qualified resource ID of the hybrid compute resource for the agent."/>
+          <help short="The fully qualified resource ID of the Hybrid Compute resource for the Agent."/>
         </arg>
         <arg type="string" var="$agent.properties.arcVmUuid" options="arc-vm-uuid" group="Properties">
-          <help short="A GUID for this agent."/>
+          <help short="The VM UUID of the Hybrid Compute resource for the Agent."/>
         </arg>
         <arg nullable="True" type="string" var="$agent.properties.description" options="description" group="Properties">
-          <help short="A description for the agent."/>
+          <help short="A description for the Agent."/>
         </arg>
       </argGroup>
       <operation operationId="Agents_Get">
@@ -334,15 +337,15 @@
                     <format template="/subscriptions/{}/resourceGroups/{}/providers/Microsoft.StorageMover/storageMovers/{}/agents/{}"/>
                   </prop>
                   <prop readOnly="True" type="string" name="name"/>
-                  <prop type="object" name="properties" clientFlatten="True">
+                  <prop type="object" name="properties" required="True" clientFlatten="True">
                     <prop readOnly="True" type="string" name="agentStatus">
                       <enum>
-                        <item value="&quot;Deprovisioning&quot;"/>
                         <item value="&quot;Executing&quot;"/>
                         <item value="&quot;Offline&quot;"/>
                         <item value="&quot;Online&quot;"/>
-                        <item value="&quot;Provisioning&quot;"/>
+                        <item value="&quot;Registering&quot;"/>
                         <item value="&quot;RequiresAttention&quot;"/>
+                        <item value="&quot;Unregistering&quot;"/>
                       </enum>
                     </prop>
                     <prop readOnly="True" type="string" name="agentVersion"/>
@@ -362,6 +365,7 @@
                         <item value="&quot;Succeeded&quot;"/>
                       </enum>
                     </prop>
+                    <prop readOnly="True" type="integer64" name="uptimeInSeconds"/>
                   </prop>
                   <prop readOnly="True" type="object" name="systemData">
                     <prop readOnly="True" type="dateTime" name="createdAt"/>
@@ -403,7 +407,7 @@
         <instanceUpdate instance="$Instance">
           <json>
             <schema type="object" name="agent" required="True" clientFlatten="True">
-              <prop type="object" name="properties" clientFlatten="True">
+              <prop type="object" name="properties" required="True" clientFlatten="True">
                 <prop type="string" name="arcResourceId" arg="$agent.properties.arcResourceId" required="True"/>
                 <prop type="string" name="arcVmUuid" arg="$agent.properties.arcVmUuid" required="True"/>
                 <prop type="string" name="description" arg="$agent.properties.description"/>

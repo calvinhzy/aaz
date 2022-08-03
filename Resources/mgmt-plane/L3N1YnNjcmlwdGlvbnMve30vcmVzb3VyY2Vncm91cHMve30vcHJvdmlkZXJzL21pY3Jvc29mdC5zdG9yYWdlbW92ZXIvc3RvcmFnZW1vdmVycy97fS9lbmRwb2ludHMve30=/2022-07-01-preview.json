@@ -36,7 +36,7 @@
                                     "required": true,
                                     "idPart": "child_name_1",
                                     "help": {
-                                        "short": "The name of the endpoint resource."
+                                        "short": "The name of the Endpoint resource."
                                     }
                                 },
                                 {
@@ -53,7 +53,6 @@
                                     "type": "string",
                                     "var": "$Path.storageMoverName",
                                     "options": [
-                                        "s",
                                         "storage-mover-name"
                                     ],
                                     "required": true,
@@ -161,6 +160,7 @@
                                                         {
                                                             "type": "object",
                                                             "name": "properties",
+                                                            "required": true,
                                                             "props": [
                                                                 {
                                                                     "type": "string",
@@ -217,6 +217,11 @@
                                                                     "props": [
                                                                         {
                                                                             "type": "string",
+                                                                            "name": "export",
+                                                                            "required": true
+                                                                        },
+                                                                        {
+                                                                            "type": "string",
                                                                             "name": "host",
                                                                             "required": true
                                                                         },
@@ -236,11 +241,6 @@
                                                                                     }
                                                                                 ]
                                                                             }
-                                                                        },
-                                                                        {
-                                                                            "type": "string",
-                                                                            "name": "remoteExport",
-                                                                            "required": true
                                                                         }
                                                                     ]
                                                                 }
@@ -372,7 +372,7 @@
                                     "required": true,
                                     "idPart": "child_name_1",
                                     "help": {
-                                        "short": "The name of the endpoint resource."
+                                        "short": "The name of the Endpoint resource."
                                     }
                                 },
                                 {
@@ -389,7 +389,6 @@
                                     "type": "string",
                                     "var": "$Path.storageMoverName",
                                     "options": [
-                                        "s",
                                         "storage-mover-name"
                                     ],
                                     "required": true,
@@ -476,6 +475,11 @@
                                 "responses": [
                                     {
                                         "statusCode": [
+                                            200
+                                        ]
+                                    },
+                                    {
+                                        "statusCode": [
                                             202
                                         ]
                                     },
@@ -525,7 +529,7 @@
                                     "required": true,
                                     "idPart": "child_name_1",
                                     "help": {
-                                        "short": "The name of the endpoint resource."
+                                        "short": "The name of the Endpoint resource."
                                     }
                                 },
                                 {
@@ -542,7 +546,6 @@
                                     "type": "string",
                                     "var": "$Path.storageMoverName",
                                     "options": [
-                                        "s",
                                         "storage-mover-name"
                                     ],
                                     "required": true,
@@ -607,6 +610,17 @@
                                     "args": [
                                         {
                                             "type": "string",
+                                            "var": "$endpoint.properties.NfsMount.export",
+                                            "options": [
+                                                "export"
+                                            ],
+                                            "required": true,
+                                            "help": {
+                                                "short": "The directory being exported from the server."
+                                            }
+                                        },
+                                        {
+                                            "type": "string",
                                             "var": "$endpoint.properties.NfsMount.host",
                                             "options": [
                                                 "host"
@@ -641,17 +655,6 @@
                                                     }
                                                 ]
                                             }
-                                        },
-                                        {
-                                            "type": "string",
-                                            "var": "$endpoint.properties.NfsMount.remoteExport",
-                                            "options": [
-                                                "remote-export"
-                                            ],
-                                            "required": true,
-                                            "help": {
-                                                "short": "The directory being exported from the server."
-                                            }
                                         }
                                     ]
                                 },
@@ -663,7 +666,7 @@
                                     ],
                                     "group": "Properties",
                                     "help": {
-                                        "short": "A description for the endpoint."
+                                        "short": "A description for the Endpoint."
                                     }
                                 }
                             ]
@@ -738,6 +741,7 @@
                                                     {
                                                         "type": "object",
                                                         "name": "properties",
+                                                        "required": true,
                                                         "props": [
                                                             {
                                                                 "type": "string",
@@ -787,6 +791,12 @@
                                                                 "props": [
                                                                     {
                                                                         "type": "string",
+                                                                        "name": "export",
+                                                                        "arg": "$endpoint.properties.NfsMount.export",
+                                                                        "required": true
+                                                                    },
+                                                                    {
+                                                                        "type": "string",
                                                                         "name": "host",
                                                                         "arg": "$endpoint.properties.NfsMount.host",
                                                                         "required": true
@@ -808,12 +818,6 @@
                                                                                 }
                                                                             ]
                                                                         }
-                                                                    },
-                                                                    {
-                                                                        "type": "string",
-                                                                        "name": "remoteExport",
-                                                                        "arg": "$endpoint.properties.NfsMount.remoteExport",
-                                                                        "required": true
                                                                     }
                                                                 ]
                                                             }
@@ -852,6 +856,7 @@
                                                         {
                                                             "type": "object",
                                                             "name": "properties",
+                                                            "required": true,
                                                             "props": [
                                                                 {
                                                                     "type": "string",
@@ -908,6 +913,11 @@
                                                                     "props": [
                                                                         {
                                                                             "type": "string",
+                                                                            "name": "export",
+                                                                            "required": true
+                                                                        },
+                                                                        {
+                                                                            "type": "string",
                                                                             "name": "host",
                                                                             "required": true
                                                                         },
@@ -927,11 +937,6 @@
                                                                                     }
                                                                                 ]
                                                                             }
-                                                                        },
-                                                                        {
-                                                                            "type": "string",
-                                                                            "name": "remoteExport",
-                                                                            "required": true
                                                                         }
                                                                     ]
                                                                 }
@@ -1063,7 +1068,7 @@
                                     "required": true,
                                     "idPart": "child_name_1",
                                     "help": {
-                                        "short": "The name of the endpoint resource."
+                                        "short": "The name of the Endpoint resource."
                                     }
                                 },
                                 {
@@ -1080,7 +1085,6 @@
                                     "type": "string",
                                     "var": "$Path.storageMoverName",
                                     "options": [
-                                        "s",
                                         "storage-mover-name"
                                     ],
                                     "required": true,
@@ -1143,22 +1147,22 @@
                                     "args": [
                                         {
                                             "type": "string",
+                                            "var": "$endpoint.properties.NfsMount.export",
+                                            "options": [
+                                                "export"
+                                            ],
+                                            "help": {
+                                                "short": "The directory being exported from the server."
+                                            }
+                                        },
+                                        {
+                                            "type": "string",
                                             "var": "$endpoint.properties.NfsMount.host",
                                             "options": [
                                                 "host"
                                             ],
                                             "help": {
                                                 "short": "The host name or IP address of the server exporting the file system."
-                                            }
-                                        },
-                                        {
-                                            "type": "string",
-                                            "var": "$endpoint.properties.NfsMount.remoteExport",
-                                            "options": [
-                                                "remote-export"
-                                            ],
-                                            "help": {
-                                                "short": "The directory being exported from the server."
                                             }
                                         }
                                     ]
@@ -1172,7 +1176,7 @@
                                     ],
                                     "group": "Properties",
                                     "help": {
-                                        "short": "A description for the endpoint."
+                                        "short": "A description for the Endpoint."
                                     }
                                 }
                             ]
@@ -1265,6 +1269,7 @@
                                                         {
                                                             "type": "object",
                                                             "name": "properties",
+                                                            "required": true,
                                                             "props": [
                                                                 {
                                                                     "type": "string",
@@ -1321,6 +1326,11 @@
                                                                     "props": [
                                                                         {
                                                                             "type": "string",
+                                                                            "name": "export",
+                                                                            "required": true
+                                                                        },
+                                                                        {
+                                                                            "type": "string",
                                                                             "name": "host",
                                                                             "required": true
                                                                         },
@@ -1340,11 +1350,6 @@
                                                                                     }
                                                                                 ]
                                                                             }
-                                                                        },
-                                                                        {
-                                                                            "type": "string",
-                                                                            "name": "remoteExport",
-                                                                            "required": true
                                                                         }
                                                                     ]
                                                                 }
@@ -1455,6 +1460,7 @@
                                             {
                                                 "type": "object",
                                                 "name": "properties",
+                                                "required": true,
                                                 "props": [
                                                     {
                                                         "type": "string",
@@ -1504,14 +1510,14 @@
                                                         "props": [
                                                             {
                                                                 "type": "string",
-                                                                "name": "host",
-                                                                "arg": "$endpoint.properties.NfsMount.host",
+                                                                "name": "export",
+                                                                "arg": "$endpoint.properties.NfsMount.export",
                                                                 "required": true
                                                             },
                                                             {
                                                                 "type": "string",
-                                                                "name": "remoteExport",
-                                                                "arg": "$endpoint.properties.NfsMount.remoteExport",
+                                                                "name": "host",
+                                                                "arg": "$endpoint.properties.NfsMount.host",
                                                                 "required": true
                                                             }
                                                         ]

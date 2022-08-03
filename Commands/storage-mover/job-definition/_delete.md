@@ -1,6 +1,6 @@
 # [Command] _storage-mover job-definition delete_
 
-Deletes a job definition resource.
+Deletes a Job Definition resource.
 
 ## Versions
 

@@ -36,7 +36,7 @@
                                     "required": true,
                                     "idPart": "child_name_1",
                                     "help": {
-                                        "short": "The name of the agent resource."
+                                        "short": "The name of the Agent resource."
                                     }
                                 },
                                 {
@@ -53,7 +53,6 @@
                                     "type": "string",
                                     "var": "$Path.storageMoverName",
                                     "options": [
-                                        "s",
                                         "storage-mover-name"
                                     ],
                                     "required": true,
@@ -161,6 +160,7 @@
                                                         {
                                                             "type": "object",
                                                             "name": "properties",
+                                                            "required": true,
                                                             "props": [
                                                                 {
                                                                     "readOnly": true,
@@ -168,9 +168,6 @@
                                                                     "name": "agentStatus",
                                                                     "enum": {
                                                                         "items": [
-                                                                            {
-                                                                                "value": "Deprovisioning"
-                                                                            },
                                                                             {
                                                                                 "value": "Executing"
                                                                             },
@@ -181,10 +178,13 @@
                                                                                 "value": "Online"
                                                                             },
                                                                             {
-                                                                                "value": "Provisioning"
+                                                                                "value": "Registering"
                                                                             },
                                                                             {
                                                                                 "value": "RequiresAttention"
+                                                                            },
+                                                                            {
+                                                                                "value": "Unregistering"
                                                                             }
                                                                         ]
                                                                     }
@@ -256,6 +256,11 @@
                                                                             }
                                                                         ]
                                                                     }
+                                                                },
+                                                                {
+                                                                    "readOnly": true,
+                                                                    "type": "integer64",
+                                                                    "name": "uptimeInSeconds"
                                                                 }
                                                             ],
                                                             "clientFlatten": true
@@ -386,7 +391,7 @@
                                     "required": true,
                                     "idPart": "child_name_1",
                                     "help": {
-                                        "short": "The name of the agent resource."
+                                        "short": "The name of the Agent resource."
                                     }
                                 },
                                 {
@@ -403,7 +408,6 @@
                                     "type": "string",
                                     "var": "$Path.storageMoverName",
                                     "options": [
-                                        "s",
                                         "storage-mover-name"
                                     ],
                                     "required": true,
@@ -490,6 +494,11 @@
                                 "responses": [
                                     {
                                         "statusCode": [
+                                            200
+                                        ]
+                                    },
+                                    {
+                                        "statusCode": [
                                             202
                                         ]
                                     },
@@ -539,7 +548,7 @@
                                     "required": true,
                                     "idPart": "child_name_1",
                                     "help": {
-                                        "short": "The name of the agent resource."
+                                        "short": "The name of the Agent resource."
                                     }
                                 },
                                 {
@@ -556,7 +565,6 @@
                                     "type": "string",
                                     "var": "$Path.storageMoverName",
                                     "options": [
-                                        "s",
                                         "storage-mover-name"
                                     ],
                                     "required": true,
@@ -585,9 +593,10 @@
                                     "options": [
                                         "arc-resource-id"
                                     ],
+                                    "required": true,
                                     "group": "Properties",
                                     "help": {
-                                        "short": "The fully qualified resource ID of the hybrid compute resource for the agent."
+                                        "short": "The fully qualified resource ID of the Hybrid Compute resource for the Agent."
                                     }
                                 },
                                 {
@@ -596,9 +605,10 @@
                                     "options": [
                                         "arc-vm-uuid"
                                     ],
+                                    "required": true,
                                     "group": "Properties",
                                     "help": {
-                                        "short": "A GUID for this agent."
+                                        "short": "The VM UUID of the Hybrid Compute resource for the Agent."
                                     }
                                 },
                                 {
@@ -609,7 +619,7 @@
                                     ],
                                     "group": "Properties",
                                     "help": {
-                                        "short": "A description for the agent."
+                                        "short": "A description for the Agent."
                                     }
                                 }
                             ]
@@ -684,6 +694,7 @@
                                                     {
                                                         "type": "object",
                                                         "name": "properties",
+                                                        "required": true,
                                                         "props": [
                                                             {
                                                                 "type": "string",
@@ -738,6 +749,7 @@
                                                         {
                                                             "type": "object",
                                                             "name": "properties",
+                                                            "required": true,
                                                             "props": [
                                                                 {
                                                                     "readOnly": true,
@@ -745,9 +757,6 @@
                                                                     "name": "agentStatus",
                                                                     "enum": {
                                                                         "items": [
-                                                                            {
-                                                                                "value": "Deprovisioning"
-                                                                            },
                                                                             {
                                                                                 "value": "Executing"
                                                                             },
@@ -758,10 +767,13 @@
                                                                                 "value": "Online"
                                                                             },
                                                                             {
-                                                                                "value": "Provisioning"
+                                                                                "value": "Registering"
                                                                             },
                                                                             {
                                                                                 "value": "RequiresAttention"
+                                                                            },
+                                                                            {
+                                                                                "value": "Unregistering"
                                                                             }
                                                                         ]
                                                                     }
@@ -833,6 +845,11 @@
                                                                             }
                                                                         ]
                                                                     }
+                                                                },
+                                                                {
+                                                                    "readOnly": true,
+                                                                    "type": "integer64",
+                                                                    "name": "uptimeInSeconds"
                                                                 }
                                                             ],
                                                             "clientFlatten": true
@@ -963,7 +980,7 @@
                                     "required": true,
                                     "idPart": "child_name_1",
                                     "help": {
-                                        "short": "The name of the agent resource."
+                                        "short": "The name of the Agent resource."
                                     }
                                 },
                                 {
@@ -980,7 +997,6 @@
                                     "type": "string",
                                     "var": "$Path.storageMoverName",
                                     "options": [
-                                        "s",
                                         "storage-mover-name"
                                     ],
                                     "required": true,
@@ -1011,7 +1027,7 @@
                                     ],
                                     "group": "Properties",
                                     "help": {
-                                        "short": "The fully qualified resource ID of the hybrid compute resource for the agent."
+                                        "short": "The fully qualified resource ID of the Hybrid Compute resource for the Agent."
                                     }
                                 },
                                 {
@@ -1022,7 +1038,7 @@
                                     ],
                                     "group": "Properties",
                                     "help": {
-                                        "short": "A GUID for this agent."
+                                        "short": "The VM UUID of the Hybrid Compute resource for the Agent."
                                     }
                                 },
                                 {
@@ -1034,7 +1050,7 @@
                                     ],
                                     "group": "Properties",
                                     "help": {
-                                        "short": "A description for the agent."
+                                        "short": "A description for the Agent."
                                     }
                                 }
                             ]
@@ -1127,6 +1143,7 @@
                                                         {
                                                             "type": "object",
                                                             "name": "properties",
+                                                            "required": true,
                                                             "props": [
                                                                 {
                                                                     "readOnly": true,
@@ -1134,9 +1151,6 @@
                                                                     "name": "agentStatus",
                                                                     "enum": {
                                                                         "items": [
-                                                                            {
-                                                                                "value": "Deprovisioning"
-                                                                            },
                                                                             {
                                                                                 "value": "Executing"
                                                                             },
@@ -1147,10 +1161,13 @@
                                                                                 "value": "Online"
                                                                             },
                                                                             {
-                                                                                "value": "Provisioning"
+                                                                                "value": "Registering"
                                                                             },
                                                                             {
                                                                                 "value": "RequiresAttention"
+                                                                            },
+                                                                            {
+                                                                                "value": "Unregistering"
                                                                             }
                                                                         ]
                                                                     }
@@ -1222,6 +1239,11 @@
                                                                             }
                                                                         ]
                                                                     }
+                                                                },
+                                                                {
+                                                                    "readOnly": true,
+                                                                    "type": "integer64",
+                                                                    "name": "uptimeInSeconds"
                                                                 }
                                                             ],
                                                             "clientFlatten": true
@@ -1331,6 +1353,7 @@
                                             {
                                                 "type": "object",
                                                 "name": "properties",
+                                                "required": true,
                                                 "props": [
                                                     {
                                                         "type": "string",

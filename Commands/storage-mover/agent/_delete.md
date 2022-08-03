@@ -1,6 +1,6 @@
 # [Command] _storage-mover agent delete_
 
-Deletes an agent resource.
+Deletes an Agent resource.
 
 ## Versions
 

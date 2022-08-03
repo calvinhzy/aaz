@@ -1,20 +1,20 @@
 # [Group] _storage-mover endpoint_
 
-Manage endpoint resource, which represents a data transfer source or destination.
+Manage Endpoint resource, which represents a data transfer source or destination.
 
 ## Commands
 
 - [create](/Commands/storage-mover/endpoint/_create.md)
-: Creates an endpoint resource.
+: Creates an Endpoint resource, which represents a data transfer source or destination.
 
 - [delete](/Commands/storage-mover/endpoint/_delete.md)
-: Deletes an endpoint resource.
+: Deletes an Endpoint resource.
 
 - [list](/Commands/storage-mover/endpoint/_list.md)
-: Lists all endpoints in a Storage Mover.
+: Lists all Endpoints in a Storage Mover.
 
 - [show](/Commands/storage-mover/endpoint/_show.md)
-: Gets an endpoint resource.
+: Gets an Endpoint resource.
 
 - [update](/Commands/storage-mover/endpoint/_update.md)
-: Updates an endpoint resource.
+: Updates an Endpoint resource, which represents a data transfer source or destination.

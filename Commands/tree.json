@@ -3846,7 +3846,7 @@
             "commands": {
               "create": {
                 "help": {
-                  "short": "Creates an agent resource."
+                  "short": "Creates an Agent resource, which references a hybrid compute machine that can run jobs."
                 },
                 "names": [
                   "storage-mover",
@@ -3869,7 +3869,7 @@
               },
               "delete": {
                 "help": {
-                  "short": "Deletes an agent resource."
+                  "short": "Deletes an Agent resource."
                 },
                 "names": [
                   "storage-mover",
@@ -3892,7 +3892,7 @@
               },
               "list": {
                 "help": {
-                  "short": "Lists all agents in a Storage Mover."
+                  "short": "Lists all Agents in a Storage Mover."
                 },
                 "names": [
                   "storage-mover",
@@ -3915,7 +3915,7 @@
               },
               "show": {
                 "help": {
-                  "short": "Gets an agent resource."
+                  "short": "Gets an Agent resource."
                 },
                 "names": [
                   "storage-mover",
@@ -3938,7 +3938,7 @@
               },
               "update": {
                 "help": {
-                  "short": "Updates an agent resource."
+                  "short": "Updates an Agent resource, which references a hybrid compute machine that can run jobs."
                 },
                 "names": [
                   "storage-mover",
@@ -3961,7 +3961,7 @@
               }
             },
             "help": {
-              "short": "Manage agent resource, which references a hybrid compute machine that can run jobs."
+              "short": "Manage Agent resource, which references a hybrid compute machine that can run jobs."
             },
             "names": [
               "storage-mover",
@@ -3972,7 +3972,7 @@
             "commands": {
               "create": {
                 "help": {
-                  "short": "Creates an endpoint resource."
+                  "short": "Creates an Endpoint resource, which represents a data transfer source or destination."
                 },
                 "names": [
                   "storage-mover",
@@ -3995,7 +3995,7 @@
               },
               "delete": {
                 "help": {
-                  "short": "Deletes an endpoint resource."
+                  "short": "Deletes an Endpoint resource."
                 },
                 "names": [
                   "storage-mover",
@@ -4018,7 +4018,7 @@
               },
               "list": {
                 "help": {
-                  "short": "Lists all endpoints in a Storage Mover."
+                  "short": "Lists all Endpoints in a Storage Mover."
                 },
                 "names": [
                   "storage-mover",
@@ -4041,7 +4041,7 @@
               },
               "show": {
                 "help": {
-                  "short": "Gets an endpoint resource."
+                  "short": "Gets an Endpoint resource."
                 },
                 "names": [
                   "storage-mover",
@@ -4064,7 +4064,7 @@
               },
               "update": {
                 "help": {
-                  "short": "Updates an endpoint resource."
+                  "short": "Updates an Endpoint resource, which represents a data transfer source or destination."
                 },
                 "names": [
                   "storage-mover",
@@ -4087,7 +4087,7 @@
               }
             },
             "help": {
-              "short": "Manage endpoint resource, which represents a data transfer source or destination."
+              "short": "Manage Endpoint resource, which represents a data transfer source or destination."
             },
             "names": [
               "storage-mover",
@@ -4098,7 +4098,7 @@
             "commands": {
               "create": {
                 "help": {
-                  "short": "Creates a job definition resource."
+                  "short": "Creates a Job Definition resource, which contains configuration for a single unit of managed data transfer."
                 },
                 "names": [
                   "storage-mover",
@@ -4121,7 +4121,7 @@
               },
               "delete": {
                 "help": {
-                  "short": "Deletes a job definition resource."
+                  "short": "Deletes a Job Definition resource."
                 },
                 "names": [
                   "storage-mover",
@@ -4144,7 +4144,7 @@
               },
               "list": {
                 "help": {
-                  "short": "Lists all job definitions in a project."
+                  "short": "Lists all Job Definitions in a Project."
                 },
                 "names": [
                   "storage-mover",
@@ -4167,7 +4167,7 @@
               },
               "show": {
                 "help": {
-                  "short": "Gets a job definition resource."
+                  "short": "Gets a Job Definition resource."
                 },
                 "names": [
                   "storage-mover",
@@ -4190,7 +4190,7 @@
               },
               "start-job": {
                 "help": {
-                  "short": "Requests an agent to start a new instance of this job definition, generating a new job run resource."
+                  "short": "Requests an Agent to start a new instance of this Job Definition, generating a new Job Run resource."
                 },
                 "names": [
                   "storage-mover",
@@ -4213,7 +4213,7 @@
               },
               "stop-job": {
                 "help": {
-                  "short": "Requests the agent of any active instance of this job definition to stop."
+                  "short": "Requests the Agent of any active instance of this Job Definition to stop."
                 },
                 "names": [
                   "storage-mover",
@@ -4236,7 +4236,7 @@
               },
               "update": {
                 "help": {
-                  "short": "Updates a job definition resource."
+                  "short": "Updates a Job Definition resource, which contains configuration for a single unit of managed data transfer."
                 },
                 "names": [
                   "storage-mover",
@@ -4259,7 +4259,7 @@
               }
             },
             "help": {
-              "short": "Manage job definition resource, which contains configuration for a single unit of managed data transfer."
+              "short": "Manage Job Definition resource, which contains configuration for a single unit of managed data transfer."
             },
             "names": [
               "storage-mover",
@@ -4270,7 +4270,7 @@
             "commands": {
               "list": {
                 "help": {
-                  "short": "Lists all job runs in a job definition."
+                  "short": "Lists all Job Runs in a Job Definition."
                 },
                 "names": [
                   "storage-mover",
@@ -4293,7 +4293,7 @@
               },
               "show": {
                 "help": {
-                  "short": "Gets a job run resource."
+                  "short": "Gets a Job Run resource."
                 },
                 "names": [
                   "storage-mover",
@@ -4316,7 +4316,7 @@
               }
             },
             "help": {
-              "short": "Manage job run resource."
+              "short": "Manage Job Run resource."
             },
             "names": [
               "storage-mover",
@@ -4327,7 +4327,7 @@
             "commands": {
               "create": {
                 "help": {
-                  "short": "Creates a project resource."
+                  "short": "Creates a Project resource, which is a logical grouping of related jobs."
                 },
                 "names": [
                   "storage-mover",
@@ -4350,7 +4350,7 @@
               },
               "delete": {
                 "help": {
-                  "short": "Deletes a project resource."
+                  "short": "Deletes a Project resource."
                 },
                 "names": [
                   "storage-mover",
@@ -4373,7 +4373,7 @@
               },
               "list": {
                 "help": {
-                  "short": "Lists all projects in a Storage Mover."
+                  "short": "Lists all Projects in a Storage Mover."
                 },
                 "names": [
                   "storage-mover",
@@ -4396,7 +4396,7 @@
               },
               "show": {
                 "help": {
-                  "short": "Gets a project resource."
+                  "short": "Gets a Project resource."
                 },
                 "names": [
                   "storage-mover",
@@ -4419,7 +4419,7 @@
               },
               "update": {
                 "help": {
-                  "short": "Updates a project resource."
+                  "short": "Updates a Project resource, which is a logical grouping of related jobs."
                 },
                 "names": [
                   "storage-mover",
@@ -4442,7 +4442,7 @@
               }
             },
             "help": {
-              "short": "Manage project resource, which is a logical grouping of related jobs."
+              "short": "Manage Project resource, which is a logical grouping of related jobs."
             },
             "names": [
               "storage-mover",

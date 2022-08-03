@@ -1,6 +1,6 @@
 # [Command] _storage-mover endpoint delete_
 
-Deletes an endpoint resource.
+Deletes an Endpoint resource.
 
 ## Versions
 

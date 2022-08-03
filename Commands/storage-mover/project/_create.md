@@ -1,6 +1,6 @@
 # [Command] _storage-mover project create_
 
-Creates a project resource.
+Creates a Project resource, which is a logical grouping of related jobs.
 
 ## Versions
 

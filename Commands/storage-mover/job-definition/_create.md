@@ -1,6 +1,6 @@
 # [Command] _storage-mover job-definition create_
 
-Creates a job definition resource.
+Creates a Job Definition resource, which contains configuration for a single unit of managed data transfer.
 
 ## Versions
 

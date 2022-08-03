@@ -38,7 +38,6 @@
                                     "type": "string",
                                     "var": "$Path.storageMoverName",
                                     "options": [
-                                        "s",
                                         "storage-mover-name"
                                     ],
                                     "required": true,
@@ -152,6 +151,7 @@
                                                                         "readOnly": true,
                                                                         "type": "object",
                                                                         "name": "properties",
+                                                                        "required": true,
                                                                         "props": [
                                                                             {
                                                                                 "readOnly": true,
@@ -159,9 +159,6 @@
                                                                                 "name": "agentStatus",
                                                                                 "enum": {
                                                                                     "items": [
-                                                                                        {
-                                                                                            "value": "Deprovisioning"
-                                                                                        },
                                                                                         {
                                                                                             "value": "Executing"
                                                                                         },
@@ -172,10 +169,13 @@
                                                                                             "value": "Online"
                                                                                         },
                                                                                         {
-                                                                                            "value": "Provisioning"
+                                                                                            "value": "Registering"
                                                                                         },
                                                                                         {
                                                                                             "value": "RequiresAttention"
+                                                                                        },
+                                                                                        {
+                                                                                            "value": "Unregistering"
                                                                                         }
                                                                                     ]
                                                                                 }
@@ -250,6 +250,11 @@
                                                                                         }
                                                                                     ]
                                                                                 }
+                                                                            },
+                                                                            {
+                                                                                "readOnly": true,
+                                                                                "type": "integer64",
+                                                                                "name": "uptimeInSeconds"
                                                                             }
                                                                         ],
                                                                         "clientFlatten": true

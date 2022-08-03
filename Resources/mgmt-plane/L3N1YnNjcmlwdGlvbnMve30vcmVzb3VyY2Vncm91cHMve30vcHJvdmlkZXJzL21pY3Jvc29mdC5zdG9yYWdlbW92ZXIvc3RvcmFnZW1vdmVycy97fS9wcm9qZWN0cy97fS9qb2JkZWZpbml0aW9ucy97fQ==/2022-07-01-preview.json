@@ -36,20 +36,19 @@
                                     "required": true,
                                     "idPart": "child_name_2",
                                     "help": {
-                                        "short": "The name of the job definition resource."
+                                        "short": "The name of the Job Definition resource."
                                     }
                                 },
                                 {
                                     "type": "string",
                                     "var": "$Path.projectName",
                                     "options": [
-                                        "p",
                                         "project-name"
                                     ],
                                     "required": true,
                                     "idPart": "child_name_1",
                                     "help": {
-                                        "short": "The name of the project resource."
+                                        "short": "The name of the Project resource."
                                     }
                                 },
                                 {
@@ -66,7 +65,6 @@
                                     "type": "string",
                                     "var": "$Path.storageMoverName",
                                     "options": [
-                                        "s",
                                         "storage-mover-name"
                                     ],
                                     "required": true,
@@ -180,6 +178,7 @@
                                                         {
                                                             "type": "object",
                                                             "name": "properties",
+                                                            "required": true,
                                                             "props": [
                                                                 {
                                                                     "type": "string",
@@ -193,6 +192,7 @@
                                                                 {
                                                                     "type": "string",
                                                                     "name": "copyMode",
+                                                                    "required": true,
                                                                     "enum": {
                                                                         "items": [
                                                                             {
@@ -420,20 +420,19 @@
                                     "required": true,
                                     "idPart": "child_name_2",
                                     "help": {
-                                        "short": "The name of the job definition resource."
+                                        "short": "The name of the Job Definition resource."
                                     }
                                 },
                                 {
                                     "type": "string",
                                     "var": "$Path.projectName",
                                     "options": [
-                                        "p",
                                         "project-name"
                                     ],
                                     "required": true,
                                     "idPart": "child_name_1",
                                     "help": {
-                                        "short": "The name of the project resource."
+                                        "short": "The name of the Project resource."
                                     }
                                 },
                                 {
@@ -450,7 +449,6 @@
                                     "type": "string",
                                     "var": "$Path.storageMoverName",
                                     "options": [
-                                        "s",
                                         "storage-mover-name"
                                     ],
                                     "required": true,
@@ -543,6 +541,11 @@
                                 "responses": [
                                     {
                                         "statusCode": [
+                                            200
+                                        ]
+                                    },
+                                    {
+                                        "statusCode": [
                                             202
                                         ]
                                     },
@@ -592,20 +595,19 @@
                                     "required": true,
                                     "idPart": "child_name_2",
                                     "help": {
-                                        "short": "The name of the job definition resource."
+                                        "short": "The name of the Job Definition resource."
                                     }
                                 },
                                 {
                                     "type": "string",
                                     "var": "$Path.projectName",
                                     "options": [
-                                        "p",
                                         "project-name"
                                     ],
                                     "required": true,
                                     "idPart": "child_name_1",
                                     "help": {
-                                        "short": "The name of the project resource."
+                                        "short": "The name of the Project resource."
                                     }
                                 },
                                 {
@@ -622,7 +624,6 @@
                                     "type": "string",
                                     "var": "$Path.storageMoverName",
                                     "options": [
-                                        "s",
                                         "storage-mover-name"
                                     ],
                                     "required": true,
@@ -653,7 +654,7 @@
                                     ],
                                     "group": "Properties",
                                     "help": {
-                                        "short": "Name of the agent to assign for new job runs of this definition."
+                                        "short": "Name of the Agent to assign for new Job Runs of this Job Definition."
                                     }
                                 },
                                 {
@@ -662,6 +663,7 @@
                                     "options": [
                                         "copy-mode"
                                     ],
+                                    "required": true,
                                     "group": "Properties",
                                     "help": {
                                         "short": "Strategy to use for copy."
@@ -687,7 +689,7 @@
                                     ],
                                     "group": "Properties",
                                     "help": {
-                                        "short": "A description for the job definition."
+                                        "short": "A description for the Job Definition."
                                     }
                                 },
                                 {
@@ -696,9 +698,10 @@
                                     "options": [
                                         "source-name"
                                     ],
+                                    "required": true,
                                     "group": "Properties",
                                     "help": {
-                                        "short": "The name of the source endpoint."
+                                        "short": "The name of the source Endpoint."
                                     }
                                 },
                                 {
@@ -718,9 +721,10 @@
                                     "options": [
                                         "target-name"
                                     ],
+                                    "required": true,
                                     "group": "Properties",
                                     "help": {
-                                        "short": "The name of the target endpoint."
+                                        "short": "The name of the target Endpoint."
                                     }
                                 },
                                 {
@@ -812,6 +816,7 @@
                                                     {
                                                         "type": "object",
                                                         "name": "properties",
+                                                        "required": true,
                                                         "props": [
                                                             {
                                                                 "type": "string",
@@ -822,6 +827,7 @@
                                                                 "type": "string",
                                                                 "name": "copyMode",
                                                                 "arg": "$jobDefinition.properties.copyMode",
+                                                                "required": true,
                                                                 "enum": {
                                                                     "items": [
                                                                         {
@@ -896,6 +902,7 @@
                                                         {
                                                             "type": "object",
                                                             "name": "properties",
+                                                            "required": true,
                                                             "props": [
                                                                 {
                                                                     "type": "string",
@@ -909,6 +916,7 @@
                                                                 {
                                                                     "type": "string",
                                                                     "name": "copyMode",
+                                                                    "required": true,
                                                                     "enum": {
                                                                         "items": [
                                                                             {
@@ -1136,20 +1144,19 @@
                                     "required": true,
                                     "idPart": "child_name_2",
                                     "help": {
-                                        "short": "The name of the job definition resource."
+                                        "short": "The name of the Job Definition resource."
                                     }
                                 },
                                 {
                                     "type": "string",
                                     "var": "$Path.projectName",
                                     "options": [
-                                        "p",
                                         "project-name"
                                     ],
                                     "required": true,
                                     "idPart": "child_name_1",
                                     "help": {
-                                        "short": "The name of the project resource."
+                                        "short": "The name of the Project resource."
                                     }
                                 },
                                 {
@@ -1166,7 +1173,6 @@
                                     "type": "string",
                                     "var": "$Path.storageMoverName",
                                     "options": [
-                                        "s",
                                         "storage-mover-name"
                                     ],
                                     "required": true,
@@ -1198,11 +1204,10 @@
                                     ],
                                     "group": "Properties",
                                     "help": {
-                                        "short": "Name of the agent to assign for new job runs of this definition."
+                                        "short": "Name of the Agent to assign for new Job Runs of this Job Definition."
                                     }
                                 },
                                 {
-                                    "nullable": true,
                                     "type": "string",
                                     "var": "$jobDefinition.properties.copyMode",
                                     "options": [
@@ -1234,7 +1239,7 @@
                                     ],
                                     "group": "Properties",
                                     "help": {
-                                        "short": "A description for the job definition."
+                                        "short": "A description for the Job Definition."
                                     }
                                 },
                                 {
@@ -1245,7 +1250,7 @@
                                     ],
                                     "group": "Properties",
                                     "help": {
-                                        "short": "The name of the source endpoint."
+                                        "short": "The name of the source Endpoint."
                                     }
                                 },
                                 {
@@ -1256,7 +1261,7 @@
                                     ],
                                     "group": "Properties",
                                     "help": {
-                                        "short": "The name of the target endpoint."
+                                        "short": "The name of the target Endpoint."
                                     }
                                 }
                             ]
@@ -1355,6 +1360,7 @@
                                                         {
                                                             "type": "object",
                                                             "name": "properties",
+                                                            "required": true,
                                                             "props": [
                                                                 {
                                                                     "type": "string",
@@ -1368,6 +1374,7 @@
                                                                 {
                                                                     "type": "string",
                                                                     "name": "copyMode",
+                                                                    "required": true,
                                                                     "enum": {
                                                                         "items": [
                                                                             {
@@ -1574,6 +1581,7 @@
                                             {
                                                 "type": "object",
                                                 "name": "properties",
+                                                "required": true,
                                                 "props": [
                                                     {
                                                         "type": "string",
@@ -1584,6 +1592,7 @@
                                                         "type": "string",
                                                         "name": "copyMode",
                                                         "arg": "$jobDefinition.properties.copyMode",
+                                                        "required": true,
                                                         "enum": {
                                                             "items": [
                                                                 {

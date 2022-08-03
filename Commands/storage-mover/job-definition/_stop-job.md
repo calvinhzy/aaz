@@ -1,6 +1,6 @@
 # [Command] _storage-mover job-definition stop-job_
 
-Requests the agent of any active instance of this job definition to stop.
+Requests the Agent of any active instance of this Job Definition to stop.
 
 ## Versions
 

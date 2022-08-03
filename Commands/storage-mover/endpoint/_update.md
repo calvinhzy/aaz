@@ -1,6 +1,6 @@
 # [Command] _storage-mover endpoint update_
 
-Updates an endpoint resource.
+Updates an Endpoint resource, which represents a data transfer source or destination.
 
 ## Versions
 

@@ -1,6 +1,6 @@
 # [Command] _storage-mover project show_
 
-Gets a project resource.
+Gets a Project resource.
 
 ## Versions
 

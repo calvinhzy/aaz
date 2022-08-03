@@ -1,6 +1,6 @@
 # [Command] _storage-mover job-definition list_
 
-Lists all job definitions in a project.
+Lists all Job Definitions in a Project.
 
 ## Versions
 

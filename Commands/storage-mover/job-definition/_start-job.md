@@ -1,6 +1,6 @@
 # [Command] _storage-mover job-definition start-job_
 
-Requests an agent to start a new instance of this job definition, generating a new job run resource.
+Requests an Agent to start a new instance of this Job Definition, generating a new Job Run resource.
 
 ## Versions
 

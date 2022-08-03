@@ -1,6 +1,6 @@
 # [Command] _storage-mover agent show_
 
-Gets an agent resource.
+Gets an Agent resource.
 
 ## Versions
 
