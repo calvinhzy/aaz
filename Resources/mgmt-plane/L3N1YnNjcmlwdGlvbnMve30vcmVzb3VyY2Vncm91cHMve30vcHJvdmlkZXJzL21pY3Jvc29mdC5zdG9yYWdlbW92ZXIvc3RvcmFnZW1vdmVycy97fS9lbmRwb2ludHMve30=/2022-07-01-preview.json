@@ -572,9 +572,12 @@
                                     "type": "object",
                                     "var": "$endpoint.properties.AzureStorageBlobContainer",
                                     "options": [
-                                        "azure-storage-blob-container"
+                                        "storage-blob-container"
                                     ],
                                     "group": "Properties",
+                                    "help": {
+                                        "short": "Storage Blob Container Object"
+                                    },
                                     "args": [
                                         {
                                             "type": "string",
@@ -1111,9 +1114,12 @@
                                     "type": "object",
                                     "var": "$endpoint.properties.AzureStorageBlobContainer",
                                     "options": [
-                                        "azure-storage-blob-container"
+                                        "storage-blob-container"
                                     ],
                                     "group": "Properties",
+                                    "help": {
+                                        "short": "Storage Blob Container Object"
+                                    },
                                     "args": [
                                         {
                                             "type": "string",
