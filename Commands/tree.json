@@ -3867,29 +3867,6 @@
                   }
                 ]
               },
-              "delete": {
-                "help": {
-                  "short": "Deletes an Agent resource."
-                },
-                "names": [
-                  "storage-mover",
-                  "agent",
-                  "delete"
-                ],
-                "versions": [
-                  {
-                    "name": "2022-07-01-preview",
-                    "resources": [
-                      {
-                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/agents/{}",
-                        "plane": "mgmt-plane",
-                        "version": "2022-07-01-preview"
-                      }
-                    ],
-                    "stage": "Preview"
-                  }
-                ]
-              },
               "list": {
                 "help": {
                   "short": "Lists all Agents in a Storage Mover."
@@ -3921,6 +3898,29 @@
                   "storage-mover",
                   "agent",
                   "show"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-07-01-preview",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers/{}/agents/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-07-01-preview"
+                      }
+                    ],
+                    "stage": "Preview"
+                  }
+                ]
+              },
+              "unregister": {
+                "help": {
+                  "short": "Unregisters an Agent resource."
+                },
+                "names": [
+                  "storage-mover",
+                  "agent",
+                  "unregister"
                 ],
                 "versions": [
                   {
