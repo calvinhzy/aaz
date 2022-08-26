@@ -9,7 +9,7 @@
     ],
     "commandGroups": [
         {
-            "name": "elastic-san volumegroup",
+            "name": "elastic-san volume-group",
             "commands": [
                 {
                     "name": "list",
@@ -165,7 +165,6 @@
                                                                             {
                                                                                 "type": "string",
                                                                                 "name": "encryption",
-                                                                                "required": true,
                                                                                 "enum": {
                                                                                     "items": [
                                                                                         {
@@ -235,7 +234,6 @@
                                                                             {
                                                                                 "type": "string",
                                                                                 "name": "protocolType",
-                                                                                "required": true,
                                                                                 "enum": {
                                                                                     "items": [
                                                                                         {

@@ -1,6 +1,6 @@
-# [Command] _elastic-san volumegroup delete_
+# [Command] _elastic-san volume-group update_
 
-Delete a Volume Group.
+Update a Volume Group.
 
 ## Versions
 

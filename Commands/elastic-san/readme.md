@@ -7,7 +7,7 @@ Manage Elastic SAN.
 - [volume](/Commands/elastic-san/volume/readme.md)
 : Manage Elastic San Volume.
 
-- [volumegroup](/Commands/elastic-san/volumegroup/readme.md)
+- [volume-group](/Commands/elastic-san/volume-group/readme.md)
 : Manage Elastic San Volume Group.
 
 ## Commands

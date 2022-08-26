@@ -1,6 +1,6 @@
-# [Command] _elastic-san volumegroup update_
+# [Command] _elastic-san volume-group create_
 
-Update a Volume Group.
+Create a Volume Group.
 
 ## Versions
 

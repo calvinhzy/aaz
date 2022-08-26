@@ -219,7 +219,6 @@
                                                                         {
                                                                             "type": "string",
                                                                             "name": "createSource",
-                                                                            "required": true,
                                                                             "enum": {
                                                                                 "items": [
                                                                                     {
@@ -783,7 +782,6 @@
                                             "options": [
                                                 "create-source"
                                             ],
-                                            "required": true,
                                             "help": {
                                                 "short": "This enumerates the possible sources of a volume creation."
                                             },
@@ -812,7 +810,7 @@
                                     "type": "integer64",
                                     "var": "$parameters.properties.sizeGiB",
                                     "options": [
-                                        "size-gi-b"
+                                        "size-gib"
                                     ],
                                     "group": "Properties",
                                     "help": {
@@ -926,7 +924,6 @@
                                                                         "type": "string",
                                                                         "name": "createSource",
                                                                         "arg": "$parameters.properties.creationData.createSource",
-                                                                        "required": true,
                                                                         "enum": {
                                                                             "items": [
                                                                                 {
@@ -1001,7 +998,6 @@
                                                                         {
                                                                             "type": "string",
                                                                             "name": "createSource",
-                                                                            "required": true,
                                                                             "enum": {
                                                                                 "items": [
                                                                                     {
@@ -1369,6 +1365,7 @@
                                     },
                                     "args": [
                                         {
+                                            "nullable": true,
                                             "type": "string",
                                             "var": "$parameters.properties.creationData.createSource",
                                             "options": [
@@ -1404,7 +1401,7 @@
                                     "type": "integer64",
                                     "var": "$parameters.properties.sizeGiB",
                                     "options": [
-                                        "size-gi-b"
+                                        "size-gib"
                                     ],
                                     "group": "Properties",
                                     "help": {
@@ -1531,7 +1528,6 @@
                                                                         {
                                                                             "type": "string",
                                                                             "name": "createSource",
-                                                                            "required": true,
                                                                             "enum": {
                                                                                 "items": [
                                                                                     {
@@ -1770,7 +1766,6 @@
                                                                 "type": "string",
                                                                 "name": "createSource",
                                                                 "arg": "$parameters.properties.creationData.createSource",
-                                                                "required": true,
                                                                 "enum": {
                                                                     "items": [
                                                                         {

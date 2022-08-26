@@ -1,4 +1,4 @@
-# [Command] _elastic-san volumegroup list_
+# [Command] _elastic-san volume-group list_
 
 List Volume Groups.
 

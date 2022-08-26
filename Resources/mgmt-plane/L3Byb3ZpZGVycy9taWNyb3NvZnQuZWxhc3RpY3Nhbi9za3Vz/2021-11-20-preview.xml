@@ -46,7 +46,7 @@
                       </prop>
                       <prop readOnly="True" type="array<object>" name="sku">
                         <item readOnly="True" type="object">
-                          <prop readOnly="True" type="string" name="name">
+                          <prop readOnly="True" type="string" name="name" required="True">
                             <enum>
                               <item value="&quot;Premium_LRS&quot;"/>
                               <item value="&quot;Premium_ZRS&quot;"/>

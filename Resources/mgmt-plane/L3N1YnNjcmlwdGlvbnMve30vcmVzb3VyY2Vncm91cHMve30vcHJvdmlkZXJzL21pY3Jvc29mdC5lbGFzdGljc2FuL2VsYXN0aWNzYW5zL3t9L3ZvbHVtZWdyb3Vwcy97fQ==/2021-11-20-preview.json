@@ -9,7 +9,7 @@
     ],
     "commandGroups": [
         {
-            "name": "elastic-san volumegroup",
+            "name": "elastic-san volume-group",
             "commands": [
                 {
                     "name": "show",
@@ -186,7 +186,6 @@
                                                                 {
                                                                     "type": "string",
                                                                     "name": "encryption",
-                                                                    "required": true,
                                                                     "enum": {
                                                                         "items": [
                                                                             {
@@ -256,7 +255,6 @@
                                                                 {
                                                                     "type": "string",
                                                                     "name": "protocolType",
-                                                                    "required": true,
                                                                     "enum": {
                                                                         "items": [
                                                                             {
@@ -882,7 +880,6 @@
                                                                 "type": "string",
                                                                 "name": "encryption",
                                                                 "arg": "$parameters.properties.encryption",
-                                                                "required": true,
                                                                 "enum": {
                                                                     "items": [
                                                                         {
@@ -933,7 +930,6 @@
                                                                 "type": "string",
                                                                 "name": "protocolType",
                                                                 "arg": "$parameters.properties.protocolType",
-                                                                "required": true,
                                                                 "enum": {
                                                                     "items": [
                                                                         {
@@ -995,7 +991,6 @@
                                                                 {
                                                                     "type": "string",
                                                                     "name": "encryption",
-                                                                    "required": true,
                                                                     "enum": {
                                                                         "items": [
                                                                             {
@@ -1065,7 +1060,6 @@
                                                                 {
                                                                     "type": "string",
                                                                     "name": "protocolType",
-                                                                    "required": true,
                                                                     "enum": {
                                                                         "items": [
                                                                             {
@@ -1336,6 +1330,7 @@
                             "name": "Properties",
                             "args": [
                                 {
+                                    "nullable": true,
                                     "type": "string",
                                     "var": "$parameters.properties.encryption",
                                     "options": [
@@ -1355,6 +1350,7 @@
                                     }
                                 },
                                 {
+                                    "nullable": true,
                                     "type": "string",
                                     "var": "$parameters.properties.protocolType",
                                     "options": [
@@ -1482,7 +1478,6 @@
                                                                 {
                                                                     "type": "string",
                                                                     "name": "encryption",
-                                                                    "required": true,
                                                                     "enum": {
                                                                         "items": [
                                                                             {
@@ -1552,7 +1547,6 @@
                                                                 {
                                                                     "type": "string",
                                                                     "name": "protocolType",
-                                                                    "required": true,
                                                                     "enum": {
                                                                         "items": [
                                                                             {
@@ -1719,7 +1713,6 @@
                                                         "type": "string",
                                                         "name": "encryption",
                                                         "arg": "$parameters.properties.encryption",
-                                                        "required": true,
                                                         "enum": {
                                                             "items": [
                                                                 {
@@ -1732,7 +1725,6 @@
                                                         "type": "string",
                                                         "name": "protocolType",
                                                         "arg": "$parameters.properties.protocolType",
-                                                        "required": true,
                                                         "enum": {
                                                             "items": [
                                                                 {

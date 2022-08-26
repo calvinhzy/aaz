@@ -53,7 +53,7 @@
                       <prop readOnly="True" type="string" name="name"/>
                       <prop type="object" name="properties" clientFlatten="True">
                         <prop type="object" name="creationData">
-                          <prop type="string" name="createSource" required="True">
+                          <prop type="string" name="createSource">
                             <enum>
                               <item value="&quot;None&quot;"/>
                             </enum>

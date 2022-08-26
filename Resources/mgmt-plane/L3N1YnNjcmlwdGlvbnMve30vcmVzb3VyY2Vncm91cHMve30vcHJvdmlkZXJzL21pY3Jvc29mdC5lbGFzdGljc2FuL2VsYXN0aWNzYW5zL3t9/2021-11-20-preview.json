@@ -157,11 +157,11 @@
                                                         {
                                                             "type": "object",
                                                             "name": "properties",
+                                                            "required": true,
                                                             "props": [
                                                                 {
                                                                     "type": "array<string>",
                                                                     "name": "availabilityZones",
-                                                                    "required": true,
                                                                     "item": {
                                                                         "type": "string"
                                                                     }
@@ -212,10 +212,12 @@
                                                                 {
                                                                     "type": "object",
                                                                     "name": "sku",
+                                                                    "required": true,
                                                                     "props": [
                                                                         {
                                                                             "type": "string",
                                                                             "name": "name",
+                                                                            "required": true,
                                                                             "enum": {
                                                                                 "items": [
                                                                                     {
@@ -636,8 +638,9 @@
                                     "type": "integer64",
                                     "var": "$parameters.properties.baseSizeTiB",
                                     "options": [
-                                        "base-size-ti-b"
+                                        "base-size-tib"
                                     ],
+                                    "required": true,
                                     "group": "Properties",
                                     "help": {
                                         "short": "Base size of the Elastic San appliance in TiB."
@@ -647,8 +650,9 @@
                                     "type": "integer64",
                                     "var": "$parameters.properties.extendedCapacitySizeTiB",
                                     "options": [
-                                        "extended-capacity-size-ti-b"
+                                        "extended-capacity-size-tib"
                                     ],
+                                    "required": true,
                                     "group": "Properties",
                                     "help": {
                                         "short": "Extended size of the Elastic San appliance in TiB."
@@ -660,6 +664,7 @@
                                     "options": [
                                         "sku"
                                     ],
+                                    "required": true,
                                     "group": "Properties",
                                     "help": {
                                         "short": "resource sku"
@@ -671,6 +676,7 @@
                                             "options": [
                                                 "name"
                                             ],
+                                            "required": true,
                                             "help": {
                                                 "short": "The sku name."
                                             },
@@ -787,12 +793,12 @@
                                                     {
                                                         "type": "object",
                                                         "name": "properties",
+                                                        "required": true,
                                                         "props": [
                                                             {
                                                                 "type": "array<string>",
                                                                 "name": "availabilityZones",
                                                                 "arg": "$parameters.properties.availabilityZones",
-                                                                "required": true,
                                                                 "item": {
                                                                     "type": "string"
                                                                 }
@@ -813,11 +819,13 @@
                                                                 "type": "object",
                                                                 "name": "sku",
                                                                 "arg": "$parameters.properties.sku",
+                                                                "required": true,
                                                                 "props": [
                                                                     {
                                                                         "type": "string",
                                                                         "name": "name",
                                                                         "arg": "$parameters.properties.sku.name",
+                                                                        "required": true,
                                                                         "enum": {
                                                                             "items": [
                                                                                 {
@@ -893,11 +901,11 @@
                                                         {
                                                             "type": "object",
                                                             "name": "properties",
+                                                            "required": true,
                                                             "props": [
                                                                 {
                                                                     "type": "array<string>",
                                                                     "name": "availabilityZones",
-                                                                    "required": true,
                                                                     "item": {
                                                                         "type": "string"
                                                                     }
@@ -948,10 +956,12 @@
                                                                 {
                                                                     "type": "object",
                                                                     "name": "sku",
+                                                                    "required": true,
                                                                     "props": [
                                                                         {
                                                                             "type": "string",
                                                                             "name": "name",
+                                                                            "required": true,
                                                                             "enum": {
                                                                                 "items": [
                                                                                     {
@@ -1209,6 +1219,7 @@
                             "name": "Properties",
                             "args": [
                                 {
+                                    "nullable": true,
                                     "type": "array<string>",
                                     "var": "$parameters.properties.availabilityZones",
                                     "options": [
@@ -1227,7 +1238,7 @@
                                     "type": "integer64",
                                     "var": "$parameters.properties.baseSizeTiB",
                                     "options": [
-                                        "base-size-ti-b"
+                                        "base-size-tib"
                                     ],
                                     "group": "Properties",
                                     "help": {
@@ -1238,7 +1249,7 @@
                                     "type": "integer64",
                                     "var": "$parameters.properties.extendedCapacitySizeTiB",
                                     "options": [
-                                        "extended-capacity-size-ti-b"
+                                        "extended-capacity-size-tib"
                                     ],
                                     "group": "Properties",
                                     "help": {
@@ -1246,7 +1257,6 @@
                                     }
                                 },
                                 {
-                                    "nullable": true,
                                     "type": "object",
                                     "var": "$parameters.properties.sku",
                                     "options": [
@@ -1258,7 +1268,6 @@
                                     },
                                     "args": [
                                         {
-                                            "nullable": true,
                                             "type": "string",
                                             "var": "$parameters.properties.sku.name",
                                             "options": [
@@ -1395,11 +1404,11 @@
                                                         {
                                                             "type": "object",
                                                             "name": "properties",
+                                                            "required": true,
                                                             "props": [
                                                                 {
                                                                     "type": "array<string>",
                                                                     "name": "availabilityZones",
-                                                                    "required": true,
                                                                     "item": {
                                                                         "type": "string"
                                                                     }
@@ -1450,10 +1459,12 @@
                                                                 {
                                                                     "type": "object",
                                                                     "name": "sku",
+                                                                    "required": true,
                                                                     "props": [
                                                                         {
                                                                             "type": "string",
                                                                             "name": "name",
+                                                                            "required": true,
                                                                             "enum": {
                                                                                 "items": [
                                                                                     {
@@ -1620,12 +1631,12 @@
                                             {
                                                 "type": "object",
                                                 "name": "properties",
+                                                "required": true,
                                                 "props": [
                                                     {
                                                         "type": "array<string>",
                                                         "name": "availabilityZones",
                                                         "arg": "$parameters.properties.availabilityZones",
-                                                        "required": true,
                                                         "item": {
                                                             "type": "string"
                                                         }
@@ -1646,11 +1657,13 @@
                                                         "type": "object",
                                                         "name": "sku",
                                                         "arg": "$parameters.properties.sku",
+                                                        "required": true,
                                                         "props": [
                                                             {
                                                                 "type": "string",
                                                                 "name": "name",
                                                                 "arg": "$parameters.properties.sku.name",
+                                                                "required": true,
                                                                 "enum": {
                                                                     "items": [
                                                                         {

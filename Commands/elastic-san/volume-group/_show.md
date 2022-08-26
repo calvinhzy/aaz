@@ -1,4 +1,4 @@
-# [Command] _elastic-san volumegroup show_
+# [Command] _elastic-san volume-group show_
 
 Get a Volume Group.
 

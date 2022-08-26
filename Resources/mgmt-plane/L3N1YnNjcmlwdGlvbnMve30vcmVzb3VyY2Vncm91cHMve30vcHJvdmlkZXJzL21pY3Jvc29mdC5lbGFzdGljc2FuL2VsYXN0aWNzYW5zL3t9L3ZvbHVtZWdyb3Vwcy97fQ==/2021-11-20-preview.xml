@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <CodeGen plane="mgmt-plane">
   <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.elasticsan/elasticsans/{}/volumegroups/{}" version="2021-11-20-preview" swagger="mgmt-plane/elasticsan/ResourceProviders/Microsoft.ElasticSan/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuRWxhc3RpY1Nhbi9lbGFzdGljU2Fucy97ZWxhc3RpY1Nhbk5hbWV9L3ZvbHVtZWdyb3Vwcy97dm9sdW1lR3JvdXBOYW1lfQ==/V/MjAyMS0xMS0yMC1wcmV2aWV3"/>
-  <commandGroup name="elastic-san volumegroup">
+  <commandGroup name="elastic-san volume-group">
     <command name="show" version="2021-11-20-preview">
       <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.elasticsan/elasticsans/{}/volumegroups/{}" version="2021-11-20-preview" swagger="mgmt-plane/elasticsan/ResourceProviders/Microsoft.ElasticSan/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuRWxhc3RpY1Nhbi9lbGFzdGljU2Fucy97ZWxhc3RpY1Nhbk5hbWV9L3ZvbHVtZWdyb3Vwcy97dm9sdW1lR3JvdXBOYW1lfQ==/V/MjAyMS0xMS0yMC1wcmV2aWV3"/>
       <argGroup name="">
@@ -49,7 +49,7 @@
                   </prop>
                   <prop readOnly="True" type="string" name="name"/>
                   <prop type="object" name="properties" clientFlatten="True">
-                    <prop type="string" name="encryption" required="True">
+                    <prop type="string" name="encryption">
                       <enum>
                         <item value="&quot;EncryptionAtRestWithPlatformKey&quot;"/>
                       </enum>
@@ -76,7 +76,7 @@
                         </item>
                       </prop>
                     </prop>
-                    <prop type="string" name="protocolType" required="True">
+                    <prop type="string" name="protocolType">
                       <enum>
                         <item value="&quot;Iscsi&quot;"/>
                         <item value="&quot;None&quot;"/>
@@ -273,7 +273,7 @@
               <json>
                 <schema type="object" name="parameters" required="True" clientFlatten="True">
                   <prop type="object" name="properties" clientFlatten="True">
-                    <prop type="string" name="encryption" arg="$parameters.properties.encryption" required="True">
+                    <prop type="string" name="encryption" arg="$parameters.properties.encryption">
                       <enum>
                         <item value="&quot;EncryptionAtRestWithPlatformKey&quot;"/>
                       </enum>
@@ -291,7 +291,7 @@
                         </item>
                       </prop>
                     </prop>
-                    <prop type="string" name="protocolType" arg="$parameters.properties.protocolType" required="True">
+                    <prop type="string" name="protocolType" arg="$parameters.properties.protocolType">
                       <enum>
                         <item value="&quot;Iscsi&quot;"/>
                         <item value="&quot;None&quot;"/>
@@ -316,7 +316,7 @@
                   </prop>
                   <prop readOnly="True" type="string" name="name"/>
                   <prop type="object" name="properties" clientFlatten="True">
-                    <prop type="string" name="encryption" required="True">
+                    <prop type="string" name="encryption">
                       <enum>
                         <item value="&quot;EncryptionAtRestWithPlatformKey&quot;"/>
                       </enum>
@@ -343,7 +343,7 @@
                         </item>
                       </prop>
                     </prop>
-                    <prop type="string" name="protocolType" required="True">
+                    <prop type="string" name="protocolType">
                       <enum>
                         <item value="&quot;Iscsi&quot;"/>
                         <item value="&quot;None&quot;"/>
@@ -435,13 +435,13 @@
         </arg>
       </argGroup>
       <argGroup name="Properties">
-        <arg type="string" var="$parameters.properties.encryption" options="encryption" group="Properties">
+        <arg nullable="True" type="string" var="$parameters.properties.encryption" options="encryption" group="Properties">
           <help short="Type of encryption"/>
           <enum>
             <item name="EncryptionAtRestWithPlatformKey" value="&quot;EncryptionAtRestWithPlatformKey&quot;"/>
           </enum>
         </arg>
-        <arg type="string" var="$parameters.properties.protocolType" options="protocol-type" group="Properties">
+        <arg nullable="True" type="string" var="$parameters.properties.protocolType" options="protocol-type" group="Properties">
           <help short="Type of storage target"/>
           <enum>
             <item name="Iscsi" value="&quot;Iscsi&quot;"/>
@@ -482,7 +482,7 @@
                   </prop>
                   <prop readOnly="True" type="string" name="name"/>
                   <prop type="object" name="properties" clientFlatten="True">
-                    <prop type="string" name="encryption" required="True">
+                    <prop type="string" name="encryption">
                       <enum>
                         <item value="&quot;EncryptionAtRestWithPlatformKey&quot;"/>
                       </enum>
@@ -509,7 +509,7 @@
                         </item>
                       </prop>
                     </prop>
-                    <prop type="string" name="protocolType" required="True">
+                    <prop type="string" name="protocolType">
                       <enum>
                         <item value="&quot;Iscsi&quot;"/>
                         <item value="&quot;None&quot;"/>
@@ -574,12 +574,12 @@
           <json>
             <schema type="object" name="parameters" required="True" clientFlatten="True">
               <prop type="object" name="properties" clientFlatten="True">
-                <prop type="string" name="encryption" arg="$parameters.properties.encryption" required="True">
+                <prop type="string" name="encryption" arg="$parameters.properties.encryption">
                   <enum>
                     <item value="&quot;EncryptionAtRestWithPlatformKey&quot;"/>
                   </enum>
                 </prop>
-                <prop type="string" name="protocolType" arg="$parameters.properties.protocolType" required="True">
+                <prop type="string" name="protocolType" arg="$parameters.properties.protocolType">
                   <enum>
                     <item value="&quot;Iscsi&quot;"/>
                     <item value="&quot;None&quot;"/>

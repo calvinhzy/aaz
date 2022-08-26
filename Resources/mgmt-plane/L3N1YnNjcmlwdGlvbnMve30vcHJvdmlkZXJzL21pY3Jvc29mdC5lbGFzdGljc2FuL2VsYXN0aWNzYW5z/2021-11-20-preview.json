@@ -186,11 +186,11 @@
                                                                     {
                                                                         "type": "object",
                                                                         "name": "properties",
+                                                                        "required": true,
                                                                         "props": [
                                                                             {
                                                                                 "type": "array<string>",
                                                                                 "name": "availabilityZones",
-                                                                                "required": true,
                                                                                 "item": {
                                                                                     "type": "string"
                                                                                 }
@@ -241,10 +241,12 @@
                                                                             {
                                                                                 "type": "object",
                                                                                 "name": "sku",
+                                                                                "required": true,
                                                                                 "props": [
                                                                                     {
                                                                                         "type": "string",
                                                                                         "name": "name",
+                                                                                        "required": true,
                                                                                         "enum": {
                                                                                             "items": [
                                                                                                 {
@@ -484,11 +486,11 @@
                                                                     {
                                                                         "type": "object",
                                                                         "name": "properties",
+                                                                        "required": true,
                                                                         "props": [
                                                                             {
                                                                                 "type": "array<string>",
                                                                                 "name": "availabilityZones",
-                                                                                "required": true,
                                                                                 "item": {
                                                                                     "type": "string"
                                                                                 }
@@ -539,10 +541,12 @@
                                                                             {
                                                                                 "type": "object",
                                                                                 "name": "sku",
+                                                                                "required": true,
                                                                                 "props": [
                                                                                     {
                                                                                         "type": "string",
                                                                                         "name": "name",
+                                                                                        "required": true,
                                                                                         "enum": {
                                                                                             "items": [
                                                                                                 {

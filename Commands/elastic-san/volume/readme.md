@@ -17,4 +17,4 @@ Manage Elastic San Volume.
 : Get an Volume.
 
 - [update](/Commands/elastic-san/volume/_update.md)
-: Create a Volume.
+: Update a Volume.

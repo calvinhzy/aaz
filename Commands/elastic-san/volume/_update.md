@@ -1,6 +1,6 @@
 # [Command] _elastic-san volume update_
 
-Create a Volume.
+Update a Volume.
 
 ## Versions
 

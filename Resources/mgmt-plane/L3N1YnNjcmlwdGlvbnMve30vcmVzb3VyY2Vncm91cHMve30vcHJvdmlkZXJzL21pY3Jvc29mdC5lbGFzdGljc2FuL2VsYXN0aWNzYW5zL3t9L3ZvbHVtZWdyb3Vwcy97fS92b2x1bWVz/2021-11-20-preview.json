@@ -197,7 +197,6 @@
                                                                                     {
                                                                                         "type": "string",
                                                                                         "name": "createSource",
-                                                                                        "required": true,
                                                                                         "enum": {
                                                                                             "items": [
                                                                                                 {

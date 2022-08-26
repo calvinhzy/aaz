@@ -173,6 +173,7 @@
                                                                                     "readOnly": true,
                                                                                     "type": "string",
                                                                                     "name": "name",
+                                                                                    "required": true,
                                                                                     "enum": {
                                                                                         "items": [
                                                                                             {

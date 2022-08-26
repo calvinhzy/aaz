@@ -57,7 +57,7 @@
                   <prop readOnly="True" type="string" name="name"/>
                   <prop type="object" name="properties" clientFlatten="True">
                     <prop type="object" name="creationData">
-                      <prop type="string" name="createSource" required="True">
+                      <prop type="string" name="createSource">
                         <enum>
                           <item value="&quot;None&quot;"/>
                         </enum>
@@ -227,7 +227,7 @@
       <argGroup name="Properties">
         <arg type="object" var="$parameters.properties.creationData" options="creation-data" group="Properties">
           <help short="State of the operation on the resource."/>
-          <arg type="string" var="$parameters.properties.creationData.createSource" options="create-source" required="True">
+          <arg type="string" var="$parameters.properties.creationData.createSource" options="create-source">
             <help short="This enumerates the possible sources of a volume creation."/>
             <enum>
               <item name="None" value="&quot;None&quot;"/>
@@ -237,7 +237,7 @@
             <help short="If createOption is Copy, this is the ARM id of the source snapshot or disk. If createOption is Restore, this is the ARM-like id of the source disk restore point."/>
           </arg>
         </arg>
-        <arg type="integer64" var="$parameters.properties.sizeGiB" options="size-gi-b" group="Properties">
+        <arg type="integer64" var="$parameters.properties.sizeGiB" options="size-gib" group="Properties">
           <help short="Volume size."/>
         </arg>
       </argGroup>
@@ -273,7 +273,7 @@
                 <schema type="object" name="parameters" required="True" clientFlatten="True">
                   <prop type="object" name="properties" clientFlatten="True">
                     <prop type="object" name="creationData" arg="$parameters.properties.creationData">
-                      <prop type="string" name="createSource" arg="$parameters.properties.creationData.createSource" required="True">
+                      <prop type="string" name="createSource" arg="$parameters.properties.creationData.createSource">
                         <enum>
                           <item value="&quot;None&quot;"/>
                         </enum>
@@ -301,7 +301,7 @@
                   <prop readOnly="True" type="string" name="name"/>
                   <prop type="object" name="properties" clientFlatten="True">
                     <prop type="object" name="creationData">
-                      <prop type="string" name="createSource" required="True">
+                      <prop type="string" name="createSource">
                         <enum>
                           <item value="&quot;None&quot;"/>
                         </enum>
@@ -419,7 +419,7 @@
       <argGroup name="Properties">
         <arg nullable="True" type="object" var="$parameters.properties.creationData" options="creation-data" group="Properties">
           <help short="State of the operation on the resource."/>
-          <arg type="string" var="$parameters.properties.creationData.createSource" options="create-source">
+          <arg nullable="True" type="string" var="$parameters.properties.creationData.createSource" options="create-source">
             <help short="This enumerates the possible sources of a volume creation."/>
             <enum>
               <item name="None" value="&quot;None&quot;"/>
@@ -429,7 +429,7 @@
             <help short="If createOption is Copy, this is the ARM id of the source snapshot or disk. If createOption is Restore, this is the ARM-like id of the source disk restore point."/>
           </arg>
         </arg>
-        <arg nullable="True" type="integer64" var="$parameters.properties.sizeGiB" options="size-gi-b" group="Properties">
+        <arg nullable="True" type="integer64" var="$parameters.properties.sizeGiB" options="size-gib" group="Properties">
           <help short="Volume size."/>
         </arg>
       </argGroup>
@@ -470,7 +470,7 @@
                   <prop readOnly="True" type="string" name="name"/>
                   <prop type="object" name="properties" clientFlatten="True">
                     <prop type="object" name="creationData">
-                      <prop type="string" name="createSource" required="True">
+                      <prop type="string" name="createSource">
                         <enum>
                           <item value="&quot;None&quot;"/>
                         </enum>
@@ -556,7 +556,7 @@
             <schema type="object" name="parameters" required="True" clientFlatten="True">
               <prop type="object" name="properties" clientFlatten="True">
                 <prop type="object" name="creationData" arg="$parameters.properties.creationData">
-                  <prop type="string" name="createSource" arg="$parameters.properties.creationData.createSource" required="True">
+                  <prop type="string" name="createSource" arg="$parameters.properties.creationData.createSource">
                     <enum>
                       <item value="&quot;None&quot;"/>
                     </enum>
