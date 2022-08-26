@@ -1,6 +1,6 @@
 # [Command] _elastic-san volume list_
 
-List Volumes in a VolumeGroup.
+List Volumes in a Volume Group.
 
 ## Versions
 

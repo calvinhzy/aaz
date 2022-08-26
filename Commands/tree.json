@@ -157,7 +157,7 @@
               },
               "show": {
                 "help": {
-                  "short": "Get an Volume."
+                  "short": "Get a Volume."
                 },
                 "names": [
                   "elastic-san",

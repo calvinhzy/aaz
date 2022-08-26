@@ -14,7 +14,7 @@ Manage Elastic San Volume.
 : List Volumes in a Volume Group.
 
 - [show](/Commands/elastic-san/volume/_show.md)
-: Get an Volume.
+: Get a Volume.
 
 - [update](/Commands/elastic-san/volume/_update.md)
 : Update a Volume.
