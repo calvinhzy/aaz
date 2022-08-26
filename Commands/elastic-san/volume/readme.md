@@ -11,7 +11,7 @@ Manage Elastic San Volume.
 : Delete a Volume.
 
 - [list](/Commands/elastic-san/volume/_list.md)
-: List Volumes in a VolumeGroup.
+: List Volumes in a Volume Group.
 
 - [show](/Commands/elastic-san/volume/_show.md)
 : Get an Volume.

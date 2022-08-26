@@ -134,7 +134,7 @@
               },
               "list": {
                 "help": {
-                  "short": "List Volumes in a VolumeGroup."
+                  "short": "List Volumes in a Volume Group."
                 },
                 "names": [
                   "elastic-san",
