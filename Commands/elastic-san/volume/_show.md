@@ -1,6 +1,6 @@
 # [Command] _elastic-san volume show_
 
-Get an Volume.
+Get a Volume.
 
 ## Versions
 
