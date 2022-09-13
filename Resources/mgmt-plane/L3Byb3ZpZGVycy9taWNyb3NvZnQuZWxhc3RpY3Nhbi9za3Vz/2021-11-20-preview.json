@@ -83,11 +83,6 @@
                                                     "props": [
                                                         {
                                                             "readOnly": true,
-                                                            "type": "string",
-                                                            "name": "nextLink"
-                                                        },
-                                                        {
-                                                            "readOnly": true,
                                                             "type": "array<object>",
                                                             "name": "value",
                                                             "item": {
@@ -96,45 +91,24 @@
                                                                 "props": [
                                                                     {
                                                                         "readOnly": true,
-                                                                        "type": "object",
-                                                                        "name": "elasticSan",
-                                                                        "props": [
-                                                                            {
-                                                                                "readOnly": true,
-                                                                                "type": "integer64",
-                                                                                "name": "iopsPerBaseTiB"
-                                                                            },
-                                                                            {
-                                                                                "readOnly": true,
-                                                                                "type": "integer64",
-                                                                                "name": "maxMBps"
-                                                                            },
-                                                                            {
-                                                                                "readOnly": true,
-                                                                                "type": "integer64",
-                                                                                "name": "maxSizeTiB"
-                                                                            },
-                                                                            {
-                                                                                "readOnly": true,
-                                                                                "type": "integer64",
-                                                                                "name": "maxVolumeGroupCount"
-                                                                            },
-                                                                            {
-                                                                                "readOnly": true,
-                                                                                "type": "integer64",
-                                                                                "name": "mbpsPerBaseTiB"
-                                                                            },
-                                                                            {
-                                                                                "readOnly": true,
-                                                                                "type": "integer64",
-                                                                                "name": "minIncrementSizeTiB"
-                                                                            },
-                                                                            {
-                                                                                "readOnly": true,
-                                                                                "type": "integer64",
-                                                                                "name": "minSizeTiB"
-                                                                            }
-                                                                        ]
+                                                                        "type": "array<object>",
+                                                                        "name": "capabilities",
+                                                                        "item": {
+                                                                            "readOnly": true,
+                                                                            "type": "object",
+                                                                            "props": [
+                                                                                {
+                                                                                    "readOnly": true,
+                                                                                    "type": "string",
+                                                                                    "name": "name"
+                                                                                },
+                                                                                {
+                                                                                    "readOnly": true,
+                                                                                    "type": "string",
+                                                                                    "name": "value"
+                                                                                }
+                                                                            ]
+                                                                        }
                                                                     },
                                                                     {
                                                                         "readOnly": true,
@@ -163,91 +137,45 @@
                                                                     },
                                                                     {
                                                                         "readOnly": true,
-                                                                        "type": "array<object>",
-                                                                        "name": "sku",
+                                                                        "type": "array<string>",
+                                                                        "name": "locations",
                                                                         "item": {
                                                                             "readOnly": true,
-                                                                            "type": "object",
-                                                                            "props": [
+                                                                            "type": "string"
+                                                                        }
+                                                                    },
+                                                                    {
+                                                                        "readOnly": true,
+                                                                        "type": "string",
+                                                                        "name": "name",
+                                                                        "required": true,
+                                                                        "enum": {
+                                                                            "items": [
                                                                                 {
-                                                                                    "readOnly": true,
-                                                                                    "type": "string",
-                                                                                    "name": "name",
-                                                                                    "required": true,
-                                                                                    "enum": {
-                                                                                        "items": [
-                                                                                            {
-                                                                                                "value": "Premium_LRS"
-                                                                                            },
-                                                                                            {
-                                                                                                "value": "Premium_ZRS"
-                                                                                            }
-                                                                                        ]
-                                                                                    }
+                                                                                    "value": "Premium_LRS"
                                                                                 },
                                                                                 {
-                                                                                    "readOnly": true,
-                                                                                    "type": "string",
-                                                                                    "name": "tier",
-                                                                                    "enum": {
-                                                                                        "items": [
-                                                                                            {
-                                                                                                "value": "Premium"
-                                                                                            }
-                                                                                        ]
-                                                                                    }
+                                                                                    "value": "Premium_ZRS"
                                                                                 }
                                                                             ]
                                                                         }
                                                                     },
                                                                     {
                                                                         "readOnly": true,
-                                                                        "type": "object",
-                                                                        "name": "volume",
-                                                                        "props": [
-                                                                            {
-                                                                                "readOnly": true,
-                                                                                "type": "integer64",
-                                                                                "name": "iopsPerBaseGiB"
-                                                                            },
-                                                                            {
-                                                                                "readOnly": true,
-                                                                                "type": "integer64",
-                                                                                "name": "maxIops"
-                                                                            },
-                                                                            {
-                                                                                "readOnly": true,
-                                                                                "type": "integer64",
-                                                                                "name": "maxMBps"
-                                                                            },
-                                                                            {
-                                                                                "readOnly": true,
-                                                                                "type": "integer64",
-                                                                                "name": "maxSizeGiB"
-                                                                            },
-                                                                            {
-                                                                                "readOnly": true,
-                                                                                "type": "integer64",
-                                                                                "name": "minIncrementSizeGiB"
-                                                                            },
-                                                                            {
-                                                                                "readOnly": true,
-                                                                                "type": "integer64",
-                                                                                "name": "minSizeGiB"
-                                                                            }
-                                                                        ]
+                                                                        "type": "string",
+                                                                        "name": "resourceType"
                                                                     },
                                                                     {
                                                                         "readOnly": true,
-                                                                        "type": "object",
-                                                                        "name": "volumeGroup",
-                                                                        "props": [
-                                                                            {
-                                                                                "readOnly": true,
-                                                                                "type": "integer64",
-                                                                                "name": "maxVolumeCount"
-                                                                            }
-                                                                        ]
+                                                                        "type": "string",
+                                                                        "name": "tier",
+                                                                        "enum": {
+                                                                            "items": [
+                                                                                {
+                                                                                    "value": "Premium"
+                                                                                }
+                                                                            ]
+                                                                        }
                                                                     }
                                                                 ]
                                                             }

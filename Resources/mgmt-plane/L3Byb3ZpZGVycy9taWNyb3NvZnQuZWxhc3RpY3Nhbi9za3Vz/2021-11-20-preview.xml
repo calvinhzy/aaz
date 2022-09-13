@@ -24,17 +24,13 @@
             <body>
               <json var="$Instance">
                 <schema type="object">
-                  <prop readOnly="True" type="string" name="nextLink"/>
                   <prop readOnly="True" type="array<object>" name="value">
                     <item readOnly="True" type="object">
-                      <prop readOnly="True" type="object" name="elasticSan">
-                        <prop readOnly="True" type="integer64" name="iopsPerBaseTiB"/>
-                        <prop readOnly="True" type="integer64" name="maxMBps"/>
-                        <prop readOnly="True" type="integer64" name="maxSizeTiB"/>
-                        <prop readOnly="True" type="integer64" name="maxVolumeGroupCount"/>
-                        <prop readOnly="True" type="integer64" name="mbpsPerBaseTiB"/>
-                        <prop readOnly="True" type="integer64" name="minIncrementSizeTiB"/>
-                        <prop readOnly="True" type="integer64" name="minSizeTiB"/>
+                      <prop readOnly="True" type="array<object>" name="capabilities">
+                        <item readOnly="True" type="object">
+                          <prop readOnly="True" type="string" name="name"/>
+                          <prop readOnly="True" type="string" name="value"/>
+                        </item>
                       </prop>
                       <prop readOnly="True" type="array<object>" name="locationInfo">
                         <item readOnly="True" type="object">
@@ -44,31 +40,20 @@
                           </prop>
                         </item>
                       </prop>
-                      <prop readOnly="True" type="array<object>" name="sku">
-                        <item readOnly="True" type="object">
-                          <prop readOnly="True" type="string" name="name" required="True">
-                            <enum>
-                              <item value="&quot;Premium_LRS&quot;"/>
-                              <item value="&quot;Premium_ZRS&quot;"/>
-                            </enum>
-                          </prop>
-                          <prop readOnly="True" type="string" name="tier">
-                            <enum>
-                              <item value="&quot;Premium&quot;"/>
-                            </enum>
-                          </prop>
-                        </item>
+                      <prop readOnly="True" type="array<string>" name="locations">
+                        <item readOnly="True" type="string"/>
                       </prop>
-                      <prop readOnly="True" type="object" name="volume">
-                        <prop readOnly="True" type="integer64" name="iopsPerBaseGiB"/>
-                        <prop readOnly="True" type="integer64" name="maxIops"/>
-                        <prop readOnly="True" type="integer64" name="maxMBps"/>
-                        <prop readOnly="True" type="integer64" name="maxSizeGiB"/>
-                        <prop readOnly="True" type="integer64" name="minIncrementSizeGiB"/>
-                        <prop readOnly="True" type="integer64" name="minSizeGiB"/>
+                      <prop readOnly="True" type="string" name="name" required="True">
+                        <enum>
+                          <item value="&quot;Premium_LRS&quot;"/>
+                          <item value="&quot;Premium_ZRS&quot;"/>
+                        </enum>
                       </prop>
-                      <prop readOnly="True" type="object" name="volumeGroup">
-                        <prop readOnly="True" type="integer64" name="maxVolumeCount"/>
+                      <prop readOnly="True" type="string" name="resourceType"/>
+                      <prop readOnly="True" type="string" name="tier">
+                        <enum>
+                          <item value="&quot;Premium&quot;"/>
+                        </enum>
                       </prop>
                     </item>
                   </prop>

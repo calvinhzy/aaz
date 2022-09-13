@@ -1351,6 +1351,66 @@
                                 },
                                 {
                                     "nullable": true,
+                                    "type": "object",
+                                    "var": "$parameters.properties.networkAcls",
+                                    "options": [
+                                        "network-acls"
+                                    ],
+                                    "group": "Properties",
+                                    "help": {
+                                        "short": "A collection of rules governing the accessibility from specific network locations."
+                                    },
+                                    "args": [
+                                        {
+                                            "nullable": true,
+                                            "type": "array<object>",
+                                            "var": "$parameters.properties.networkAcls.virtualNetworkRules",
+                                            "options": [
+                                                "virtual-network-rules"
+                                            ],
+                                            "help": {
+                                                "short": "The list of virtual network rules."
+                                            },
+                                            "item": {
+                                                "nullable": true,
+                                                "type": "object",
+                                                "args": [
+                                                    {
+                                                        "nullable": true,
+                                                        "type": "string",
+                                                        "var": "$parameters.properties.networkAcls.virtualNetworkRules[].action",
+                                                        "options": [
+                                                            "action"
+                                                        ],
+                                                        "help": {
+                                                            "short": "The action of virtual network rule."
+                                                        },
+                                                        "enum": {
+                                                            "items": [
+                                                                {
+                                                                    "name": "Allow",
+                                                                    "value": "Allow"
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "type": "string",
+                                                        "var": "$parameters.properties.networkAcls.virtualNetworkRules[].id",
+                                                        "options": [
+                                                            "id"
+                                                        ],
+                                                        "help": {
+                                                            "short": "Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}."
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nullable": true,
                                     "type": "string",
                                     "var": "$parameters.properties.protocolType",
                                     "options": [
@@ -1720,6 +1780,44 @@
                                                                 }
                                                             ]
                                                         }
+                                                    },
+                                                    {
+                                                        "type": "object",
+                                                        "name": "networkAcls",
+                                                        "arg": "$parameters.properties.networkAcls",
+                                                        "props": [
+                                                            {
+                                                                "type": "array<object>",
+                                                                "name": "virtualNetworkRules",
+                                                                "arg": "$parameters.properties.networkAcls.virtualNetworkRules",
+                                                                "item": {
+                                                                    "type": "object",
+                                                                    "props": [
+                                                                        {
+                                                                            "default": {
+                                                                                "value": "Allow"
+                                                                            },
+                                                                            "type": "string",
+                                                                            "name": "action",
+                                                                            "arg": "$parameters.properties.networkAcls.virtualNetworkRules[].action",
+                                                                            "enum": {
+                                                                                "items": [
+                                                                                    {
+                                                                                        "value": "Allow"
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "type": "string",
+                                                                            "name": "id",
+                                                                            "arg": "$parameters.properties.networkAcls.virtualNetworkRules[].id",
+                                                                            "required": true
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
                                                     },
                                                     {
                                                         "type": "string",

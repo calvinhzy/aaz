@@ -441,6 +441,23 @@
             <item name="EncryptionAtRestWithPlatformKey" value="&quot;EncryptionAtRestWithPlatformKey&quot;"/>
           </enum>
         </arg>
+        <arg nullable="True" type="object" var="$parameters.properties.networkAcls" options="network-acls" group="Properties">
+          <help short="A collection of rules governing the accessibility from specific network locations."/>
+          <arg nullable="True" type="array<object>" var="$parameters.properties.networkAcls.virtualNetworkRules" options="virtual-network-rules">
+            <help short="The list of virtual network rules."/>
+            <item nullable="True" type="object">
+              <arg nullable="True" type="string" var="$parameters.properties.networkAcls.virtualNetworkRules[].action" options="action">
+                <help short="The action of virtual network rule."/>
+                <enum>
+                  <item name="Allow" value="&quot;Allow&quot;"/>
+                </enum>
+              </arg>
+              <arg type="string" var="$parameters.properties.networkAcls.virtualNetworkRules[].id" options="id">
+                <help short="Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}."/>
+              </arg>
+            </item>
+          </arg>
+        </arg>
         <arg nullable="True" type="string" var="$parameters.properties.protocolType" options="protocol-type" group="Properties">
           <help short="Type of storage target"/>
           <enum>
@@ -578,6 +595,19 @@
                   <enum>
                     <item value="&quot;EncryptionAtRestWithPlatformKey&quot;"/>
                   </enum>
+                </prop>
+                <prop type="object" name="networkAcls" arg="$parameters.properties.networkAcls">
+                  <prop type="array<object>" name="virtualNetworkRules" arg="$parameters.properties.networkAcls.virtualNetworkRules">
+                    <item type="object">
+                      <prop type="string" name="action" arg="$parameters.properties.networkAcls.virtualNetworkRules[].action">
+                        <default value="&quot;Allow&quot;"/>
+                        <enum>
+                          <item value="&quot;Allow&quot;"/>
+                        </enum>
+                      </prop>
+                      <prop type="string" name="id" arg="$parameters.properties.networkAcls.virtualNetworkRules[].id" required="True"/>
+                    </item>
+                  </prop>
                 </prop>
                 <prop type="string" name="protocolType" arg="$parameters.properties.protocolType">
                   <enum>
