@@ -390,6 +390,16 @@
                                         "statusCode": [
                                             204
                                         ]
+                                    },
+                                    {
+                                        "isError": true,
+                                        "body": {
+                                            "json": {
+                                                "schema": {
+                                                    "type": "@ODataV4Format"
+                                                }
+                                            }
+                                        }
                                     }
                                 ]
                             }

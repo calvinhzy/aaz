@@ -1155,6 +1155,13 @@
           </request>
           <response statusCode="202"/>
           <response statusCode="204"/>
+          <response isError="True">
+            <body>
+              <json>
+                <schema type="@ODataV4Format"/>
+              </json>
+            </body>
+          </response>
         </http>
       </operation>
     </command>
