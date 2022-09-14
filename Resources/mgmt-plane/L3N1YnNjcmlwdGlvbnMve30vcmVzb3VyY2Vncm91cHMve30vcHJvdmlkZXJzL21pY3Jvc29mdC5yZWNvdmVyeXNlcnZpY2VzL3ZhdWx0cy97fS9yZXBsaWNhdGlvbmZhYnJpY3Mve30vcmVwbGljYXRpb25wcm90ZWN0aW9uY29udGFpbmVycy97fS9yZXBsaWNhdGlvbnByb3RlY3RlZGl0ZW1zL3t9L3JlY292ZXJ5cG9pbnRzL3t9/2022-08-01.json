@@ -1,0 +1,331 @@
+{
+    "plane": "mgmt-plane",
+    "resources": [
+        {
+            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/recoverypoints/{}",
+            "version": "2022-08-01",
+            "swagger": "mgmt-plane/recoveryservicessiterecovery/ResourceProviders/Microsoft.RecoveryServices/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuUmVjb3ZlcnlTZXJ2aWNlcy92YXVsdHMve3Jlc291cmNlTmFtZX0vcmVwbGljYXRpb25GYWJyaWNzL3tmYWJyaWNOYW1lfS9yZXBsaWNhdGlvblByb3RlY3Rpb25Db250YWluZXJzL3twcm90ZWN0aW9uQ29udGFpbmVyTmFtZX0vcmVwbGljYXRpb25Qcm90ZWN0ZWRJdGVtcy97cmVwbGljYXRlZFByb3RlY3RlZEl0ZW1OYW1lfS9yZWNvdmVyeVBvaW50cy97cmVjb3ZlcnlQb2ludE5hbWV9/V/MjAyMi0wOC0wMQ=="
+        }
+    ],
+    "commandGroups": [
+        {
+            "name": "site-recovery vault fabric protection-container protected-item recovery-point",
+            "commands": [
+                {
+                    "name": "show",
+                    "version": "2022-08-01",
+                    "resources": [
+                        {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/recoverypoints/{}",
+                            "version": "2022-08-01",
+                            "swagger": "mgmt-plane/recoveryservicessiterecovery/ResourceProviders/Microsoft.RecoveryServices/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuUmVjb3ZlcnlTZXJ2aWNlcy92YXVsdHMve3Jlc291cmNlTmFtZX0vcmVwbGljYXRpb25GYWJyaWNzL3tmYWJyaWNOYW1lfS9yZXBsaWNhdGlvblByb3RlY3Rpb25Db250YWluZXJzL3twcm90ZWN0aW9uQ29udGFpbmVyTmFtZX0vcmVwbGljYXRpb25Qcm90ZWN0ZWRJdGVtcy97cmVwbGljYXRlZFByb3RlY3RlZEl0ZW1OYW1lfS9yZWNvdmVyeVBvaW50cy97cmVjb3ZlcnlQb2ludE5hbWV9/V/MjAyMi0wOC0wMQ=="
+                        }
+                    ],
+                    "argGroups": [
+                        {
+                            "name": "",
+                            "args": [
+                                {
+                                    "type": "string",
+                                    "var": "$Path.fabricName",
+                                    "options": [
+                                        "fabric-name"
+                                    ],
+                                    "required": true,
+                                    "idPart": "child_name_1",
+                                    "help": {
+                                        "short": "The fabric name."
+                                    }
+                                },
+                                {
+                                    "type": "string",
+                                    "var": "$Path.protectionContainerName",
+                                    "options": [
+                                        "protection-container-name"
+                                    ],
+                                    "required": true,
+                                    "idPart": "child_name_2",
+                                    "help": {
+                                        "short": "The protection container name."
+                                    }
+                                },
+                                {
+                                    "type": "string",
+                                    "var": "$Path.recoveryPointName",
+                                    "options": [
+                                        "n",
+                                        "name",
+                                        "recovery-point-name"
+                                    ],
+                                    "required": true,
+                                    "idPart": "child_name_4",
+                                    "help": {
+                                        "short": "The recovery point name."
+                                    }
+                                },
+                                {
+                                    "type": "string",
+                                    "var": "$Path.replicatedProtectedItemName",
+                                    "options": [
+                                        "replicated-protected-item-name"
+                                    ],
+                                    "required": true,
+                                    "idPart": "child_name_3",
+                                    "help": {
+                                        "short": "The replication protected item name."
+                                    }
+                                },
+                                {
+                                    "type": "ResourceGroupName",
+                                    "var": "$Path.resourceGroupName",
+                                    "options": [
+                                        "g",
+                                        "resource-group"
+                                    ],
+                                    "required": true,
+                                    "idPart": "resource_group"
+                                },
+                                {
+                                    "type": "string",
+                                    "var": "$Path.resourceName",
+                                    "options": [
+                                        "resource-name"
+                                    ],
+                                    "required": true,
+                                    "idPart": "name",
+                                    "help": {
+                                        "short": "The name of the recovery services vault."
+                                    }
+                                },
+                                {
+                                    "type": "SubscriptionId",
+                                    "var": "$Path.subscriptionId",
+                                    "options": [
+                                        "subscription"
+                                    ],
+                                    "required": true,
+                                    "idPart": "subscription"
+                                }
+                            ]
+                        }
+                    ],
+                    "operations": [
+                        {
+                            "operationId": "RecoveryPoints_Get",
+                            "http": {
+                                "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationFabrics/{fabricName}/replicationProtectionContainers/{protectionContainerName}/replicationProtectedItems/{replicatedProtectedItemName}/recoveryPoints/{recoveryPointName}",
+                                "request": {
+                                    "method": "get",
+                                    "path": {
+                                        "params": [
+                                            {
+                                                "type": "string",
+                                                "name": "fabricName",
+                                                "arg": "$Path.fabricName",
+                                                "required": true
+                                            },
+                                            {
+                                                "type": "string",
+                                                "name": "protectionContainerName",
+                                                "arg": "$Path.protectionContainerName",
+                                                "required": true
+                                            },
+                                            {
+                                                "type": "string",
+                                                "name": "recoveryPointName",
+                                                "arg": "$Path.recoveryPointName",
+                                                "required": true
+                                            },
+                                            {
+                                                "type": "string",
+                                                "name": "replicatedProtectedItemName",
+                                                "arg": "$Path.replicatedProtectedItemName",
+                                                "required": true
+                                            },
+                                            {
+                                                "type": "string",
+                                                "name": "resourceGroupName",
+                                                "arg": "$Path.resourceGroupName",
+                                                "required": true
+                                            },
+                                            {
+                                                "type": "string",
+                                                "name": "resourceName",
+                                                "arg": "$Path.resourceName",
+                                                "required": true
+                                            },
+                                            {
+                                                "type": "string",
+                                                "name": "subscriptionId",
+                                                "arg": "$Path.subscriptionId",
+                                                "required": true
+                                            }
+                                        ]
+                                    },
+                                    "query": {
+                                        "consts": [
+                                            {
+                                                "readOnly": true,
+                                                "const": true,
+                                                "default": {
+                                                    "value": "2022-08-01"
+                                                },
+                                                "type": "string",
+                                                "name": "api-version",
+                                                "required": true
+                                            }
+                                        ]
+                                    }
+                                },
+                                "responses": [
+                                    {
+                                        "statusCode": [
+                                            200
+                                        ],
+                                        "body": {
+                                            "json": {
+                                                "var": "$Instance",
+                                                "schema": {
+                                                    "type": "object",
+                                                    "props": [
+                                                        {
+                                                            "readOnly": true,
+                                                            "type": "ResourceId",
+                                                            "name": "id",
+                                                            "format": {
+                                                                "template": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.RecoveryServices/vaults/{}/replicationFabrics/{}/replicationProtectionContainers/{}/replicationProtectedItems/{}/recoveryPoints/{}"
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "ResourceLocation",
+                                                            "name": "location"
+                                                        },
+                                                        {
+                                                            "readOnly": true,
+                                                            "type": "string",
+                                                            "name": "name"
+                                                        },
+                                                        {
+                                                            "type": "object",
+                                                            "name": "properties",
+                                                            "props": [
+                                                                {
+                                                                    "type": "object",
+                                                                    "name": "providerSpecificDetails",
+                                                                    "props": [
+                                                                        {
+                                                                            "type": "string",
+                                                                            "name": "instanceType",
+                                                                            "required": true,
+                                                                            "enum": {
+                                                                                "items": [
+                                                                                    {
+                                                                                        "value": "A2A"
+                                                                                    },
+                                                                                    {
+                                                                                        "value": "InMageAzureV2"
+                                                                                    },
+                                                                                    {
+                                                                                        "value": "InMageRcm"
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        }
+                                                                    ],
+                                                                    "discriminators": [
+                                                                        {
+                                                                            "property": "instanceType",
+                                                                            "value": "A2A",
+                                                                            "props": [
+                                                                                {
+                                                                                    "type": "array<string>",
+                                                                                    "name": "disks",
+                                                                                    "item": {
+                                                                                        "type": "string"
+                                                                                    }
+                                                                                },
+                                                                                {
+                                                                                    "type": "string",
+                                                                                    "name": "recoveryPointSyncType",
+                                                                                    "enum": {
+                                                                                        "items": [
+                                                                                            {
+                                                                                                "value": "MultiVmSyncRecoveryPoint"
+                                                                                            },
+                                                                                            {
+                                                                                                "value": "PerVmRecoveryPoint"
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "property": "instanceType",
+                                                                            "value": "InMageAzureV2",
+                                                                            "props": [
+                                                                                {
+                                                                                    "type": "string",
+                                                                                    "name": "isMultiVmSyncPoint"
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "property": "instanceType",
+                                                                            "value": "InMageRcm",
+                                                                            "props": [
+                                                                                {
+                                                                                    "readOnly": true,
+                                                                                    "type": "string",
+                                                                                    "name": "isMultiVmSyncPoint"
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "type": "dateTime",
+                                                                    "name": "recoveryPointTime"
+                                                                },
+                                                                {
+                                                                    "type": "string",
+                                                                    "name": "recoveryPointType"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "readOnly": true,
+                                                            "type": "string",
+                                                            "name": "type"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "isError": true,
+                                        "body": {
+                                            "json": {
+                                                "schema": {
+                                                    "type": "@ODataV4Format"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "type": "object",
+                            "ref": "$Instance",
+                            "clientFlatten": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

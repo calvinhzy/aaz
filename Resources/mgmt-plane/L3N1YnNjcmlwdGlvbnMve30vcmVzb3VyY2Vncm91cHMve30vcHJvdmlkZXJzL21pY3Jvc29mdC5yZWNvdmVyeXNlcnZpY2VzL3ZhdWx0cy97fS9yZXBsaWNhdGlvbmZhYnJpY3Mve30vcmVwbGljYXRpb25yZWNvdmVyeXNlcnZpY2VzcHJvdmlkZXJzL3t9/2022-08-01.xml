@@ -1,0 +1,623 @@
+<?xml version='1.0' encoding='utf-8'?>
+<CodeGen plane="mgmt-plane">
+  <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationrecoveryservicesproviders/{}" version="2022-08-01" swagger="mgmt-plane/recoveryservicessiterecovery/ResourceProviders/Microsoft.RecoveryServices/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuUmVjb3ZlcnlTZXJ2aWNlcy92YXVsdHMve3Jlc291cmNlTmFtZX0vcmVwbGljYXRpb25GYWJyaWNzL3tmYWJyaWNOYW1lfS9yZXBsaWNhdGlvblJlY292ZXJ5U2VydmljZXNQcm92aWRlcnMve3Byb3ZpZGVyTmFtZX0=/V/MjAyMi0wOC0wMQ=="/>
+  <commandGroup name="site-recovery vault fabric recovery-services-provider">
+    <command name="show" version="2022-08-01">
+      <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationrecoveryservicesproviders/{}" version="2022-08-01" swagger="mgmt-plane/recoveryservicessiterecovery/ResourceProviders/Microsoft.RecoveryServices/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuUmVjb3ZlcnlTZXJ2aWNlcy92YXVsdHMve3Jlc291cmNlTmFtZX0vcmVwbGljYXRpb25GYWJyaWNzL3tmYWJyaWNOYW1lfS9yZXBsaWNhdGlvblJlY292ZXJ5U2VydmljZXNQcm92aWRlcnMve3Byb3ZpZGVyTmFtZX0=/V/MjAyMi0wOC0wMQ=="/>
+      <argGroup name="">
+        <arg type="string" var="$Path.fabricName" options="fabric-name" required="True" idPart="child_name_1">
+          <help short="Fabric name."/>
+        </arg>
+        <arg type="string" var="$Path.providerName" options="provider-name name n" required="True" idPart="child_name_2">
+          <help short="Recovery services provider name."/>
+        </arg>
+        <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
+        <arg type="string" var="$Path.resourceName" options="resource-name" required="True" idPart="name">
+          <help short="The name of the recovery services vault."/>
+        </arg>
+        <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
+      </argGroup>
+      <operation operationId="ReplicationRecoveryServicesProviders_Get">
+        <http path="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationFabrics/{fabricName}/replicationRecoveryServicesProviders/{providerName}">
+          <request method="get">
+            <path>
+              <param type="string" name="fabricName" arg="$Path.fabricName" required="True"/>
+              <param type="string" name="providerName" arg="$Path.providerName" required="True"/>
+              <param type="string" name="resourceGroupName" arg="$Path.resourceGroupName" required="True"/>
+              <param type="string" name="resourceName" arg="$Path.resourceName" required="True"/>
+              <param type="string" name="subscriptionId" arg="$Path.subscriptionId" required="True"/>
+            </path>
+            <query>
+              <const readOnly="True" const="True" type="string" name="api-version" required="True">
+                <default value="&quot;2022-08-01&quot;"/>
+              </const>
+            </query>
+          </request>
+          <response statusCode="200">
+            <body>
+              <json var="$Instance">
+                <schema type="object">
+                  <prop readOnly="True" type="ResourceId" name="id">
+                    <format template="/subscriptions/{}/resourceGroups/{}/providers/Microsoft.RecoveryServices/vaults/{}/replicationFabrics/{}/replicationRecoveryServicesProviders/{}"/>
+                  </prop>
+                  <prop type="ResourceLocation" name="location"/>
+                  <prop readOnly="True" type="string" name="name"/>
+                  <prop type="object" name="properties">
+                    <prop type="array<string>" name="allowedScenarios">
+                      <item type="string"/>
+                    </prop>
+                    <prop type="object" name="authenticationIdentityDetails" cls="IdentityProviderDetails_read">
+                      <prop type="string" name="aadAuthority"/>
+                      <prop type="string" name="applicationId"/>
+                      <prop type="string" name="audience"/>
+                      <prop type="string" name="objectId"/>
+                      <prop type="string" name="tenantId"/>
+                    </prop>
+                    <prop type="string" name="biosId"/>
+                    <prop type="string" name="connectionStatus"/>
+                    <prop type="@IdentityProviderDetails_read" name="dataPlaneAuthenticationIdentityDetails"/>
+                    <prop type="string" name="draIdentifier"/>
+                    <prop type="string" name="fabricFriendlyName"/>
+                    <prop type="string" name="fabricType"/>
+                    <prop type="string" name="friendlyName"/>
+                    <prop type="array<object>" name="healthErrorDetails">
+                      <item type="object">
+                        <prop type="dateTime" name="creationTimeUtc"/>
+                        <prop type="string" name="customerResolvability">
+                          <enum>
+                            <item value="&quot;Allowed&quot;"/>
+                            <item value="&quot;NotAllowed&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="string" name="entityId"/>
+                        <prop type="string" name="errorCategory"/>
+                        <prop type="string" name="errorCode"/>
+                        <prop type="string" name="errorId"/>
+                        <prop type="string" name="errorLevel"/>
+                        <prop type="string" name="errorMessage"/>
+                        <prop type="string" name="errorSource"/>
+                        <prop type="string" name="errorType"/>
+                        <prop type="array<object>" name="innerHealthErrors">
+                          <item type="object">
+                            <prop type="dateTime" name="creationTimeUtc"/>
+                            <prop type="string" name="customerResolvability">
+                              <enum>
+                                <item value="&quot;Allowed&quot;"/>
+                                <item value="&quot;NotAllowed&quot;"/>
+                              </enum>
+                            </prop>
+                            <prop type="string" name="entityId"/>
+                            <prop type="string" name="errorCategory"/>
+                            <prop type="string" name="errorCode"/>
+                            <prop type="string" name="errorId"/>
+                            <prop type="string" name="errorLevel"/>
+                            <prop type="string" name="errorMessage"/>
+                            <prop type="string" name="errorSource"/>
+                            <prop type="string" name="errorType"/>
+                            <prop type="string" name="possibleCauses"/>
+                            <prop type="string" name="recommendedAction"/>
+                            <prop type="string" name="recoveryProviderErrorMessage"/>
+                            <prop type="string" name="summaryMessage"/>
+                          </item>
+                        </prop>
+                        <prop type="string" name="possibleCauses"/>
+                        <prop type="string" name="recommendedAction"/>
+                        <prop type="string" name="recoveryProviderErrorMessage"/>
+                        <prop type="string" name="summaryMessage"/>
+                      </item>
+                    </prop>
+                    <prop type="dateTime" name="lastHeartBeat"/>
+                    <prop type="string" name="machineId"/>
+                    <prop type="string" name="machineName"/>
+                    <prop type="integer32" name="protectedItemCount"/>
+                    <prop type="string" name="providerVersion"/>
+                    <prop type="object" name="providerVersionDetails">
+                      <prop type="dateTime" name="expiryDate"/>
+                      <prop type="string" name="status">
+                        <enum>
+                          <item value="&quot;Deprecated&quot;"/>
+                          <item value="&quot;NotSupported&quot;"/>
+                          <item value="&quot;SecurityUpdateRequired&quot;"/>
+                          <item value="&quot;Supported&quot;"/>
+                          <item value="&quot;UpdateRequired&quot;"/>
+                        </enum>
+                      </prop>
+                      <prop type="string" name="version"/>
+                    </prop>
+                    <prop type="dateTime" name="providerVersionExpiryDate"/>
+                    <prop type="string" name="providerVersionState"/>
+                    <prop type="@IdentityProviderDetails_read" name="resourceAccessIdentityDetails"/>
+                    <prop type="string" name="serverVersion"/>
+                  </prop>
+                  <prop readOnly="True" type="string" name="type"/>
+                </schema>
+              </json>
+            </body>
+          </response>
+          <response isError="True">
+            <body>
+              <json>
+                <schema type="@ODataV4Format"/>
+              </json>
+            </body>
+          </response>
+        </http>
+      </operation>
+      <output type="object" ref="$Instance" clientFlatten="True"/>
+    </command>
+    <command name="delete" version="2022-08-01" confirmation="Are you sure you want to perform this operation?">
+      <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationrecoveryservicesproviders/{}" version="2022-08-01" swagger="mgmt-plane/recoveryservicessiterecovery/ResourceProviders/Microsoft.RecoveryServices/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuUmVjb3ZlcnlTZXJ2aWNlcy92YXVsdHMve3Jlc291cmNlTmFtZX0vcmVwbGljYXRpb25GYWJyaWNzL3tmYWJyaWNOYW1lfS9yZXBsaWNhdGlvblJlY292ZXJ5U2VydmljZXNQcm92aWRlcnMve3Byb3ZpZGVyTmFtZX0=/V/MjAyMi0wOC0wMQ=="/>
+      <argGroup name="">
+        <arg type="string" var="$Path.fabricName" options="fabric-name" required="True" idPart="child_name_1">
+          <help short="Fabric name."/>
+        </arg>
+        <arg type="string" var="$Path.providerName" options="provider-name name n" required="True" idPart="child_name_2">
+          <help short="Recovery services provider name."/>
+        </arg>
+        <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
+        <arg type="string" var="$Path.resourceName" options="resource-name" required="True" idPart="name">
+          <help short="The name of the recovery services vault."/>
+        </arg>
+        <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
+      </argGroup>
+      <operation operationId="ReplicationRecoveryServicesProviders_Purge">
+        <longRunning finalStateVia="azure-async-operation"/>
+        <http path="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationFabrics/{fabricName}/replicationRecoveryServicesProviders/{providerName}">
+          <request method="delete">
+            <path>
+              <param type="string" name="fabricName" arg="$Path.fabricName" required="True"/>
+              <param type="string" name="providerName" arg="$Path.providerName" required="True"/>
+              <param type="string" name="resourceGroupName" arg="$Path.resourceGroupName" required="True"/>
+              <param type="string" name="resourceName" arg="$Path.resourceName" required="True"/>
+              <param type="string" name="subscriptionId" arg="$Path.subscriptionId" required="True"/>
+            </path>
+            <query>
+              <const readOnly="True" const="True" type="string" name="api-version" required="True">
+                <default value="&quot;2022-08-01&quot;"/>
+              </const>
+            </query>
+          </request>
+          <response statusCode="202"/>
+          <response statusCode="204"/>
+        </http>
+      </operation>
+    </command>
+    <command name="create" version="2022-08-01">
+      <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationrecoveryservicesproviders/{}" version="2022-08-01" swagger="mgmt-plane/recoveryservicessiterecovery/ResourceProviders/Microsoft.RecoveryServices/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuUmVjb3ZlcnlTZXJ2aWNlcy92YXVsdHMve3Jlc291cmNlTmFtZX0vcmVwbGljYXRpb25GYWJyaWNzL3tmYWJyaWNOYW1lfS9yZXBsaWNhdGlvblJlY292ZXJ5U2VydmljZXNQcm92aWRlcnMve3Byb3ZpZGVyTmFtZX0=/V/MjAyMi0wOC0wMQ=="/>
+      <argGroup name="">
+        <arg type="string" var="$Path.fabricName" options="fabric-name" required="True" idPart="child_name_1">
+          <help short="Fabric name."/>
+        </arg>
+        <arg type="string" var="$Path.providerName" options="provider-name name n" required="True" idPart="child_name_2">
+          <help short="Recovery services provider name."/>
+        </arg>
+        <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
+        <arg type="string" var="$Path.resourceName" options="resource-name" required="True" idPart="name">
+          <help short="The name of the recovery services vault."/>
+        </arg>
+        <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
+      </argGroup>
+      <argGroup name="Properties">
+        <arg type="object" var="$addProviderInput.properties.authenticationIdentityInput" options="authentication-identity-input" required="True" group="Properties" cls="IdentityProviderInput_create">
+          <help short="The identity provider input for DRA authentication."/>
+          <arg type="string" var="@IdentityProviderInput_create.aadAuthority" options="aad-authority" required="True">
+            <help short="The base authority for Azure Active Directory authentication."/>
+          </arg>
+          <arg type="string" var="@IdentityProviderInput_create.applicationId" options="application-id" required="True">
+            <help short="The application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services."/>
+          </arg>
+          <arg type="string" var="@IdentityProviderInput_create.audience" options="audience" required="True">
+            <help short="The intended Audience of the service principal with which the on-premise management/data plane components would communicate with our Azure services."/>
+          </arg>
+          <arg type="string" var="@IdentityProviderInput_create.objectId" options="object-id" required="True">
+            <help short="The object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services."/>
+          </arg>
+          <arg type="string" var="@IdentityProviderInput_create.tenantId" options="tenant-id" required="True">
+            <help short="The tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services."/>
+          </arg>
+        </arg>
+        <arg type="string" var="$addProviderInput.properties.biosId" options="bios-id" group="Properties">
+          <help short="The Bios Id of the machine."/>
+        </arg>
+        <arg type="@IdentityProviderInput_create" var="$addProviderInput.properties.dataPlaneAuthenticationIdentityInput" options="data-plane-authentication-identity-input" group="Properties">
+          <help short="The identity provider input for data plane authentication."/>
+        </arg>
+        <arg type="string" var="$addProviderInput.properties.machineId" options="machine-id" group="Properties">
+          <help short="The Id of the machine where the provider is getting added."/>
+        </arg>
+        <arg type="string" var="$addProviderInput.properties.machineName" options="machine-name" required="True" group="Properties">
+          <help short="The name of the machine where the provider is getting added."/>
+        </arg>
+        <arg type="@IdentityProviderInput_create" var="$addProviderInput.properties.resourceAccessIdentityInput" options="resource-access-identity-input" required="True" group="Properties">
+          <help short="The identity provider input for resource access."/>
+        </arg>
+      </argGroup>
+      <operation operationId="ReplicationRecoveryServicesProviders_Create">
+        <longRunning finalStateVia="azure-async-operation"/>
+        <http path="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationFabrics/{fabricName}/replicationRecoveryServicesProviders/{providerName}">
+          <request method="put">
+            <path>
+              <param type="string" name="fabricName" arg="$Path.fabricName" required="True"/>
+              <param type="string" name="providerName" arg="$Path.providerName" required="True"/>
+              <param type="string" name="resourceGroupName" arg="$Path.resourceGroupName" required="True"/>
+              <param type="string" name="resourceName" arg="$Path.resourceName" required="True"/>
+              <param type="string" name="subscriptionId" arg="$Path.subscriptionId" required="True"/>
+            </path>
+            <query>
+              <const readOnly="True" const="True" type="string" name="api-version" required="True">
+                <default value="&quot;2022-08-01&quot;"/>
+              </const>
+            </query>
+            <body>
+              <json>
+                <schema type="object" name="addProviderInput" required="True" clientFlatten="True">
+                  <prop type="object" name="properties" required="True">
+                    <prop type="object" name="authenticationIdentityInput" arg="$addProviderInput.properties.authenticationIdentityInput" required="True" cls="IdentityProviderInput_create">
+                      <prop type="string" name="aadAuthority" arg="@IdentityProviderInput_create.aadAuthority" required="True"/>
+                      <prop type="string" name="applicationId" arg="@IdentityProviderInput_create.applicationId" required="True"/>
+                      <prop type="string" name="audience" arg="@IdentityProviderInput_create.audience" required="True"/>
+                      <prop type="string" name="objectId" arg="@IdentityProviderInput_create.objectId" required="True"/>
+                      <prop type="string" name="tenantId" arg="@IdentityProviderInput_create.tenantId" required="True"/>
+                    </prop>
+                    <prop type="string" name="biosId" arg="$addProviderInput.properties.biosId"/>
+                    <prop type="@IdentityProviderInput_create" name="dataPlaneAuthenticationIdentityInput" arg="$addProviderInput.properties.dataPlaneAuthenticationIdentityInput"/>
+                    <prop type="string" name="machineId" arg="$addProviderInput.properties.machineId"/>
+                    <prop type="string" name="machineName" arg="$addProviderInput.properties.machineName" required="True"/>
+                    <prop type="@IdentityProviderInput_create" name="resourceAccessIdentityInput" arg="$addProviderInput.properties.resourceAccessIdentityInput" required="True"/>
+                  </prop>
+                </schema>
+              </json>
+            </body>
+          </request>
+          <response statusCode="200">
+            <body>
+              <json var="$Instance">
+                <schema type="object">
+                  <prop readOnly="True" type="ResourceId" name="id">
+                    <format template="/subscriptions/{}/resourceGroups/{}/providers/Microsoft.RecoveryServices/vaults/{}/replicationFabrics/{}/replicationRecoveryServicesProviders/{}"/>
+                  </prop>
+                  <prop type="ResourceLocation" name="location"/>
+                  <prop readOnly="True" type="string" name="name"/>
+                  <prop type="object" name="properties">
+                    <prop type="array<string>" name="allowedScenarios">
+                      <item type="string"/>
+                    </prop>
+                    <prop type="object" name="authenticationIdentityDetails" cls="IdentityProviderDetails_read">
+                      <prop type="string" name="aadAuthority"/>
+                      <prop type="string" name="applicationId"/>
+                      <prop type="string" name="audience"/>
+                      <prop type="string" name="objectId"/>
+                      <prop type="string" name="tenantId"/>
+                    </prop>
+                    <prop type="string" name="biosId"/>
+                    <prop type="string" name="connectionStatus"/>
+                    <prop type="@IdentityProviderDetails_read" name="dataPlaneAuthenticationIdentityDetails"/>
+                    <prop type="string" name="draIdentifier"/>
+                    <prop type="string" name="fabricFriendlyName"/>
+                    <prop type="string" name="fabricType"/>
+                    <prop type="string" name="friendlyName"/>
+                    <prop type="array<object>" name="healthErrorDetails">
+                      <item type="object">
+                        <prop type="dateTime" name="creationTimeUtc"/>
+                        <prop type="string" name="customerResolvability">
+                          <enum>
+                            <item value="&quot;Allowed&quot;"/>
+                            <item value="&quot;NotAllowed&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="string" name="entityId"/>
+                        <prop type="string" name="errorCategory"/>
+                        <prop type="string" name="errorCode"/>
+                        <prop type="string" name="errorId"/>
+                        <prop type="string" name="errorLevel"/>
+                        <prop type="string" name="errorMessage"/>
+                        <prop type="string" name="errorSource"/>
+                        <prop type="string" name="errorType"/>
+                        <prop type="array<object>" name="innerHealthErrors">
+                          <item type="object">
+                            <prop type="dateTime" name="creationTimeUtc"/>
+                            <prop type="string" name="customerResolvability">
+                              <enum>
+                                <item value="&quot;Allowed&quot;"/>
+                                <item value="&quot;NotAllowed&quot;"/>
+                              </enum>
+                            </prop>
+                            <prop type="string" name="entityId"/>
+                            <prop type="string" name="errorCategory"/>
+                            <prop type="string" name="errorCode"/>
+                            <prop type="string" name="errorId"/>
+                            <prop type="string" name="errorLevel"/>
+                            <prop type="string" name="errorMessage"/>
+                            <prop type="string" name="errorSource"/>
+                            <prop type="string" name="errorType"/>
+                            <prop type="string" name="possibleCauses"/>
+                            <prop type="string" name="recommendedAction"/>
+                            <prop type="string" name="recoveryProviderErrorMessage"/>
+                            <prop type="string" name="summaryMessage"/>
+                          </item>
+                        </prop>
+                        <prop type="string" name="possibleCauses"/>
+                        <prop type="string" name="recommendedAction"/>
+                        <prop type="string" name="recoveryProviderErrorMessage"/>
+                        <prop type="string" name="summaryMessage"/>
+                      </item>
+                    </prop>
+                    <prop type="dateTime" name="lastHeartBeat"/>
+                    <prop type="string" name="machineId"/>
+                    <prop type="string" name="machineName"/>
+                    <prop type="integer32" name="protectedItemCount"/>
+                    <prop type="string" name="providerVersion"/>
+                    <prop type="object" name="providerVersionDetails">
+                      <prop type="dateTime" name="expiryDate"/>
+                      <prop type="string" name="status">
+                        <enum>
+                          <item value="&quot;Deprecated&quot;"/>
+                          <item value="&quot;NotSupported&quot;"/>
+                          <item value="&quot;SecurityUpdateRequired&quot;"/>
+                          <item value="&quot;Supported&quot;"/>
+                          <item value="&quot;UpdateRequired&quot;"/>
+                        </enum>
+                      </prop>
+                      <prop type="string" name="version"/>
+                    </prop>
+                    <prop type="dateTime" name="providerVersionExpiryDate"/>
+                    <prop type="string" name="providerVersionState"/>
+                    <prop type="@IdentityProviderDetails_read" name="resourceAccessIdentityDetails"/>
+                    <prop type="string" name="serverVersion"/>
+                  </prop>
+                  <prop readOnly="True" type="string" name="type"/>
+                </schema>
+              </json>
+            </body>
+          </response>
+          <response statusCode="202"/>
+          <response isError="True">
+            <body>
+              <json>
+                <schema type="@ODataV4Format"/>
+              </json>
+            </body>
+          </response>
+        </http>
+      </operation>
+      <output type="object" ref="$Instance" clientFlatten="True"/>
+    </command>
+    <command name="update" version="2022-08-01">
+      <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationrecoveryservicesproviders/{}" version="2022-08-01" swagger="mgmt-plane/recoveryservicessiterecovery/ResourceProviders/Microsoft.RecoveryServices/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuUmVjb3ZlcnlTZXJ2aWNlcy92YXVsdHMve3Jlc291cmNlTmFtZX0vcmVwbGljYXRpb25GYWJyaWNzL3tmYWJyaWNOYW1lfS9yZXBsaWNhdGlvblJlY292ZXJ5U2VydmljZXNQcm92aWRlcnMve3Byb3ZpZGVyTmFtZX0=/V/MjAyMi0wOC0wMQ=="/>
+      <argGroup name="">
+        <arg type="string" var="$Path.fabricName" options="fabric-name" required="True" idPart="child_name_1">
+          <help short="Fabric name."/>
+        </arg>
+        <arg type="string" var="$Path.providerName" options="provider-name name n" required="True" idPart="child_name_2">
+          <help short="Recovery services provider name."/>
+        </arg>
+        <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
+        <arg type="string" var="$Path.resourceName" options="resource-name" required="True" idPart="name">
+          <help short="The name of the recovery services vault."/>
+        </arg>
+        <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
+      </argGroup>
+      <argGroup name="Properties">
+        <arg type="object" var="$addProviderInput.properties.authenticationIdentityInput" options="authentication-identity-input" group="Properties" cls="IdentityProviderInput_update">
+          <help short="The identity provider input for DRA authentication."/>
+          <arg type="string" var="@IdentityProviderInput_update.aadAuthority" options="aad-authority">
+            <help short="The base authority for Azure Active Directory authentication."/>
+          </arg>
+          <arg type="string" var="@IdentityProviderInput_update.applicationId" options="application-id">
+            <help short="The application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services."/>
+          </arg>
+          <arg type="string" var="@IdentityProviderInput_update.audience" options="audience">
+            <help short="The intended Audience of the service principal with which the on-premise management/data plane components would communicate with our Azure services."/>
+          </arg>
+          <arg type="string" var="@IdentityProviderInput_update.objectId" options="object-id">
+            <help short="The object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services."/>
+          </arg>
+          <arg type="string" var="@IdentityProviderInput_update.tenantId" options="tenant-id">
+            <help short="The tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services."/>
+          </arg>
+        </arg>
+        <arg nullable="True" type="string" var="$addProviderInput.properties.biosId" options="bios-id" group="Properties">
+          <help short="The Bios Id of the machine."/>
+        </arg>
+        <arg nullable="True" type="@IdentityProviderInput_update" var="$addProviderInput.properties.dataPlaneAuthenticationIdentityInput" options="data-plane-authentication-identity-input" group="Properties">
+          <help short="The identity provider input for data plane authentication."/>
+        </arg>
+        <arg nullable="True" type="string" var="$addProviderInput.properties.machineId" options="machine-id" group="Properties">
+          <help short="The Id of the machine where the provider is getting added."/>
+        </arg>
+        <arg type="string" var="$addProviderInput.properties.machineName" options="machine-name" group="Properties">
+          <help short="The name of the machine where the provider is getting added."/>
+        </arg>
+        <arg type="@IdentityProviderInput_update" var="$addProviderInput.properties.resourceAccessIdentityInput" options="resource-access-identity-input" group="Properties">
+          <help short="The identity provider input for resource access."/>
+        </arg>
+      </argGroup>
+      <operation operationId="ReplicationRecoveryServicesProviders_Get">
+        <http path="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationFabrics/{fabricName}/replicationRecoveryServicesProviders/{providerName}">
+          <request method="get">
+            <path>
+              <param type="string" name="fabricName" arg="$Path.fabricName" required="True"/>
+              <param type="string" name="providerName" arg="$Path.providerName" required="True"/>
+              <param type="string" name="resourceGroupName" arg="$Path.resourceGroupName" required="True"/>
+              <param type="string" name="resourceName" arg="$Path.resourceName" required="True"/>
+              <param type="string" name="subscriptionId" arg="$Path.subscriptionId" required="True"/>
+            </path>
+            <query>
+              <const readOnly="True" const="True" type="string" name="api-version" required="True">
+                <default value="&quot;2022-08-01&quot;"/>
+              </const>
+            </query>
+          </request>
+          <response statusCode="200">
+            <body>
+              <json var="$Instance">
+                <schema type="object" cls="RecoveryServicesProvider_read">
+                  <prop readOnly="True" type="ResourceId" name="id">
+                    <format template="/subscriptions/{}/resourceGroups/{}/providers/Microsoft.RecoveryServices/vaults/{}/replicationFabrics/{}/replicationRecoveryServicesProviders/{}"/>
+                  </prop>
+                  <prop type="ResourceLocation" name="location"/>
+                  <prop readOnly="True" type="string" name="name"/>
+                  <prop type="object" name="properties">
+                    <prop type="array<string>" name="allowedScenarios">
+                      <item type="string"/>
+                    </prop>
+                    <prop type="object" name="authenticationIdentityDetails" cls="IdentityProviderDetails_read">
+                      <prop type="string" name="aadAuthority"/>
+                      <prop type="string" name="applicationId"/>
+                      <prop type="string" name="audience"/>
+                      <prop type="string" name="objectId"/>
+                      <prop type="string" name="tenantId"/>
+                    </prop>
+                    <prop type="string" name="biosId"/>
+                    <prop type="string" name="connectionStatus"/>
+                    <prop type="@IdentityProviderDetails_read" name="dataPlaneAuthenticationIdentityDetails"/>
+                    <prop type="string" name="draIdentifier"/>
+                    <prop type="string" name="fabricFriendlyName"/>
+                    <prop type="string" name="fabricType"/>
+                    <prop type="string" name="friendlyName"/>
+                    <prop type="array<object>" name="healthErrorDetails">
+                      <item type="object">
+                        <prop type="dateTime" name="creationTimeUtc"/>
+                        <prop type="string" name="customerResolvability">
+                          <enum>
+                            <item value="&quot;Allowed&quot;"/>
+                            <item value="&quot;NotAllowed&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="string" name="entityId"/>
+                        <prop type="string" name="errorCategory"/>
+                        <prop type="string" name="errorCode"/>
+                        <prop type="string" name="errorId"/>
+                        <prop type="string" name="errorLevel"/>
+                        <prop type="string" name="errorMessage"/>
+                        <prop type="string" name="errorSource"/>
+                        <prop type="string" name="errorType"/>
+                        <prop type="array<object>" name="innerHealthErrors">
+                          <item type="object">
+                            <prop type="dateTime" name="creationTimeUtc"/>
+                            <prop type="string" name="customerResolvability">
+                              <enum>
+                                <item value="&quot;Allowed&quot;"/>
+                                <item value="&quot;NotAllowed&quot;"/>
+                              </enum>
+                            </prop>
+                            <prop type="string" name="entityId"/>
+                            <prop type="string" name="errorCategory"/>
+                            <prop type="string" name="errorCode"/>
+                            <prop type="string" name="errorId"/>
+                            <prop type="string" name="errorLevel"/>
+                            <prop type="string" name="errorMessage"/>
+                            <prop type="string" name="errorSource"/>
+                            <prop type="string" name="errorType"/>
+                            <prop type="string" name="possibleCauses"/>
+                            <prop type="string" name="recommendedAction"/>
+                            <prop type="string" name="recoveryProviderErrorMessage"/>
+                            <prop type="string" name="summaryMessage"/>
+                          </item>
+                        </prop>
+                        <prop type="string" name="possibleCauses"/>
+                        <prop type="string" name="recommendedAction"/>
+                        <prop type="string" name="recoveryProviderErrorMessage"/>
+                        <prop type="string" name="summaryMessage"/>
+                      </item>
+                    </prop>
+                    <prop type="dateTime" name="lastHeartBeat"/>
+                    <prop type="string" name="machineId"/>
+                    <prop type="string" name="machineName"/>
+                    <prop type="integer32" name="protectedItemCount"/>
+                    <prop type="string" name="providerVersion"/>
+                    <prop type="object" name="providerVersionDetails">
+                      <prop type="dateTime" name="expiryDate"/>
+                      <prop type="string" name="status">
+                        <enum>
+                          <item value="&quot;Deprecated&quot;"/>
+                          <item value="&quot;NotSupported&quot;"/>
+                          <item value="&quot;SecurityUpdateRequired&quot;"/>
+                          <item value="&quot;Supported&quot;"/>
+                          <item value="&quot;UpdateRequired&quot;"/>
+                        </enum>
+                      </prop>
+                      <prop type="string" name="version"/>
+                    </prop>
+                    <prop type="dateTime" name="providerVersionExpiryDate"/>
+                    <prop type="string" name="providerVersionState"/>
+                    <prop type="@IdentityProviderDetails_read" name="resourceAccessIdentityDetails"/>
+                    <prop type="string" name="serverVersion"/>
+                  </prop>
+                  <prop readOnly="True" type="string" name="type"/>
+                </schema>
+              </json>
+            </body>
+          </response>
+          <response isError="True">
+            <body>
+              <json>
+                <schema type="@ODataV4Format"/>
+              </json>
+            </body>
+          </response>
+        </http>
+      </operation>
+      <operation>
+        <instanceUpdate instance="$Instance">
+          <json>
+            <schema type="object" name="addProviderInput" required="True" clientFlatten="True">
+              <prop type="object" name="properties" required="True">
+                <prop type="object" name="authenticationIdentityInput" arg="$addProviderInput.properties.authenticationIdentityInput" required="True" cls="IdentityProviderInput_update">
+                  <prop type="string" name="aadAuthority" arg="@IdentityProviderInput_update.aadAuthority" required="True"/>
+                  <prop type="string" name="applicationId" arg="@IdentityProviderInput_update.applicationId" required="True"/>
+                  <prop type="string" name="audience" arg="@IdentityProviderInput_update.audience" required="True"/>
+                  <prop type="string" name="objectId" arg="@IdentityProviderInput_update.objectId" required="True"/>
+                  <prop type="string" name="tenantId" arg="@IdentityProviderInput_update.tenantId" required="True"/>
+                </prop>
+                <prop type="string" name="biosId" arg="$addProviderInput.properties.biosId"/>
+                <prop type="@IdentityProviderInput_update" name="dataPlaneAuthenticationIdentityInput" arg="$addProviderInput.properties.dataPlaneAuthenticationIdentityInput"/>
+                <prop type="string" name="machineId" arg="$addProviderInput.properties.machineId"/>
+                <prop type="string" name="machineName" arg="$addProviderInput.properties.machineName" required="True"/>
+                <prop type="@IdentityProviderInput_update" name="resourceAccessIdentityInput" arg="$addProviderInput.properties.resourceAccessIdentityInput" required="True"/>
+              </prop>
+            </schema>
+          </json>
+        </instanceUpdate>
+      </operation>
+      <operation operationId="ReplicationRecoveryServicesProviders_Create">
+        <longRunning finalStateVia="azure-async-operation"/>
+        <http path="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationFabrics/{fabricName}/replicationRecoveryServicesProviders/{providerName}">
+          <request method="put">
+            <path>
+              <param type="string" name="fabricName" arg="$Path.fabricName" required="True"/>
+              <param type="string" name="providerName" arg="$Path.providerName" required="True"/>
+              <param type="string" name="resourceGroupName" arg="$Path.resourceGroupName" required="True"/>
+              <param type="string" name="resourceName" arg="$Path.resourceName" required="True"/>
+              <param type="string" name="subscriptionId" arg="$Path.subscriptionId" required="True"/>
+            </path>
+            <query>
+              <const readOnly="True" const="True" type="string" name="api-version" required="True">
+                <default value="&quot;2022-08-01&quot;"/>
+              </const>
+            </query>
+            <body>
+              <json ref="$Instance"/>
+            </body>
+          </request>
+          <response statusCode="200">
+            <body>
+              <json var="$Instance">
+                <schema type="@RecoveryServicesProvider_read"/>
+              </json>
+            </body>
+          </response>
+          <response statusCode="202"/>
+          <response isError="True">
+            <body>
+              <json>
+                <schema type="@ODataV4Format"/>
+              </json>
+            </body>
+          </response>
+        </http>
+      </operation>
+      <output type="object" ref="$Instance" clientFlatten="True"/>
+    </command>
+  </commandGroup>
+</CodeGen>

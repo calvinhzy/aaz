@@ -1,0 +1,306 @@
+<?xml version='1.0' encoding='utf-8'?>
+<CodeGen plane="mgmt-plane">
+  <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationstorageclassifications/{}/replicationstorageclassificationmappings/{}" version="2022-08-01" swagger="mgmt-plane/recoveryservicessiterecovery/ResourceProviders/Microsoft.RecoveryServices/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuUmVjb3ZlcnlTZXJ2aWNlcy92YXVsdHMve3Jlc291cmNlTmFtZX0vcmVwbGljYXRpb25GYWJyaWNzL3tmYWJyaWNOYW1lfS9yZXBsaWNhdGlvblN0b3JhZ2VDbGFzc2lmaWNhdGlvbnMve3N0b3JhZ2VDbGFzc2lmaWNhdGlvbk5hbWV9L3JlcGxpY2F0aW9uU3RvcmFnZUNsYXNzaWZpY2F0aW9uTWFwcGluZ3Mve3N0b3JhZ2VDbGFzc2lmaWNhdGlvbk1hcHBpbmdOYW1lfQ==/V/MjAyMi0wOC0wMQ=="/>
+  <commandGroup name="site-recovery vault fabric storage-classification storage-classification-mapping">
+    <command name="show" version="2022-08-01">
+      <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationstorageclassifications/{}/replicationstorageclassificationmappings/{}" version="2022-08-01" swagger="mgmt-plane/recoveryservicessiterecovery/ResourceProviders/Microsoft.RecoveryServices/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuUmVjb3ZlcnlTZXJ2aWNlcy92YXVsdHMve3Jlc291cmNlTmFtZX0vcmVwbGljYXRpb25GYWJyaWNzL3tmYWJyaWNOYW1lfS9yZXBsaWNhdGlvblN0b3JhZ2VDbGFzc2lmaWNhdGlvbnMve3N0b3JhZ2VDbGFzc2lmaWNhdGlvbk5hbWV9L3JlcGxpY2F0aW9uU3RvcmFnZUNsYXNzaWZpY2F0aW9uTWFwcGluZ3Mve3N0b3JhZ2VDbGFzc2lmaWNhdGlvbk1hcHBpbmdOYW1lfQ==/V/MjAyMi0wOC0wMQ=="/>
+      <argGroup name="">
+        <arg type="string" var="$Path.fabricName" options="fabric-name" required="True" idPart="child_name_1">
+          <help short="Fabric name."/>
+        </arg>
+        <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
+        <arg type="string" var="$Path.resourceName" options="resource-name" required="True" idPart="name">
+          <help short="The name of the recovery services vault."/>
+        </arg>
+        <arg type="string" var="$Path.storageClassificationMappingName" options="storage-classification-mapping-name name n" required="True" idPart="child_name_3">
+          <help short="Storage classification mapping name."/>
+        </arg>
+        <arg type="string" var="$Path.storageClassificationName" options="storage-classification-name" required="True" idPart="child_name_2">
+          <help short="Storage classification name."/>
+        </arg>
+        <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
+      </argGroup>
+      <operation operationId="ReplicationStorageClassificationMappings_Get">
+        <http path="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationFabrics/{fabricName}/replicationStorageClassifications/{storageClassificationName}/replicationStorageClassificationMappings/{storageClassificationMappingName}">
+          <request method="get">
+            <path>
+              <param type="string" name="fabricName" arg="$Path.fabricName" required="True"/>
+              <param type="string" name="resourceGroupName" arg="$Path.resourceGroupName" required="True"/>
+              <param type="string" name="resourceName" arg="$Path.resourceName" required="True"/>
+              <param type="string" name="storageClassificationMappingName" arg="$Path.storageClassificationMappingName" required="True"/>
+              <param type="string" name="storageClassificationName" arg="$Path.storageClassificationName" required="True"/>
+              <param type="string" name="subscriptionId" arg="$Path.subscriptionId" required="True"/>
+            </path>
+            <query>
+              <const readOnly="True" const="True" type="string" name="api-version" required="True">
+                <default value="&quot;2022-08-01&quot;"/>
+              </const>
+            </query>
+          </request>
+          <response statusCode="200">
+            <body>
+              <json var="$Instance">
+                <schema type="object">
+                  <prop readOnly="True" type="ResourceId" name="id">
+                    <format template="/subscriptions/{}/resourceGroups/{}/providers/Microsoft.RecoveryServices/vaults/{}/replicationFabrics/{}/replicationStorageClassifications/{}/replicationStorageClassificationMappings/{}"/>
+                  </prop>
+                  <prop type="ResourceLocation" name="location"/>
+                  <prop readOnly="True" type="string" name="name"/>
+                  <prop type="object" name="properties">
+                    <prop type="string" name="targetStorageClassificationId"/>
+                  </prop>
+                  <prop readOnly="True" type="string" name="type"/>
+                </schema>
+              </json>
+            </body>
+          </response>
+          <response isError="True">
+            <body>
+              <json>
+                <schema type="@ODataV4Format"/>
+              </json>
+            </body>
+          </response>
+        </http>
+      </operation>
+      <output type="object" ref="$Instance" clientFlatten="True"/>
+    </command>
+    <command name="delete" version="2022-08-01" confirmation="Are you sure you want to perform this operation?">
+      <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationstorageclassifications/{}/replicationstorageclassificationmappings/{}" version="2022-08-01" swagger="mgmt-plane/recoveryservicessiterecovery/ResourceProviders/Microsoft.RecoveryServices/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuUmVjb3ZlcnlTZXJ2aWNlcy92YXVsdHMve3Jlc291cmNlTmFtZX0vcmVwbGljYXRpb25GYWJyaWNzL3tmYWJyaWNOYW1lfS9yZXBsaWNhdGlvblN0b3JhZ2VDbGFzc2lmaWNhdGlvbnMve3N0b3JhZ2VDbGFzc2lmaWNhdGlvbk5hbWV9L3JlcGxpY2F0aW9uU3RvcmFnZUNsYXNzaWZpY2F0aW9uTWFwcGluZ3Mve3N0b3JhZ2VDbGFzc2lmaWNhdGlvbk1hcHBpbmdOYW1lfQ==/V/MjAyMi0wOC0wMQ=="/>
+      <argGroup name="">
+        <arg type="string" var="$Path.fabricName" options="fabric-name" required="True" idPart="child_name_1">
+          <help short="Fabric name."/>
+        </arg>
+        <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
+        <arg type="string" var="$Path.resourceName" options="resource-name" required="True" idPart="name">
+          <help short="The name of the recovery services vault."/>
+        </arg>
+        <arg type="string" var="$Path.storageClassificationMappingName" options="storage-classification-mapping-name name n" required="True" idPart="child_name_3">
+          <help short="Storage classification mapping name."/>
+        </arg>
+        <arg type="string" var="$Path.storageClassificationName" options="storage-classification-name" required="True" idPart="child_name_2">
+          <help short="Storage classification name."/>
+        </arg>
+        <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
+      </argGroup>
+      <operation operationId="ReplicationStorageClassificationMappings_Delete">
+        <longRunning finalStateVia="azure-async-operation"/>
+        <http path="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationFabrics/{fabricName}/replicationStorageClassifications/{storageClassificationName}/replicationStorageClassificationMappings/{storageClassificationMappingName}">
+          <request method="delete">
+            <path>
+              <param type="string" name="fabricName" arg="$Path.fabricName" required="True"/>
+              <param type="string" name="resourceGroupName" arg="$Path.resourceGroupName" required="True"/>
+              <param type="string" name="resourceName" arg="$Path.resourceName" required="True"/>
+              <param type="string" name="storageClassificationMappingName" arg="$Path.storageClassificationMappingName" required="True"/>
+              <param type="string" name="storageClassificationName" arg="$Path.storageClassificationName" required="True"/>
+              <param type="string" name="subscriptionId" arg="$Path.subscriptionId" required="True"/>
+            </path>
+            <query>
+              <const readOnly="True" const="True" type="string" name="api-version" required="True">
+                <default value="&quot;2022-08-01&quot;"/>
+              </const>
+            </query>
+          </request>
+          <response statusCode="202"/>
+          <response statusCode="204"/>
+        </http>
+      </operation>
+    </command>
+    <command name="create" version="2022-08-01">
+      <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationstorageclassifications/{}/replicationstorageclassificationmappings/{}" version="2022-08-01" swagger="mgmt-plane/recoveryservicessiterecovery/ResourceProviders/Microsoft.RecoveryServices/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuUmVjb3ZlcnlTZXJ2aWNlcy92YXVsdHMve3Jlc291cmNlTmFtZX0vcmVwbGljYXRpb25GYWJyaWNzL3tmYWJyaWNOYW1lfS9yZXBsaWNhdGlvblN0b3JhZ2VDbGFzc2lmaWNhdGlvbnMve3N0b3JhZ2VDbGFzc2lmaWNhdGlvbk5hbWV9L3JlcGxpY2F0aW9uU3RvcmFnZUNsYXNzaWZpY2F0aW9uTWFwcGluZ3Mve3N0b3JhZ2VDbGFzc2lmaWNhdGlvbk1hcHBpbmdOYW1lfQ==/V/MjAyMi0wOC0wMQ=="/>
+      <argGroup name="">
+        <arg type="string" var="$Path.fabricName" options="fabric-name" required="True" idPart="child_name_1">
+          <help short="Fabric name."/>
+        </arg>
+        <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
+        <arg type="string" var="$Path.resourceName" options="resource-name" required="True" idPart="name">
+          <help short="The name of the recovery services vault."/>
+        </arg>
+        <arg type="string" var="$Path.storageClassificationMappingName" options="storage-classification-mapping-name name n" required="True" idPart="child_name_3">
+          <help short="Storage classification mapping name."/>
+        </arg>
+        <arg type="string" var="$Path.storageClassificationName" options="storage-classification-name" required="True" idPart="child_name_2">
+          <help short="Storage classification name."/>
+        </arg>
+        <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
+      </argGroup>
+      <argGroup name="Properties">
+        <arg type="string" var="$pairingInput.properties.targetStorageClassificationId" options="target-storage-classification-id" group="Properties">
+          <help short="The ID of the storage object."/>
+        </arg>
+      </argGroup>
+      <operation operationId="ReplicationStorageClassificationMappings_Create">
+        <longRunning finalStateVia="azure-async-operation"/>
+        <http path="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationFabrics/{fabricName}/replicationStorageClassifications/{storageClassificationName}/replicationStorageClassificationMappings/{storageClassificationMappingName}">
+          <request method="put">
+            <path>
+              <param type="string" name="fabricName" arg="$Path.fabricName" required="True"/>
+              <param type="string" name="resourceGroupName" arg="$Path.resourceGroupName" required="True"/>
+              <param type="string" name="resourceName" arg="$Path.resourceName" required="True"/>
+              <param type="string" name="storageClassificationMappingName" arg="$Path.storageClassificationMappingName" required="True"/>
+              <param type="string" name="storageClassificationName" arg="$Path.storageClassificationName" required="True"/>
+              <param type="string" name="subscriptionId" arg="$Path.subscriptionId" required="True"/>
+            </path>
+            <query>
+              <const readOnly="True" const="True" type="string" name="api-version" required="True">
+                <default value="&quot;2022-08-01&quot;"/>
+              </const>
+            </query>
+            <body>
+              <json>
+                <schema type="object" name="pairingInput" required="True" clientFlatten="True">
+                  <prop type="object" name="properties">
+                    <prop type="string" name="targetStorageClassificationId" arg="$pairingInput.properties.targetStorageClassificationId"/>
+                  </prop>
+                </schema>
+              </json>
+            </body>
+          </request>
+          <response statusCode="200">
+            <body>
+              <json var="$Instance">
+                <schema type="object">
+                  <prop readOnly="True" type="ResourceId" name="id">
+                    <format template="/subscriptions/{}/resourceGroups/{}/providers/Microsoft.RecoveryServices/vaults/{}/replicationFabrics/{}/replicationStorageClassifications/{}/replicationStorageClassificationMappings/{}"/>
+                  </prop>
+                  <prop type="ResourceLocation" name="location"/>
+                  <prop readOnly="True" type="string" name="name"/>
+                  <prop type="object" name="properties">
+                    <prop type="string" name="targetStorageClassificationId"/>
+                  </prop>
+                  <prop readOnly="True" type="string" name="type"/>
+                </schema>
+              </json>
+            </body>
+          </response>
+          <response statusCode="202"/>
+          <response isError="True">
+            <body>
+              <json>
+                <schema type="@ODataV4Format"/>
+              </json>
+            </body>
+          </response>
+        </http>
+      </operation>
+      <output type="object" ref="$Instance" clientFlatten="True"/>
+    </command>
+    <command name="update" version="2022-08-01">
+      <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationstorageclassifications/{}/replicationstorageclassificationmappings/{}" version="2022-08-01" swagger="mgmt-plane/recoveryservicessiterecovery/ResourceProviders/Microsoft.RecoveryServices/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuUmVjb3ZlcnlTZXJ2aWNlcy92YXVsdHMve3Jlc291cmNlTmFtZX0vcmVwbGljYXRpb25GYWJyaWNzL3tmYWJyaWNOYW1lfS9yZXBsaWNhdGlvblN0b3JhZ2VDbGFzc2lmaWNhdGlvbnMve3N0b3JhZ2VDbGFzc2lmaWNhdGlvbk5hbWV9L3JlcGxpY2F0aW9uU3RvcmFnZUNsYXNzaWZpY2F0aW9uTWFwcGluZ3Mve3N0b3JhZ2VDbGFzc2lmaWNhdGlvbk1hcHBpbmdOYW1lfQ==/V/MjAyMi0wOC0wMQ=="/>
+      <argGroup name="">
+        <arg type="string" var="$Path.fabricName" options="fabric-name" required="True" idPart="child_name_1">
+          <help short="Fabric name."/>
+        </arg>
+        <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
+        <arg type="string" var="$Path.resourceName" options="resource-name" required="True" idPart="name">
+          <help short="The name of the recovery services vault."/>
+        </arg>
+        <arg type="string" var="$Path.storageClassificationMappingName" options="storage-classification-mapping-name name n" required="True" idPart="child_name_3">
+          <help short="Storage classification mapping name."/>
+        </arg>
+        <arg type="string" var="$Path.storageClassificationName" options="storage-classification-name" required="True" idPart="child_name_2">
+          <help short="Storage classification name."/>
+        </arg>
+        <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
+      </argGroup>
+      <argGroup name="Properties">
+        <arg nullable="True" type="string" var="$pairingInput.properties.targetStorageClassificationId" options="target-storage-classification-id" group="Properties">
+          <help short="The ID of the storage object."/>
+        </arg>
+      </argGroup>
+      <operation operationId="ReplicationStorageClassificationMappings_Get">
+        <http path="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationFabrics/{fabricName}/replicationStorageClassifications/{storageClassificationName}/replicationStorageClassificationMappings/{storageClassificationMappingName}">
+          <request method="get">
+            <path>
+              <param type="string" name="fabricName" arg="$Path.fabricName" required="True"/>
+              <param type="string" name="resourceGroupName" arg="$Path.resourceGroupName" required="True"/>
+              <param type="string" name="resourceName" arg="$Path.resourceName" required="True"/>
+              <param type="string" name="storageClassificationMappingName" arg="$Path.storageClassificationMappingName" required="True"/>
+              <param type="string" name="storageClassificationName" arg="$Path.storageClassificationName" required="True"/>
+              <param type="string" name="subscriptionId" arg="$Path.subscriptionId" required="True"/>
+            </path>
+            <query>
+              <const readOnly="True" const="True" type="string" name="api-version" required="True">
+                <default value="&quot;2022-08-01&quot;"/>
+              </const>
+            </query>
+          </request>
+          <response statusCode="200">
+            <body>
+              <json var="$Instance">
+                <schema type="object" cls="StorageClassificationMapping_read">
+                  <prop readOnly="True" type="ResourceId" name="id">
+                    <format template="/subscriptions/{}/resourceGroups/{}/providers/Microsoft.RecoveryServices/vaults/{}/replicationFabrics/{}/replicationStorageClassifications/{}/replicationStorageClassificationMappings/{}"/>
+                  </prop>
+                  <prop type="ResourceLocation" name="location"/>
+                  <prop readOnly="True" type="string" name="name"/>
+                  <prop type="object" name="properties">
+                    <prop type="string" name="targetStorageClassificationId"/>
+                  </prop>
+                  <prop readOnly="True" type="string" name="type"/>
+                </schema>
+              </json>
+            </body>
+          </response>
+          <response isError="True">
+            <body>
+              <json>
+                <schema type="@ODataV4Format"/>
+              </json>
+            </body>
+          </response>
+        </http>
+      </operation>
+      <operation>
+        <instanceUpdate instance="$Instance">
+          <json>
+            <schema type="object" name="pairingInput" required="True" clientFlatten="True">
+              <prop type="object" name="properties">
+                <prop type="string" name="targetStorageClassificationId" arg="$pairingInput.properties.targetStorageClassificationId"/>
+              </prop>
+            </schema>
+          </json>
+        </instanceUpdate>
+      </operation>
+      <operation operationId="ReplicationStorageClassificationMappings_Create">
+        <longRunning finalStateVia="azure-async-operation"/>
+        <http path="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationFabrics/{fabricName}/replicationStorageClassifications/{storageClassificationName}/replicationStorageClassificationMappings/{storageClassificationMappingName}">
+          <request method="put">
+            <path>
+              <param type="string" name="fabricName" arg="$Path.fabricName" required="True"/>
+              <param type="string" name="resourceGroupName" arg="$Path.resourceGroupName" required="True"/>
+              <param type="string" name="resourceName" arg="$Path.resourceName" required="True"/>
+              <param type="string" name="storageClassificationMappingName" arg="$Path.storageClassificationMappingName" required="True"/>
+              <param type="string" name="storageClassificationName" arg="$Path.storageClassificationName" required="True"/>
+              <param type="string" name="subscriptionId" arg="$Path.subscriptionId" required="True"/>
+            </path>
+            <query>
+              <const readOnly="True" const="True" type="string" name="api-version" required="True">
+                <default value="&quot;2022-08-01&quot;"/>
+              </const>
+            </query>
+            <body>
+              <json ref="$Instance"/>
+            </body>
+          </request>
+          <response statusCode="200">
+            <body>
+              <json var="$Instance">
+                <schema type="@StorageClassificationMapping_read"/>
+              </json>
+            </body>
+          </response>
+          <response statusCode="202"/>
+          <response isError="True">
+            <body>
+              <json>
+                <schema type="@ODataV4Format"/>
+              </json>
+            </body>
+          </response>
+        </http>
+      </operation>
+      <output type="object" ref="$Instance" clientFlatten="True"/>
+    </command>
+  </commandGroup>
+</CodeGen>

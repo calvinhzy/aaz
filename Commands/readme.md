@@ -20,5 +20,8 @@
 - [sentinel](/Commands/sentinel/readme.md)
 : Manage Microsoft Sentinel.
 
+- [site-recovery](/Commands/site-recovery/readme.md)
+: Manage Site Recovery Service
+
 - [sql](/Commands/sql/readme.md)
 : Manage Azure SQL Databases and Data Warehouses.

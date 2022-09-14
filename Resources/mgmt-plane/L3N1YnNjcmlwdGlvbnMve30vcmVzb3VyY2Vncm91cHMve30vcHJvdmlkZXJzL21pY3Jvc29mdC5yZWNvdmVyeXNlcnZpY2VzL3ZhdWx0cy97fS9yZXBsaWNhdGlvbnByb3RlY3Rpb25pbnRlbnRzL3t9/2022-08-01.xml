@@ -1,0 +1,1381 @@
+<?xml version='1.0' encoding='utf-8'?>
+<CodeGen plane="mgmt-plane">
+  <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationprotectionintents/{}" version="2022-08-01" swagger="mgmt-plane/recoveryservicessiterecovery/ResourceProviders/Microsoft.RecoveryServices/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuUmVjb3ZlcnlTZXJ2aWNlcy92YXVsdHMve3Jlc291cmNlTmFtZX0vcmVwbGljYXRpb25Qcm90ZWN0aW9uSW50ZW50cy97aW50ZW50T2JqZWN0TmFtZX0=/V/MjAyMi0wOC0wMQ=="/>
+  <commandGroup name="site-recovery vault protection-intent">
+    <command name="show" version="2022-08-01">
+      <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationprotectionintents/{}" version="2022-08-01" swagger="mgmt-plane/recoveryservicessiterecovery/ResourceProviders/Microsoft.RecoveryServices/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuUmVjb3ZlcnlTZXJ2aWNlcy92YXVsdHMve3Jlc291cmNlTmFtZX0vcmVwbGljYXRpb25Qcm90ZWN0aW9uSW50ZW50cy97aW50ZW50T2JqZWN0TmFtZX0=/V/MjAyMi0wOC0wMQ=="/>
+      <argGroup name="">
+        <arg type="string" var="$Path.intentObjectName" options="intent-object-name name n" required="True" idPart="child_name_1">
+          <help short="Replication protection intent name."/>
+        </arg>
+        <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
+        <arg type="string" var="$Path.resourceName" options="resource-name" required="True" idPart="name">
+          <help short="The name of the recovery services vault."/>
+        </arg>
+        <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
+      </argGroup>
+      <operation operationId="ReplicationProtectionIntents_Get">
+        <http path="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationProtectionIntents/{intentObjectName}">
+          <request method="get">
+            <path>
+              <param type="string" name="intentObjectName" arg="$Path.intentObjectName" required="True"/>
+              <param type="string" name="resourceGroupName" arg="$Path.resourceGroupName" required="True"/>
+              <param type="string" name="resourceName" arg="$Path.resourceName" required="True"/>
+              <param type="string" name="subscriptionId" arg="$Path.subscriptionId" required="True"/>
+            </path>
+            <query>
+              <const readOnly="True" const="True" type="string" name="api-version" required="True">
+                <default value="&quot;2022-08-01&quot;"/>
+              </const>
+            </query>
+          </request>
+          <response statusCode="200">
+            <body>
+              <json var="$Instance">
+                <schema type="object">
+                  <prop readOnly="True" type="ResourceId" name="id">
+                    <format template="/subscriptions/{}/resourceGroups/{}/providers/Microsoft.RecoveryServices/vaults/{}/replicationProtectionIntents/{}"/>
+                  </prop>
+                  <prop type="ResourceLocation" name="location"/>
+                  <prop readOnly="True" type="string" name="name"/>
+                  <prop type="object" name="properties">
+                    <prop readOnly="True" type="string" name="creationTimeUTC"/>
+                    <prop type="string" name="friendlyName"/>
+                    <prop readOnly="True" type="boolean" name="isActive"/>
+                    <prop readOnly="True" type="string" name="jobId"/>
+                    <prop readOnly="True" type="string" name="jobState"/>
+                    <prop type="object" name="providerSpecificDetails">
+                      <prop type="string" name="instanceType" required="True">
+                        <enum>
+                          <item value="&quot;A2A&quot;"/>
+                        </enum>
+                      </prop>
+                      <discriminator property="instanceType" value="A2A">
+                        <prop type="string" name="agentAutoUpdateStatus">
+                          <enum>
+                            <item value="&quot;Disabled&quot;"/>
+                            <item value="&quot;Enabled&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="string" name="autoProtectionOfDataDisk">
+                          <enum>
+                            <item value="&quot;Disabled&quot;"/>
+                            <item value="&quot;Enabled&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="string" name="automationAccountArmId"/>
+                        <prop type="string" name="automationAccountAuthenticationType">
+                          <default value="&quot;RunAsAccount&quot;"/>
+                          <enum>
+                            <item value="&quot;RunAsAccount&quot;"/>
+                            <item value="&quot;SystemAssignedIdentity&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="@DiskEncryptionInfo_read" name="diskEncryptionInfo"/>
+                        <prop type="string" name="fabricObjectId"/>
+                        <prop type="string" name="multiVmGroupId"/>
+                        <prop type="string" name="multiVmGroupName"/>
+                        <prop type="string" name="primaryLocation"/>
+                        <prop type="@StorageAccountCustomDetails_read" name="primaryStagingStorageAccount"/>
+                        <prop type="object" name="protectionProfile">
+                          <prop type="string" name="resourceType" required="True">
+                            <enum>
+                              <item value="&quot;Existing&quot;"/>
+                              <item value="&quot;New&quot;"/>
+                            </enum>
+                          </prop>
+                          <discriminator property="resourceType" value="Existing">
+                            <prop type="string" name="protectionProfileId" required="True"/>
+                          </discriminator>
+                          <discriminator property="resourceType" value="New">
+                            <prop type="integer32" name="appConsistentFrequencyInMinutes"/>
+                            <prop type="integer32" name="crashConsistentFrequencyInMinutes"/>
+                            <prop type="string" name="multiVmSyncStatus" required="True">
+                              <enum>
+                                <item value="&quot;Disable&quot;"/>
+                                <item value="&quot;Enable&quot;"/>
+                              </enum>
+                            </prop>
+                            <prop type="string" name="policyName" required="True"/>
+                            <prop type="integer32" name="recoveryPointHistory"/>
+                          </discriminator>
+                        </prop>
+                        <prop type="object" name="recoveryAvailabilitySet">
+                          <prop type="string" name="resourceType" required="True">
+                            <enum>
+                              <item value="&quot;Existing&quot;"/>
+                            </enum>
+                          </prop>
+                          <discriminator property="resourceType" value="Existing">
+                            <prop type="string" name="recoveryAvailabilitySetId"/>
+                          </discriminator>
+                        </prop>
+                        <prop type="string" name="recoveryAvailabilityType" required="True"/>
+                        <prop type="string" name="recoveryAvailabilityZone"/>
+                        <prop type="@StorageAccountCustomDetails_read" name="recoveryBootDiagStorageAccount"/>
+                        <prop type="string" name="recoveryLocation"/>
+                        <prop type="object" name="recoveryProximityPlacementGroup">
+                          <prop type="string" name="resourceType" required="True">
+                            <enum>
+                              <item value="&quot;Existing&quot;"/>
+                            </enum>
+                          </prop>
+                          <discriminator property="resourceType" value="Existing">
+                            <prop type="string" name="recoveryProximityPlacementGroupId"/>
+                          </discriminator>
+                        </prop>
+                        <prop type="string" name="recoveryResourceGroupId"/>
+                        <prop type="string" name="recoverySubscriptionId"/>
+                        <prop type="object" name="recoveryVirtualNetwork">
+                          <prop type="string" name="resourceType" required="True">
+                            <enum>
+                              <item value="&quot;Existing&quot;"/>
+                              <item value="&quot;New&quot;"/>
+                            </enum>
+                          </prop>
+                          <discriminator property="resourceType" value="Existing">
+                            <prop type="string" name="recoverySubnetName"/>
+                            <prop type="string" name="recoveryVirtualNetworkId" required="True"/>
+                          </discriminator>
+                          <discriminator property="resourceType" value="New">
+                            <prop type="string" name="recoveryVirtualNetworkName"/>
+                            <prop type="string" name="recoveryVirtualNetworkResourceGroupName"/>
+                          </discriminator>
+                        </prop>
+                        <prop type="array<object>" name="vmDisks">
+                          <item type="object">
+                            <prop type="string" name="diskUri" required="True"/>
+                            <prop type="@StorageAccountCustomDetails_read" name="primaryStagingStorageAccountCustomInput"/>
+                            <prop type="object" name="recoveryAzureStorageAccountCustomInput" cls="StorageAccountCustomDetails_read">
+                              <prop type="string" name="resourceType" required="True">
+                                <enum>
+                                  <item value="&quot;Existing&quot;"/>
+                                </enum>
+                              </prop>
+                              <discriminator property="resourceType" value="Existing">
+                                <prop type="string" name="azureStorageAccountId" required="True"/>
+                              </discriminator>
+                            </prop>
+                          </item>
+                        </prop>
+                        <prop type="array<object>" name="vmManagedDisks">
+                          <item type="object">
+                            <prop type="object" name="diskEncryptionInfo" cls="DiskEncryptionInfo_read">
+                              <prop type="object" name="diskEncryptionKeyInfo">
+                                <prop type="string" name="keyVaultResourceArmId"/>
+                                <prop type="string" name="secretIdentifier"/>
+                              </prop>
+                              <prop type="object" name="keyEncryptionKeyInfo">
+                                <prop type="string" name="keyIdentifier"/>
+                                <prop type="string" name="keyVaultResourceArmId"/>
+                              </prop>
+                            </prop>
+                            <prop type="string" name="diskId" required="True"/>
+                            <prop type="@StorageAccountCustomDetails_read" name="primaryStagingStorageAccountCustomInput"/>
+                            <prop type="string" name="recoveryDiskEncryptionSetId"/>
+                            <prop type="string" name="recoveryReplicaDiskAccountType"/>
+                            <prop type="object" name="recoveryResourceGroupCustomInput">
+                              <prop type="string" name="resourceType" required="True">
+                                <enum>
+                                  <item value="&quot;Existing&quot;"/>
+                                </enum>
+                              </prop>
+                              <discriminator property="resourceType" value="Existing">
+                                <prop type="string" name="recoveryResourceGroupId"/>
+                              </discriminator>
+                            </prop>
+                            <prop type="string" name="recoveryTargetDiskAccountType"/>
+                          </item>
+                        </prop>
+                      </discriminator>
+                    </prop>
+                  </prop>
+                  <prop readOnly="True" type="string" name="type"/>
+                </schema>
+              </json>
+            </body>
+          </response>
+          <response isError="True">
+            <body>
+              <json>
+                <schema type="@ODataV4Format"/>
+              </json>
+            </body>
+          </response>
+        </http>
+      </operation>
+      <output type="object" ref="$Instance" clientFlatten="True"/>
+    </command>
+    <command name="create" version="2022-08-01">
+      <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationprotectionintents/{}" version="2022-08-01" swagger="mgmt-plane/recoveryservicessiterecovery/ResourceProviders/Microsoft.RecoveryServices/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuUmVjb3ZlcnlTZXJ2aWNlcy92YXVsdHMve3Jlc291cmNlTmFtZX0vcmVwbGljYXRpb25Qcm90ZWN0aW9uSW50ZW50cy97aW50ZW50T2JqZWN0TmFtZX0=/V/MjAyMi0wOC0wMQ=="/>
+      <argGroup name="">
+        <arg type="string" var="$Path.intentObjectName" options="intent-object-name name n" required="True" idPart="child_name_1">
+          <help short="A name for the replication protection item."/>
+        </arg>
+        <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
+        <arg type="string" var="$Path.resourceName" options="resource-name" required="True" idPart="name">
+          <help short="The name of the recovery services vault."/>
+        </arg>
+        <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
+      </argGroup>
+      <argGroup name="Properties">
+        <arg type="object" var="$input.properties.providerSpecificDetails" options="provider-specific-details" group="Properties">
+          <help short="The ReplicationProviderInput. For A2A provider, it will be A2ACreateProtectionIntentInput object."/>
+          <arg type="object" var="$input.properties.providerSpecificDetails.A2A" options="a2-a">
+            <arg type="string" var="$input.properties.providerSpecificDetails.A2A.agentAutoUpdateStatus" options="agent-auto-update-status">
+              <help short="A value indicating whether the auto update is enabled."/>
+              <enum>
+                <item name="Disabled" value="&quot;Disabled&quot;"/>
+                <item name="Enabled" value="&quot;Enabled&quot;"/>
+              </enum>
+            </arg>
+            <arg type="string" var="$input.properties.providerSpecificDetails.A2A.autoProtectionOfDataDisk" options="auto-protection-of-data-disk">
+              <help short="A value indicating whether the auto protection is enabled."/>
+              <enum>
+                <item name="Disabled" value="&quot;Disabled&quot;"/>
+                <item name="Enabled" value="&quot;Enabled&quot;"/>
+              </enum>
+            </arg>
+            <arg type="string" var="$input.properties.providerSpecificDetails.A2A.automationAccountArmId" options="automation-account-arm-id">
+              <help short="The automation account arm id."/>
+            </arg>
+            <arg type="string" var="$input.properties.providerSpecificDetails.A2A.automationAccountAuthenticationType" options="automation-account-authentication-type">
+              <help short="A value indicating the authentication type for automation account. The default value is &quot;RunAsAccount&quot;."/>
+              <default value="&quot;RunAsAccount&quot;"/>
+              <enum>
+                <item name="RunAsAccount" value="&quot;RunAsAccount&quot;"/>
+                <item name="SystemAssignedIdentity" value="&quot;SystemAssignedIdentity&quot;"/>
+              </enum>
+            </arg>
+            <arg type="@DiskEncryptionInfo_create" var="$input.properties.providerSpecificDetails.A2A.diskEncryptionInfo" options="disk-encryption-info">
+              <help short="The recovery disk encryption information (for two pass flows)."/>
+            </arg>
+            <arg type="string" var="$input.properties.providerSpecificDetails.A2A.fabricObjectId" options="fabric-object-id" required="True">
+              <help short="The fabric specific object Id of the virtual machine."/>
+            </arg>
+            <arg type="string" var="$input.properties.providerSpecificDetails.A2A.multiVmGroupId" options="multi-vm-group-id">
+              <help short="The multi vm group id."/>
+            </arg>
+            <arg type="string" var="$input.properties.providerSpecificDetails.A2A.multiVmGroupName" options="multi-vm-group-name">
+              <help short="The multi vm group name."/>
+            </arg>
+            <arg type="string" var="$input.properties.providerSpecificDetails.A2A.primaryLocation" options="primary-location" required="True">
+              <help short="The primary location for the virtual machine."/>
+            </arg>
+            <arg type="object" var="$input.properties.providerSpecificDetails.A2A.primaryStagingStorageAccountCustomInput" options="primary-staging-storage-account-custom-input" cls="StorageAccountCustomDetails_create">
+              <help short="The primary staging storage account input."/>
+              <arg type="object" var="@StorageAccountCustomDetails_create.Existing" options="existing">
+                <arg type="string" var="@StorageAccountCustomDetails_create.Existing.azureStorageAccountId" options="azure-storage-account-id" required="True">
+                  <help short="The storage account Arm Id. Throw error, if resource does not exists."/>
+                </arg>
+              </arg>
+            </arg>
+            <arg type="object" var="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput" options="protection-profile-custom-input">
+              <help short="The protection profile custom inputs."/>
+              <arg type="object" var="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput.Existing" options="existing">
+                <arg type="string" var="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput.Existing.protectionProfileId" options="protection-profile-id" required="True">
+                  <help short="The protection profile Arm Id. Throw error, if resource does not exists."/>
+                </arg>
+              </arg>
+              <arg type="object" var="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput.New" options="new">
+                <arg type="integer32" var="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput.New.appConsistentFrequencyInMinutes" options="app-consistent-frequency-in-minutes">
+                  <help short="The app consistent snapshot frequency (in minutes)."/>
+                </arg>
+                <arg type="integer32" var="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput.New.crashConsistentFrequencyInMinutes" options="crash-consistent-frequency-in-minutes">
+                  <help short="The crash consistent snapshot frequency (in minutes)."/>
+                </arg>
+                <arg type="string" var="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput.New.multiVmSyncStatus" options="multi-vm-sync-status" required="True">
+                  <help short="A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'."/>
+                  <enum>
+                    <item name="Disable" value="&quot;Disable&quot;"/>
+                    <item name="Enable" value="&quot;Enable&quot;"/>
+                  </enum>
+                </arg>
+                <arg type="string" var="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput.New.policyName" options="policy-name" required="True">
+                  <help short="The protection profile input."/>
+                </arg>
+                <arg type="integer32" var="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput.New.recoveryPointHistory" options="recovery-point-history">
+                  <help short="The duration in minutes until which the recovery points need to be stored."/>
+                </arg>
+              </arg>
+            </arg>
+            <arg type="object" var="$input.properties.providerSpecificDetails.A2A.recoveryAvailabilitySetCustomInput" options="recovery-availability-set-custom-input">
+              <help short="The recovery availability set input."/>
+              <arg type="object" var="$input.properties.providerSpecificDetails.A2A.recoveryAvailabilitySetCustomInput.Existing" options="existing">
+                <arg type="string" var="$input.properties.providerSpecificDetails.A2A.recoveryAvailabilitySetCustomInput.Existing.recoveryAvailabilitySetId" options="recovery-availability-set-id">
+                  <help short="The recovery availability set Id. Will throw error, if resource does not exist."/>
+                </arg>
+              </arg>
+            </arg>
+            <arg type="string" var="$input.properties.providerSpecificDetails.A2A.recoveryAvailabilityType" options="recovery-availability-type" required="True">
+              <help short="The recovery availability type of the virtual machine."/>
+              <enum>
+                <item name="AvailabilitySet" value="&quot;AvailabilitySet&quot;"/>
+                <item name="AvailabilityZone" value="&quot;AvailabilityZone&quot;"/>
+                <item name="Single" value="&quot;Single&quot;"/>
+              </enum>
+            </arg>
+            <arg type="string" var="$input.properties.providerSpecificDetails.A2A.recoveryAvailabilityZone" options="recovery-availability-zone">
+              <help short="The recovery availability zone."/>
+            </arg>
+            <arg type="@StorageAccountCustomDetails_create" var="$input.properties.providerSpecificDetails.A2A.recoveryBootDiagStorageAccount" options="recovery-boot-diag-storage-account">
+              <help short="The boot diagnostic storage account."/>
+            </arg>
+            <arg type="string" var="$input.properties.providerSpecificDetails.A2A.recoveryLocation" options="recovery-location" required="True">
+              <help short="The recovery location for the virtual machine."/>
+            </arg>
+            <arg type="object" var="$input.properties.providerSpecificDetails.A2A.recoveryProximityPlacementGroupCustomInput" options="recovery-proximity-placement-group-custom-input">
+              <help short="The recovery proximity placement group custom input."/>
+              <arg type="object" var="$input.properties.providerSpecificDetails.A2A.recoveryProximityPlacementGroupCustomInput.Existing" options="existing">
+                <arg type="string" var="$input.properties.providerSpecificDetails.A2A.recoveryProximityPlacementGroupCustomInput.Existing.recoveryProximityPlacementGroupId" options="recovery-proximity-placement-group-id">
+                  <help short="The recovery proximity placement group Id. Will throw error, if resource does not exist."/>
+                </arg>
+              </arg>
+            </arg>
+            <arg type="string" var="$input.properties.providerSpecificDetails.A2A.recoveryResourceGroupId" options="recovery-resource-group-id" required="True">
+              <help short="The recovery resource group Id. Valid for V2 scenarios."/>
+            </arg>
+            <arg type="string" var="$input.properties.providerSpecificDetails.A2A.recoverySubscriptionId" options="recovery-subscription-id" required="True">
+              <help short="The recovery subscription Id of the virtual machine."/>
+            </arg>
+            <arg type="object" var="$input.properties.providerSpecificDetails.A2A.recoveryVirtualNetworkCustomInput" options="recovery-virtual-network-custom-input">
+              <help short="The recovery virtual network input."/>
+              <arg type="object" var="$input.properties.providerSpecificDetails.A2A.recoveryVirtualNetworkCustomInput.Existing" options="existing">
+                <arg type="string" var="$input.properties.providerSpecificDetails.A2A.recoveryVirtualNetworkCustomInput.Existing.recoverySubnetName" options="recovery-subnet-name">
+                  <help short="The recovery subnet name."/>
+                </arg>
+                <arg type="string" var="$input.properties.providerSpecificDetails.A2A.recoveryVirtualNetworkCustomInput.Existing.recoveryVirtualNetworkId" options="recovery-virtual-network-id" required="True">
+                  <help short="The recovery virtual network Id. Will throw error, if resource does not exist."/>
+                </arg>
+              </arg>
+              <arg type="object" var="$input.properties.providerSpecificDetails.A2A.recoveryVirtualNetworkCustomInput.New" options="new">
+                <arg type="string" var="$input.properties.providerSpecificDetails.A2A.recoveryVirtualNetworkCustomInput.New.recoveryVirtualNetworkName" options="recovery-virtual-network-name">
+                  <help short="The recovery virtual network name."/>
+                </arg>
+                <arg type="string" var="$input.properties.providerSpecificDetails.A2A.recoveryVirtualNetworkCustomInput.New.recoveryVirtualNetworkResourceGroupName" options="recovery-virtual-network-resource-group-name">
+                  <help short="The name of the resource group to be used to create the recovery virtual network. If absent, target network would be created in the same resource group as target VM."/>
+                </arg>
+              </arg>
+            </arg>
+            <arg type="array<object>" var="$input.properties.providerSpecificDetails.A2A.vmDisks" options="vm-disks">
+              <help short="The list of vm disk inputs."/>
+              <item type="object">
+                <arg type="string" var="$input.properties.providerSpecificDetails.A2A.vmDisks[].diskUri" options="disk-uri" required="True">
+                  <help short="The disk Uri."/>
+                </arg>
+                <arg type="@StorageAccountCustomDetails_create" var="$input.properties.providerSpecificDetails.A2A.vmDisks[].primaryStagingStorageAccountCustomInput" options="primary-staging-storage-account-custom-input">
+                  <help short="The primary staging storage account input."/>
+                </arg>
+                <arg type="@StorageAccountCustomDetails_create" var="$input.properties.providerSpecificDetails.A2A.vmDisks[].recoveryAzureStorageAccountCustomInput" options="recovery-azure-storage-account-custom-input">
+                  <help short="The recovery VHD storage account input."/>
+                </arg>
+              </item>
+            </arg>
+            <arg type="array<object>" var="$input.properties.providerSpecificDetails.A2A.vmManagedDisks" options="vm-managed-disks">
+              <help short="The list of vm managed disk inputs."/>
+              <item type="object">
+                <arg type="object" var="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].diskEncryptionInfo" options="disk-encryption-info" cls="DiskEncryptionInfo_create">
+                  <help short="The recovery disk encryption information (for one / single pass flows)."/>
+                  <arg type="object" var="@DiskEncryptionInfo_create.diskEncryptionKeyInfo" options="disk-encryption-key-info">
+                    <help short="The recovery KeyVault reference for secret."/>
+                    <arg type="string" var="@DiskEncryptionInfo_create.diskEncryptionKeyInfo.keyVaultResourceArmId" options="key-vault-resource-arm-id">
+                      <help short="The KeyVault resource ARM id for secret."/>
+                    </arg>
+                    <arg type="string" var="@DiskEncryptionInfo_create.diskEncryptionKeyInfo.secretIdentifier" options="secret-identifier">
+                      <help short="The secret url / identifier."/>
+                    </arg>
+                  </arg>
+                  <arg type="object" var="@DiskEncryptionInfo_create.keyEncryptionKeyInfo" options="key-encryption-key-info">
+                    <help short="The recovery KeyVault reference for key."/>
+                    <arg type="string" var="@DiskEncryptionInfo_create.keyEncryptionKeyInfo.keyIdentifier" options="key-identifier">
+                      <help short="The key URL / identifier."/>
+                    </arg>
+                    <arg type="string" var="@DiskEncryptionInfo_create.keyEncryptionKeyInfo.keyVaultResourceArmId" options="key-vault-resource-arm-id">
+                      <help short="The KeyVault resource ARM Id for key."/>
+                    </arg>
+                  </arg>
+                </arg>
+                <arg type="string" var="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].diskId" options="disk-id" required="True">
+                  <help short="The disk Id."/>
+                </arg>
+                <arg type="@StorageAccountCustomDetails_create" var="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].primaryStagingStorageAccountCustomInput" options="primary-staging-storage-account-custom-input">
+                  <help short="The primary staging storage account input."/>
+                </arg>
+                <arg type="string" var="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].recoveryDiskEncryptionSetId" options="recovery-disk-encryption-set-id">
+                  <help short="The recovery disk encryption set Id."/>
+                </arg>
+                <arg type="string" var="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].recoveryReplicaDiskAccountType" options="recovery-replica-disk-account-type">
+                  <help short="The replica disk type. Its an optional value and will be same as source disk type if not user provided."/>
+                </arg>
+                <arg type="object" var="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].recoveryResourceGroupCustomInput" options="recovery-resource-group-custom-input">
+                  <help short="The recovery resource group input."/>
+                  <arg type="object" var="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].recoveryResourceGroupCustomInput.Existing" options="existing">
+                    <arg type="string" var="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].recoveryResourceGroupCustomInput.Existing.recoveryResourceGroupId" options="recovery-resource-group-id">
+                      <help short="The recovery resource group Id. Valid for V2 scenarios."/>
+                    </arg>
+                  </arg>
+                </arg>
+                <arg type="string" var="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].recoveryTargetDiskAccountType" options="recovery-target-disk-account-type">
+                  <help short="The target disk type after failover. Its an optional value and will be same as source disk type if not user provided."/>
+                </arg>
+              </item>
+            </arg>
+          </arg>
+        </arg>
+      </argGroup>
+      <operation operationId="ReplicationProtectionIntents_Create">
+        <http path="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationProtectionIntents/{intentObjectName}">
+          <request method="put">
+            <path>
+              <param type="string" name="intentObjectName" arg="$Path.intentObjectName" required="True"/>
+              <param type="string" name="resourceGroupName" arg="$Path.resourceGroupName" required="True"/>
+              <param type="string" name="resourceName" arg="$Path.resourceName" required="True"/>
+              <param type="string" name="subscriptionId" arg="$Path.subscriptionId" required="True"/>
+            </path>
+            <query>
+              <const readOnly="True" const="True" type="string" name="api-version" required="True">
+                <default value="&quot;2022-08-01&quot;"/>
+              </const>
+            </query>
+            <body>
+              <json>
+                <schema type="object" name="input" required="True" clientFlatten="True">
+                  <prop type="object" name="properties">
+                    <prop type="object" name="providerSpecificDetails" arg="$input.properties.providerSpecificDetails">
+                      <prop type="string" name="instanceType" required="True">
+                        <enum>
+                          <item arg="$input.properties.providerSpecificDetails.A2A" value="&quot;A2A&quot;"/>
+                        </enum>
+                      </prop>
+                      <discriminator property="instanceType" value="A2A">
+                        <prop type="string" name="agentAutoUpdateStatus" arg="$input.properties.providerSpecificDetails.A2A.agentAutoUpdateStatus">
+                          <enum>
+                            <item value="&quot;Disabled&quot;"/>
+                            <item value="&quot;Enabled&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="string" name="autoProtectionOfDataDisk" arg="$input.properties.providerSpecificDetails.A2A.autoProtectionOfDataDisk">
+                          <enum>
+                            <item value="&quot;Disabled&quot;"/>
+                            <item value="&quot;Enabled&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="string" name="automationAccountArmId" arg="$input.properties.providerSpecificDetails.A2A.automationAccountArmId"/>
+                        <prop type="string" name="automationAccountAuthenticationType" arg="$input.properties.providerSpecificDetails.A2A.automationAccountAuthenticationType">
+                          <default value="&quot;RunAsAccount&quot;"/>
+                          <enum>
+                            <item value="&quot;RunAsAccount&quot;"/>
+                            <item value="&quot;SystemAssignedIdentity&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="@DiskEncryptionInfo_create" name="diskEncryptionInfo" arg="$input.properties.providerSpecificDetails.A2A.diskEncryptionInfo"/>
+                        <prop type="string" name="fabricObjectId" arg="$input.properties.providerSpecificDetails.A2A.fabricObjectId" required="True"/>
+                        <prop type="string" name="multiVmGroupId" arg="$input.properties.providerSpecificDetails.A2A.multiVmGroupId"/>
+                        <prop type="string" name="multiVmGroupName" arg="$input.properties.providerSpecificDetails.A2A.multiVmGroupName"/>
+                        <prop type="string" name="primaryLocation" arg="$input.properties.providerSpecificDetails.A2A.primaryLocation" required="True"/>
+                        <prop type="object" name="primaryStagingStorageAccountCustomInput" arg="$input.properties.providerSpecificDetails.A2A.primaryStagingStorageAccountCustomInput" cls="StorageAccountCustomDetails_create">
+                          <prop type="string" name="resourceType" required="True">
+                            <enum>
+                              <item arg="@StorageAccountCustomDetails_create.Existing" value="&quot;Existing&quot;"/>
+                            </enum>
+                          </prop>
+                          <discriminator property="resourceType" value="Existing">
+                            <prop type="string" name="azureStorageAccountId" arg="@StorageAccountCustomDetails_create.Existing.azureStorageAccountId" required="True"/>
+                          </discriminator>
+                        </prop>
+                        <prop type="object" name="protectionProfileCustomInput" arg="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput">
+                          <prop type="string" name="resourceType" required="True">
+                            <enum>
+                              <item arg="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput.Existing" value="&quot;Existing&quot;"/>
+                              <item arg="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput.New" value="&quot;New&quot;"/>
+                            </enum>
+                          </prop>
+                          <discriminator property="resourceType" value="Existing">
+                            <prop type="string" name="protectionProfileId" arg="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput.Existing.protectionProfileId" required="True"/>
+                          </discriminator>
+                          <discriminator property="resourceType" value="New">
+                            <prop type="integer32" name="appConsistentFrequencyInMinutes" arg="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput.New.appConsistentFrequencyInMinutes"/>
+                            <prop type="integer32" name="crashConsistentFrequencyInMinutes" arg="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput.New.crashConsistentFrequencyInMinutes"/>
+                            <prop type="string" name="multiVmSyncStatus" arg="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput.New.multiVmSyncStatus" required="True">
+                              <enum>
+                                <item value="&quot;Disable&quot;"/>
+                                <item value="&quot;Enable&quot;"/>
+                              </enum>
+                            </prop>
+                            <prop type="string" name="policyName" arg="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput.New.policyName" required="True"/>
+                            <prop type="integer32" name="recoveryPointHistory" arg="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput.New.recoveryPointHistory"/>
+                          </discriminator>
+                        </prop>
+                        <prop type="object" name="recoveryAvailabilitySetCustomInput" arg="$input.properties.providerSpecificDetails.A2A.recoveryAvailabilitySetCustomInput">
+                          <prop type="string" name="resourceType" required="True">
+                            <enum>
+                              <item arg="$input.properties.providerSpecificDetails.A2A.recoveryAvailabilitySetCustomInput.Existing" value="&quot;Existing&quot;"/>
+                            </enum>
+                          </prop>
+                          <discriminator property="resourceType" value="Existing">
+                            <prop type="string" name="recoveryAvailabilitySetId" arg="$input.properties.providerSpecificDetails.A2A.recoveryAvailabilitySetCustomInput.Existing.recoveryAvailabilitySetId"/>
+                          </discriminator>
+                        </prop>
+                        <prop type="string" name="recoveryAvailabilityType" arg="$input.properties.providerSpecificDetails.A2A.recoveryAvailabilityType" required="True">
+                          <enum>
+                            <item value="&quot;AvailabilitySet&quot;"/>
+                            <item value="&quot;AvailabilityZone&quot;"/>
+                            <item value="&quot;Single&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="string" name="recoveryAvailabilityZone" arg="$input.properties.providerSpecificDetails.A2A.recoveryAvailabilityZone"/>
+                        <prop type="@StorageAccountCustomDetails_create" name="recoveryBootDiagStorageAccount" arg="$input.properties.providerSpecificDetails.A2A.recoveryBootDiagStorageAccount"/>
+                        <prop type="string" name="recoveryLocation" arg="$input.properties.providerSpecificDetails.A2A.recoveryLocation" required="True"/>
+                        <prop type="object" name="recoveryProximityPlacementGroupCustomInput" arg="$input.properties.providerSpecificDetails.A2A.recoveryProximityPlacementGroupCustomInput">
+                          <prop type="string" name="resourceType" required="True">
+                            <enum>
+                              <item arg="$input.properties.providerSpecificDetails.A2A.recoveryProximityPlacementGroupCustomInput.Existing" value="&quot;Existing&quot;"/>
+                            </enum>
+                          </prop>
+                          <discriminator property="resourceType" value="Existing">
+                            <prop type="string" name="recoveryProximityPlacementGroupId" arg="$input.properties.providerSpecificDetails.A2A.recoveryProximityPlacementGroupCustomInput.Existing.recoveryProximityPlacementGroupId"/>
+                          </discriminator>
+                        </prop>
+                        <prop type="string" name="recoveryResourceGroupId" arg="$input.properties.providerSpecificDetails.A2A.recoveryResourceGroupId" required="True"/>
+                        <prop type="string" name="recoverySubscriptionId" arg="$input.properties.providerSpecificDetails.A2A.recoverySubscriptionId" required="True"/>
+                        <prop type="object" name="recoveryVirtualNetworkCustomInput" arg="$input.properties.providerSpecificDetails.A2A.recoveryVirtualNetworkCustomInput">
+                          <prop type="string" name="resourceType" required="True">
+                            <enum>
+                              <item arg="$input.properties.providerSpecificDetails.A2A.recoveryVirtualNetworkCustomInput.Existing" value="&quot;Existing&quot;"/>
+                              <item arg="$input.properties.providerSpecificDetails.A2A.recoveryVirtualNetworkCustomInput.New" value="&quot;New&quot;"/>
+                            </enum>
+                          </prop>
+                          <discriminator property="resourceType" value="Existing">
+                            <prop type="string" name="recoverySubnetName" arg="$input.properties.providerSpecificDetails.A2A.recoveryVirtualNetworkCustomInput.Existing.recoverySubnetName"/>
+                            <prop type="string" name="recoveryVirtualNetworkId" arg="$input.properties.providerSpecificDetails.A2A.recoveryVirtualNetworkCustomInput.Existing.recoveryVirtualNetworkId" required="True"/>
+                          </discriminator>
+                          <discriminator property="resourceType" value="New">
+                            <prop type="string" name="recoveryVirtualNetworkName" arg="$input.properties.providerSpecificDetails.A2A.recoveryVirtualNetworkCustomInput.New.recoveryVirtualNetworkName"/>
+                            <prop type="string" name="recoveryVirtualNetworkResourceGroupName" arg="$input.properties.providerSpecificDetails.A2A.recoveryVirtualNetworkCustomInput.New.recoveryVirtualNetworkResourceGroupName"/>
+                          </discriminator>
+                        </prop>
+                        <prop type="array<object>" name="vmDisks" arg="$input.properties.providerSpecificDetails.A2A.vmDisks">
+                          <item type="object">
+                            <prop type="string" name="diskUri" arg="$input.properties.providerSpecificDetails.A2A.vmDisks[].diskUri" required="True"/>
+                            <prop type="@StorageAccountCustomDetails_create" name="primaryStagingStorageAccountCustomInput" arg="$input.properties.providerSpecificDetails.A2A.vmDisks[].primaryStagingStorageAccountCustomInput"/>
+                            <prop type="@StorageAccountCustomDetails_create" name="recoveryAzureStorageAccountCustomInput" arg="$input.properties.providerSpecificDetails.A2A.vmDisks[].recoveryAzureStorageAccountCustomInput"/>
+                          </item>
+                        </prop>
+                        <prop type="array<object>" name="vmManagedDisks" arg="$input.properties.providerSpecificDetails.A2A.vmManagedDisks">
+                          <item type="object">
+                            <prop type="object" name="diskEncryptionInfo" arg="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].diskEncryptionInfo" cls="DiskEncryptionInfo_create">
+                              <prop type="object" name="diskEncryptionKeyInfo" arg="@DiskEncryptionInfo_create.diskEncryptionKeyInfo">
+                                <prop type="string" name="keyVaultResourceArmId" arg="@DiskEncryptionInfo_create.diskEncryptionKeyInfo.keyVaultResourceArmId"/>
+                                <prop type="string" name="secretIdentifier" arg="@DiskEncryptionInfo_create.diskEncryptionKeyInfo.secretIdentifier"/>
+                              </prop>
+                              <prop type="object" name="keyEncryptionKeyInfo" arg="@DiskEncryptionInfo_create.keyEncryptionKeyInfo">
+                                <prop type="string" name="keyIdentifier" arg="@DiskEncryptionInfo_create.keyEncryptionKeyInfo.keyIdentifier"/>
+                                <prop type="string" name="keyVaultResourceArmId" arg="@DiskEncryptionInfo_create.keyEncryptionKeyInfo.keyVaultResourceArmId"/>
+                              </prop>
+                            </prop>
+                            <prop type="string" name="diskId" arg="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].diskId" required="True"/>
+                            <prop type="@StorageAccountCustomDetails_create" name="primaryStagingStorageAccountCustomInput" arg="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].primaryStagingStorageAccountCustomInput"/>
+                            <prop type="string" name="recoveryDiskEncryptionSetId" arg="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].recoveryDiskEncryptionSetId"/>
+                            <prop type="string" name="recoveryReplicaDiskAccountType" arg="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].recoveryReplicaDiskAccountType"/>
+                            <prop type="object" name="recoveryResourceGroupCustomInput" arg="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].recoveryResourceGroupCustomInput">
+                              <prop type="string" name="resourceType" required="True">
+                                <enum>
+                                  <item arg="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].recoveryResourceGroupCustomInput.Existing" value="&quot;Existing&quot;"/>
+                                </enum>
+                              </prop>
+                              <discriminator property="resourceType" value="Existing">
+                                <prop type="string" name="recoveryResourceGroupId" arg="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].recoveryResourceGroupCustomInput.Existing.recoveryResourceGroupId"/>
+                              </discriminator>
+                            </prop>
+                            <prop type="string" name="recoveryTargetDiskAccountType" arg="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].recoveryTargetDiskAccountType"/>
+                          </item>
+                        </prop>
+                      </discriminator>
+                    </prop>
+                  </prop>
+                </schema>
+              </json>
+            </body>
+          </request>
+          <response statusCode="200">
+            <body>
+              <json var="$Instance">
+                <schema type="object">
+                  <prop readOnly="True" type="ResourceId" name="id">
+                    <format template="/subscriptions/{}/resourceGroups/{}/providers/Microsoft.RecoveryServices/vaults/{}/replicationProtectionIntents/{}"/>
+                  </prop>
+                  <prop type="ResourceLocation" name="location"/>
+                  <prop readOnly="True" type="string" name="name"/>
+                  <prop type="object" name="properties">
+                    <prop readOnly="True" type="string" name="creationTimeUTC"/>
+                    <prop type="string" name="friendlyName"/>
+                    <prop readOnly="True" type="boolean" name="isActive"/>
+                    <prop readOnly="True" type="string" name="jobId"/>
+                    <prop readOnly="True" type="string" name="jobState"/>
+                    <prop type="object" name="providerSpecificDetails">
+                      <prop type="string" name="instanceType" required="True">
+                        <enum>
+                          <item value="&quot;A2A&quot;"/>
+                        </enum>
+                      </prop>
+                      <discriminator property="instanceType" value="A2A">
+                        <prop type="string" name="agentAutoUpdateStatus">
+                          <enum>
+                            <item value="&quot;Disabled&quot;"/>
+                            <item value="&quot;Enabled&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="string" name="autoProtectionOfDataDisk">
+                          <enum>
+                            <item value="&quot;Disabled&quot;"/>
+                            <item value="&quot;Enabled&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="string" name="automationAccountArmId"/>
+                        <prop type="string" name="automationAccountAuthenticationType">
+                          <default value="&quot;RunAsAccount&quot;"/>
+                          <enum>
+                            <item value="&quot;RunAsAccount&quot;"/>
+                            <item value="&quot;SystemAssignedIdentity&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="@DiskEncryptionInfo_read" name="diskEncryptionInfo"/>
+                        <prop type="string" name="fabricObjectId"/>
+                        <prop type="string" name="multiVmGroupId"/>
+                        <prop type="string" name="multiVmGroupName"/>
+                        <prop type="string" name="primaryLocation"/>
+                        <prop type="@StorageAccountCustomDetails_read" name="primaryStagingStorageAccount"/>
+                        <prop type="object" name="protectionProfile">
+                          <prop type="string" name="resourceType" required="True">
+                            <enum>
+                              <item value="&quot;Existing&quot;"/>
+                              <item value="&quot;New&quot;"/>
+                            </enum>
+                          </prop>
+                          <discriminator property="resourceType" value="Existing">
+                            <prop type="string" name="protectionProfileId" required="True"/>
+                          </discriminator>
+                          <discriminator property="resourceType" value="New">
+                            <prop type="integer32" name="appConsistentFrequencyInMinutes"/>
+                            <prop type="integer32" name="crashConsistentFrequencyInMinutes"/>
+                            <prop type="string" name="multiVmSyncStatus" required="True">
+                              <enum>
+                                <item value="&quot;Disable&quot;"/>
+                                <item value="&quot;Enable&quot;"/>
+                              </enum>
+                            </prop>
+                            <prop type="string" name="policyName" required="True"/>
+                            <prop type="integer32" name="recoveryPointHistory"/>
+                          </discriminator>
+                        </prop>
+                        <prop type="object" name="recoveryAvailabilitySet">
+                          <prop type="string" name="resourceType" required="True">
+                            <enum>
+                              <item value="&quot;Existing&quot;"/>
+                            </enum>
+                          </prop>
+                          <discriminator property="resourceType" value="Existing">
+                            <prop type="string" name="recoveryAvailabilitySetId"/>
+                          </discriminator>
+                        </prop>
+                        <prop type="string" name="recoveryAvailabilityType" required="True"/>
+                        <prop type="string" name="recoveryAvailabilityZone"/>
+                        <prop type="@StorageAccountCustomDetails_read" name="recoveryBootDiagStorageAccount"/>
+                        <prop type="string" name="recoveryLocation"/>
+                        <prop type="object" name="recoveryProximityPlacementGroup">
+                          <prop type="string" name="resourceType" required="True">
+                            <enum>
+                              <item value="&quot;Existing&quot;"/>
+                            </enum>
+                          </prop>
+                          <discriminator property="resourceType" value="Existing">
+                            <prop type="string" name="recoveryProximityPlacementGroupId"/>
+                          </discriminator>
+                        </prop>
+                        <prop type="string" name="recoveryResourceGroupId"/>
+                        <prop type="string" name="recoverySubscriptionId"/>
+                        <prop type="object" name="recoveryVirtualNetwork">
+                          <prop type="string" name="resourceType" required="True">
+                            <enum>
+                              <item value="&quot;Existing&quot;"/>
+                              <item value="&quot;New&quot;"/>
+                            </enum>
+                          </prop>
+                          <discriminator property="resourceType" value="Existing">
+                            <prop type="string" name="recoverySubnetName"/>
+                            <prop type="string" name="recoveryVirtualNetworkId" required="True"/>
+                          </discriminator>
+                          <discriminator property="resourceType" value="New">
+                            <prop type="string" name="recoveryVirtualNetworkName"/>
+                            <prop type="string" name="recoveryVirtualNetworkResourceGroupName"/>
+                          </discriminator>
+                        </prop>
+                        <prop type="array<object>" name="vmDisks">
+                          <item type="object">
+                            <prop type="string" name="diskUri" required="True"/>
+                            <prop type="@StorageAccountCustomDetails_read" name="primaryStagingStorageAccountCustomInput"/>
+                            <prop type="object" name="recoveryAzureStorageAccountCustomInput" cls="StorageAccountCustomDetails_read">
+                              <prop type="string" name="resourceType" required="True">
+                                <enum>
+                                  <item value="&quot;Existing&quot;"/>
+                                </enum>
+                              </prop>
+                              <discriminator property="resourceType" value="Existing">
+                                <prop type="string" name="azureStorageAccountId" required="True"/>
+                              </discriminator>
+                            </prop>
+                          </item>
+                        </prop>
+                        <prop type="array<object>" name="vmManagedDisks">
+                          <item type="object">
+                            <prop type="object" name="diskEncryptionInfo" cls="DiskEncryptionInfo_read">
+                              <prop type="object" name="diskEncryptionKeyInfo">
+                                <prop type="string" name="keyVaultResourceArmId"/>
+                                <prop type="string" name="secretIdentifier"/>
+                              </prop>
+                              <prop type="object" name="keyEncryptionKeyInfo">
+                                <prop type="string" name="keyIdentifier"/>
+                                <prop type="string" name="keyVaultResourceArmId"/>
+                              </prop>
+                            </prop>
+                            <prop type="string" name="diskId" required="True"/>
+                            <prop type="@StorageAccountCustomDetails_read" name="primaryStagingStorageAccountCustomInput"/>
+                            <prop type="string" name="recoveryDiskEncryptionSetId"/>
+                            <prop type="string" name="recoveryReplicaDiskAccountType"/>
+                            <prop type="object" name="recoveryResourceGroupCustomInput">
+                              <prop type="string" name="resourceType" required="True">
+                                <enum>
+                                  <item value="&quot;Existing&quot;"/>
+                                </enum>
+                              </prop>
+                              <discriminator property="resourceType" value="Existing">
+                                <prop type="string" name="recoveryResourceGroupId"/>
+                              </discriminator>
+                            </prop>
+                            <prop type="string" name="recoveryTargetDiskAccountType"/>
+                          </item>
+                        </prop>
+                      </discriminator>
+                    </prop>
+                  </prop>
+                  <prop readOnly="True" type="string" name="type"/>
+                </schema>
+              </json>
+            </body>
+          </response>
+          <response isError="True">
+            <body>
+              <json>
+                <schema type="@ODataV4Format"/>
+              </json>
+            </body>
+          </response>
+        </http>
+      </operation>
+      <output type="object" ref="$Instance" clientFlatten="True"/>
+    </command>
+    <command name="update" version="2022-08-01">
+      <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationprotectionintents/{}" version="2022-08-01" swagger="mgmt-plane/recoveryservicessiterecovery/ResourceProviders/Microsoft.RecoveryServices/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuUmVjb3ZlcnlTZXJ2aWNlcy92YXVsdHMve3Jlc291cmNlTmFtZX0vcmVwbGljYXRpb25Qcm90ZWN0aW9uSW50ZW50cy97aW50ZW50T2JqZWN0TmFtZX0=/V/MjAyMi0wOC0wMQ=="/>
+      <argGroup name="">
+        <arg type="string" var="$Path.intentObjectName" options="intent-object-name name n" required="True" idPart="child_name_1">
+          <help short="Replication protection intent name."/>
+        </arg>
+        <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
+        <arg type="string" var="$Path.resourceName" options="resource-name" required="True" idPart="name">
+          <help short="The name of the recovery services vault."/>
+        </arg>
+        <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
+      </argGroup>
+      <argGroup name="Properties">
+        <arg nullable="True" type="object" var="$input.properties.providerSpecificDetails" options="provider-specific-details" group="Properties">
+          <help short="The ReplicationProviderInput. For A2A provider, it will be A2ACreateProtectionIntentInput object."/>
+          <arg type="object" var="$input.properties.providerSpecificDetails.A2A" options="a2-a">
+            <arg nullable="True" type="string" var="$input.properties.providerSpecificDetails.A2A.agentAutoUpdateStatus" options="agent-auto-update-status">
+              <help short="A value indicating whether the auto update is enabled."/>
+              <enum>
+                <item name="Disabled" value="&quot;Disabled&quot;"/>
+                <item name="Enabled" value="&quot;Enabled&quot;"/>
+              </enum>
+            </arg>
+            <arg nullable="True" type="string" var="$input.properties.providerSpecificDetails.A2A.autoProtectionOfDataDisk" options="auto-protection-of-data-disk">
+              <help short="A value indicating whether the auto protection is enabled."/>
+              <enum>
+                <item name="Disabled" value="&quot;Disabled&quot;"/>
+                <item name="Enabled" value="&quot;Enabled&quot;"/>
+              </enum>
+            </arg>
+            <arg nullable="True" type="string" var="$input.properties.providerSpecificDetails.A2A.automationAccountArmId" options="automation-account-arm-id">
+              <help short="The automation account arm id."/>
+            </arg>
+            <arg nullable="True" type="string" var="$input.properties.providerSpecificDetails.A2A.automationAccountAuthenticationType" options="automation-account-authentication-type">
+              <help short="A value indicating the authentication type for automation account. The default value is &quot;RunAsAccount&quot;."/>
+              <enum>
+                <item name="RunAsAccount" value="&quot;RunAsAccount&quot;"/>
+                <item name="SystemAssignedIdentity" value="&quot;SystemAssignedIdentity&quot;"/>
+              </enum>
+            </arg>
+            <arg nullable="True" type="@DiskEncryptionInfo_update" var="$input.properties.providerSpecificDetails.A2A.diskEncryptionInfo" options="disk-encryption-info">
+              <help short="The recovery disk encryption information (for two pass flows)."/>
+            </arg>
+            <arg type="string" var="$input.properties.providerSpecificDetails.A2A.fabricObjectId" options="fabric-object-id">
+              <help short="The fabric specific object Id of the virtual machine."/>
+            </arg>
+            <arg nullable="True" type="string" var="$input.properties.providerSpecificDetails.A2A.multiVmGroupId" options="multi-vm-group-id">
+              <help short="The multi vm group id."/>
+            </arg>
+            <arg nullable="True" type="string" var="$input.properties.providerSpecificDetails.A2A.multiVmGroupName" options="multi-vm-group-name">
+              <help short="The multi vm group name."/>
+            </arg>
+            <arg type="string" var="$input.properties.providerSpecificDetails.A2A.primaryLocation" options="primary-location">
+              <help short="The primary location for the virtual machine."/>
+            </arg>
+            <arg nullable="True" type="object" var="$input.properties.providerSpecificDetails.A2A.primaryStagingStorageAccountCustomInput" options="primary-staging-storage-account-custom-input" cls="StorageAccountCustomDetails_update">
+              <help short="The primary staging storage account input."/>
+              <arg type="object" var="@StorageAccountCustomDetails_update.Existing" options="existing">
+                <arg type="string" var="@StorageAccountCustomDetails_update.Existing.azureStorageAccountId" options="azure-storage-account-id">
+                  <help short="The storage account Arm Id. Throw error, if resource does not exists."/>
+                </arg>
+              </arg>
+            </arg>
+            <arg nullable="True" type="object" var="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput" options="protection-profile-custom-input">
+              <help short="The protection profile custom inputs."/>
+              <arg type="object" var="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput.Existing" options="existing">
+                <arg type="string" var="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput.Existing.protectionProfileId" options="protection-profile-id">
+                  <help short="The protection profile Arm Id. Throw error, if resource does not exists."/>
+                </arg>
+              </arg>
+              <arg type="object" var="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput.New" options="new">
+                <arg nullable="True" type="integer32" var="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput.New.appConsistentFrequencyInMinutes" options="app-consistent-frequency-in-minutes">
+                  <help short="The app consistent snapshot frequency (in minutes)."/>
+                </arg>
+                <arg nullable="True" type="integer32" var="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput.New.crashConsistentFrequencyInMinutes" options="crash-consistent-frequency-in-minutes">
+                  <help short="The crash consistent snapshot frequency (in minutes)."/>
+                </arg>
+                <arg type="string" var="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput.New.multiVmSyncStatus" options="multi-vm-sync-status">
+                  <help short="A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'."/>
+                  <enum>
+                    <item name="Disable" value="&quot;Disable&quot;"/>
+                    <item name="Enable" value="&quot;Enable&quot;"/>
+                  </enum>
+                </arg>
+                <arg type="string" var="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput.New.policyName" options="policy-name">
+                  <help short="The protection profile input."/>
+                </arg>
+                <arg nullable="True" type="integer32" var="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput.New.recoveryPointHistory" options="recovery-point-history">
+                  <help short="The duration in minutes until which the recovery points need to be stored."/>
+                </arg>
+              </arg>
+            </arg>
+            <arg nullable="True" type="object" var="$input.properties.providerSpecificDetails.A2A.recoveryAvailabilitySetCustomInput" options="recovery-availability-set-custom-input">
+              <help short="The recovery availability set input."/>
+              <arg type="object" var="$input.properties.providerSpecificDetails.A2A.recoveryAvailabilitySetCustomInput.Existing" options="existing">
+                <arg nullable="True" type="string" var="$input.properties.providerSpecificDetails.A2A.recoveryAvailabilitySetCustomInput.Existing.recoveryAvailabilitySetId" options="recovery-availability-set-id">
+                  <help short="The recovery availability set Id. Will throw error, if resource does not exist."/>
+                </arg>
+              </arg>
+            </arg>
+            <arg type="string" var="$input.properties.providerSpecificDetails.A2A.recoveryAvailabilityType" options="recovery-availability-type">
+              <help short="The recovery availability type of the virtual machine."/>
+              <enum>
+                <item name="AvailabilitySet" value="&quot;AvailabilitySet&quot;"/>
+                <item name="AvailabilityZone" value="&quot;AvailabilityZone&quot;"/>
+                <item name="Single" value="&quot;Single&quot;"/>
+              </enum>
+            </arg>
+            <arg nullable="True" type="string" var="$input.properties.providerSpecificDetails.A2A.recoveryAvailabilityZone" options="recovery-availability-zone">
+              <help short="The recovery availability zone."/>
+            </arg>
+            <arg nullable="True" type="@StorageAccountCustomDetails_update" var="$input.properties.providerSpecificDetails.A2A.recoveryBootDiagStorageAccount" options="recovery-boot-diag-storage-account">
+              <help short="The boot diagnostic storage account."/>
+            </arg>
+            <arg type="string" var="$input.properties.providerSpecificDetails.A2A.recoveryLocation" options="recovery-location">
+              <help short="The recovery location for the virtual machine."/>
+            </arg>
+            <arg nullable="True" type="object" var="$input.properties.providerSpecificDetails.A2A.recoveryProximityPlacementGroupCustomInput" options="recovery-proximity-placement-group-custom-input">
+              <help short="The recovery proximity placement group custom input."/>
+              <arg type="object" var="$input.properties.providerSpecificDetails.A2A.recoveryProximityPlacementGroupCustomInput.Existing" options="existing">
+                <arg nullable="True" type="string" var="$input.properties.providerSpecificDetails.A2A.recoveryProximityPlacementGroupCustomInput.Existing.recoveryProximityPlacementGroupId" options="recovery-proximity-placement-group-id">
+                  <help short="The recovery proximity placement group Id. Will throw error, if resource does not exist."/>
+                </arg>
+              </arg>
+            </arg>
+            <arg type="string" var="$input.properties.providerSpecificDetails.A2A.recoveryResourceGroupId" options="recovery-resource-group-id">
+              <help short="The recovery resource group Id. Valid for V2 scenarios."/>
+            </arg>
+            <arg type="string" var="$input.properties.providerSpecificDetails.A2A.recoverySubscriptionId" options="recovery-subscription-id">
+              <help short="The recovery subscription Id of the virtual machine."/>
+            </arg>
+            <arg nullable="True" type="object" var="$input.properties.providerSpecificDetails.A2A.recoveryVirtualNetworkCustomInput" options="recovery-virtual-network-custom-input">
+              <help short="The recovery virtual network input."/>
+              <arg type="object" var="$input.properties.providerSpecificDetails.A2A.recoveryVirtualNetworkCustomInput.Existing" options="existing">
+                <arg nullable="True" type="string" var="$input.properties.providerSpecificDetails.A2A.recoveryVirtualNetworkCustomInput.Existing.recoverySubnetName" options="recovery-subnet-name">
+                  <help short="The recovery subnet name."/>
+                </arg>
+                <arg type="string" var="$input.properties.providerSpecificDetails.A2A.recoveryVirtualNetworkCustomInput.Existing.recoveryVirtualNetworkId" options="recovery-virtual-network-id">
+                  <help short="The recovery virtual network Id. Will throw error, if resource does not exist."/>
+                </arg>
+              </arg>
+              <arg type="object" var="$input.properties.providerSpecificDetails.A2A.recoveryVirtualNetworkCustomInput.New" options="new">
+                <arg nullable="True" type="string" var="$input.properties.providerSpecificDetails.A2A.recoveryVirtualNetworkCustomInput.New.recoveryVirtualNetworkName" options="recovery-virtual-network-name">
+                  <help short="The recovery virtual network name."/>
+                </arg>
+                <arg nullable="True" type="string" var="$input.properties.providerSpecificDetails.A2A.recoveryVirtualNetworkCustomInput.New.recoveryVirtualNetworkResourceGroupName" options="recovery-virtual-network-resource-group-name">
+                  <help short="The name of the resource group to be used to create the recovery virtual network. If absent, target network would be created in the same resource group as target VM."/>
+                </arg>
+              </arg>
+            </arg>
+            <arg nullable="True" type="array<object>" var="$input.properties.providerSpecificDetails.A2A.vmDisks" options="vm-disks">
+              <help short="The list of vm disk inputs."/>
+              <item nullable="True" type="object">
+                <arg type="string" var="$input.properties.providerSpecificDetails.A2A.vmDisks[].diskUri" options="disk-uri">
+                  <help short="The disk Uri."/>
+                </arg>
+                <arg nullable="True" type="@StorageAccountCustomDetails_update" var="$input.properties.providerSpecificDetails.A2A.vmDisks[].primaryStagingStorageAccountCustomInput" options="primary-staging-storage-account-custom-input">
+                  <help short="The primary staging storage account input."/>
+                </arg>
+                <arg nullable="True" type="@StorageAccountCustomDetails_update" var="$input.properties.providerSpecificDetails.A2A.vmDisks[].recoveryAzureStorageAccountCustomInput" options="recovery-azure-storage-account-custom-input">
+                  <help short="The recovery VHD storage account input."/>
+                </arg>
+              </item>
+            </arg>
+            <arg nullable="True" type="array<object>" var="$input.properties.providerSpecificDetails.A2A.vmManagedDisks" options="vm-managed-disks">
+              <help short="The list of vm managed disk inputs."/>
+              <item nullable="True" type="object">
+                <arg nullable="True" type="object" var="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].diskEncryptionInfo" options="disk-encryption-info" cls="DiskEncryptionInfo_update">
+                  <help short="The recovery disk encryption information (for one / single pass flows)."/>
+                  <arg nullable="True" type="object" var="@DiskEncryptionInfo_update.diskEncryptionKeyInfo" options="disk-encryption-key-info">
+                    <help short="The recovery KeyVault reference for secret."/>
+                    <arg nullable="True" type="string" var="@DiskEncryptionInfo_update.diskEncryptionKeyInfo.keyVaultResourceArmId" options="key-vault-resource-arm-id">
+                      <help short="The KeyVault resource ARM id for secret."/>
+                    </arg>
+                    <arg nullable="True" type="string" var="@DiskEncryptionInfo_update.diskEncryptionKeyInfo.secretIdentifier" options="secret-identifier">
+                      <help short="The secret url / identifier."/>
+                    </arg>
+                  </arg>
+                  <arg nullable="True" type="object" var="@DiskEncryptionInfo_update.keyEncryptionKeyInfo" options="key-encryption-key-info">
+                    <help short="The recovery KeyVault reference for key."/>
+                    <arg nullable="True" type="string" var="@DiskEncryptionInfo_update.keyEncryptionKeyInfo.keyIdentifier" options="key-identifier">
+                      <help short="The key URL / identifier."/>
+                    </arg>
+                    <arg nullable="True" type="string" var="@DiskEncryptionInfo_update.keyEncryptionKeyInfo.keyVaultResourceArmId" options="key-vault-resource-arm-id">
+                      <help short="The KeyVault resource ARM Id for key."/>
+                    </arg>
+                  </arg>
+                </arg>
+                <arg type="string" var="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].diskId" options="disk-id">
+                  <help short="The disk Id."/>
+                </arg>
+                <arg nullable="True" type="@StorageAccountCustomDetails_update" var="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].primaryStagingStorageAccountCustomInput" options="primary-staging-storage-account-custom-input">
+                  <help short="The primary staging storage account input."/>
+                </arg>
+                <arg nullable="True" type="string" var="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].recoveryDiskEncryptionSetId" options="recovery-disk-encryption-set-id">
+                  <help short="The recovery disk encryption set Id."/>
+                </arg>
+                <arg nullable="True" type="string" var="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].recoveryReplicaDiskAccountType" options="recovery-replica-disk-account-type">
+                  <help short="The replica disk type. Its an optional value and will be same as source disk type if not user provided."/>
+                </arg>
+                <arg nullable="True" type="object" var="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].recoveryResourceGroupCustomInput" options="recovery-resource-group-custom-input">
+                  <help short="The recovery resource group input."/>
+                  <arg type="object" var="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].recoveryResourceGroupCustomInput.Existing" options="existing">
+                    <arg nullable="True" type="string" var="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].recoveryResourceGroupCustomInput.Existing.recoveryResourceGroupId" options="recovery-resource-group-id">
+                      <help short="The recovery resource group Id. Valid for V2 scenarios."/>
+                    </arg>
+                  </arg>
+                </arg>
+                <arg nullable="True" type="string" var="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].recoveryTargetDiskAccountType" options="recovery-target-disk-account-type">
+                  <help short="The target disk type after failover. Its an optional value and will be same as source disk type if not user provided."/>
+                </arg>
+              </item>
+            </arg>
+          </arg>
+        </arg>
+      </argGroup>
+      <operation operationId="ReplicationProtectionIntents_Get">
+        <http path="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationProtectionIntents/{intentObjectName}">
+          <request method="get">
+            <path>
+              <param type="string" name="intentObjectName" arg="$Path.intentObjectName" required="True"/>
+              <param type="string" name="resourceGroupName" arg="$Path.resourceGroupName" required="True"/>
+              <param type="string" name="resourceName" arg="$Path.resourceName" required="True"/>
+              <param type="string" name="subscriptionId" arg="$Path.subscriptionId" required="True"/>
+            </path>
+            <query>
+              <const readOnly="True" const="True" type="string" name="api-version" required="True">
+                <default value="&quot;2022-08-01&quot;"/>
+              </const>
+            </query>
+          </request>
+          <response statusCode="200">
+            <body>
+              <json var="$Instance">
+                <schema type="object" cls="ReplicationProtectionIntent_read">
+                  <prop readOnly="True" type="ResourceId" name="id">
+                    <format template="/subscriptions/{}/resourceGroups/{}/providers/Microsoft.RecoveryServices/vaults/{}/replicationProtectionIntents/{}"/>
+                  </prop>
+                  <prop type="ResourceLocation" name="location"/>
+                  <prop readOnly="True" type="string" name="name"/>
+                  <prop type="object" name="properties">
+                    <prop readOnly="True" type="string" name="creationTimeUTC"/>
+                    <prop type="string" name="friendlyName"/>
+                    <prop readOnly="True" type="boolean" name="isActive"/>
+                    <prop readOnly="True" type="string" name="jobId"/>
+                    <prop readOnly="True" type="string" name="jobState"/>
+                    <prop type="object" name="providerSpecificDetails">
+                      <prop type="string" name="instanceType" required="True">
+                        <enum>
+                          <item value="&quot;A2A&quot;"/>
+                        </enum>
+                      </prop>
+                      <discriminator property="instanceType" value="A2A">
+                        <prop type="string" name="agentAutoUpdateStatus">
+                          <enum>
+                            <item value="&quot;Disabled&quot;"/>
+                            <item value="&quot;Enabled&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="string" name="autoProtectionOfDataDisk">
+                          <enum>
+                            <item value="&quot;Disabled&quot;"/>
+                            <item value="&quot;Enabled&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="string" name="automationAccountArmId"/>
+                        <prop type="string" name="automationAccountAuthenticationType">
+                          <default value="&quot;RunAsAccount&quot;"/>
+                          <enum>
+                            <item value="&quot;RunAsAccount&quot;"/>
+                            <item value="&quot;SystemAssignedIdentity&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="@DiskEncryptionInfo_read" name="diskEncryptionInfo"/>
+                        <prop type="string" name="fabricObjectId"/>
+                        <prop type="string" name="multiVmGroupId"/>
+                        <prop type="string" name="multiVmGroupName"/>
+                        <prop type="string" name="primaryLocation"/>
+                        <prop type="@StorageAccountCustomDetails_read" name="primaryStagingStorageAccount"/>
+                        <prop type="object" name="protectionProfile">
+                          <prop type="string" name="resourceType" required="True">
+                            <enum>
+                              <item value="&quot;Existing&quot;"/>
+                              <item value="&quot;New&quot;"/>
+                            </enum>
+                          </prop>
+                          <discriminator property="resourceType" value="Existing">
+                            <prop type="string" name="protectionProfileId" required="True"/>
+                          </discriminator>
+                          <discriminator property="resourceType" value="New">
+                            <prop type="integer32" name="appConsistentFrequencyInMinutes"/>
+                            <prop type="integer32" name="crashConsistentFrequencyInMinutes"/>
+                            <prop type="string" name="multiVmSyncStatus" required="True">
+                              <enum>
+                                <item value="&quot;Disable&quot;"/>
+                                <item value="&quot;Enable&quot;"/>
+                              </enum>
+                            </prop>
+                            <prop type="string" name="policyName" required="True"/>
+                            <prop type="integer32" name="recoveryPointHistory"/>
+                          </discriminator>
+                        </prop>
+                        <prop type="object" name="recoveryAvailabilitySet">
+                          <prop type="string" name="resourceType" required="True">
+                            <enum>
+                              <item value="&quot;Existing&quot;"/>
+                            </enum>
+                          </prop>
+                          <discriminator property="resourceType" value="Existing">
+                            <prop type="string" name="recoveryAvailabilitySetId"/>
+                          </discriminator>
+                        </prop>
+                        <prop type="string" name="recoveryAvailabilityType" required="True"/>
+                        <prop type="string" name="recoveryAvailabilityZone"/>
+                        <prop type="@StorageAccountCustomDetails_read" name="recoveryBootDiagStorageAccount"/>
+                        <prop type="string" name="recoveryLocation"/>
+                        <prop type="object" name="recoveryProximityPlacementGroup">
+                          <prop type="string" name="resourceType" required="True">
+                            <enum>
+                              <item value="&quot;Existing&quot;"/>
+                            </enum>
+                          </prop>
+                          <discriminator property="resourceType" value="Existing">
+                            <prop type="string" name="recoveryProximityPlacementGroupId"/>
+                          </discriminator>
+                        </prop>
+                        <prop type="string" name="recoveryResourceGroupId"/>
+                        <prop type="string" name="recoverySubscriptionId"/>
+                        <prop type="object" name="recoveryVirtualNetwork">
+                          <prop type="string" name="resourceType" required="True">
+                            <enum>
+                              <item value="&quot;Existing&quot;"/>
+                              <item value="&quot;New&quot;"/>
+                            </enum>
+                          </prop>
+                          <discriminator property="resourceType" value="Existing">
+                            <prop type="string" name="recoverySubnetName"/>
+                            <prop type="string" name="recoveryVirtualNetworkId" required="True"/>
+                          </discriminator>
+                          <discriminator property="resourceType" value="New">
+                            <prop type="string" name="recoveryVirtualNetworkName"/>
+                            <prop type="string" name="recoveryVirtualNetworkResourceGroupName"/>
+                          </discriminator>
+                        </prop>
+                        <prop type="array<object>" name="vmDisks">
+                          <item type="object">
+                            <prop type="string" name="diskUri" required="True"/>
+                            <prop type="@StorageAccountCustomDetails_read" name="primaryStagingStorageAccountCustomInput"/>
+                            <prop type="object" name="recoveryAzureStorageAccountCustomInput" cls="StorageAccountCustomDetails_read">
+                              <prop type="string" name="resourceType" required="True">
+                                <enum>
+                                  <item value="&quot;Existing&quot;"/>
+                                </enum>
+                              </prop>
+                              <discriminator property="resourceType" value="Existing">
+                                <prop type="string" name="azureStorageAccountId" required="True"/>
+                              </discriminator>
+                            </prop>
+                          </item>
+                        </prop>
+                        <prop type="array<object>" name="vmManagedDisks">
+                          <item type="object">
+                            <prop type="object" name="diskEncryptionInfo" cls="DiskEncryptionInfo_read">
+                              <prop type="object" name="diskEncryptionKeyInfo">
+                                <prop type="string" name="keyVaultResourceArmId"/>
+                                <prop type="string" name="secretIdentifier"/>
+                              </prop>
+                              <prop type="object" name="keyEncryptionKeyInfo">
+                                <prop type="string" name="keyIdentifier"/>
+                                <prop type="string" name="keyVaultResourceArmId"/>
+                              </prop>
+                            </prop>
+                            <prop type="string" name="diskId" required="True"/>
+                            <prop type="@StorageAccountCustomDetails_read" name="primaryStagingStorageAccountCustomInput"/>
+                            <prop type="string" name="recoveryDiskEncryptionSetId"/>
+                            <prop type="string" name="recoveryReplicaDiskAccountType"/>
+                            <prop type="object" name="recoveryResourceGroupCustomInput">
+                              <prop type="string" name="resourceType" required="True">
+                                <enum>
+                                  <item value="&quot;Existing&quot;"/>
+                                </enum>
+                              </prop>
+                              <discriminator property="resourceType" value="Existing">
+                                <prop type="string" name="recoveryResourceGroupId"/>
+                              </discriminator>
+                            </prop>
+                            <prop type="string" name="recoveryTargetDiskAccountType"/>
+                          </item>
+                        </prop>
+                      </discriminator>
+                    </prop>
+                  </prop>
+                  <prop readOnly="True" type="string" name="type"/>
+                </schema>
+              </json>
+            </body>
+          </response>
+          <response isError="True">
+            <body>
+              <json>
+                <schema type="@ODataV4Format"/>
+              </json>
+            </body>
+          </response>
+        </http>
+      </operation>
+      <operation>
+        <instanceUpdate instance="$Instance">
+          <json>
+            <schema type="object" name="input" required="True" clientFlatten="True">
+              <prop type="object" name="properties">
+                <prop type="object" name="providerSpecificDetails" arg="$input.properties.providerSpecificDetails">
+                  <prop type="string" name="instanceType" required="True">
+                    <enum>
+                      <item arg="$input.properties.providerSpecificDetails.A2A" value="&quot;A2A&quot;"/>
+                    </enum>
+                  </prop>
+                  <discriminator property="instanceType" value="A2A">
+                    <prop type="string" name="agentAutoUpdateStatus" arg="$input.properties.providerSpecificDetails.A2A.agentAutoUpdateStatus">
+                      <enum>
+                        <item value="&quot;Disabled&quot;"/>
+                        <item value="&quot;Enabled&quot;"/>
+                      </enum>
+                    </prop>
+                    <prop type="string" name="autoProtectionOfDataDisk" arg="$input.properties.providerSpecificDetails.A2A.autoProtectionOfDataDisk">
+                      <enum>
+                        <item value="&quot;Disabled&quot;"/>
+                        <item value="&quot;Enabled&quot;"/>
+                      </enum>
+                    </prop>
+                    <prop type="string" name="automationAccountArmId" arg="$input.properties.providerSpecificDetails.A2A.automationAccountArmId"/>
+                    <prop type="string" name="automationAccountAuthenticationType" arg="$input.properties.providerSpecificDetails.A2A.automationAccountAuthenticationType">
+                      <default value="&quot;RunAsAccount&quot;"/>
+                      <enum>
+                        <item value="&quot;RunAsAccount&quot;"/>
+                        <item value="&quot;SystemAssignedIdentity&quot;"/>
+                      </enum>
+                    </prop>
+                    <prop type="@DiskEncryptionInfo_update" name="diskEncryptionInfo" arg="$input.properties.providerSpecificDetails.A2A.diskEncryptionInfo"/>
+                    <prop type="string" name="fabricObjectId" arg="$input.properties.providerSpecificDetails.A2A.fabricObjectId" required="True"/>
+                    <prop type="string" name="multiVmGroupId" arg="$input.properties.providerSpecificDetails.A2A.multiVmGroupId"/>
+                    <prop type="string" name="multiVmGroupName" arg="$input.properties.providerSpecificDetails.A2A.multiVmGroupName"/>
+                    <prop type="string" name="primaryLocation" arg="$input.properties.providerSpecificDetails.A2A.primaryLocation" required="True"/>
+                    <prop type="object" name="primaryStagingStorageAccountCustomInput" arg="$input.properties.providerSpecificDetails.A2A.primaryStagingStorageAccountCustomInput" cls="StorageAccountCustomDetails_update">
+                      <prop type="string" name="resourceType" required="True">
+                        <enum>
+                          <item arg="@StorageAccountCustomDetails_update.Existing" value="&quot;Existing&quot;"/>
+                        </enum>
+                      </prop>
+                      <discriminator property="resourceType" value="Existing">
+                        <prop type="string" name="azureStorageAccountId" arg="@StorageAccountCustomDetails_update.Existing.azureStorageAccountId" required="True"/>
+                      </discriminator>
+                    </prop>
+                    <prop type="object" name="protectionProfileCustomInput" arg="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput">
+                      <prop type="string" name="resourceType" required="True">
+                        <enum>
+                          <item arg="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput.Existing" value="&quot;Existing&quot;"/>
+                          <item arg="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput.New" value="&quot;New&quot;"/>
+                        </enum>
+                      </prop>
+                      <discriminator property="resourceType" value="Existing">
+                        <prop type="string" name="protectionProfileId" arg="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput.Existing.protectionProfileId" required="True"/>
+                      </discriminator>
+                      <discriminator property="resourceType" value="New">
+                        <prop type="integer32" name="appConsistentFrequencyInMinutes" arg="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput.New.appConsistentFrequencyInMinutes"/>
+                        <prop type="integer32" name="crashConsistentFrequencyInMinutes" arg="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput.New.crashConsistentFrequencyInMinutes"/>
+                        <prop type="string" name="multiVmSyncStatus" arg="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput.New.multiVmSyncStatus" required="True">
+                          <enum>
+                            <item value="&quot;Disable&quot;"/>
+                            <item value="&quot;Enable&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="string" name="policyName" arg="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput.New.policyName" required="True"/>
+                        <prop type="integer32" name="recoveryPointHistory" arg="$input.properties.providerSpecificDetails.A2A.protectionProfileCustomInput.New.recoveryPointHistory"/>
+                      </discriminator>
+                    </prop>
+                    <prop type="object" name="recoveryAvailabilitySetCustomInput" arg="$input.properties.providerSpecificDetails.A2A.recoveryAvailabilitySetCustomInput">
+                      <prop type="string" name="resourceType" required="True">
+                        <enum>
+                          <item arg="$input.properties.providerSpecificDetails.A2A.recoveryAvailabilitySetCustomInput.Existing" value="&quot;Existing&quot;"/>
+                        </enum>
+                      </prop>
+                      <discriminator property="resourceType" value="Existing">
+                        <prop type="string" name="recoveryAvailabilitySetId" arg="$input.properties.providerSpecificDetails.A2A.recoveryAvailabilitySetCustomInput.Existing.recoveryAvailabilitySetId"/>
+                      </discriminator>
+                    </prop>
+                    <prop type="string" name="recoveryAvailabilityType" arg="$input.properties.providerSpecificDetails.A2A.recoveryAvailabilityType" required="True">
+                      <enum>
+                        <item value="&quot;AvailabilitySet&quot;"/>
+                        <item value="&quot;AvailabilityZone&quot;"/>
+                        <item value="&quot;Single&quot;"/>
+                      </enum>
+                    </prop>
+                    <prop type="string" name="recoveryAvailabilityZone" arg="$input.properties.providerSpecificDetails.A2A.recoveryAvailabilityZone"/>
+                    <prop type="@StorageAccountCustomDetails_update" name="recoveryBootDiagStorageAccount" arg="$input.properties.providerSpecificDetails.A2A.recoveryBootDiagStorageAccount"/>
+                    <prop type="string" name="recoveryLocation" arg="$input.properties.providerSpecificDetails.A2A.recoveryLocation" required="True"/>
+                    <prop type="object" name="recoveryProximityPlacementGroupCustomInput" arg="$input.properties.providerSpecificDetails.A2A.recoveryProximityPlacementGroupCustomInput">
+                      <prop type="string" name="resourceType" required="True">
+                        <enum>
+                          <item arg="$input.properties.providerSpecificDetails.A2A.recoveryProximityPlacementGroupCustomInput.Existing" value="&quot;Existing&quot;"/>
+                        </enum>
+                      </prop>
+                      <discriminator property="resourceType" value="Existing">
+                        <prop type="string" name="recoveryProximityPlacementGroupId" arg="$input.properties.providerSpecificDetails.A2A.recoveryProximityPlacementGroupCustomInput.Existing.recoveryProximityPlacementGroupId"/>
+                      </discriminator>
+                    </prop>
+                    <prop type="string" name="recoveryResourceGroupId" arg="$input.properties.providerSpecificDetails.A2A.recoveryResourceGroupId" required="True"/>
+                    <prop type="string" name="recoverySubscriptionId" arg="$input.properties.providerSpecificDetails.A2A.recoverySubscriptionId" required="True"/>
+                    <prop type="object" name="recoveryVirtualNetworkCustomInput" arg="$input.properties.providerSpecificDetails.A2A.recoveryVirtualNetworkCustomInput">
+                      <prop type="string" name="resourceType" required="True">
+                        <enum>
+                          <item arg="$input.properties.providerSpecificDetails.A2A.recoveryVirtualNetworkCustomInput.Existing" value="&quot;Existing&quot;"/>
+                          <item arg="$input.properties.providerSpecificDetails.A2A.recoveryVirtualNetworkCustomInput.New" value="&quot;New&quot;"/>
+                        </enum>
+                      </prop>
+                      <discriminator property="resourceType" value="Existing">
+                        <prop type="string" name="recoverySubnetName" arg="$input.properties.providerSpecificDetails.A2A.recoveryVirtualNetworkCustomInput.Existing.recoverySubnetName"/>
+                        <prop type="string" name="recoveryVirtualNetworkId" arg="$input.properties.providerSpecificDetails.A2A.recoveryVirtualNetworkCustomInput.Existing.recoveryVirtualNetworkId" required="True"/>
+                      </discriminator>
+                      <discriminator property="resourceType" value="New">
+                        <prop type="string" name="recoveryVirtualNetworkName" arg="$input.properties.providerSpecificDetails.A2A.recoveryVirtualNetworkCustomInput.New.recoveryVirtualNetworkName"/>
+                        <prop type="string" name="recoveryVirtualNetworkResourceGroupName" arg="$input.properties.providerSpecificDetails.A2A.recoveryVirtualNetworkCustomInput.New.recoveryVirtualNetworkResourceGroupName"/>
+                      </discriminator>
+                    </prop>
+                    <prop type="array<object>" name="vmDisks" arg="$input.properties.providerSpecificDetails.A2A.vmDisks">
+                      <item type="object">
+                        <prop type="string" name="diskUri" arg="$input.properties.providerSpecificDetails.A2A.vmDisks[].diskUri" required="True"/>
+                        <prop type="@StorageAccountCustomDetails_update" name="primaryStagingStorageAccountCustomInput" arg="$input.properties.providerSpecificDetails.A2A.vmDisks[].primaryStagingStorageAccountCustomInput"/>
+                        <prop type="@StorageAccountCustomDetails_update" name="recoveryAzureStorageAccountCustomInput" arg="$input.properties.providerSpecificDetails.A2A.vmDisks[].recoveryAzureStorageAccountCustomInput"/>
+                      </item>
+                    </prop>
+                    <prop type="array<object>" name="vmManagedDisks" arg="$input.properties.providerSpecificDetails.A2A.vmManagedDisks">
+                      <item type="object">
+                        <prop type="object" name="diskEncryptionInfo" arg="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].diskEncryptionInfo" cls="DiskEncryptionInfo_update">
+                          <prop type="object" name="diskEncryptionKeyInfo" arg="@DiskEncryptionInfo_update.diskEncryptionKeyInfo">
+                            <prop type="string" name="keyVaultResourceArmId" arg="@DiskEncryptionInfo_update.diskEncryptionKeyInfo.keyVaultResourceArmId"/>
+                            <prop type="string" name="secretIdentifier" arg="@DiskEncryptionInfo_update.diskEncryptionKeyInfo.secretIdentifier"/>
+                          </prop>
+                          <prop type="object" name="keyEncryptionKeyInfo" arg="@DiskEncryptionInfo_update.keyEncryptionKeyInfo">
+                            <prop type="string" name="keyIdentifier" arg="@DiskEncryptionInfo_update.keyEncryptionKeyInfo.keyIdentifier"/>
+                            <prop type="string" name="keyVaultResourceArmId" arg="@DiskEncryptionInfo_update.keyEncryptionKeyInfo.keyVaultResourceArmId"/>
+                          </prop>
+                        </prop>
+                        <prop type="string" name="diskId" arg="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].diskId" required="True"/>
+                        <prop type="@StorageAccountCustomDetails_update" name="primaryStagingStorageAccountCustomInput" arg="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].primaryStagingStorageAccountCustomInput"/>
+                        <prop type="string" name="recoveryDiskEncryptionSetId" arg="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].recoveryDiskEncryptionSetId"/>
+                        <prop type="string" name="recoveryReplicaDiskAccountType" arg="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].recoveryReplicaDiskAccountType"/>
+                        <prop type="object" name="recoveryResourceGroupCustomInput" arg="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].recoveryResourceGroupCustomInput">
+                          <prop type="string" name="resourceType" required="True">
+                            <enum>
+                              <item arg="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].recoveryResourceGroupCustomInput.Existing" value="&quot;Existing&quot;"/>
+                            </enum>
+                          </prop>
+                          <discriminator property="resourceType" value="Existing">
+                            <prop type="string" name="recoveryResourceGroupId" arg="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].recoveryResourceGroupCustomInput.Existing.recoveryResourceGroupId"/>
+                          </discriminator>
+                        </prop>
+                        <prop type="string" name="recoveryTargetDiskAccountType" arg="$input.properties.providerSpecificDetails.A2A.vmManagedDisks[].recoveryTargetDiskAccountType"/>
+                      </item>
+                    </prop>
+                  </discriminator>
+                </prop>
+              </prop>
+            </schema>
+          </json>
+        </instanceUpdate>
+      </operation>
+      <operation operationId="ReplicationProtectionIntents_Create">
+        <http path="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationProtectionIntents/{intentObjectName}">
+          <request method="put">
+            <path>
+              <param type="string" name="intentObjectName" arg="$Path.intentObjectName" required="True"/>
+              <param type="string" name="resourceGroupName" arg="$Path.resourceGroupName" required="True"/>
+              <param type="string" name="resourceName" arg="$Path.resourceName" required="True"/>
+              <param type="string" name="subscriptionId" arg="$Path.subscriptionId" required="True"/>
+            </path>
+            <query>
+              <const readOnly="True" const="True" type="string" name="api-version" required="True">
+                <default value="&quot;2022-08-01&quot;"/>
+              </const>
+            </query>
+            <body>
+              <json ref="$Instance"/>
+            </body>
+          </request>
+          <response statusCode="200">
+            <body>
+              <json var="$Instance">
+                <schema type="@ReplicationProtectionIntent_read"/>
+              </json>
+            </body>
+          </response>
+          <response isError="True">
+            <body>
+              <json>
+                <schema type="@ODataV4Format"/>
+              </json>
+            </body>
+          </response>
+        </http>
+      </operation>
+      <output type="object" ref="$Instance" clientFlatten="True"/>
+    </command>
+  </commandGroup>
+</CodeGen>

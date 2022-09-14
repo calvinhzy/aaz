@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='utf-8'?>
+<CodeGen plane="mgmt-plane">
+  <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/recoverypoints" version="2022-08-01" swagger="mgmt-plane/recoveryservicessiterecovery/ResourceProviders/Microsoft.RecoveryServices/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuUmVjb3ZlcnlTZXJ2aWNlcy92YXVsdHMve3Jlc291cmNlTmFtZX0vcmVwbGljYXRpb25GYWJyaWNzL3tmYWJyaWNOYW1lfS9yZXBsaWNhdGlvblByb3RlY3Rpb25Db250YWluZXJzL3twcm90ZWN0aW9uQ29udGFpbmVyTmFtZX0vcmVwbGljYXRpb25Qcm90ZWN0ZWRJdGVtcy97cmVwbGljYXRlZFByb3RlY3RlZEl0ZW1OYW1lfS9yZWNvdmVyeVBvaW50cw==/V/MjAyMi0wOC0wMQ=="/>
+  <commandGroup name="site-recovery vault fabric protection-container protected-item recovery-point">
+    <command name="list" version="2022-08-01">
+      <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/recoverypoints" version="2022-08-01" swagger="mgmt-plane/recoveryservicessiterecovery/ResourceProviders/Microsoft.RecoveryServices/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuUmVjb3ZlcnlTZXJ2aWNlcy92YXVsdHMve3Jlc291cmNlTmFtZX0vcmVwbGljYXRpb25GYWJyaWNzL3tmYWJyaWNOYW1lfS9yZXBsaWNhdGlvblByb3RlY3Rpb25Db250YWluZXJzL3twcm90ZWN0aW9uQ29udGFpbmVyTmFtZX0vcmVwbGljYXRpb25Qcm90ZWN0ZWRJdGVtcy97cmVwbGljYXRlZFByb3RlY3RlZEl0ZW1OYW1lfS9yZWNvdmVyeVBvaW50cw==/V/MjAyMi0wOC0wMQ=="/>
+      <argGroup name="">
+        <arg type="string" var="$Path.fabricName" options="fabric-name" required="True">
+          <help short="The fabric name."/>
+        </arg>
+        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name" required="True">
+          <help short="The protection container name."/>
+        </arg>
+        <arg type="string" var="$Path.replicatedProtectedItemName" options="replicated-protected-item-name" required="True">
+          <help short="The replication protected item name."/>
+        </arg>
+        <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True"/>
+        <arg type="string" var="$Path.resourceName" options="resource-name" required="True">
+          <help short="The name of the recovery services vault."/>
+        </arg>
+        <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True"/>
+      </argGroup>
+      <operation operationId="RecoveryPoints_ListByReplicationProtectedItems">
+        <http path="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationFabrics/{fabricName}/replicationProtectionContainers/{protectionContainerName}/replicationProtectedItems/{replicatedProtectedItemName}/recoveryPoints">
+          <request method="get">
+            <path>
+              <param type="string" name="fabricName" arg="$Path.fabricName" required="True"/>
+              <param type="string" name="protectionContainerName" arg="$Path.protectionContainerName" required="True"/>
+              <param type="string" name="replicatedProtectedItemName" arg="$Path.replicatedProtectedItemName" required="True"/>
+              <param type="string" name="resourceGroupName" arg="$Path.resourceGroupName" required="True"/>
+              <param type="string" name="resourceName" arg="$Path.resourceName" required="True"/>
+              <param type="string" name="subscriptionId" arg="$Path.subscriptionId" required="True"/>
+            </path>
+            <query>
+              <const readOnly="True" const="True" type="string" name="api-version" required="True">
+                <default value="&quot;2022-08-01&quot;"/>
+              </const>
+            </query>
+          </request>
+          <response statusCode="200">
+            <body>
+              <json var="$Instance">
+                <schema type="object">
+                  <prop type="string" name="nextLink"/>
+                  <prop type="array<object>" name="value">
+                    <item type="object">
+                      <prop readOnly="True" type="ResourceId" name="id">
+                        <format template="/subscriptions/{}/resourceGroups/{}/providers/Microsoft.RecoveryServices/vaults/{}/replicationFabrics/{}/replicationProtectionContainers/{}/replicationProtectedItems/{}/recoveryPoints/{}"/>
+                      </prop>
+                      <prop type="ResourceLocation" name="location"/>
+                      <prop readOnly="True" type="string" name="name"/>
+                      <prop type="object" name="properties">
+                        <prop type="object" name="providerSpecificDetails">
+                          <prop type="string" name="instanceType" required="True">
+                            <enum>
+                              <item value="&quot;A2A&quot;"/>
+                              <item value="&quot;InMageAzureV2&quot;"/>
+                              <item value="&quot;InMageRcm&quot;"/>
+                            </enum>
+                          </prop>
+                          <discriminator property="instanceType" value="A2A">
+                            <prop type="array<string>" name="disks">
+                              <item type="string"/>
+                            </prop>
+                            <prop type="string" name="recoveryPointSyncType">
+                              <enum>
+                                <item value="&quot;MultiVmSyncRecoveryPoint&quot;"/>
+                                <item value="&quot;PerVmRecoveryPoint&quot;"/>
+                              </enum>
+                            </prop>
+                          </discriminator>
+                          <discriminator property="instanceType" value="InMageAzureV2">
+                            <prop type="string" name="isMultiVmSyncPoint"/>
+                          </discriminator>
+                          <discriminator property="instanceType" value="InMageRcm">
+                            <prop readOnly="True" type="string" name="isMultiVmSyncPoint"/>
+                          </discriminator>
+                        </prop>
+                        <prop type="dateTime" name="recoveryPointTime"/>
+                        <prop type="string" name="recoveryPointType"/>
+                      </prop>
+                      <prop readOnly="True" type="string" name="type"/>
+                    </item>
+                  </prop>
+                </schema>
+              </json>
+            </body>
+          </response>
+          <response isError="True">
+            <body>
+              <json>
+                <schema type="@ODataV4Format"/>
+              </json>
+            </body>
+          </response>
+        </http>
+      </operation>
+      <output type="array" ref="$Instance.value" clientFlatten="True" nextLink="$Instance.nextLink"/>
+    </command>
+  </commandGroup>
+</CodeGen>
