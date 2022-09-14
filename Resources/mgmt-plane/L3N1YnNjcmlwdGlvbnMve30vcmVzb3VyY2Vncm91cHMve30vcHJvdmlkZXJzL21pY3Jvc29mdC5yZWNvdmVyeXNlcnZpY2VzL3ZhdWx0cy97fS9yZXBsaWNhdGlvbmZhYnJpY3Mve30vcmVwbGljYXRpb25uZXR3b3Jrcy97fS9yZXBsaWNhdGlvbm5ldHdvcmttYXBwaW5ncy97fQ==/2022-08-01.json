@@ -567,6 +567,7 @@
                                     "type": "object",
                                     "var": "$input.properties.fabricSpecificDetails",
                                     "options": [
+                                        "fabric-details",
                                         "fabric-specific-details"
                                     ],
                                     "group": "Properties",
@@ -993,6 +994,7 @@
                                     "type": "object",
                                     "var": "$input.properties.fabricSpecificDetails",
                                     "options": [
+                                        "fabric-details",
                                         "fabric-specific-details"
                                     ],
                                     "group": "Properties",

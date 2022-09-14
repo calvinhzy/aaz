@@ -14,7 +14,7 @@
         <arg type="string" var="$Path.migrationRecoveryPointName" options="migration-recovery-point-name name n" required="True" idPart="child_name_4">
           <help short="The migration recovery point name."/>
         </arg>
-        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name" required="True" idPart="child_name_2">
+        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name protection-container" required="True" idPart="child_name_2">
           <help short="Protection container name."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>

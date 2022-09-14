@@ -8,8 +8,8 @@
         <arg type="string" var="$Path.fabricName" options="fabric-name" required="True">
           <help short="Unique fabric name."/>
         </arg>
-        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name" required="True">
-          <help short="Protection container name."/>
+        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name n" required="True">
+          <help short="The name of the protection container."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True"/>
         <arg type="string" var="$Path.resourceName" options="resource-name" required="True">
@@ -18,7 +18,7 @@
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True"/>
       </argGroup>
       <argGroup name="Properties">
-        <arg type="object" var="$switchInput.properties.providerSpecificDetails" options="provider-specific-details" group="Properties">
+        <arg type="object" var="$switchInput.properties.providerSpecificDetails" options="provider-specific-details provider-details" group="Properties">
           <help short="Provider specific switch protection input."/>
           <arg type="object" var="$switchInput.properties.providerSpecificDetails.A2A" options="a2-a">
             <arg type="@DiskEncryptionInfo_create" var="$switchInput.properties.providerSpecificDetails.A2A.diskEncryptionInfo" options="disk-encryption-info">

@@ -8,10 +8,10 @@
         <arg type="string" var="$Path.fabricName" options="fabric-name" required="True">
           <help short="Fabric name."/>
         </arg>
-        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name" required="True">
+        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name protection-container" required="True">
           <help short="Protection container name."/>
         </arg>
-        <arg type="string" var="$Path.replicatedProtectedItemName" options="replicated-protected-item-name" required="True">
+        <arg type="string" var="$Path.replicatedProtectedItemName" options="replicated-protected-item-name n" required="True">
           <help short="Replication protected item name."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True"/>
@@ -21,7 +21,7 @@
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True"/>
       </argGroup>
       <argGroup name="Properties">
-        <arg type="object" var="$applianceUpdateInput.properties.providerSpecificDetails" options="provider-specific-details" required="True" group="Properties">
+        <arg type="object" var="$applianceUpdateInput.properties.providerSpecificDetails" options="provider-specific-details provider-details" required="True" group="Properties">
           <help short="The provider specific input to update replication protected item."/>
           <arg type="object" var="$applianceUpdateInput.properties.providerSpecificDetails.InMageRcm" options="in-mage-rcm">
             <arg type="string" var="$applianceUpdateInput.properties.providerSpecificDetails.InMageRcm.runAsAccountId" options="run-as-account-id">

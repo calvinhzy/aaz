@@ -40,6 +40,7 @@
                                     "type": "string",
                                     "var": "$Path.protectionContainerName",
                                     "options": [
+                                        "protection-container",
                                         "protection-container-name"
                                     ],
                                     "required": true,
@@ -51,6 +52,7 @@
                                     "type": "string",
                                     "var": "$Path.replicatedProtectedItemName",
                                     "options": [
+                                        "n",
                                         "replicated-protected-item-name"
                                     ],
                                     "required": true,
@@ -106,6 +108,7 @@
                                     "type": "object",
                                     "var": "$failoverInput.properties.providerSpecificDetails",
                                     "options": [
+                                        "provider-details",
                                         "provider-specific-details"
                                     ],
                                     "group": "Properties",

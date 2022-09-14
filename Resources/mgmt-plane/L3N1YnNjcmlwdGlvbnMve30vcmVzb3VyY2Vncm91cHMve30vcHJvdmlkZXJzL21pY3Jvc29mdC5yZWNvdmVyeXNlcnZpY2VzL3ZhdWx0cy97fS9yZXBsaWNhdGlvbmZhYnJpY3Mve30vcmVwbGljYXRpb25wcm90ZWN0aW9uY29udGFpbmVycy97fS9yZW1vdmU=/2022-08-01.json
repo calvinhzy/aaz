@@ -40,11 +40,12 @@
                                     "type": "string",
                                     "var": "$Path.protectionContainerName",
                                     "options": [
+                                        "n",
                                         "protection-container-name"
                                     ],
                                     "required": true,
                                     "help": {
-                                        "short": "Unique protection container ARM name."
+                                        "short": "The name of the protection container."
                                     }
                                 },
                                 {

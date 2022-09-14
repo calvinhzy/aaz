@@ -40,22 +40,24 @@
                                     "type": "string",
                                     "var": "$Path.protectionContainerName",
                                     "options": [
+                                        "protection-container",
                                         "protection-container-name"
                                     ],
                                     "required": true,
                                     "help": {
-                                        "short": "The protection container name."
+                                        "short": "Protection container name."
                                     }
                                 },
                                 {
                                     "type": "string",
                                     "var": "$Path.replicatedProtectedItemName",
                                     "options": [
+                                        "n",
                                         "replicated-protected-item-name"
                                     ],
                                     "required": true,
                                     "help": {
-                                        "short": "The replicated protected item name."
+                                        "short": "Replication protected item name."
                                     }
                                 },
                                 {
@@ -95,6 +97,7 @@
                                     "type": "object",
                                     "var": "$applyRecoveryPointInput.properties.providerSpecificDetails",
                                     "options": [
+                                        "provider-details",
                                         "provider-specific-details"
                                     ],
                                     "required": true,

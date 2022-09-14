@@ -152,7 +152,7 @@
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
       </argGroup>
       <argGroup name="Properties">
-        <arg type="object" var="$input.properties.fabricSpecificDetails" options="fabric-specific-details" group="Properties">
+        <arg type="object" var="$input.properties.fabricSpecificDetails" options="fabric-specific-details fabric-details" group="Properties">
           <help short="Fabric specific input properties."/>
           <arg type="object" var="$input.properties.fabricSpecificDetails.AzureToAzure" options="azure-to-azure">
             <arg type="string" var="$input.properties.fabricSpecificDetails.AzureToAzure.primaryNetworkId" options="primary-network-id" required="True">
@@ -275,7 +275,7 @@
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
       </argGroup>
       <argGroup name="Properties">
-        <arg nullable="True" type="object" var="$input.properties.fabricSpecificDetails" options="fabric-specific-details" group="Properties">
+        <arg nullable="True" type="object" var="$input.properties.fabricSpecificDetails" options="fabric-specific-details fabric-details" group="Properties">
           <help short="Fabric specific input properties."/>
           <arg type="object" var="$input.properties.fabricSpecificDetails.AzureToAzure" options="azure-to-azure">
             <arg type="string" var="$input.properties.fabricSpecificDetails.AzureToAzure.primaryNetworkId" options="primary-network-id">

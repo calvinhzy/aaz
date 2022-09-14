@@ -11,7 +11,7 @@
         <arg type="string" var="$Path.mappingName" options="mapping-name" required="True">
           <help short="Protection container mapping name."/>
         </arg>
-        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name" required="True">
+        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name protection-container" required="True">
           <help short="Protection container name."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True"/>

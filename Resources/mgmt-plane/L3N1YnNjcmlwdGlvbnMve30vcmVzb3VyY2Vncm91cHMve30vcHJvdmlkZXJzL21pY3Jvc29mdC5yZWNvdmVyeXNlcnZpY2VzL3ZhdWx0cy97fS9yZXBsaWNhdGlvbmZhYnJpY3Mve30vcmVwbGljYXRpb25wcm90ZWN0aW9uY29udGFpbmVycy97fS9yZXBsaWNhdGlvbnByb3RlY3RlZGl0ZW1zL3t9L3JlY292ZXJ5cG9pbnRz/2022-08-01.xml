@@ -8,10 +8,10 @@
         <arg type="string" var="$Path.fabricName" options="fabric-name" required="True">
           <help short="The fabric name."/>
         </arg>
-        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name" required="True">
-          <help short="The protection container name."/>
+        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name protection-container" required="True">
+          <help short="Protection container name."/>
         </arg>
-        <arg type="string" var="$Path.replicatedProtectedItemName" options="replicated-protected-item-name" required="True">
+        <arg type="string" var="$Path.replicatedProtectedItemName" options="replicated-protected-item-name protected-item" required="True">
           <help short="The replication protected item name."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True"/>

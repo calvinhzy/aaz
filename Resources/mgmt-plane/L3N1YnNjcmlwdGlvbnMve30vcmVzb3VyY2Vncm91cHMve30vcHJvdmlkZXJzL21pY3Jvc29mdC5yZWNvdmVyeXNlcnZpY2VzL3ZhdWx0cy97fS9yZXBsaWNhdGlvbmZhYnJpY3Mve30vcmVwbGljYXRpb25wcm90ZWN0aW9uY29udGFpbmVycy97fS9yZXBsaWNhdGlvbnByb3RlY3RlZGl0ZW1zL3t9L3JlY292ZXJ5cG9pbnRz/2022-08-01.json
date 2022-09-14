@@ -40,17 +40,19 @@
                                     "type": "string",
                                     "var": "$Path.protectionContainerName",
                                     "options": [
+                                        "protection-container",
                                         "protection-container-name"
                                     ],
                                     "required": true,
                                     "help": {
-                                        "short": "The protection container name."
+                                        "short": "Protection container name."
                                     }
                                 },
                                 {
                                     "type": "string",
                                     "var": "$Path.replicatedProtectedItemName",
                                     "options": [
+                                        "protected-item",
                                         "replicated-protected-item-name"
                                     ],
                                     "required": true,

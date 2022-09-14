@@ -11,7 +11,7 @@
         <arg type="string" var="$Path.migrationItemName" options="migration-item-name" required="True">
           <help short="Migration item name."/>
         </arg>
-        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name" required="True">
+        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name protection-container" required="True">
           <help short="Protection container name."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True"/>
@@ -21,7 +21,7 @@
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True"/>
       </argGroup>
       <argGroup name="Properties">
-        <arg type="object" var="$input.properties.providerSpecificDetails" options="provider-specific-details" required="True" group="Properties">
+        <arg type="object" var="$input.properties.providerSpecificDetails" options="provider-specific-details provider-details" required="True" group="Properties">
           <help short="The provider specific details."/>
           <arg type="object" var="$input.properties.providerSpecificDetails.VMwareCbt" options="v-mware-cbt">
             <arg type="string" var="$input.properties.providerSpecificDetails.VMwareCbt.skipCbtReset" options="skip-cbt-reset" required="True">

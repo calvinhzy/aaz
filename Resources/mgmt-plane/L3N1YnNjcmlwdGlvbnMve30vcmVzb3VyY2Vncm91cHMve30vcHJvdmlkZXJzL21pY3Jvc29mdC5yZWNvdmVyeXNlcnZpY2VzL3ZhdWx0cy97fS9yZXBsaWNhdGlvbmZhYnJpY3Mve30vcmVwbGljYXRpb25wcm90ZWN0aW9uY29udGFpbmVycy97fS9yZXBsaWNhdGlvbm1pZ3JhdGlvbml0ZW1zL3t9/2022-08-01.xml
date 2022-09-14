@@ -11,7 +11,7 @@
         <arg type="string" var="$Path.migrationItemName" options="migration-item-name name n" required="True" idPart="child_name_3">
           <help short="Migration item name."/>
         </arg>
-        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name" required="True" idPart="child_name_2">
+        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name protection-container" required="True" idPart="child_name_2">
           <help short="Protection container name."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
@@ -321,7 +321,7 @@
         <arg type="string" var="$Path.migrationItemName" options="migration-item-name name n" required="True" idPart="child_name_3">
           <help short="Migration item name."/>
         </arg>
-        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name" required="True" idPart="child_name_2">
+        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name protection-container" required="True" idPart="child_name_2">
           <help short="Protection container name."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
@@ -373,7 +373,7 @@
         <arg type="string" var="$Path.migrationItemName" options="migration-item-name name n" required="True" idPart="child_name_3">
           <help short="Migration item name."/>
         </arg>
-        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name" required="True" idPart="child_name_2">
+        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name protection-container" required="True" idPart="child_name_2">
           <help short="Protection container name."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
@@ -386,7 +386,7 @@
         <arg type="string" var="$input.properties.policyId" options="policy-id" required="True" group="Properties">
           <help short="The policy Id."/>
         </arg>
-        <arg type="object" var="$input.properties.providerSpecificDetails" options="provider-specific-details" required="True" group="Properties">
+        <arg type="object" var="$input.properties.providerSpecificDetails" options="provider-specific-details provider-details" required="True" group="Properties">
           <help short="The provider specific details."/>
           <arg type="object" var="$input.properties.providerSpecificDetails.VMwareCbt" options="v-mware-cbt">
             <arg type="string" var="$input.properties.providerSpecificDetails.VMwareCbt.dataMoverRunAsAccountId" options="data-mover-run-as-account-id" required="True">
@@ -895,7 +895,7 @@
         <arg type="string" var="$Path.migrationItemName" options="migration-item-name name n" required="True" idPart="child_name_3">
           <help short="Migration item name."/>
         </arg>
-        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name" required="True" idPart="child_name_2">
+        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name protection-container" required="True" idPart="child_name_2">
           <help short="Protection container name."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
@@ -908,7 +908,7 @@
         <arg type="string" var="$input.properties.policyId" options="policy-id" group="Properties">
           <help short="The policy Id."/>
         </arg>
-        <arg type="object" var="$input.properties.providerSpecificDetails" options="provider-specific-details" group="Properties">
+        <arg type="object" var="$input.properties.providerSpecificDetails" options="provider-specific-details provider-details" group="Properties">
           <help short="The provider specific details."/>
           <arg type="object" var="$input.properties.providerSpecificDetails.VMwareCbt" options="v-mware-cbt">
             <arg type="string" var="$input.properties.providerSpecificDetails.VMwareCbt.dataMoverRunAsAccountId" options="data-mover-run-as-account-id">

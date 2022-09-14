@@ -8,11 +8,11 @@
         <arg type="string" var="$Path.fabricName" options="fabric-name" required="True">
           <help short="The ARM fabric name."/>
         </arg>
-        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name" required="True">
-          <help short="The protection container name."/>
+        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name protection-container" required="True">
+          <help short="Protection container name."/>
         </arg>
-        <arg type="string" var="$Path.replicatedProtectedItemName" options="replicated-protected-item-name" required="True">
-          <help short="The replicated protected item name."/>
+        <arg type="string" var="$Path.replicatedProtectedItemName" options="replicated-protected-item-name n" required="True">
+          <help short="Replication protected item name."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True"/>
         <arg type="string" var="$Path.resourceName" options="resource-name" required="True">
@@ -21,7 +21,7 @@
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True"/>
       </argGroup>
       <argGroup name="Properties">
-        <arg type="object" var="$applyRecoveryPointInput.properties.providerSpecificDetails" options="provider-specific-details" required="True" group="Properties">
+        <arg type="object" var="$applyRecoveryPointInput.properties.providerSpecificDetails" options="provider-specific-details provider-details" required="True" group="Properties">
           <help short="Provider specific input for applying recovery point."/>
           <arg type="object" var="$applyRecoveryPointInput.properties.providerSpecificDetails.HyperVReplicaAzure" options="hyper-v-replica-azure">
             <arg type="string" var="$applyRecoveryPointInput.properties.providerSpecificDetails.HyperVReplicaAzure.primaryKekCertificatePfx" options="primary-kek-certificate-pfx">

@@ -55,6 +55,7 @@
                                     "type": "string",
                                     "var": "$Path.protectionContainerName",
                                     "options": [
+                                        "protection-container",
                                         "protection-container-name"
                                     ],
                                     "required": true,
@@ -589,6 +590,7 @@
                                     "type": "string",
                                     "var": "$Path.protectionContainerName",
                                     "options": [
+                                        "protection-container",
                                         "protection-container-name"
                                     ],
                                     "required": true,
@@ -767,6 +769,7 @@
                                     "type": "string",
                                     "var": "$Path.protectionContainerName",
                                     "options": [
+                                        "protection-container",
                                         "protection-container-name"
                                     ],
                                     "required": true,
@@ -1622,6 +1625,7 @@
                                     "type": "string",
                                     "var": "$Path.protectionContainerName",
                                     "options": [
+                                        "protection-container",
                                         "protection-container-name"
                                     ],
                                     "required": true,

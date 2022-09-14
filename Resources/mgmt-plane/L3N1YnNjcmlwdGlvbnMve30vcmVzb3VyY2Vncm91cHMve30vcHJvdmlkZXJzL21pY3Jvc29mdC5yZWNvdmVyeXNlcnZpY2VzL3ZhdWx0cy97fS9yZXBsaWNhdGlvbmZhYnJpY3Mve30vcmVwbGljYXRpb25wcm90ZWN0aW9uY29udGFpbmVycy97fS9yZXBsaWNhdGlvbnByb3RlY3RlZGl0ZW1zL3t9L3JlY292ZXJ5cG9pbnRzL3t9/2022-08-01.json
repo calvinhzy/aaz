@@ -41,12 +41,13 @@
                                     "type": "string",
                                     "var": "$Path.protectionContainerName",
                                     "options": [
+                                        "protection-container",
                                         "protection-container-name"
                                     ],
                                     "required": true,
                                     "idPart": "child_name_2",
                                     "help": {
-                                        "short": "The protection container name."
+                                        "short": "Protection container name."
                                     }
                                 },
                                 {
@@ -67,6 +68,7 @@
                                     "type": "string",
                                     "var": "$Path.replicatedProtectedItemName",
                                     "options": [
+                                        "protected-item",
                                         "replicated-protected-item-name"
                                     ],
                                     "required": true,

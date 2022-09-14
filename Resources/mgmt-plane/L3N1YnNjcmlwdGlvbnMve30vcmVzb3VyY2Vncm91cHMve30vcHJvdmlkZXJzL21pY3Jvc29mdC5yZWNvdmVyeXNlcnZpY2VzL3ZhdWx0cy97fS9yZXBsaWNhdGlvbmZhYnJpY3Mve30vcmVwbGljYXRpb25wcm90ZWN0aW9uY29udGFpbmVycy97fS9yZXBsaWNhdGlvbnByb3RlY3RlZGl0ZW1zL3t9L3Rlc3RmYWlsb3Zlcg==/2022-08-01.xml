@@ -8,10 +8,10 @@
         <arg type="string" var="$Path.fabricName" options="fabric-name" required="True">
           <help short="Unique fabric name."/>
         </arg>
-        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name" required="True">
+        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name protection-container" required="True">
           <help short="Protection container name."/>
         </arg>
-        <arg type="string" var="$Path.replicatedProtectedItemName" options="replicated-protected-item-name" required="True">
+        <arg type="string" var="$Path.replicatedProtectedItemName" options="replicated-protected-item-name n" required="True">
           <help short="Replication protected item name."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True"/>
@@ -30,7 +30,7 @@
         <arg type="string" var="$testfailoverInput.properties.networkType" options="network-type" group="Properties">
           <help short="Network type to be used for test failover."/>
         </arg>
-        <arg type="object" var="$testfailoverInput.properties.providerSpecificDetails" options="provider-specific-details" group="Properties">
+        <arg type="object" var="$testfailoverInput.properties.providerSpecificDetails" options="provider-specific-details provider-details" group="Properties">
           <help short="Provider specific settings."/>
           <arg type="object" var="$testfailoverInput.properties.providerSpecificDetails.A2A" options="a2-a">
             <arg type="string" var="$testfailoverInput.properties.providerSpecificDetails.A2A.cloudServiceCreationOption" options="cloud-service-creation-option">

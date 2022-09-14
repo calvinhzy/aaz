@@ -322,6 +322,7 @@
                                     "type": "array<object>",
                                     "var": "$creationInput.properties.providerSpecificInput",
                                     "options": [
+                                        "provider-input",
                                         "provider-specific-input"
                                     ],
                                     "group": "Properties",
@@ -657,6 +658,7 @@
                                     "type": "array<object>",
                                     "var": "$creationInput.properties.providerSpecificInput",
                                     "options": [
+                                        "provider-input",
                                         "provider-specific-input"
                                     ],
                                     "group": "Properties",

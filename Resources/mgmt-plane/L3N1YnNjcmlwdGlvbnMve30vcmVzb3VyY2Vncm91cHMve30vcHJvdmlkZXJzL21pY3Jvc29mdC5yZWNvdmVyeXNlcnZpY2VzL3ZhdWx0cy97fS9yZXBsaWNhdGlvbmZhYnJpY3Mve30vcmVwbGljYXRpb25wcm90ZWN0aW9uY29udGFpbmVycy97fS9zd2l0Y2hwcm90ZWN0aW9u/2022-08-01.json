@@ -40,11 +40,12 @@
                                     "type": "string",
                                     "var": "$Path.protectionContainerName",
                                     "options": [
+                                        "n",
                                         "protection-container-name"
                                     ],
                                     "required": true,
                                     "help": {
-                                        "short": "Protection container name."
+                                        "short": "The name of the protection container."
                                     }
                                 },
                                 {
@@ -84,6 +85,7 @@
                                     "type": "object",
                                     "var": "$switchInput.properties.providerSpecificDetails",
                                     "options": [
+                                        "provider-details",
                                         "provider-specific-details"
                                     ],
                                     "group": "Properties",

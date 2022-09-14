@@ -8,10 +8,10 @@
         <arg type="string" var="$Path.fabricName" options="fabric-name" required="True">
           <help short="Unique fabric name."/>
         </arg>
-        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name" required="True">
+        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name protection-container" required="True">
           <help short="Protection container name."/>
         </arg>
-        <arg type="string" var="$Path.replicatedProtectedItemName" options="replicated-protected-item-name" required="True">
+        <arg type="string" var="$Path.replicatedProtectedItemName" options="replicated-protected-item-name n" required="True">
           <help short="Replication protected item name."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True"/>
@@ -21,7 +21,7 @@
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True"/>
       </argGroup>
       <argGroup name="Properties">
-        <arg type="object" var="$addDisksInput.properties.providerSpecificDetails" options="provider-specific-details" group="Properties">
+        <arg type="object" var="$addDisksInput.properties.providerSpecificDetails" options="provider-specific-details provider-details" group="Properties">
           <help short="The ReplicationProviderInput. For HyperVReplicaAzure provider, it will be AzureEnableProtectionInput object. For San provider, it will be SanEnableProtectionInput object. For HyperVReplicaAzure provider, it can be null."/>
           <arg type="object" var="$addDisksInput.properties.providerSpecificDetails.A2A" options="a2-a">
             <arg type="array<object>" var="$addDisksInput.properties.providerSpecificDetails.A2A.vmDisks" options="vm-disks">

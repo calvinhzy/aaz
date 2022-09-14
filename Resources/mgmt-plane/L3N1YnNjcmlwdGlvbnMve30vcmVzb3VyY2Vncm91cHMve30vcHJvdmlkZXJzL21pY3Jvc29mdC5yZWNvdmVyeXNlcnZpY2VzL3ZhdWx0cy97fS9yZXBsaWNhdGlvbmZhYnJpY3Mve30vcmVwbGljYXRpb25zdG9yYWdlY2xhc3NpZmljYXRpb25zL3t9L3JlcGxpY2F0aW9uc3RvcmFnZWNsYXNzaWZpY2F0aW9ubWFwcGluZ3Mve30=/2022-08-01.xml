@@ -15,7 +15,7 @@
         <arg type="string" var="$Path.storageClassificationMappingName" options="storage-classification-mapping-name name n" required="True" idPart="child_name_3">
           <help short="Storage classification mapping name."/>
         </arg>
-        <arg type="string" var="$Path.storageClassificationName" options="storage-classification-name" required="True" idPart="child_name_2">
+        <arg type="string" var="$Path.storageClassificationName" options="storage-classification-name storage-classification" required="True" idPart="child_name_2">
           <help short="Storage classification name."/>
         </arg>
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
@@ -78,7 +78,7 @@
         <arg type="string" var="$Path.storageClassificationMappingName" options="storage-classification-mapping-name name n" required="True" idPart="child_name_3">
           <help short="Storage classification mapping name."/>
         </arg>
-        <arg type="string" var="$Path.storageClassificationName" options="storage-classification-name" required="True" idPart="child_name_2">
+        <arg type="string" var="$Path.storageClassificationName" options="storage-classification-name storage-classification" required="True" idPart="child_name_2">
           <help short="Storage classification name."/>
         </arg>
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
@@ -126,7 +126,7 @@
         <arg type="string" var="$Path.storageClassificationMappingName" options="storage-classification-mapping-name name n" required="True" idPart="child_name_3">
           <help short="Storage classification mapping name."/>
         </arg>
-        <arg type="string" var="$Path.storageClassificationName" options="storage-classification-name" required="True" idPart="child_name_2">
+        <arg type="string" var="$Path.storageClassificationName" options="storage-classification-name storage-classification" required="True" idPart="child_name_2">
           <help short="Storage classification name."/>
         </arg>
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
@@ -205,7 +205,7 @@
         <arg type="string" var="$Path.storageClassificationMappingName" options="storage-classification-mapping-name name n" required="True" idPart="child_name_3">
           <help short="Storage classification mapping name."/>
         </arg>
-        <arg type="string" var="$Path.storageClassificationName" options="storage-classification-name" required="True" idPart="child_name_2">
+        <arg type="string" var="$Path.storageClassificationName" options="storage-classification-name storage-classification" required="True" idPart="child_name_2">
           <help short="Storage classification name."/>
         </arg>
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>

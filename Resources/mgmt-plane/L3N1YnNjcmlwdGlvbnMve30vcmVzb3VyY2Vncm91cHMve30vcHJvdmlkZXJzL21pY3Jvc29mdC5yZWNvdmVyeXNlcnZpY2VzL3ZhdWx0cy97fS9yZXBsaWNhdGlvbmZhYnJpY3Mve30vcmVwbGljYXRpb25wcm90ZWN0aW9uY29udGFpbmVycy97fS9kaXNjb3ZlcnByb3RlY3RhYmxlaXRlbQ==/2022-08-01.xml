@@ -8,7 +8,7 @@
         <arg type="string" var="$Path.fabricName" options="fabric-name" required="True">
           <help short="The name of the fabric."/>
         </arg>
-        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name" required="True">
+        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name n" required="True">
           <help short="The name of the protection container."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True"/>

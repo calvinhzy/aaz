@@ -12,7 +12,7 @@
         <arg type="string" var="$Path.resourceName" options="resource-name" required="True">
           <help short="The name of the recovery services vault."/>
         </arg>
-        <arg type="string" var="$Path.storageClassificationName" options="storage-classification-name" required="True">
+        <arg type="string" var="$Path.storageClassificationName" options="storage-classification-name storage-classification" required="True">
           <help short="Storage classification name."/>
         </arg>
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True"/>

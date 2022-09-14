@@ -60,6 +60,7 @@
                                     "type": "string",
                                     "var": "$Path.storageClassificationName",
                                     "options": [
+                                        "storage-classification",
                                         "storage-classification-name"
                                     ],
                                     "required": true,

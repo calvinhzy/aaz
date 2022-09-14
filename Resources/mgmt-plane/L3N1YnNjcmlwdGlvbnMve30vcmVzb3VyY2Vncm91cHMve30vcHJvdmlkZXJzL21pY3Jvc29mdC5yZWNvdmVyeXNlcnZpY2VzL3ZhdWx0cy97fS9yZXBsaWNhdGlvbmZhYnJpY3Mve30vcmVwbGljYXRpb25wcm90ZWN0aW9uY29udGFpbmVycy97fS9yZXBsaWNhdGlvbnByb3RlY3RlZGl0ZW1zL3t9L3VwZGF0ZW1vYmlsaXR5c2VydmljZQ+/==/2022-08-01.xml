@@ -8,8 +8,8 @@
         <arg type="string" var="$Path.fabricName" options="fabric-name" required="True">
           <help short="The name of the fabric containing the protected item."/>
         </arg>
-        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name" required="True">
-          <help short="The name of the container containing the protected item."/>
+        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name protection-container" required="True">
+          <help short="Protection container name."/>
         </arg>
         <arg type="string" var="$Path.replicationProtectedItemName" options="replication-protected-item-name" required="True">
           <help short="The name of the protected item on which the agent is to be updated."/>
