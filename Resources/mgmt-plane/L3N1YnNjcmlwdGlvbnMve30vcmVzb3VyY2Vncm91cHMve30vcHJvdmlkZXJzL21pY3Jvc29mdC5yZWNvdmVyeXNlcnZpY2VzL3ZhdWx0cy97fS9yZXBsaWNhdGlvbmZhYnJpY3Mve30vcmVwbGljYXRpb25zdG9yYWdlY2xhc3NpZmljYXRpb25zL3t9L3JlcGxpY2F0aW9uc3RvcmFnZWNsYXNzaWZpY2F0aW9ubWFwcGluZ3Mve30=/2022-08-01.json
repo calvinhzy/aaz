@@ -502,7 +502,7 @@
                                     "type": "string",
                                     "var": "$pairingInput.properties.targetStorageClassificationId",
                                     "options": [
-                                        "target-storage-classification",
+                                        "target-storage-class",
                                         "target-storage-classification-id"
                                     ],
                                     "group": "Properties",
@@ -770,7 +770,7 @@
                                     "type": "string",
                                     "var": "$pairingInput.properties.targetStorageClassificationId",
                                     "options": [
-                                        "target-storage-classification",
+                                        "target-storage-class",
                                         "target-storage-classification-id"
                                     ],
                                     "group": "Properties",
