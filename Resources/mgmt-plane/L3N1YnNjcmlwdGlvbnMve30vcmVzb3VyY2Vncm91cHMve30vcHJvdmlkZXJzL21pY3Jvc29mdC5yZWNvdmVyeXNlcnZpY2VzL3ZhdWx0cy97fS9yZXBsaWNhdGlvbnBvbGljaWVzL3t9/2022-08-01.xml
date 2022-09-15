@@ -213,7 +213,7 @@
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
       </argGroup>
       <argGroup name="Properties">
-        <arg type="object" var="$input.properties.providerSpecificInput" options="provider-specific-input" group="Properties">
+        <arg type="object" var="$input.properties.providerSpecificInput" options="provider-specific-input provider-input" group="Properties">
           <help short="The ReplicationProviderSettings."/>
           <arg type="object" var="$input.properties.providerSpecificInput.A2A" options="a2-a">
             <arg type="integer32" var="$input.properties.providerSpecificInput.A2A.appConsistentFrequencyInMinutes" options="app-consistent-frequency-in-minutes">
@@ -660,7 +660,7 @@
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
       </argGroup>
       <argGroup name="Properties">
-        <arg nullable="True" type="object" var="$input.properties.providerSpecificInput" options="provider-specific-input" group="Properties">
+        <arg nullable="True" type="object" var="$input.properties.providerSpecificInput" options="provider-specific-input provider-input" group="Properties">
           <help short="The ReplicationProviderSettings."/>
           <arg type="object" var="$input.properties.providerSpecificInput.A2A" options="a2-a">
             <arg nullable="True" type="integer32" var="$input.properties.providerSpecificInput.A2A.appConsistentFrequencyInMinutes" options="app-consistent-frequency-in-minutes">

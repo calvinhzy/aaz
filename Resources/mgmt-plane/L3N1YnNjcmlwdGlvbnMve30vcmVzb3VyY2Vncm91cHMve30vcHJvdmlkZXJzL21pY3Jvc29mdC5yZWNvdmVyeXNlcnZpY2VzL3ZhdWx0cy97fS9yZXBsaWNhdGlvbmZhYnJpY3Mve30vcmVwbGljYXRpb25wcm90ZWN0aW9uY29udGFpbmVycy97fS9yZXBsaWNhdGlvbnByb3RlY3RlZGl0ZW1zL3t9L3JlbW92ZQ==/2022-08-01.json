@@ -97,6 +97,7 @@
                                     "type": "string",
                                     "var": "$disableProtectionInput.properties.disableProtectionReason",
                                     "options": [
+                                        "disable-reason",
                                         "disable-protection-reason"
                                     ],
                                     "group": "Properties",
@@ -120,6 +121,7 @@
                                     "type": "object",
                                     "var": "$disableProtectionInput.properties.replicationProviderInput",
                                     "options": [
+                                        "provider-input",
                                         "replication-provider-input"
                                     ],
                                     "group": "Properties",

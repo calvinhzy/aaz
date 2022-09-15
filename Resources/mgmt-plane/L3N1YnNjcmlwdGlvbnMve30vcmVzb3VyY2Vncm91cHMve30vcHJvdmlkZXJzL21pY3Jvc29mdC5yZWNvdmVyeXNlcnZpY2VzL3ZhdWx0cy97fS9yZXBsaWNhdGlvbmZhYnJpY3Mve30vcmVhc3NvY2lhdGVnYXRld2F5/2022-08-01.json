@@ -84,6 +84,7 @@
                                     "type": "string",
                                     "var": "$failoverProcessServerRequest.properties.sourceProcessServerId",
                                     "options": [
+                                        "source-process-server",
                                         "source-process-server-id"
                                     ],
                                     "group": "Properties",
@@ -95,6 +96,7 @@
                                     "type": "string",
                                     "var": "$failoverProcessServerRequest.properties.targetProcessServerId",
                                     "options": [
+                                        "target-process-server",
                                         "target-process-server-id"
                                     ],
                                     "group": "Properties",

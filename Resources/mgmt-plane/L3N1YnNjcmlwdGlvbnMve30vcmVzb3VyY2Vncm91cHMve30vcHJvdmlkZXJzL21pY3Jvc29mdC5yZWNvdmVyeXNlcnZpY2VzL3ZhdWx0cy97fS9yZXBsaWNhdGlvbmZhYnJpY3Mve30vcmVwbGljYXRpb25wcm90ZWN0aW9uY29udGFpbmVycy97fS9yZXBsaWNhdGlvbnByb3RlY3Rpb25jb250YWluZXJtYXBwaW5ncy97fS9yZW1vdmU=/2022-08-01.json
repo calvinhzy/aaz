@@ -96,6 +96,7 @@
                                     "type": "object",
                                     "var": "$removalInput.properties.providerSpecificInput",
                                     "options": [
+                                        "provider-input",
                                         "provider-specific-input"
                                     ],
                                     "group": "Properties",

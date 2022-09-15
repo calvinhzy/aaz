@@ -12,7 +12,7 @@
             "name": "site-recovery vault fabric protection-container",
             "commands": [
                 {
-                    "name": "switchprotection",
+                    "name": "switch-protection",
                     "version": "2022-08-01",
                     "resources": [
                         {
@@ -421,6 +421,7 @@
                                     "type": "string",
                                     "var": "$switchInput.properties.replicationProtectedItemName",
                                     "options": [
+                                        "protected-item",
                                         "replication-protected-item-name"
                                     ],
                                     "group": "Properties",

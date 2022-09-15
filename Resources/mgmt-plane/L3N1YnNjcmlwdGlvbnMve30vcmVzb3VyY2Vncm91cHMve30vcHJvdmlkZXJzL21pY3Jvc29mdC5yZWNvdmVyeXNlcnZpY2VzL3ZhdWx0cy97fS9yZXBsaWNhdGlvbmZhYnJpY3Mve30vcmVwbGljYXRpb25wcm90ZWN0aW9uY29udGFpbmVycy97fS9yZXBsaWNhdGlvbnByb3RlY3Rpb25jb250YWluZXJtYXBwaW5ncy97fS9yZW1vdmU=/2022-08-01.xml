@@ -21,7 +21,7 @@
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True"/>
       </argGroup>
       <argGroup name="Properties">
-        <arg type="object" var="$removalInput.properties.providerSpecificInput" options="provider-specific-input" group="Properties">
+        <arg type="object" var="$removalInput.properties.providerSpecificInput" options="provider-specific-input provider-input" group="Properties">
           <help short="Provider specific input for unpairing."/>
           <arg type="string" var="$removalInput.properties.providerSpecificInput.instanceType" options="instance-type">
             <help short="The class type."/>

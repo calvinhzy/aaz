@@ -10656,7 +10656,7 @@
                           }
                         ]
                       },
-                      "switchprotection": {
+                      "switch-protection": {
                         "help": {
                           "short": "Operation to switch protection from one container to another or one replication provider to another."
                         },
@@ -10665,7 +10665,7 @@
                           "vault",
                           "fabric",
                           "protection-container",
-                          "switchprotection"
+                          "switch-protection"
                         ],
                         "versions": [
                           {

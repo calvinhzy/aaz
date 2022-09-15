@@ -52,6 +52,7 @@
                                     "type": "string",
                                     "var": "$Path.replicationProtectedItemName",
                                     "options": [
+                                        "protected-item",
                                         "replication-protected-item-name"
                                     ],
                                     "required": true,

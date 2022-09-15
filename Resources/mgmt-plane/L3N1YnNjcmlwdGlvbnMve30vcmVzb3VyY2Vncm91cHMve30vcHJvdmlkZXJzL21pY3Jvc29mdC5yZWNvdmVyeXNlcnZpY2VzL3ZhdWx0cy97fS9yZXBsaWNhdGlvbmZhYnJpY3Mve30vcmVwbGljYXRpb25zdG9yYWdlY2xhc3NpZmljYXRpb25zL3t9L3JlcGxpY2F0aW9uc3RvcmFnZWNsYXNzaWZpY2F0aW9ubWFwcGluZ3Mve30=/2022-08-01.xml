@@ -132,7 +132,7 @@
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
       </argGroup>
       <argGroup name="Properties">
-        <arg type="string" var="$pairingInput.properties.targetStorageClassificationId" options="target-storage-classification-id" group="Properties">
+        <arg type="string" var="$pairingInput.properties.targetStorageClassificationId" options="target-storage-classification-id target-storage-classification" group="Properties">
           <help short="The ID of the storage object."/>
         </arg>
       </argGroup>
@@ -211,7 +211,7 @@
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
       </argGroup>
       <argGroup name="Properties">
-        <arg nullable="True" type="string" var="$pairingInput.properties.targetStorageClassificationId" options="target-storage-classification-id" group="Properties">
+        <arg nullable="True" type="string" var="$pairingInput.properties.targetStorageClassificationId" options="target-storage-classification-id target-storage-classification" group="Properties">
           <help short="The ID of the storage object."/>
         </arg>
       </argGroup>

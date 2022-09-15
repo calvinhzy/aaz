@@ -21,14 +21,14 @@
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True"/>
       </argGroup>
       <argGroup name="Properties">
-        <arg type="string" var="$disableProtectionInput.properties.disableProtectionReason" options="disable-protection-reason" group="Properties">
+        <arg type="string" var="$disableProtectionInput.properties.disableProtectionReason" options="disable-protection-reason disable-reason" group="Properties">
           <help short="Disable protection reason. It can have values NotSpecified/MigrationComplete."/>
           <enum>
             <item name="MigrationComplete" value="&quot;MigrationComplete&quot;"/>
             <item name="NotSpecified" value="&quot;NotSpecified&quot;"/>
           </enum>
         </arg>
-        <arg type="object" var="$disableProtectionInput.properties.replicationProviderInput" options="replication-provider-input" group="Properties">
+        <arg type="object" var="$disableProtectionInput.properties.replicationProviderInput" options="replication-provider-input provider-input" group="Properties">
           <help short="Replication provider specific input."/>
           <arg type="object" var="$disableProtectionInput.properties.replicationProviderInput.InMage" options="in-mage">
             <arg type="string" var="$disableProtectionInput.properties.replicationProviderInput.InMage.replicaVmDeletionStatus" options="replica-vm-deletion-status">

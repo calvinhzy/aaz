@@ -1,4 +1,4 @@
-# [Command] _site-recovery vault fabric protection-container switchprotection_
+# [Command] _site-recovery vault fabric protection-container switch-protection_
 
 Operation to switch protection from one container to another or one replication provider to another.
 

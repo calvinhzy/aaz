@@ -276,6 +276,7 @@
                                     "type": "string",
                                     "var": "$input.properties.vmwareToAzureProviderType",
                                     "options": [
+                                        "vmware-to-azure",
                                         "vmware-to-azure-provider-type"
                                     ],
                                     "group": "Properties",
@@ -523,6 +524,7 @@
                                     "type": "string",
                                     "var": "$input.properties.vmwareToAzureProviderType",
                                     "options": [
+                                        "vmware-to-azure",
                                         "vmware-to-azure-provider-type"
                                     ],
                                     "group": "Properties",

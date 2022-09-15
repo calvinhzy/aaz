@@ -33,7 +33,7 @@ Manage Vault Fabric Protection Container
 - [show](/Commands/site-recovery/vault/fabric/protection-container/_show.md)
 : Get the details of a protection container.
 
-- [switchprotection](/Commands/site-recovery/vault/fabric/protection-container/_switchprotection.md)
+- [switch-protection](/Commands/site-recovery/vault/fabric/protection-container/_switch-protection.md)
 : Operation to switch protection from one container to another or one replication provider to another.
 
 - [update](/Commands/site-recovery/vault/fabric/protection-container/_update.md)

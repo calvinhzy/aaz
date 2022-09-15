@@ -775,6 +775,7 @@
                                     "type": "object",
                                     "var": "$input.properties.providerSpecificInput",
                                     "options": [
+                                        "provider-input",
                                         "provider-specific-input"
                                     ],
                                     "group": "Properties",
@@ -2364,6 +2365,7 @@
                                     "type": "object",
                                     "var": "$input.properties.providerSpecificInput",
                                     "options": [
+                                        "provider-input",
                                         "provider-specific-input"
                                     ],
                                     "group": "Properties",

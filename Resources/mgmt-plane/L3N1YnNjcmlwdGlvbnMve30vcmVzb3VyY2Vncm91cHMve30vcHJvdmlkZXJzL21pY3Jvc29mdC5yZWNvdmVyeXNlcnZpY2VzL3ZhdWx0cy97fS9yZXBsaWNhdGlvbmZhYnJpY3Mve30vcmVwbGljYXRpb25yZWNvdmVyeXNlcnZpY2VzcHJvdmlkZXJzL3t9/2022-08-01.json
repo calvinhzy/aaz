@@ -732,6 +732,7 @@
                                     "type": "object",
                                     "var": "$addProviderInput.properties.authenticationIdentityInput",
                                     "options": [
+                                        "auth-identity",
                                         "authentication-identity-input"
                                     ],
                                     "required": true,
@@ -813,6 +814,7 @@
                                     "type": "@IdentityProviderInput_create",
                                     "var": "$addProviderInput.properties.dataPlaneAuthenticationIdentityInput",
                                     "options": [
+                                        "data-plane-auth-identity",
                                         "data-plane-authentication-identity-input"
                                     ],
                                     "group": "Properties",
@@ -847,6 +849,7 @@
                                     "type": "@IdentityProviderInput_create",
                                     "var": "$addProviderInput.properties.resourceAccessIdentityInput",
                                     "options": [
+                                        "resource-access-identity",
                                         "resource-access-identity-input"
                                     ],
                                     "required": true,
@@ -1438,6 +1441,7 @@
                                     "type": "object",
                                     "var": "$addProviderInput.properties.authenticationIdentityInput",
                                     "options": [
+                                        "auth-identity",
                                         "authentication-identity-input"
                                     ],
                                     "group": "Properties",
@@ -1515,6 +1519,7 @@
                                     "type": "@IdentityProviderInput_update",
                                     "var": "$addProviderInput.properties.dataPlaneAuthenticationIdentityInput",
                                     "options": [
+                                        "data-plane-auth-identity",
                                         "data-plane-authentication-identity-input"
                                     ],
                                     "group": "Properties",
@@ -1549,6 +1554,7 @@
                                     "type": "@IdentityProviderInput_update",
                                     "var": "$addProviderInput.properties.resourceAccessIdentityInput",
                                     "options": [
+                                        "resource-access-identity",
                                         "resource-access-identity-input"
                                     ],
                                     "group": "Properties",

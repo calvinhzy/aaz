@@ -11,7 +11,7 @@
         <arg type="string" var="$Path.protectionContainerName" options="protection-container-name protection-container" required="True">
           <help short="Protection container name."/>
         </arg>
-        <arg type="string" var="$Path.replicationProtectedItemName" options="replication-protected-item-name" required="True">
+        <arg type="string" var="$Path.replicationProtectedItemName" options="replication-protected-item-name protected-item" required="True">
           <help short="The name of the protected item on which the agent is to be updated."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True"/>

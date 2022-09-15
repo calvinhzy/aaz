@@ -74,7 +74,7 @@
         <arg type="string" var="$input.properties.migrationSolutionId" options="migration-solution-id" group="Properties">
           <help short="The migration solution Id."/>
         </arg>
-        <arg type="string" var="$input.properties.vmwareToAzureProviderType" options="vmware-to-azure-provider-type" group="Properties">
+        <arg type="string" var="$input.properties.vmwareToAzureProviderType" options="vmware-to-azure-provider-type vmware-to-azure" group="Properties">
           <help short="VMware to Azure provider type."/>
         </arg>
       </argGroup>
@@ -149,7 +149,7 @@
         <arg nullable="True" type="string" var="$input.properties.migrationSolutionId" options="migration-solution-id" group="Properties">
           <help short="The migration solution Id."/>
         </arg>
-        <arg nullable="True" type="string" var="$input.properties.vmwareToAzureProviderType" options="vmware-to-azure-provider-type" group="Properties">
+        <arg nullable="True" type="string" var="$input.properties.vmwareToAzureProviderType" options="vmware-to-azure-provider-type vmware-to-azure" group="Properties">
           <help short="VMware to Azure provider type."/>
         </arg>
       </argGroup>

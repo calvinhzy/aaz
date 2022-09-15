@@ -746,6 +746,7 @@
                                     "type": "string",
                                     "var": "$input.properties.failoverDeploymentModel",
                                     "options": [
+                                        "failover-deploy-model",
                                         "failover-deployment-model"
                                     ],
                                     "group": "Properties",
@@ -1141,6 +1142,7 @@
                                     "type": "array<object>",
                                     "var": "$input.properties.providerSpecificInput",
                                     "options": [
+                                        "provider-input",
                                         "provider-specific-input"
                                     ],
                                     "group": "Properties",
@@ -2168,6 +2170,7 @@
                                     "type": "string",
                                     "var": "$input.properties.failoverDeploymentModel",
                                     "options": [
+                                        "failover-deploy-model",
                                         "failover-deployment-model"
                                     ],
                                     "group": "Properties",
@@ -2569,6 +2572,7 @@
                                     "type": "array<object>",
                                     "var": "$input.properties.providerSpecificInput",
                                     "options": [
+                                        "provider-input",
                                         "provider-specific-input"
                                     ],
                                     "group": "Properties",

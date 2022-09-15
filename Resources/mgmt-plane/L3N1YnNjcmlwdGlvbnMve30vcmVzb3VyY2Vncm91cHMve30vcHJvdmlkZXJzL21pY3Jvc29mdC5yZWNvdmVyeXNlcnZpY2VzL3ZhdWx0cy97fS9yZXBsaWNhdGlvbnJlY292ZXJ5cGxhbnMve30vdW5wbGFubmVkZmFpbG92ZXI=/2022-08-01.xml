@@ -22,7 +22,7 @@
             <item name="RecoveryToPrimary" value="&quot;RecoveryToPrimary&quot;"/>
           </enum>
         </arg>
-        <arg type="array<object>" var="$input.properties.providerSpecificDetails" options="provider-specific-details" group="Properties">
+        <arg type="array<object>" var="$input.properties.providerSpecificDetails" options="provider-specific-details provider-details" group="Properties">
           <help short="The provider specific properties."/>
           <format maxLength="1"/>
           <item type="object">

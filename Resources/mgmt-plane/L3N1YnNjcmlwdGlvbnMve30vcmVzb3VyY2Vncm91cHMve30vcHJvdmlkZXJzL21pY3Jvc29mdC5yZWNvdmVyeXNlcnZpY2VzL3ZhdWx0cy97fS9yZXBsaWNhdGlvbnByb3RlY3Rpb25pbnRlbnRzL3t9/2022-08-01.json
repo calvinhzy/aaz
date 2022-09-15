@@ -734,6 +734,7 @@
                                     "type": "object",
                                     "var": "$input.properties.providerSpecificDetails",
                                     "options": [
+                                        "provider-details",
                                         "provider-specific-details"
                                     ],
                                     "group": "Properties",
@@ -2670,6 +2671,7 @@
                                     "type": "object",
                                     "var": "$input.properties.providerSpecificDetails",
                                     "options": [
+                                        "provider-details",
                                         "provider-specific-details"
                                     ],
                                     "group": "Properties",

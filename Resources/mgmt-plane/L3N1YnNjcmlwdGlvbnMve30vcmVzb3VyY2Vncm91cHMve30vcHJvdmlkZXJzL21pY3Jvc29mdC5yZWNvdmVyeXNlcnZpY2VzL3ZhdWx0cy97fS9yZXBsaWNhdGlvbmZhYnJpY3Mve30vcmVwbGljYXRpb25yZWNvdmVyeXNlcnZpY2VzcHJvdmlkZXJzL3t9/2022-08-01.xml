@@ -205,7 +205,7 @@
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
       </argGroup>
       <argGroup name="Properties">
-        <arg type="object" var="$addProviderInput.properties.authenticationIdentityInput" options="authentication-identity-input" required="True" group="Properties" cls="IdentityProviderInput_create">
+        <arg type="object" var="$addProviderInput.properties.authenticationIdentityInput" options="authentication-identity-input auth-identity" required="True" group="Properties" cls="IdentityProviderInput_create">
           <help short="The identity provider input for DRA authentication."/>
           <arg type="string" var="@IdentityProviderInput_create.aadAuthority" options="aad-authority" required="True">
             <help short="The base authority for Azure Active Directory authentication."/>
@@ -226,7 +226,7 @@
         <arg type="string" var="$addProviderInput.properties.biosId" options="bios-id" group="Properties">
           <help short="The Bios Id of the machine."/>
         </arg>
-        <arg type="@IdentityProviderInput_create" var="$addProviderInput.properties.dataPlaneAuthenticationIdentityInput" options="data-plane-authentication-identity-input" group="Properties">
+        <arg type="@IdentityProviderInput_create" var="$addProviderInput.properties.dataPlaneAuthenticationIdentityInput" options="data-plane-authentication-identity-input data-plane-auth-identity" group="Properties">
           <help short="The identity provider input for data plane authentication."/>
         </arg>
         <arg type="string" var="$addProviderInput.properties.machineId" options="machine-id" group="Properties">
@@ -235,7 +235,7 @@
         <arg type="string" var="$addProviderInput.properties.machineName" options="machine-name" required="True" group="Properties">
           <help short="The name of the machine where the provider is getting added."/>
         </arg>
-        <arg type="@IdentityProviderInput_create" var="$addProviderInput.properties.resourceAccessIdentityInput" options="resource-access-identity-input" required="True" group="Properties">
+        <arg type="@IdentityProviderInput_create" var="$addProviderInput.properties.resourceAccessIdentityInput" options="resource-access-identity-input resource-access-identity" required="True" group="Properties">
           <help short="The identity provider input for resource access."/>
         </arg>
       </argGroup>
@@ -405,7 +405,7 @@
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
       </argGroup>
       <argGroup name="Properties">
-        <arg type="object" var="$addProviderInput.properties.authenticationIdentityInput" options="authentication-identity-input" group="Properties" cls="IdentityProviderInput_update">
+        <arg type="object" var="$addProviderInput.properties.authenticationIdentityInput" options="authentication-identity-input auth-identity" group="Properties" cls="IdentityProviderInput_update">
           <help short="The identity provider input for DRA authentication."/>
           <arg type="string" var="@IdentityProviderInput_update.aadAuthority" options="aad-authority">
             <help short="The base authority for Azure Active Directory authentication."/>
@@ -426,7 +426,7 @@
         <arg nullable="True" type="string" var="$addProviderInput.properties.biosId" options="bios-id" group="Properties">
           <help short="The Bios Id of the machine."/>
         </arg>
-        <arg nullable="True" type="@IdentityProviderInput_update" var="$addProviderInput.properties.dataPlaneAuthenticationIdentityInput" options="data-plane-authentication-identity-input" group="Properties">
+        <arg nullable="True" type="@IdentityProviderInput_update" var="$addProviderInput.properties.dataPlaneAuthenticationIdentityInput" options="data-plane-authentication-identity-input data-plane-auth-identity" group="Properties">
           <help short="The identity provider input for data plane authentication."/>
         </arg>
         <arg nullable="True" type="string" var="$addProviderInput.properties.machineId" options="machine-id" group="Properties">
@@ -435,7 +435,7 @@
         <arg type="string" var="$addProviderInput.properties.machineName" options="machine-name" group="Properties">
           <help short="The name of the machine where the provider is getting added."/>
         </arg>
-        <arg type="@IdentityProviderInput_update" var="$addProviderInput.properties.resourceAccessIdentityInput" options="resource-access-identity-input" group="Properties">
+        <arg type="@IdentityProviderInput_update" var="$addProviderInput.properties.resourceAccessIdentityInput" options="resource-access-identity-input resource-access-identity" group="Properties">
           <help short="The identity provider input for resource access."/>
         </arg>
       </argGroup>

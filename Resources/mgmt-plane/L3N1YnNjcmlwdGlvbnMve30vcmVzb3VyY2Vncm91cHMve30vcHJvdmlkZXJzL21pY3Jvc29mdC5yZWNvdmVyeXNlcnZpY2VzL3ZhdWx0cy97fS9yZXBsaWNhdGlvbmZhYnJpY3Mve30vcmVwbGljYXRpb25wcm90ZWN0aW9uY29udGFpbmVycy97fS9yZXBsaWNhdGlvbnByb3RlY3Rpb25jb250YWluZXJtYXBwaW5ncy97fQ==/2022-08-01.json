@@ -829,6 +829,7 @@
                                     "type": "object",
                                     "var": "$creationInput.properties.providerSpecificInput",
                                     "options": [
+                                        "provider-input",
                                         "provider-specific-input"
                                     ],
                                     "group": "Properties",
@@ -979,6 +980,7 @@
                                     "type": "string",
                                     "var": "$creationInput.properties.targetProtectionContainerId",
                                     "options": [
+                                        "target-container",
                                         "target-protection-container-id"
                                     ],
                                     "group": "Properties",
@@ -1687,6 +1689,7 @@
                                     "type": "object",
                                     "var": "$creationInput.properties.providerSpecificInput",
                                     "options": [
+                                        "provider-input",
                                         "provider-specific-input"
                                     ],
                                     "group": "Properties",
@@ -1840,6 +1843,7 @@
                                     "type": "string",
                                     "var": "$creationInput.properties.targetProtectionContainerId",
                                     "options": [
+                                        "target-container",
                                         "target-protection-container-id"
                                     ],
                                     "group": "Properties",

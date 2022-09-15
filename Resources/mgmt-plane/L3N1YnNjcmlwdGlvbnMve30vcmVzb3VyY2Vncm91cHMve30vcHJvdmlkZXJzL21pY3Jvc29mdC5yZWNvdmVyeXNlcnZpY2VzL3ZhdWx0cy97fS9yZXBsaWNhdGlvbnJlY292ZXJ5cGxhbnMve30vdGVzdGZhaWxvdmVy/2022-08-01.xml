@@ -28,7 +28,7 @@
         <arg type="string" var="$input.properties.networkType" options="network-type" required="True" group="Properties">
           <help short="The network type to be used for test failover."/>
         </arg>
-        <arg type="array<object>" var="$input.properties.providerSpecificDetails" options="provider-specific-details" group="Properties">
+        <arg type="array<object>" var="$input.properties.providerSpecificDetails" options="provider-specific-details provider-details" group="Properties">
           <help short="The provider specific properties."/>
           <format maxLength="1"/>
           <item type="object">

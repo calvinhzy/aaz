@@ -18,10 +18,10 @@
         <arg type="string" var="$failoverProcessServerRequest.properties.containerName" options="container-name" group="Properties">
           <help short="The container identifier."/>
         </arg>
-        <arg type="string" var="$failoverProcessServerRequest.properties.sourceProcessServerId" options="source-process-server-id" group="Properties">
+        <arg type="string" var="$failoverProcessServerRequest.properties.sourceProcessServerId" options="source-process-server-id source-process-server" group="Properties">
           <help short="The source process server."/>
         </arg>
-        <arg type="string" var="$failoverProcessServerRequest.properties.targetProcessServerId" options="target-process-server-id" group="Properties">
+        <arg type="string" var="$failoverProcessServerRequest.properties.targetProcessServerId" options="target-process-server-id target-process-server" group="Properties">
           <help short="The new process server."/>
         </arg>
         <arg type="string" var="$failoverProcessServerRequest.properties.updateType" options="update-type" group="Properties">

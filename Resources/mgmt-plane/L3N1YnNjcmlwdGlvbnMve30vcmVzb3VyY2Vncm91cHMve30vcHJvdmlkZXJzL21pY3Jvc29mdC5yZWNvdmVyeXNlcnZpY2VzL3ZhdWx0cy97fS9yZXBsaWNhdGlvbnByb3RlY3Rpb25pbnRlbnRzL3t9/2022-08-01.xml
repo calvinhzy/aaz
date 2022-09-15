@@ -219,7 +219,7 @@
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
       </argGroup>
       <argGroup name="Properties">
-        <arg type="object" var="$input.properties.providerSpecificDetails" options="provider-specific-details" group="Properties">
+        <arg type="object" var="$input.properties.providerSpecificDetails" options="provider-specific-details provider-details" group="Properties">
           <help short="The ReplicationProviderInput. For A2A provider, it will be A2ACreateProtectionIntentInput object."/>
           <arg type="object" var="$input.properties.providerSpecificDetails.A2A" options="a2-a">
             <arg type="string" var="$input.properties.providerSpecificDetails.A2A.agentAutoUpdateStatus" options="agent-auto-update-status">
@@ -787,7 +787,7 @@
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
       </argGroup>
       <argGroup name="Properties">
-        <arg nullable="True" type="object" var="$input.properties.providerSpecificDetails" options="provider-specific-details" group="Properties">
+        <arg nullable="True" type="object" var="$input.properties.providerSpecificDetails" options="provider-specific-details provider-details" group="Properties">
           <help short="The ReplicationProviderInput. For A2A provider, it will be A2ACreateProtectionIntentInput object."/>
           <arg type="object" var="$input.properties.providerSpecificDetails.A2A" options="a2-a">
             <arg nullable="True" type="string" var="$input.properties.providerSpecificDetails.A2A.agentAutoUpdateStatus" options="agent-auto-update-status">
