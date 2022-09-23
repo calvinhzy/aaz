@@ -2,6 +2,9 @@
 
 ## Groups
 
+- [automanage](/Commands/automanage/readme.md)
+: Manage Automanage
+
 - [change-analysis](/Commands/change-analysis/readme.md)
 : List changes for resources
 
