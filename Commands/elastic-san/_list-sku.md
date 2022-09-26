@@ -4,6 +4,6 @@ Get a list of Elastic SAN skus.
 
 ## Versions
 
-### [2021-11-20-preview](/Resources/mgmt-plane/L3Byb3ZpZGVycy9taWNyb3NvZnQuZWxhc3RpY3Nhbi9za3Vz/2021-11-20-preview.xml) **Preview**
+### [2021-11-20-preview](/Resources/mgmt-plane/L3N1YnNjcmlwdGlvbnMve30vcHJvdmlkZXJzL21pY3Jvc29mdC5lbGFzdGljc2FuL3NrdXM=/2021-11-20-preview.xml) **Preview**
 
-<!-- mgmt-plane /providers/microsoft.elasticsan/skus 2021-11-20-preview -->
+<!-- mgmt-plane /subscriptions/{}/providers/microsoft.elasticsan/skus 2021-11-20-preview -->

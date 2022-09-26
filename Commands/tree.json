@@ -422,7 +422,7 @@
                 "name": "2021-11-20-preview",
                 "resources": [
                   {
-                    "id": "/providers/microsoft.elasticsan/skus",
+                    "id": "/subscriptions/{}/providers/microsoft.elasticsan/skus",
                     "plane": "mgmt-plane",
                     "version": "2021-11-20-preview"
                   }
