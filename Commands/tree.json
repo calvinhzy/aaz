@@ -203,7 +203,7 @@
               }
             },
             "help": {
-              "short": "Manage Elastic San Volume."
+              "short": "Manage Elastic SAN Volume."
             },
             "names": [
               "elastic-san",
@@ -329,7 +329,7 @@
               }
             },
             "help": {
-              "short": "Manage Elastic San Volume Group."
+              "short": "Manage Elastic SAN Volume Group."
             },
             "names": [
               "elastic-san",

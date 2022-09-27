@@ -1,6 +1,6 @@
 # [Group] _elastic-san volume-group_
 
-Manage Elastic San Volume Group.
+Manage Elastic SAN Volume Group.
 
 ## Commands
 

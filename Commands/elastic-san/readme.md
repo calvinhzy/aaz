@@ -5,10 +5,10 @@ Manage Elastic SAN.
 ## Subgroups
 
 - [volume](/Commands/elastic-san/volume/readme.md)
-: Manage Elastic San Volume.
+: Manage Elastic SAN Volume.
 
 - [volume-group](/Commands/elastic-san/volume-group/readme.md)
-: Manage Elastic San Volume Group.
+: Manage Elastic SAN Volume Group.
 
 ## Commands
 
