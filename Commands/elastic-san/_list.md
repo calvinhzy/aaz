@@ -8,3 +8,10 @@ Get a list of Elastic SANs in a subscription.
 
 <!-- mgmt-plane /subscriptions/{}/providers/microsoft.elasticsan/elasticsans 2021-11-20-preview -->
 <!-- mgmt-plane /subscriptions/{}/resourcegroups/{}/providers/microsoft.elasticsan/elasticsans 2021-11-20-preview -->
+
+#### examples
+
+- Get a list of Elastic SANs in a subscription.
+    ```bash
+        elastic-san list -g {rg}
+    ```
