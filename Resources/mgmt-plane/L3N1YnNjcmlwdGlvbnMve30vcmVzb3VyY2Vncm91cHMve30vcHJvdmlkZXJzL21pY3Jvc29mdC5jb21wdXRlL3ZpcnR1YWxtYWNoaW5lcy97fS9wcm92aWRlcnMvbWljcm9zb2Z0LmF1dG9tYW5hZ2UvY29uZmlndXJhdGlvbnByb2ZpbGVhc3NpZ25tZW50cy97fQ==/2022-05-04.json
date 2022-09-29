@@ -12,7 +12,7 @@
             "name": "automanage configuration-profile-assignment vm",
             "commands": [
                 {
-                    "name": "create",
+                    "name": "show",
                     "version": "2022-05-04",
                     "resources": [
                         {
@@ -36,7 +36,7 @@
                                     "required": true,
                                     "idPart": "child_name_1",
                                     "help": {
-                                        "short": "Name of the configuration profile assignment. Only default is supported."
+                                        "short": "The configuration profile assignment name."
                                     }
                                 },
                                 {
@@ -71,31 +71,15 @@
                                     }
                                 }
                             ]
-                        },
-                        {
-                            "name": "Properties",
-                            "args": [
-                                {
-                                    "type": "string",
-                                    "var": "$parameters.properties.configurationProfile",
-                                    "options": [
-                                        "configuration-profile"
-                                    ],
-                                    "group": "Properties",
-                                    "help": {
-                                        "short": "The Automanage configurationProfile ARM Resource URI."
-                                    }
-                                }
-                            ]
                         }
                     ],
                     "operations": [
                         {
-                            "operationId": "ConfigurationProfileAssignments_CreateOrUpdate",
+                            "operationId": "ConfigurationProfileAssignments_Get",
                             "http": {
                                 "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/providers/Microsoft.Automanage/configurationProfileAssignments/{configurationProfileAssignmentName}",
                                 "request": {
-                                    "method": "put",
+                                    "method": "get",
                                     "path": {
                                         "params": [
                                             {
@@ -147,36 +131,12 @@
                                                 }
                                             }
                                         ]
-                                    },
-                                    "body": {
-                                        "json": {
-                                            "schema": {
-                                                "type": "object",
-                                                "name": "parameters",
-                                                "required": true,
-                                                "props": [
-                                                    {
-                                                        "type": "object",
-                                                        "name": "properties",
-                                                        "props": [
-                                                            {
-                                                                "type": "string",
-                                                                "name": "configurationProfile",
-                                                                "arg": "$parameters.properties.configurationProfile"
-                                                            }
-                                                        ]
-                                                    }
-                                                ],
-                                                "clientFlatten": true
-                                            }
-                                        }
                                     }
                                 },
                                 "responses": [
                                     {
                                         "statusCode": [
-                                            200,
-                                            201
+                                            200
                                         ],
                                         "body": {
                                             "json": {
@@ -470,7 +430,7 @@
                     "confirmation": "Are you sure you want to perform this operation?"
                 },
                 {
-                    "name": "show",
+                    "name": "create",
                     "version": "2022-05-04",
                     "resources": [
                         {
@@ -494,7 +454,7 @@
                                     "required": true,
                                     "idPart": "child_name_1",
                                     "help": {
-                                        "short": "The configuration profile assignment name."
+                                        "short": "Name of the configuration profile assignment. Only default is supported."
                                     }
                                 },
                                 {
@@ -529,15 +489,31 @@
                                     }
                                 }
                             ]
+                        },
+                        {
+                            "name": "Properties",
+                            "args": [
+                                {
+                                    "type": "string",
+                                    "var": "$parameters.properties.configurationProfile",
+                                    "options": [
+                                        "configuration-profile"
+                                    ],
+                                    "group": "Properties",
+                                    "help": {
+                                        "short": "The Automanage configurationProfile ARM Resource URI."
+                                    }
+                                }
+                            ]
                         }
                     ],
                     "operations": [
                         {
-                            "operationId": "ConfigurationProfileAssignments_Get",
+                            "operationId": "ConfigurationProfileAssignments_CreateOrUpdate",
                             "http": {
                                 "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/providers/Microsoft.Automanage/configurationProfileAssignments/{configurationProfileAssignmentName}",
                                 "request": {
-                                    "method": "get",
+                                    "method": "put",
                                     "path": {
                                         "params": [
                                             {
@@ -589,12 +565,36 @@
                                                 }
                                             }
                                         ]
+                                    },
+                                    "body": {
+                                        "json": {
+                                            "schema": {
+                                                "type": "object",
+                                                "name": "parameters",
+                                                "required": true,
+                                                "props": [
+                                                    {
+                                                        "type": "object",
+                                                        "name": "properties",
+                                                        "props": [
+                                                            {
+                                                                "type": "string",
+                                                                "name": "configurationProfile",
+                                                                "arg": "$parameters.properties.configurationProfile"
+                                                            }
+                                                        ]
+                                                    }
+                                                ],
+                                                "clientFlatten": true
+                                            }
+                                        }
                                     }
                                 },
                                 "responses": [
                                     {
                                         "statusCode": [
-                                            200
+                                            200,
+                                            201
                                         ],
                                         "body": {
                                             "json": {
