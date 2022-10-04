@@ -113,6 +113,23 @@
                                                             "name": "name"
                                                         },
                                                         {
+                                                            "type": "object",
+                                                            "name": "properties",
+                                                            "props": [
+                                                                {
+                                                                    "type": "object",
+                                                                    "name": "configuration",
+                                                                    "props": [
+                                                                        {
+                                                                            "type": "boolean",
+                                                                            "name": "Antimalware-Enable"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ],
+                                                            "clientFlatten": true
+                                                        },
+                                                        {
                                                             "readOnly": true,
                                                             "type": "object",
                                                             "name": "systemData",

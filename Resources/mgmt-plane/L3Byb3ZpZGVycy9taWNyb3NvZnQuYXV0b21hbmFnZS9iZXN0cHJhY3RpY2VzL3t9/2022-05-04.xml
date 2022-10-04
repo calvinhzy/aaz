@@ -28,6 +28,11 @@
                 <schema type="object">
                   <prop readOnly="True" type="ResourceId" name="id"/>
                   <prop readOnly="True" type="string" name="name"/>
+                  <prop type="object" name="properties" clientFlatten="True">
+                    <prop type="object" name="configuration">
+                      <prop type="boolean" name="Antimalware-Enable"/>
+                    </prop>
+                  </prop>
                   <prop readOnly="True" type="object" name="systemData">
                     <prop readOnly="True" type="dateTime" name="createdAt"/>
                     <prop readOnly="True" type="string" name="createdBy"/>

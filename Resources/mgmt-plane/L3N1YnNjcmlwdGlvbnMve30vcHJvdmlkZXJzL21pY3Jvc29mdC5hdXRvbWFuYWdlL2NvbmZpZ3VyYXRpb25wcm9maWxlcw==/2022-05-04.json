@@ -175,6 +175,22 @@
                                                                         "name": "name"
                                                                     },
                                                                     {
+                                                                        "type": "object",
+                                                                        "name": "properties",
+                                                                        "props": [
+                                                                            {
+                                                                                "type": "object",
+                                                                                "name": "configuration",
+                                                                                "props": [
+                                                                                    {
+                                                                                        "type": "boolean",
+                                                                                        "name": "Antimalware-Enable"
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
                                                                         "readOnly": true,
                                                                         "type": "object",
                                                                         "name": "systemData",
@@ -349,6 +365,22 @@
                                                                         "readOnly": true,
                                                                         "type": "string",
                                                                         "name": "name"
+                                                                    },
+                                                                    {
+                                                                        "type": "object",
+                                                                        "name": "properties",
+                                                                        "props": [
+                                                                            {
+                                                                                "type": "object",
+                                                                                "name": "configuration",
+                                                                                "props": [
+                                                                                    {
+                                                                                        "type": "boolean",
+                                                                                        "name": "Antimalware-Enable"
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
                                                                     },
                                                                     {
                                                                         "readOnly": true,

@@ -39,6 +39,11 @@
                       <prop readOnly="True" type="ResourceId" name="id"/>
                       <prop type="ResourceLocation" name="location" required="True"/>
                       <prop readOnly="True" type="string" name="name"/>
+                      <prop type="object" name="properties">
+                        <prop type="object" name="configuration">
+                          <prop type="boolean" name="Antimalware-Enable"/>
+                        </prop>
+                      </prop>
                       <prop readOnly="True" type="object" name="systemData">
                         <prop readOnly="True" type="dateTime" name="createdAt"/>
                         <prop readOnly="True" type="string" name="createdBy"/>

@@ -37,6 +37,11 @@
                   <prop readOnly="True" type="ResourceId" name="id"/>
                   <prop type="ResourceLocation" name="location" required="True"/>
                   <prop readOnly="True" type="string" name="name"/>
+                  <prop type="object" name="properties">
+                    <prop type="object" name="configuration">
+                      <prop type="boolean" name="Antimalware-Enable"/>
+                    </prop>
+                  </prop>
                   <prop readOnly="True" type="object" name="systemData">
                     <prop readOnly="True" type="dateTime" name="createdAt"/>
                     <prop readOnly="True" type="string" name="createdBy"/>
@@ -140,6 +145,12 @@
           </additionalProp>
         </arg>
       </argGroup>
+      <argGroup name="Properties">
+        <arg type="object" var="$parameters.properties.configuration" options="configuration" group="Properties">
+          <help short="configuration dictionary of the configuration profile."/>
+          <arg type="boolean" var="$parameters.properties.configuration.Antimalware-Enable" options="antimalware-enable"/>
+        </arg>
+      </argGroup>
       <operation operationId="ConfigurationProfiles_CreateOrUpdate">
         <http path="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automanage/configurationProfiles/{configurationProfileName}">
           <request method="put">
@@ -162,6 +173,11 @@
               <json>
                 <schema type="object" name="parameters" required="True" clientFlatten="True">
                   <prop type="ResourceLocation" name="location" arg="$parameters.location" required="True"/>
+                  <prop type="object" name="properties">
+                    <prop type="object" name="configuration" arg="$parameters.properties.configuration">
+                      <prop type="boolean" name="Antimalware-Enable" arg="$parameters.properties.configuration.Antimalware-Enable"/>
+                    </prop>
+                  </prop>
                   <prop type="object" name="tags" arg="$parameters.tags">
                     <additionalProp>
                       <item type="string"/>
@@ -178,6 +194,11 @@
                   <prop readOnly="True" type="ResourceId" name="id"/>
                   <prop type="ResourceLocation" name="location" required="True"/>
                   <prop readOnly="True" type="string" name="name"/>
+                  <prop type="object" name="properties">
+                    <prop type="object" name="configuration">
+                      <prop type="boolean" name="Antimalware-Enable"/>
+                    </prop>
+                  </prop>
                   <prop readOnly="True" type="object" name="systemData">
                     <prop readOnly="True" type="dateTime" name="createdAt"/>
                     <prop readOnly="True" type="string" name="createdBy"/>
@@ -238,6 +259,12 @@
           </additionalProp>
         </arg>
       </argGroup>
+      <argGroup name="Properties">
+        <arg nullable="True" type="object" var="$parameters.properties.configuration" options="configuration" group="Properties">
+          <help short="configuration dictionary of the configuration profile."/>
+          <arg nullable="True" type="boolean" var="$parameters.properties.configuration.Antimalware-Enable" options="antimalware-enable"/>
+        </arg>
+      </argGroup>
       <operation operationId="ConfigurationProfiles_Get">
         <http path="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automanage/configurationProfiles/{configurationProfileName}">
           <request method="get">
@@ -264,6 +291,11 @@
                   <prop readOnly="True" type="ResourceId" name="id"/>
                   <prop type="ResourceLocation" name="location" required="True"/>
                   <prop readOnly="True" type="string" name="name"/>
+                  <prop type="object" name="properties">
+                    <prop type="object" name="configuration">
+                      <prop type="boolean" name="Antimalware-Enable"/>
+                    </prop>
+                  </prop>
                   <prop readOnly="True" type="object" name="systemData">
                     <prop readOnly="True" type="dateTime" name="createdAt"/>
                     <prop readOnly="True" type="string" name="createdBy"/>
@@ -309,6 +341,11 @@
         <instanceUpdate instance="$Instance">
           <json>
             <schema type="object" name="parameters" required="True" clientFlatten="True">
+              <prop type="object" name="properties">
+                <prop type="object" name="configuration" arg="$parameters.properties.configuration">
+                  <prop type="boolean" name="Antimalware-Enable" arg="$parameters.properties.configuration.Antimalware-Enable"/>
+                </prop>
+              </prop>
               <prop type="object" name="tags" arg="$parameters.tags">
                 <additionalProp>
                   <item type="string"/>

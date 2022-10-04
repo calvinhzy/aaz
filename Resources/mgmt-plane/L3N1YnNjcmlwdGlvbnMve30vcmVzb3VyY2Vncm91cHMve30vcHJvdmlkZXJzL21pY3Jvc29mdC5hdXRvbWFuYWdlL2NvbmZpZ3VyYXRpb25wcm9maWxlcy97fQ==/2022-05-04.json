@@ -142,6 +142,22 @@
                                                             "name": "name"
                                                         },
                                                         {
+                                                            "type": "object",
+                                                            "name": "properties",
+                                                            "props": [
+                                                                {
+                                                                    "type": "object",
+                                                                    "name": "configuration",
+                                                                    "props": [
+                                                                        {
+                                                                            "type": "boolean",
+                                                                            "name": "Antimalware-Enable"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
                                                             "readOnly": true,
                                                             "type": "object",
                                                             "name": "systemData",
@@ -464,6 +480,31 @@
                                     }
                                 }
                             ]
+                        },
+                        {
+                            "name": "Properties",
+                            "args": [
+                                {
+                                    "type": "object",
+                                    "var": "$parameters.properties.configuration",
+                                    "options": [
+                                        "configuration"
+                                    ],
+                                    "group": "Properties",
+                                    "help": {
+                                        "short": "configuration dictionary of the configuration profile."
+                                    },
+                                    "args": [
+                                        {
+                                            "type": "boolean",
+                                            "var": "$parameters.properties.configuration.Antimalware-Enable",
+                                            "options": [
+                                                "antimalware-enable"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ],
                     "operations": [
@@ -534,6 +575,24 @@
                                                     },
                                                     {
                                                         "type": "object",
+                                                        "name": "properties",
+                                                        "props": [
+                                                            {
+                                                                "type": "object",
+                                                                "name": "configuration",
+                                                                "arg": "$parameters.properties.configuration",
+                                                                "props": [
+                                                                    {
+                                                                        "type": "boolean",
+                                                                        "name": "Antimalware-Enable",
+                                                                        "arg": "$parameters.properties.configuration.Antimalware-Enable"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "type": "object",
                                                         "name": "tags",
                                                         "arg": "$parameters.tags",
                                                         "additionalProps": {
@@ -574,6 +633,22 @@
                                                             "readOnly": true,
                                                             "type": "string",
                                                             "name": "name"
+                                                        },
+                                                        {
+                                                            "type": "object",
+                                                            "name": "properties",
+                                                            "props": [
+                                                                {
+                                                                    "type": "object",
+                                                                    "name": "configuration",
+                                                                    "props": [
+                                                                        {
+                                                                            "type": "boolean",
+                                                                            "name": "Antimalware-Enable"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
                                                         },
                                                         {
                                                             "readOnly": true,
@@ -756,6 +831,33 @@
                                     }
                                 }
                             ]
+                        },
+                        {
+                            "name": "Properties",
+                            "args": [
+                                {
+                                    "nullable": true,
+                                    "type": "object",
+                                    "var": "$parameters.properties.configuration",
+                                    "options": [
+                                        "configuration"
+                                    ],
+                                    "group": "Properties",
+                                    "help": {
+                                        "short": "configuration dictionary of the configuration profile."
+                                    },
+                                    "args": [
+                                        {
+                                            "nullable": true,
+                                            "type": "boolean",
+                                            "var": "$parameters.properties.configuration.Antimalware-Enable",
+                                            "options": [
+                                                "antimalware-enable"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ],
                     "operations": [
@@ -837,6 +939,22 @@
                                                             "readOnly": true,
                                                             "type": "string",
                                                             "name": "name"
+                                                        },
+                                                        {
+                                                            "type": "object",
+                                                            "name": "properties",
+                                                            "props": [
+                                                                {
+                                                                    "type": "object",
+                                                                    "name": "configuration",
+                                                                    "props": [
+                                                                        {
+                                                                            "type": "boolean",
+                                                                            "name": "Antimalware-Enable"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
                                                         },
                                                         {
                                                             "readOnly": true,
@@ -949,6 +1067,24 @@
                                         "name": "parameters",
                                         "required": true,
                                         "props": [
+                                            {
+                                                "type": "object",
+                                                "name": "properties",
+                                                "props": [
+                                                    {
+                                                        "type": "object",
+                                                        "name": "configuration",
+                                                        "arg": "$parameters.properties.configuration",
+                                                        "props": [
+                                                            {
+                                                                "type": "boolean",
+                                                                "name": "Antimalware-Enable",
+                                                                "arg": "$parameters.properties.configuration.Antimalware-Enable"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
                                             {
                                                 "type": "object",
                                                 "name": "tags",
