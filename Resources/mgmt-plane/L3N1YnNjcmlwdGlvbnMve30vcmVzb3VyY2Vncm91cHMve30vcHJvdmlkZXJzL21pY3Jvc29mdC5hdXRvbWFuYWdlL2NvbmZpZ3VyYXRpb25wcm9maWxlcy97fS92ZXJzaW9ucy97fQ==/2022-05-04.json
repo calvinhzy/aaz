@@ -166,12 +166,11 @@
                                                                 {
                                                                     "type": "object",
                                                                     "name": "configuration",
-                                                                    "props": [
-                                                                        {
-                                                                            "type": "boolean",
-                                                                            "name": "Antimalware-Enable"
+                                                                    "additionalProps": {
+                                                                        "item": {
+                                                                            "type": "string"
                                                                         }
-                                                                    ]
+                                                                    }
                                                                 }
                                                             ]
                                                         },
@@ -542,15 +541,11 @@
                                     "help": {
                                         "short": "configuration dictionary of the configuration profile."
                                     },
-                                    "args": [
-                                        {
-                                            "type": "boolean",
-                                            "var": "$parameters.properties.configuration.Antimalware-Enable",
-                                            "options": [
-                                                "antimalware-enable"
-                                            ]
+                                    "additionalProps": {
+                                        "item": {
+                                            "type": "string"
                                         }
-                                    ]
+                                    }
                                 }
                             ]
                         }
@@ -635,13 +630,11 @@
                                                                 "type": "object",
                                                                 "name": "configuration",
                                                                 "arg": "$parameters.properties.configuration",
-                                                                "props": [
-                                                                    {
-                                                                        "type": "boolean",
-                                                                        "name": "Antimalware-Enable",
-                                                                        "arg": "$parameters.properties.configuration.Antimalware-Enable"
+                                                                "additionalProps": {
+                                                                    "item": {
+                                                                        "type": "string"
                                                                     }
-                                                                ]
+                                                                }
                                                             }
                                                         ]
                                                     },
@@ -695,12 +688,11 @@
                                                                 {
                                                                     "type": "object",
                                                                     "name": "configuration",
-                                                                    "props": [
-                                                                        {
-                                                                            "type": "boolean",
-                                                                            "name": "Antimalware-Enable"
+                                                                    "additionalProps": {
+                                                                        "item": {
+                                                                            "type": "string"
                                                                         }
-                                                                    ]
+                                                                    }
                                                                 }
                                                             ]
                                                         },
@@ -912,16 +904,12 @@
                                     "help": {
                                         "short": "configuration dictionary of the configuration profile."
                                     },
-                                    "args": [
-                                        {
+                                    "additionalProps": {
+                                        "item": {
                                             "nullable": true,
-                                            "type": "boolean",
-                                            "var": "$parameters.properties.configuration.Antimalware-Enable",
-                                            "options": [
-                                                "antimalware-enable"
-                                            ]
+                                            "type": "string"
                                         }
-                                    ]
+                                    }
                                 }
                             ]
                         }
@@ -1019,12 +1007,11 @@
                                                                 {
                                                                     "type": "object",
                                                                     "name": "configuration",
-                                                                    "props": [
-                                                                        {
-                                                                            "type": "boolean",
-                                                                            "name": "Antimalware-Enable"
+                                                                    "additionalProps": {
+                                                                        "item": {
+                                                                            "type": "string"
                                                                         }
-                                                                    ]
+                                                                    }
                                                                 }
                                                             ]
                                                         },
@@ -1147,13 +1134,11 @@
                                                         "type": "object",
                                                         "name": "configuration",
                                                         "arg": "$parameters.properties.configuration",
-                                                        "props": [
-                                                            {
-                                                                "type": "boolean",
-                                                                "name": "Antimalware-Enable",
-                                                                "arg": "$parameters.properties.configuration.Antimalware-Enable"
+                                                        "additionalProps": {
+                                                            "item": {
+                                                                "type": "string"
                                                             }
-                                                        ]
+                                                        }
                                                     }
                                                 ]
                                             },

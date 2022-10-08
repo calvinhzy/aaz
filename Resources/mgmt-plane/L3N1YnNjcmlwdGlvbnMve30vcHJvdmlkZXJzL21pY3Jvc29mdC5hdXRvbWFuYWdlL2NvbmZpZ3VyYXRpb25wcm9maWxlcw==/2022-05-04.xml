@@ -53,7 +53,9 @@
                       <prop readOnly="True" type="string" name="name"/>
                       <prop type="object" name="properties">
                         <prop type="object" name="configuration">
-                          <prop type="boolean" name="Antimalware-Enable"/>
+                          <additionalProp>
+                            <item type="string"/>
+                          </additionalProp>
                         </prop>
                       </prop>
                       <prop readOnly="True" type="object" name="systemData">
@@ -125,7 +127,9 @@
                       <prop readOnly="True" type="string" name="name"/>
                       <prop type="object" name="properties">
                         <prop type="object" name="configuration">
-                          <prop type="boolean" name="Antimalware-Enable"/>
+                          <additionalProp>
+                            <item type="string"/>
+                          </additionalProp>
                         </prop>
                       </prop>
                       <prop readOnly="True" type="object" name="systemData">

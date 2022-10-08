@@ -39,7 +39,9 @@
                   <prop readOnly="True" type="string" name="name"/>
                   <prop type="object" name="properties">
                     <prop type="object" name="configuration">
-                      <prop type="boolean" name="Antimalware-Enable"/>
+                      <additionalProp>
+                        <item type="string"/>
+                      </additionalProp>
                     </prop>
                   </prop>
                   <prop readOnly="True" type="object" name="systemData">
@@ -148,7 +150,9 @@
       <argGroup name="Properties">
         <arg type="object" var="$parameters.properties.configuration" options="configuration" group="Properties">
           <help short="configuration dictionary of the configuration profile."/>
-          <arg type="boolean" var="$parameters.properties.configuration.Antimalware-Enable" options="antimalware-enable"/>
+          <additionalProp>
+            <item type="string"/>
+          </additionalProp>
         </arg>
       </argGroup>
       <operation operationId="ConfigurationProfiles_CreateOrUpdate">
@@ -175,7 +179,9 @@
                   <prop type="ResourceLocation" name="location" arg="$parameters.location" required="True"/>
                   <prop type="object" name="properties">
                     <prop type="object" name="configuration" arg="$parameters.properties.configuration">
-                      <prop type="boolean" name="Antimalware-Enable" arg="$parameters.properties.configuration.Antimalware-Enable"/>
+                      <additionalProp>
+                        <item type="string"/>
+                      </additionalProp>
                     </prop>
                   </prop>
                   <prop type="object" name="tags" arg="$parameters.tags">
@@ -196,7 +202,9 @@
                   <prop readOnly="True" type="string" name="name"/>
                   <prop type="object" name="properties">
                     <prop type="object" name="configuration">
-                      <prop type="boolean" name="Antimalware-Enable"/>
+                      <additionalProp>
+                        <item type="string"/>
+                      </additionalProp>
                     </prop>
                   </prop>
                   <prop readOnly="True" type="object" name="systemData">
@@ -262,7 +270,9 @@
       <argGroup name="Properties">
         <arg nullable="True" type="object" var="$parameters.properties.configuration" options="configuration" group="Properties">
           <help short="configuration dictionary of the configuration profile."/>
-          <arg nullable="True" type="boolean" var="$parameters.properties.configuration.Antimalware-Enable" options="antimalware-enable"/>
+          <additionalProp>
+            <item nullable="True" type="string"/>
+          </additionalProp>
         </arg>
       </argGroup>
       <operation operationId="ConfigurationProfiles_Get">
@@ -293,7 +303,9 @@
                   <prop readOnly="True" type="string" name="name"/>
                   <prop type="object" name="properties">
                     <prop type="object" name="configuration">
-                      <prop type="boolean" name="Antimalware-Enable"/>
+                      <additionalProp>
+                        <item type="string"/>
+                      </additionalProp>
                     </prop>
                   </prop>
                   <prop readOnly="True" type="object" name="systemData">
@@ -343,7 +355,9 @@
             <schema type="object" name="parameters" required="True" clientFlatten="True">
               <prop type="object" name="properties">
                 <prop type="object" name="configuration" arg="$parameters.properties.configuration">
-                  <prop type="boolean" name="Antimalware-Enable" arg="$parameters.properties.configuration.Antimalware-Enable"/>
+                  <additionalProp>
+                    <item type="string"/>
+                  </additionalProp>
                 </prop>
               </prop>
               <prop type="object" name="tags" arg="$parameters.tags">

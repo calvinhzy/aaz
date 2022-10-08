@@ -102,12 +102,11 @@
                                                                 {
                                                                     "type": "object",
                                                                     "name": "configuration",
-                                                                    "props": [
-                                                                        {
-                                                                            "type": "boolean",
-                                                                            "name": "Antimalware-Enable"
+                                                                    "additionalProps": {
+                                                                        "item": {
+                                                                            "type": "string"
                                                                         }
-                                                                    ]
+                                                                    }
                                                                 }
                                                             ],
                                                             "clientFlatten": true
