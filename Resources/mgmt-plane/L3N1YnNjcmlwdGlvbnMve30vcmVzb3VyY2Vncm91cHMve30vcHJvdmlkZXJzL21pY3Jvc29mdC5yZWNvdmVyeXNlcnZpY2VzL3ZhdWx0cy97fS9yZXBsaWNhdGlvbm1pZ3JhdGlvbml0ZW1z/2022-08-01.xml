@@ -51,7 +51,7 @@
                       <prop readOnly="True" type="string" name="name"/>
                       <prop type="object" name="properties">
                         <prop readOnly="True" type="array<string>" name="allowedOperations">
-                          <item readOnly="True" type="string">
+                          <item type="string">
                             <enum>
                               <item value="&quot;DisableMigration&quot;"/>
                               <item value="&quot;Migrate&quot;"/>
@@ -64,14 +64,14 @@
                           </item>
                         </prop>
                         <prop readOnly="True" type="array<object>" name="criticalJobHistory">
-                          <item readOnly="True" type="object">
+                          <item type="object">
                             <prop readOnly="True" type="string" name="jobId"/>
                             <prop readOnly="True" type="string" name="jobName"/>
                             <prop readOnly="True" type="string" name="jobStatus"/>
                             <prop readOnly="True" type="dateTime" name="startTime"/>
                           </item>
                         </prop>
-                        <prop readOnly="True" type="object" name="currentJob">
+                        <prop type="object" name="currentJob">
                           <prop readOnly="True" type="string" name="jobId"/>
                           <prop readOnly="True" type="string" name="jobName"/>
                           <prop readOnly="True" type="dateTime" name="startTime"/>
@@ -86,49 +86,49 @@
                           </enum>
                         </prop>
                         <prop readOnly="True" type="array<object>" name="healthErrors">
-                          <item readOnly="True" type="object">
-                            <prop readOnly="True" type="dateTime" name="creationTimeUtc"/>
-                            <prop readOnly="True" type="string" name="customerResolvability">
+                          <item type="object">
+                            <prop type="dateTime" name="creationTimeUtc"/>
+                            <prop type="string" name="customerResolvability">
                               <enum>
                                 <item value="&quot;Allowed&quot;"/>
                                 <item value="&quot;NotAllowed&quot;"/>
                               </enum>
                             </prop>
-                            <prop readOnly="True" type="string" name="entityId"/>
-                            <prop readOnly="True" type="string" name="errorCategory"/>
-                            <prop readOnly="True" type="string" name="errorCode"/>
-                            <prop readOnly="True" type="string" name="errorId"/>
-                            <prop readOnly="True" type="string" name="errorLevel"/>
-                            <prop readOnly="True" type="string" name="errorMessage"/>
-                            <prop readOnly="True" type="string" name="errorSource"/>
-                            <prop readOnly="True" type="string" name="errorType"/>
-                            <prop readOnly="True" type="array<object>" name="innerHealthErrors">
-                              <item readOnly="True" type="object">
-                                <prop readOnly="True" type="dateTime" name="creationTimeUtc"/>
-                                <prop readOnly="True" type="string" name="customerResolvability">
+                            <prop type="string" name="entityId"/>
+                            <prop type="string" name="errorCategory"/>
+                            <prop type="string" name="errorCode"/>
+                            <prop type="string" name="errorId"/>
+                            <prop type="string" name="errorLevel"/>
+                            <prop type="string" name="errorMessage"/>
+                            <prop type="string" name="errorSource"/>
+                            <prop type="string" name="errorType"/>
+                            <prop type="array<object>" name="innerHealthErrors">
+                              <item type="object">
+                                <prop type="dateTime" name="creationTimeUtc"/>
+                                <prop type="string" name="customerResolvability">
                                   <enum>
                                     <item value="&quot;Allowed&quot;"/>
                                     <item value="&quot;NotAllowed&quot;"/>
                                   </enum>
                                 </prop>
-                                <prop readOnly="True" type="string" name="entityId"/>
-                                <prop readOnly="True" type="string" name="errorCategory"/>
-                                <prop readOnly="True" type="string" name="errorCode"/>
-                                <prop readOnly="True" type="string" name="errorId"/>
-                                <prop readOnly="True" type="string" name="errorLevel"/>
-                                <prop readOnly="True" type="string" name="errorMessage"/>
-                                <prop readOnly="True" type="string" name="errorSource"/>
-                                <prop readOnly="True" type="string" name="errorType"/>
-                                <prop readOnly="True" type="string" name="possibleCauses"/>
-                                <prop readOnly="True" type="string" name="recommendedAction"/>
-                                <prop readOnly="True" type="string" name="recoveryProviderErrorMessage"/>
-                                <prop readOnly="True" type="string" name="summaryMessage"/>
+                                <prop type="string" name="entityId"/>
+                                <prop type="string" name="errorCategory"/>
+                                <prop type="string" name="errorCode"/>
+                                <prop type="string" name="errorId"/>
+                                <prop type="string" name="errorLevel"/>
+                                <prop type="string" name="errorMessage"/>
+                                <prop type="string" name="errorSource"/>
+                                <prop type="string" name="errorType"/>
+                                <prop type="string" name="possibleCauses"/>
+                                <prop type="string" name="recommendedAction"/>
+                                <prop type="string" name="recoveryProviderErrorMessage"/>
+                                <prop type="string" name="summaryMessage"/>
                               </item>
                             </prop>
-                            <prop readOnly="True" type="string" name="possibleCauses"/>
-                            <prop readOnly="True" type="string" name="recommendedAction"/>
-                            <prop readOnly="True" type="string" name="recoveryProviderErrorMessage"/>
-                            <prop readOnly="True" type="string" name="summaryMessage"/>
+                            <prop type="string" name="possibleCauses"/>
+                            <prop type="string" name="recommendedAction"/>
+                            <prop type="string" name="recoveryProviderErrorMessage"/>
+                            <prop type="string" name="summaryMessage"/>
                           </item>
                         </prop>
                         <prop readOnly="True" type="string" name="lastMigrationStatus"/>

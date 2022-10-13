@@ -128,7 +128,6 @@
                                                                         "name": "name"
                                                                     },
                                                                     {
-                                                                        "readOnly": true,
                                                                         "type": "object",
                                                                         "name": "properties",
                                                                         "props": [
@@ -138,30 +137,24 @@
                                                                                 "name": "clientRequestId"
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "array<object>",
                                                                                 "name": "errors",
                                                                                 "item": {
-                                                                                    "readOnly": true,
                                                                                     "type": "object",
                                                                                     "props": [
                                                                                         {
-                                                                                            "readOnly": true,
                                                                                             "type": "string",
                                                                                             "name": "code"
                                                                                         },
                                                                                         {
-                                                                                            "readOnly": true,
                                                                                             "type": "string",
                                                                                             "name": "message"
                                                                                         },
                                                                                         {
-                                                                                            "readOnly": true,
                                                                                             "type": "string",
                                                                                             "name": "possibleCauses"
                                                                                         },
                                                                                         {
-                                                                                            "readOnly": true,
                                                                                             "type": "string",
                                                                                             "name": "recommendedAction"
                                                                                         },

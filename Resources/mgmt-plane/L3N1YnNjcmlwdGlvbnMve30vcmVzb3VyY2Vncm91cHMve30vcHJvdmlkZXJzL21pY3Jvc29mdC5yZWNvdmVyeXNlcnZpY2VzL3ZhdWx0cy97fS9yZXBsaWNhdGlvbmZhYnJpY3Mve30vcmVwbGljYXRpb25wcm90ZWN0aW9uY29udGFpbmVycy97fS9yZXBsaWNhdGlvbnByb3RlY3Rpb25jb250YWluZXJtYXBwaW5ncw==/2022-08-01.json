@@ -444,7 +444,6 @@
                                                                                                 "additionalProps": {
                                                                                                     "readOnly": true,
                                                                                                     "item": {
-                                                                                                        "readOnly": true,
                                                                                                         "type": "integer32"
                                                                                                     }
                                                                                                 }

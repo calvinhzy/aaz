@@ -702,12 +702,12 @@
                             <prop readOnly="True" type="string" name="errorMessage"/>
                             <prop readOnly="True" type="object" name="errorMessageParameters">
                               <additionalProp readOnly="True">
-                                <item readOnly="True" type="string"/>
+                                <item type="string"/>
                               </additionalProp>
                             </prop>
                             <prop readOnly="True" type="object" name="errorTags">
                               <additionalProp readOnly="True">
-                                <item readOnly="True" type="string"/>
+                                <item type="string"/>
                               </additionalProp>
                             </prop>
                             <prop readOnly="True" type="string" name="possibleCauses"/>
@@ -762,12 +762,12 @@
                             <prop readOnly="True" type="string" name="errorMessage"/>
                             <prop readOnly="True" type="object" name="errorMessageParameters">
                               <additionalProp readOnly="True">
-                                <item readOnly="True" type="string"/>
+                                <item type="string"/>
                               </additionalProp>
                             </prop>
                             <prop readOnly="True" type="object" name="errorTags">
                               <additionalProp readOnly="True">
-                                <item readOnly="True" type="string"/>
+                                <item type="string"/>
                               </additionalProp>
                             </prop>
                             <prop readOnly="True" type="string" name="possibleCauses"/>
@@ -787,10 +787,10 @@
                         <prop type="object" name="discoveredVmDetails">
                           <prop readOnly="True" type="dateTime" name="createdTimestamp"/>
                           <prop readOnly="True" type="array<string>" name="datastores">
-                            <item readOnly="True" type="string"/>
+                            <item type="string"/>
                           </prop>
                           <prop readOnly="True" type="array<string>" name="ipAddresses">
-                            <item readOnly="True" type="string"/>
+                            <item type="string"/>
                           </prop>
                           <prop readOnly="True" type="boolean" name="isDeleted"/>
                           <prop readOnly="True" type="dateTime" name="lastDiscoveryTimeInUtc"/>
@@ -826,12 +826,12 @@
                             <prop readOnly="True" type="string" name="errorMessage"/>
                             <prop readOnly="True" type="object" name="errorMessageParameters">
                               <additionalProp readOnly="True">
-                                <item readOnly="True" type="string"/>
+                                <item type="string"/>
                               </additionalProp>
                             </prop>
                             <prop readOnly="True" type="object" name="errorTags">
                               <additionalProp readOnly="True">
-                                <item readOnly="True" type="string"/>
+                                <item type="string"/>
                               </additionalProp>
                             </prop>
                             <prop readOnly="True" type="string" name="possibleCauses"/>
@@ -854,7 +854,7 @@
                           <prop readOnly="True" type="string" name="latestUpgradableVersionWithoutReboot"/>
                           <prop readOnly="True" type="string" name="latestVersion"/>
                           <prop readOnly="True" type="array<string>" name="reasonsBlockingUpgrade">
-                            <item readOnly="True" type="string">
+                            <item type="string">
                               <enum>
                                 <item value="&quot;AgentNoHeartbeat&quot;"/>
                                 <item value="&quot;AlreadyOnLatestVersion&quot;"/>
@@ -993,10 +993,10 @@
                         <prop type="object" name="discoveredVmDetails">
                           <prop readOnly="True" type="dateTime" name="createdTimestamp"/>
                           <prop readOnly="True" type="array<string>" name="datastores">
-                            <item readOnly="True" type="string"/>
+                            <item type="string"/>
                           </prop>
                           <prop readOnly="True" type="array<string>" name="ipAddresses">
-                            <item readOnly="True" type="string"/>
+                            <item type="string"/>
                           </prop>
                           <prop readOnly="True" type="boolean" name="isDeleted"/>
                           <prop readOnly="True" type="dateTime" name="lastDiscoveryTimeInUtc"/>
@@ -1042,7 +1042,7 @@
                           <prop readOnly="True" type="string" name="latestUpgradableVersionWithoutReboot"/>
                           <prop readOnly="True" type="string" name="latestVersion"/>
                           <prop readOnly="True" type="array<string>" name="reasonsBlockingUpgrade">
-                            <item readOnly="True" type="string">
+                            <item type="string">
                               <enum>
                                 <item value="&quot;AgentNoHeartbeat&quot;"/>
                                 <item value="&quot;AlreadyOnLatestVersion&quot;"/>

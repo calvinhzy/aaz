@@ -75,11 +75,11 @@
                       </discriminator>
                       <discriminator property="instanceType" value="InMageRcm">
                         <prop readOnly="True" type="array<object>" name="agentDetails">
-                          <item readOnly="True" type="object">
+                          <item type="object">
                             <prop readOnly="True" type="string" name="agentId"/>
                             <prop readOnly="True" type="string" name="biosId"/>
                             <prop readOnly="True" type="array<object>" name="disks">
-                              <item readOnly="True" type="object">
+                              <item type="object">
                                 <prop readOnly="True" type="integer64" name="capacityInBytes"/>
                                 <prop readOnly="True" type="string" name="diskId"/>
                                 <prop readOnly="True" type="string" name="diskName"/>
@@ -94,7 +94,7 @@
                         <prop readOnly="True" type="string" name="controlPlaneUri"/>
                         <prop readOnly="True" type="string" name="dataPlaneUri"/>
                         <prop readOnly="True" type="array<object>" name="dras">
-                          <item readOnly="True" type="object">
+                          <item type="object">
                             <prop readOnly="True" type="string" name="biosId"/>
                             <prop readOnly="True" type="integer32" name="forwardProtectedItemCount"/>
                             <prop readOnly="True" type="string" name="health">
@@ -106,7 +106,7 @@
                               </enum>
                             </prop>
                             <prop readOnly="True" type="array<@HealthError_read>" name="healthErrors">
-                              <item readOnly="True" type="@HealthError_read"/>
+                              <item type="@HealthError_read"/>
                             </prop>
                             <prop readOnly="True" type="string" name="id"/>
                             <prop readOnly="True" type="dateTime" name="lastHeartbeatUtc"/>
@@ -116,7 +116,7 @@
                           </item>
                         </prop>
                         <prop readOnly="True" type="array<object>" name="marsAgents">
-                          <item readOnly="True" type="object">
+                          <item type="object">
                             <prop readOnly="True" type="string" name="biosId"/>
                             <prop readOnly="True" type="string" name="fabricObjectId"/>
                             <prop readOnly="True" type="string" name="fqdn"/>
@@ -129,7 +129,7 @@
                               </enum>
                             </prop>
                             <prop readOnly="True" type="array<@HealthError_read>" name="healthErrors">
-                              <item readOnly="True" type="@HealthError_read"/>
+                              <item type="@HealthError_read"/>
                             </prop>
                             <prop readOnly="True" type="string" name="id"/>
                             <prop readOnly="True" type="dateTime" name="lastHeartbeatUtc"/>
@@ -139,7 +139,7 @@
                         </prop>
                         <prop readOnly="True" type="string" name="physicalSiteId"/>
                         <prop readOnly="True" type="array<object>" name="processServers">
-                          <item readOnly="True" type="object" cls="ProcessServerDetails_read">
+                          <item type="object" cls="ProcessServerDetails_read">
                             <prop readOnly="True" type="integer64" name="availableMemoryInBytes"/>
                             <prop readOnly="True" type="integer64" name="availableSpaceInBytes"/>
                             <prop readOnly="True" type="string" name="biosId"/>
@@ -163,49 +163,49 @@
                               </enum>
                             </prop>
                             <prop readOnly="True" type="array<object>" name="healthErrors">
-                              <item readOnly="True" type="object" cls="HealthError_read">
-                                <prop readOnly="True" type="dateTime" name="creationTimeUtc"/>
-                                <prop readOnly="True" type="string" name="customerResolvability">
+                              <item type="object" cls="HealthError_read">
+                                <prop type="dateTime" name="creationTimeUtc"/>
+                                <prop type="string" name="customerResolvability">
                                   <enum>
                                     <item value="&quot;Allowed&quot;"/>
                                     <item value="&quot;NotAllowed&quot;"/>
                                   </enum>
                                 </prop>
-                                <prop readOnly="True" type="string" name="entityId"/>
-                                <prop readOnly="True" type="string" name="errorCategory"/>
-                                <prop readOnly="True" type="string" name="errorCode"/>
-                                <prop readOnly="True" type="string" name="errorId"/>
-                                <prop readOnly="True" type="string" name="errorLevel"/>
-                                <prop readOnly="True" type="string" name="errorMessage"/>
-                                <prop readOnly="True" type="string" name="errorSource"/>
-                                <prop readOnly="True" type="string" name="errorType"/>
-                                <prop readOnly="True" type="array<object>" name="innerHealthErrors">
-                                  <item readOnly="True" type="object">
-                                    <prop readOnly="True" type="dateTime" name="creationTimeUtc"/>
-                                    <prop readOnly="True" type="string" name="customerResolvability">
+                                <prop type="string" name="entityId"/>
+                                <prop type="string" name="errorCategory"/>
+                                <prop type="string" name="errorCode"/>
+                                <prop type="string" name="errorId"/>
+                                <prop type="string" name="errorLevel"/>
+                                <prop type="string" name="errorMessage"/>
+                                <prop type="string" name="errorSource"/>
+                                <prop type="string" name="errorType"/>
+                                <prop type="array<object>" name="innerHealthErrors">
+                                  <item type="object">
+                                    <prop type="dateTime" name="creationTimeUtc"/>
+                                    <prop type="string" name="customerResolvability">
                                       <enum>
                                         <item value="&quot;Allowed&quot;"/>
                                         <item value="&quot;NotAllowed&quot;"/>
                                       </enum>
                                     </prop>
-                                    <prop readOnly="True" type="string" name="entityId"/>
-                                    <prop readOnly="True" type="string" name="errorCategory"/>
-                                    <prop readOnly="True" type="string" name="errorCode"/>
-                                    <prop readOnly="True" type="string" name="errorId"/>
-                                    <prop readOnly="True" type="string" name="errorLevel"/>
-                                    <prop readOnly="True" type="string" name="errorMessage"/>
-                                    <prop readOnly="True" type="string" name="errorSource"/>
-                                    <prop readOnly="True" type="string" name="errorType"/>
-                                    <prop readOnly="True" type="string" name="possibleCauses"/>
-                                    <prop readOnly="True" type="string" name="recommendedAction"/>
-                                    <prop readOnly="True" type="string" name="recoveryProviderErrorMessage"/>
-                                    <prop readOnly="True" type="string" name="summaryMessage"/>
+                                    <prop type="string" name="entityId"/>
+                                    <prop type="string" name="errorCategory"/>
+                                    <prop type="string" name="errorCode"/>
+                                    <prop type="string" name="errorId"/>
+                                    <prop type="string" name="errorLevel"/>
+                                    <prop type="string" name="errorMessage"/>
+                                    <prop type="string" name="errorSource"/>
+                                    <prop type="string" name="errorType"/>
+                                    <prop type="string" name="possibleCauses"/>
+                                    <prop type="string" name="recommendedAction"/>
+                                    <prop type="string" name="recoveryProviderErrorMessage"/>
+                                    <prop type="string" name="summaryMessage"/>
                                   </item>
                                 </prop>
-                                <prop readOnly="True" type="string" name="possibleCauses"/>
-                                <prop readOnly="True" type="string" name="recommendedAction"/>
-                                <prop readOnly="True" type="string" name="recoveryProviderErrorMessage"/>
-                                <prop readOnly="True" type="string" name="summaryMessage"/>
+                                <prop type="string" name="possibleCauses"/>
+                                <prop type="string" name="recommendedAction"/>
+                                <prop type="string" name="recoveryProviderErrorMessage"/>
+                                <prop type="string" name="summaryMessage"/>
                               </item>
                             </prop>
                             <prop readOnly="True" type="string" name="historicHealth">
@@ -218,7 +218,7 @@
                             </prop>
                             <prop readOnly="True" type="string" name="id"/>
                             <prop readOnly="True" type="array<string>" name="ipAddresses">
-                              <item readOnly="True" type="string"/>
+                              <item type="string"/>
                             </prop>
                             <prop readOnly="True" type="dateTime" name="lastHeartbeatUtc"/>
                             <prop readOnly="True" type="float64" name="memoryUsagePercentage"/>
@@ -268,7 +268,7 @@
                           </item>
                         </prop>
                         <prop readOnly="True" type="array<object>" name="pushInstallers">
-                          <item readOnly="True" type="object">
+                          <item type="object">
                             <prop readOnly="True" type="string" name="biosId"/>
                             <prop readOnly="True" type="string" name="fabricObjectId"/>
                             <prop readOnly="True" type="string" name="fqdn"/>
@@ -281,7 +281,7 @@
                               </enum>
                             </prop>
                             <prop readOnly="True" type="array<@HealthError_read>" name="healthErrors">
-                              <item readOnly="True" type="@HealthError_read"/>
+                              <item type="@HealthError_read"/>
                             </prop>
                             <prop readOnly="True" type="string" name="id"/>
                             <prop readOnly="True" type="dateTime" name="lastHeartbeatUtc"/>
@@ -290,7 +290,7 @@
                           </item>
                         </prop>
                         <prop readOnly="True" type="array<object>" name="rcmProxies">
-                          <item readOnly="True" type="object">
+                          <item type="object">
                             <prop readOnly="True" type="string" name="biosId"/>
                             <prop readOnly="True" type="string" name="clientAuthenticationType"/>
                             <prop readOnly="True" type="string" name="fabricObjectId"/>
@@ -304,7 +304,7 @@
                               </enum>
                             </prop>
                             <prop readOnly="True" type="array<@HealthError_read>" name="healthErrors">
-                              <item readOnly="True" type="@HealthError_read"/>
+                              <item type="@HealthError_read"/>
                             </prop>
                             <prop readOnly="True" type="string" name="id"/>
                             <prop readOnly="True" type="dateTime" name="lastHeartbeatUtc"/>
@@ -313,7 +313,7 @@
                           </item>
                         </prop>
                         <prop readOnly="True" type="array<object>" name="replicationAgents">
-                          <item readOnly="True" type="object">
+                          <item type="object">
                             <prop readOnly="True" type="string" name="biosId"/>
                             <prop readOnly="True" type="string" name="fabricObjectId"/>
                             <prop readOnly="True" type="string" name="fqdn"/>
@@ -326,7 +326,7 @@
                               </enum>
                             </prop>
                             <prop readOnly="True" type="array<@HealthError_read>" name="healthErrors">
-                              <item readOnly="True" type="@HealthError_read"/>
+                              <item type="@HealthError_read"/>
                             </prop>
                             <prop readOnly="True" type="string" name="id"/>
                             <prop readOnly="True" type="dateTime" name="lastHeartbeatUtc"/>
@@ -335,9 +335,9 @@
                           </item>
                         </prop>
                         <prop readOnly="True" type="array<object>" name="reprotectAgents">
-                          <item readOnly="True" type="object">
+                          <item type="object">
                             <prop readOnly="True" type="array<string>" name="accessibleDatastores">
-                              <item readOnly="True" type="string"/>
+                              <item type="string"/>
                             </prop>
                             <prop readOnly="True" type="string" name="biosId"/>
                             <prop readOnly="True" type="string" name="fabricObjectId"/>
@@ -351,7 +351,7 @@
                               </enum>
                             </prop>
                             <prop readOnly="True" type="array<@HealthError_read>" name="healthErrors">
-                              <item readOnly="True" type="@HealthError_read"/>
+                              <item type="@HealthError_read"/>
                             </prop>
                             <prop readOnly="True" type="string" name="id"/>
                             <prop readOnly="True" type="dateTime" name="lastDiscoveryInUtc"/>
@@ -517,12 +517,12 @@
                             <prop readOnly="True" type="string" name="errorMessage"/>
                             <prop readOnly="True" type="object" name="errorMessageParameters">
                               <additionalProp readOnly="True">
-                                <item readOnly="True" type="string"/>
+                                <item type="string"/>
                               </additionalProp>
                             </prop>
                             <prop readOnly="True" type="object" name="errorTags">
                               <additionalProp readOnly="True">
-                                <item readOnly="True" type="string"/>
+                                <item type="string"/>
                               </additionalProp>
                             </prop>
                             <prop readOnly="True" type="string" name="possibleCauses"/>
@@ -541,7 +541,7 @@
                         <prop readOnly="True" type="string" name="migrationSolutionId"/>
                         <prop readOnly="True" type="string" name="physicalSiteId"/>
                         <prop readOnly="True" type="array<@ProcessServerDetails_read>" name="processServers">
-                          <item readOnly="True" type="@ProcessServerDetails_read"/>
+                          <item type="@ProcessServerDetails_read"/>
                         </prop>
                         <prop readOnly="True" type="string" name="serviceContainerId"/>
                         <prop readOnly="True" type="string" name="serviceEndpoint"/>

@@ -262,7 +262,6 @@
                                                                                     "type": "array<object>",
                                                                                     "name": "agentDetails",
                                                                                     "item": {
-                                                                                        "readOnly": true,
                                                                                         "type": "object",
                                                                                         "props": [
                                                                                             {
@@ -280,7 +279,6 @@
                                                                                                 "type": "array<object>",
                                                                                                 "name": "disks",
                                                                                                 "item": {
-                                                                                                    "readOnly": true,
                                                                                                     "type": "object",
                                                                                                     "props": [
                                                                                                         {
@@ -339,7 +337,6 @@
                                                                                     "type": "array<object>",
                                                                                     "name": "dras",
                                                                                     "item": {
-                                                                                        "readOnly": true,
                                                                                         "type": "object",
                                                                                         "props": [
                                                                                             {
@@ -378,7 +375,6 @@
                                                                                                 "type": "array<@HealthError_read>",
                                                                                                 "name": "healthErrors",
                                                                                                 "item": {
-                                                                                                    "readOnly": true,
                                                                                                     "type": "@HealthError_read"
                                                                                                 }
                                                                                             },
@@ -415,7 +411,6 @@
                                                                                     "type": "array<object>",
                                                                                     "name": "marsAgents",
                                                                                     "item": {
-                                                                                        "readOnly": true,
                                                                                         "type": "object",
                                                                                         "props": [
                                                                                             {
@@ -459,7 +454,6 @@
                                                                                                 "type": "array<@HealthError_read>",
                                                                                                 "name": "healthErrors",
                                                                                                 "item": {
-                                                                                                    "readOnly": true,
                                                                                                     "type": "@HealthError_read"
                                                                                                 }
                                                                                             },
@@ -496,7 +490,6 @@
                                                                                     "type": "array<object>",
                                                                                     "name": "processServers",
                                                                                     "item": {
-                                                                                        "readOnly": true,
                                                                                         "type": "object",
                                                                                         "props": [
                                                                                             {
@@ -576,16 +569,13 @@
                                                                                                 "type": "array<object>",
                                                                                                 "name": "healthErrors",
                                                                                                 "item": {
-                                                                                                    "readOnly": true,
                                                                                                     "type": "object",
                                                                                                     "props": [
                                                                                                         {
-                                                                                                            "readOnly": true,
                                                                                                             "type": "dateTime",
                                                                                                             "name": "creationTimeUtc"
                                                                                                         },
                                                                                                         {
-                                                                                                            "readOnly": true,
                                                                                                             "type": "string",
                                                                                                             "name": "customerResolvability",
                                                                                                             "enum": {
@@ -600,60 +590,48 @@
                                                                                                             }
                                                                                                         },
                                                                                                         {
-                                                                                                            "readOnly": true,
                                                                                                             "type": "string",
                                                                                                             "name": "entityId"
                                                                                                         },
                                                                                                         {
-                                                                                                            "readOnly": true,
                                                                                                             "type": "string",
                                                                                                             "name": "errorCategory"
                                                                                                         },
                                                                                                         {
-                                                                                                            "readOnly": true,
                                                                                                             "type": "string",
                                                                                                             "name": "errorCode"
                                                                                                         },
                                                                                                         {
-                                                                                                            "readOnly": true,
                                                                                                             "type": "string",
                                                                                                             "name": "errorId"
                                                                                                         },
                                                                                                         {
-                                                                                                            "readOnly": true,
                                                                                                             "type": "string",
                                                                                                             "name": "errorLevel"
                                                                                                         },
                                                                                                         {
-                                                                                                            "readOnly": true,
                                                                                                             "type": "string",
                                                                                                             "name": "errorMessage"
                                                                                                         },
                                                                                                         {
-                                                                                                            "readOnly": true,
                                                                                                             "type": "string",
                                                                                                             "name": "errorSource"
                                                                                                         },
                                                                                                         {
-                                                                                                            "readOnly": true,
                                                                                                             "type": "string",
                                                                                                             "name": "errorType"
                                                                                                         },
                                                                                                         {
-                                                                                                            "readOnly": true,
                                                                                                             "type": "array<object>",
                                                                                                             "name": "innerHealthErrors",
                                                                                                             "item": {
-                                                                                                                "readOnly": true,
                                                                                                                 "type": "object",
                                                                                                                 "props": [
                                                                                                                     {
-                                                                                                                        "readOnly": true,
                                                                                                                         "type": "dateTime",
                                                                                                                         "name": "creationTimeUtc"
                                                                                                                     },
                                                                                                                     {
-                                                                                                                        "readOnly": true,
                                                                                                                         "type": "string",
                                                                                                                         "name": "customerResolvability",
                                                                                                                         "enum": {
@@ -668,62 +646,50 @@
                                                                                                                         }
                                                                                                                     },
                                                                                                                     {
-                                                                                                                        "readOnly": true,
                                                                                                                         "type": "string",
                                                                                                                         "name": "entityId"
                                                                                                                     },
                                                                                                                     {
-                                                                                                                        "readOnly": true,
                                                                                                                         "type": "string",
                                                                                                                         "name": "errorCategory"
                                                                                                                     },
                                                                                                                     {
-                                                                                                                        "readOnly": true,
                                                                                                                         "type": "string",
                                                                                                                         "name": "errorCode"
                                                                                                                     },
                                                                                                                     {
-                                                                                                                        "readOnly": true,
                                                                                                                         "type": "string",
                                                                                                                         "name": "errorId"
                                                                                                                     },
                                                                                                                     {
-                                                                                                                        "readOnly": true,
                                                                                                                         "type": "string",
                                                                                                                         "name": "errorLevel"
                                                                                                                     },
                                                                                                                     {
-                                                                                                                        "readOnly": true,
                                                                                                                         "type": "string",
                                                                                                                         "name": "errorMessage"
                                                                                                                     },
                                                                                                                     {
-                                                                                                                        "readOnly": true,
                                                                                                                         "type": "string",
                                                                                                                         "name": "errorSource"
                                                                                                                     },
                                                                                                                     {
-                                                                                                                        "readOnly": true,
                                                                                                                         "type": "string",
                                                                                                                         "name": "errorType"
                                                                                                                     },
                                                                                                                     {
-                                                                                                                        "readOnly": true,
                                                                                                                         "type": "string",
                                                                                                                         "name": "possibleCauses"
                                                                                                                     },
                                                                                                                     {
-                                                                                                                        "readOnly": true,
                                                                                                                         "type": "string",
                                                                                                                         "name": "recommendedAction"
                                                                                                                     },
                                                                                                                     {
-                                                                                                                        "readOnly": true,
                                                                                                                         "type": "string",
                                                                                                                         "name": "recoveryProviderErrorMessage"
                                                                                                                     },
                                                                                                                     {
-                                                                                                                        "readOnly": true,
                                                                                                                         "type": "string",
                                                                                                                         "name": "summaryMessage"
                                                                                                                     }
@@ -731,22 +697,18 @@
                                                                                                             }
                                                                                                         },
                                                                                                         {
-                                                                                                            "readOnly": true,
                                                                                                             "type": "string",
                                                                                                             "name": "possibleCauses"
                                                                                                         },
                                                                                                         {
-                                                                                                            "readOnly": true,
                                                                                                             "type": "string",
                                                                                                             "name": "recommendedAction"
                                                                                                         },
                                                                                                         {
-                                                                                                            "readOnly": true,
                                                                                                             "type": "string",
                                                                                                             "name": "recoveryProviderErrorMessage"
                                                                                                         },
                                                                                                         {
-                                                                                                            "readOnly": true,
                                                                                                             "type": "string",
                                                                                                             "name": "summaryMessage"
                                                                                                         }
@@ -785,7 +747,6 @@
                                                                                                 "type": "array<string>",
                                                                                                 "name": "ipAddresses",
                                                                                                 "item": {
-                                                                                                    "readOnly": true,
                                                                                                     "type": "string"
                                                                                                 }
                                                                                             },
@@ -947,7 +908,6 @@
                                                                                     "type": "array<object>",
                                                                                     "name": "pushInstallers",
                                                                                     "item": {
-                                                                                        "readOnly": true,
                                                                                         "type": "object",
                                                                                         "props": [
                                                                                             {
@@ -991,7 +951,6 @@
                                                                                                 "type": "array<@HealthError_read>",
                                                                                                 "name": "healthErrors",
                                                                                                 "item": {
-                                                                                                    "readOnly": true,
                                                                                                     "type": "@HealthError_read"
                                                                                                 }
                                                                                             },
@@ -1023,7 +982,6 @@
                                                                                     "type": "array<object>",
                                                                                     "name": "rcmProxies",
                                                                                     "item": {
-                                                                                        "readOnly": true,
                                                                                         "type": "object",
                                                                                         "props": [
                                                                                             {
@@ -1072,7 +1030,6 @@
                                                                                                 "type": "array<@HealthError_read>",
                                                                                                 "name": "healthErrors",
                                                                                                 "item": {
-                                                                                                    "readOnly": true,
                                                                                                     "type": "@HealthError_read"
                                                                                                 }
                                                                                             },
@@ -1104,7 +1061,6 @@
                                                                                     "type": "array<object>",
                                                                                     "name": "replicationAgents",
                                                                                     "item": {
-                                                                                        "readOnly": true,
                                                                                         "type": "object",
                                                                                         "props": [
                                                                                             {
@@ -1148,7 +1104,6 @@
                                                                                                 "type": "array<@HealthError_read>",
                                                                                                 "name": "healthErrors",
                                                                                                 "item": {
-                                                                                                    "readOnly": true,
                                                                                                     "type": "@HealthError_read"
                                                                                                 }
                                                                                             },
@@ -1180,7 +1135,6 @@
                                                                                     "type": "array<object>",
                                                                                     "name": "reprotectAgents",
                                                                                     "item": {
-                                                                                        "readOnly": true,
                                                                                         "type": "object",
                                                                                         "props": [
                                                                                             {
@@ -1188,7 +1142,6 @@
                                                                                                 "type": "array<string>",
                                                                                                 "name": "accessibleDatastores",
                                                                                                 "item": {
-                                                                                                    "readOnly": true,
                                                                                                     "type": "string"
                                                                                                 }
                                                                                             },
@@ -1233,7 +1186,6 @@
                                                                                                 "type": "array<@HealthError_read>",
                                                                                                 "name": "healthErrors",
                                                                                                 "item": {
-                                                                                                    "readOnly": true,
                                                                                                     "type": "@HealthError_read"
                                                                                                 }
                                                                                             },
@@ -1819,7 +1771,6 @@
                                                                                                 "additionalProps": {
                                                                                                     "readOnly": true,
                                                                                                     "item": {
-                                                                                                        "readOnly": true,
                                                                                                         "type": "string"
                                                                                                     }
                                                                                                 }
@@ -1831,7 +1782,6 @@
                                                                                                 "additionalProps": {
                                                                                                     "readOnly": true,
                                                                                                     "item": {
-                                                                                                        "readOnly": true,
                                                                                                         "type": "string"
                                                                                                     }
                                                                                                 }
@@ -1898,7 +1848,6 @@
                                                                                     "type": "array<@ProcessServerDetails_read>",
                                                                                     "name": "processServers",
                                                                                     "item": {
-                                                                                        "readOnly": true,
                                                                                         "type": "@ProcessServerDetails_read"
                                                                                     }
                                                                                 },

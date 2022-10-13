@@ -31,14 +31,14 @@
                 <schema type="object">
                   <prop readOnly="True" type="string" name="id"/>
                   <prop readOnly="True" type="string" name="name"/>
-                  <prop readOnly="True" type="object" name="properties">
+                  <prop type="object" name="properties">
                     <prop readOnly="True" type="string" name="clientRequestId"/>
-                    <prop readOnly="True" type="array<object>" name="errors">
-                      <item readOnly="True" type="object">
-                        <prop readOnly="True" type="string" name="code"/>
-                        <prop readOnly="True" type="string" name="message"/>
-                        <prop readOnly="True" type="string" name="possibleCauses"/>
-                        <prop readOnly="True" type="string" name="recommendedAction"/>
+                    <prop type="array<object>" name="errors">
+                      <item type="object">
+                        <prop type="string" name="code"/>
+                        <prop type="string" name="message"/>
+                        <prop type="string" name="possibleCauses"/>
+                        <prop type="string" name="recommendedAction"/>
                         <prop readOnly="True" type="string" name="status"/>
                       </item>
                     </prop>

@@ -130,7 +130,7 @@
                         <prop readOnly="True" type="string" name="keyVaultUri"/>
                         <prop readOnly="True" type="object" name="roleSizeToNicCountMap">
                           <additionalProp readOnly="True">
-                            <item readOnly="True" type="integer32"/>
+                            <item type="integer32"/>
                           </additionalProp>
                         </prop>
                         <prop readOnly="True" type="string" name="serviceBusConnectionStringSecretName"/>
@@ -432,7 +432,7 @@
                         <prop readOnly="True" type="string" name="keyVaultUri"/>
                         <prop readOnly="True" type="object" name="roleSizeToNicCountMap">
                           <additionalProp readOnly="True">
-                            <item readOnly="True" type="integer32"/>
+                            <item type="integer32"/>
                           </additionalProp>
                         </prop>
                         <prop readOnly="True" type="string" name="serviceBusConnectionStringSecretName"/>
@@ -643,7 +643,7 @@
                         <prop readOnly="True" type="string" name="keyVaultUri"/>
                         <prop readOnly="True" type="object" name="roleSizeToNicCountMap">
                           <additionalProp readOnly="True">
-                            <item readOnly="True" type="integer32"/>
+                            <item type="integer32"/>
                           </additionalProp>
                         </prop>
                         <prop readOnly="True" type="string" name="serviceBusConnectionStringSecretName"/>

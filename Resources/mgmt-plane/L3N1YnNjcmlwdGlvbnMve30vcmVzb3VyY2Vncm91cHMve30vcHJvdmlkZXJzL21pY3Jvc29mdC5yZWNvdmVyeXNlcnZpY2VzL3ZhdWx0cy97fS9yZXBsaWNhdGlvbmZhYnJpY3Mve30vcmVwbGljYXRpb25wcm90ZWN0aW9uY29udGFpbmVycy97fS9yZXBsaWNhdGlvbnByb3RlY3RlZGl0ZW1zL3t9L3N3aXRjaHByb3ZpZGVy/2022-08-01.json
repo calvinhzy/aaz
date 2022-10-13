@@ -2423,7 +2423,6 @@
                                                                                                 "additionalProps": {
                                                                                                     "readOnly": true,
                                                                                                     "item": {
-                                                                                                        "readOnly": true,
                                                                                                         "type": "string"
                                                                                                     }
                                                                                                 }
@@ -2435,7 +2434,6 @@
                                                                                                 "additionalProps": {
                                                                                                     "readOnly": true,
                                                                                                     "item": {
-                                                                                                        "readOnly": true,
                                                                                                         "type": "string"
                                                                                                     }
                                                                                                 }
@@ -2602,7 +2600,6 @@
                                                                                                 "additionalProps": {
                                                                                                     "readOnly": true,
                                                                                                     "item": {
-                                                                                                        "readOnly": true,
                                                                                                         "type": "string"
                                                                                                     }
                                                                                                 }
@@ -2614,7 +2611,6 @@
                                                                                                 "additionalProps": {
                                                                                                     "readOnly": true,
                                                                                                     "item": {
-                                                                                                        "readOnly": true,
                                                                                                         "type": "string"
                                                                                                     }
                                                                                                 }
@@ -2677,7 +2673,6 @@
                                                                                             "type": "array<string>",
                                                                                             "name": "datastores",
                                                                                             "item": {
-                                                                                                "readOnly": true,
                                                                                                 "type": "string"
                                                                                             }
                                                                                         },
@@ -2686,7 +2681,6 @@
                                                                                             "type": "array<string>",
                                                                                             "name": "ipAddresses",
                                                                                             "item": {
-                                                                                                "readOnly": true,
                                                                                                 "type": "string"
                                                                                             }
                                                                                         },
@@ -2831,7 +2825,6 @@
                                                                                                 "additionalProps": {
                                                                                                     "readOnly": true,
                                                                                                     "item": {
-                                                                                                        "readOnly": true,
                                                                                                         "type": "string"
                                                                                                     }
                                                                                                 }
@@ -2843,7 +2836,6 @@
                                                                                                 "additionalProps": {
                                                                                                     "readOnly": true,
                                                                                                     "item": {
-                                                                                                        "readOnly": true,
                                                                                                         "type": "string"
                                                                                                     }
                                                                                                 }
@@ -2939,7 +2931,6 @@
                                                                                             "type": "array<string>",
                                                                                             "name": "reasonsBlockingUpgrade",
                                                                                             "item": {
-                                                                                                "readOnly": true,
                                                                                                 "type": "string",
                                                                                                 "enum": {
                                                                                                     "items": [
@@ -3417,7 +3408,6 @@
                                                                                             "type": "array<string>",
                                                                                             "name": "datastores",
                                                                                             "item": {
-                                                                                                "readOnly": true,
                                                                                                 "type": "string"
                                                                                             }
                                                                                         },
@@ -3426,7 +3416,6 @@
                                                                                             "type": "array<string>",
                                                                                             "name": "ipAddresses",
                                                                                             "item": {
-                                                                                                "readOnly": true,
                                                                                                 "type": "string"
                                                                                             }
                                                                                         },
@@ -3608,7 +3597,6 @@
                                                                                             "type": "array<string>",
                                                                                             "name": "reasonsBlockingUpgrade",
                                                                                             "item": {
-                                                                                                "readOnly": true,
                                                                                                 "type": "string",
                                                                                                 "enum": {
                                                                                                     "items": [

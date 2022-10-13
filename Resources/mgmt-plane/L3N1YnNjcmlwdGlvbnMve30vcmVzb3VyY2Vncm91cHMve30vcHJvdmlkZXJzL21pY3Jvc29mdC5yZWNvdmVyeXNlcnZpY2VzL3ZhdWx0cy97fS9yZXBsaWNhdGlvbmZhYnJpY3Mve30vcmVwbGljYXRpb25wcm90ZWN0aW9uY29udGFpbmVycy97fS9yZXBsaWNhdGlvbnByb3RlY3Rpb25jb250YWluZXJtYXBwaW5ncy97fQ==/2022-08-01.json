@@ -459,7 +459,6 @@
                                                                                     "additionalProps": {
                                                                                         "readOnly": true,
                                                                                         "item": {
-                                                                                            "readOnly": true,
                                                                                             "type": "integer32"
                                                                                         }
                                                                                     }
@@ -1491,7 +1490,6 @@
                                                                                     "additionalProps": {
                                                                                         "readOnly": true,
                                                                                         "item": {
-                                                                                            "readOnly": true,
                                                                                             "type": "integer32"
                                                                                         }
                                                                                     }
@@ -2215,7 +2213,6 @@
                                                                                     "additionalProps": {
                                                                                         "readOnly": true,
                                                                                         "item": {
-                                                                                            "readOnly": true,
                                                                                             "type": "integer32"
                                                                                         }
                                                                                     }
