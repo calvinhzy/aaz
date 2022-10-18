@@ -264,11 +264,9 @@
                                                                                 "type": "array<object>",
                                                                                 "name": "resources",
                                                                                 "item": {
-                                                                                    "readOnly": true,
                                                                                     "type": "object",
                                                                                     "props": [
                                                                                         {
-                                                                                            "readOnly": true,
                                                                                             "type": "object",
                                                                                             "name": "error",
                                                                                             "props": [
@@ -277,7 +275,6 @@
                                                                                                     "type": "array<object>",
                                                                                                     "name": "additionalInfo",
                                                                                                     "item": {
-                                                                                                        "readOnly": true,
                                                                                                         "type": "object",
                                                                                                         "props": [
                                                                                                             {
@@ -298,7 +295,6 @@
                                                                                                     "type": "array<@ErrorDetail_read>",
                                                                                                     "name": "details",
                                                                                                     "item": {
-                                                                                                        "readOnly": true,
                                                                                                         "type": "@ErrorDetail_read"
                                                                                                     }
                                                                                                 },
@@ -361,17 +357,14 @@
                                                                         "name": "systemData",
                                                                         "props": [
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "dateTime",
                                                                                 "name": "createdAt"
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "string",
                                                                                 "name": "createdBy"
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "string",
                                                                                 "name": "createdByType",
                                                                                 "enum": {
@@ -392,17 +385,14 @@
                                                                                 }
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "dateTime",
                                                                                 "name": "lastModifiedAt"
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "string",
                                                                                 "name": "lastModifiedBy"
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "string",
                                                                                 "name": "lastModifiedByType",
                                                                                 "enum": {
@@ -577,11 +567,9 @@
                                                                                 "type": "array<object>",
                                                                                 "name": "resources",
                                                                                 "item": {
-                                                                                    "readOnly": true,
                                                                                     "type": "object",
                                                                                     "props": [
                                                                                         {
-                                                                                            "readOnly": true,
                                                                                             "type": "@ErrorDetail_read",
                                                                                             "name": "error"
                                                                                         },
@@ -631,17 +619,14 @@
                                                                         "name": "systemData",
                                                                         "props": [
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "dateTime",
                                                                                 "name": "createdAt"
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "string",
                                                                                 "name": "createdBy"
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "string",
                                                                                 "name": "createdByType",
                                                                                 "enum": {
@@ -662,17 +647,14 @@
                                                                                 }
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "dateTime",
                                                                                 "name": "lastModifiedAt"
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "string",
                                                                                 "name": "lastModifiedBy"
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "string",
                                                                                 "name": "lastModifiedByType",
                                                                                 "enum": {

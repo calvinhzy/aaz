@@ -333,7 +333,6 @@
                                                                         "name": "id"
                                                                     },
                                                                     {
-                                                                        "readOnly": true,
                                                                         "type": "string",
                                                                         "name": "managedBy"
                                                                     },
@@ -368,17 +367,14 @@
                                                                         "name": "systemData",
                                                                         "props": [
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "dateTime",
                                                                                 "name": "createdAt"
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "string",
                                                                                 "name": "createdBy"
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "string",
                                                                                 "name": "createdByType",
                                                                                 "enum": {
@@ -399,17 +395,14 @@
                                                                                 }
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "dateTime",
                                                                                 "name": "lastModifiedAt"
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "string",
                                                                                 "name": "lastModifiedBy"
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "string",
                                                                                 "name": "lastModifiedByType",
                                                                                 "enum": {
@@ -536,7 +529,6 @@
                                                                         "name": "id"
                                                                     },
                                                                     {
-                                                                        "readOnly": true,
                                                                         "type": "string",
                                                                         "name": "managedBy"
                                                                     },
@@ -571,17 +563,14 @@
                                                                         "name": "systemData",
                                                                         "props": [
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "dateTime",
                                                                                 "name": "createdAt"
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "string",
                                                                                 "name": "createdBy"
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "string",
                                                                                 "name": "createdByType",
                                                                                 "enum": {
@@ -602,17 +591,14 @@
                                                                                 }
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "dateTime",
                                                                                 "name": "lastModifiedAt"
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "string",
                                                                                 "name": "lastModifiedBy"
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "string",
                                                                                 "name": "lastModifiedByType",
                                                                                 "enum": {
@@ -739,7 +725,6 @@
                                                                         "name": "id"
                                                                     },
                                                                     {
-                                                                        "readOnly": true,
                                                                         "type": "string",
                                                                         "name": "managedBy"
                                                                     },
@@ -774,17 +759,14 @@
                                                                         "name": "systemData",
                                                                         "props": [
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "dateTime",
                                                                                 "name": "createdAt"
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "string",
                                                                                 "name": "createdBy"
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "string",
                                                                                 "name": "createdByType",
                                                                                 "enum": {
@@ -805,17 +787,14 @@
                                                                                 }
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "dateTime",
                                                                                 "name": "lastModifiedAt"
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "string",
                                                                                 "name": "lastModifiedBy"
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "string",
                                                                                 "name": "lastModifiedByType",
                                                                                 "enum": {
@@ -936,7 +915,6 @@
                                                                         "name": "id"
                                                                     },
                                                                     {
-                                                                        "readOnly": true,
                                                                         "type": "string",
                                                                         "name": "managedBy"
                                                                     },
@@ -971,17 +949,14 @@
                                                                         "name": "systemData",
                                                                         "props": [
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "dateTime",
                                                                                 "name": "createdAt"
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "string",
                                                                                 "name": "createdBy"
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "string",
                                                                                 "name": "createdByType",
                                                                                 "enum": {
@@ -1002,17 +977,14 @@
                                                                                 }
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "dateTime",
                                                                                 "name": "lastModifiedAt"
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "string",
                                                                                 "name": "lastModifiedBy"
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "string",
                                                                                 "name": "lastModifiedByType",
                                                                                 "enum": {
@@ -1123,7 +1095,6 @@
                                                                         "name": "id"
                                                                     },
                                                                     {
-                                                                        "readOnly": true,
                                                                         "type": "string",
                                                                         "name": "managedBy"
                                                                     },
@@ -1158,17 +1129,14 @@
                                                                         "name": "systemData",
                                                                         "props": [
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "dateTime",
                                                                                 "name": "createdAt"
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "string",
                                                                                 "name": "createdBy"
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "string",
                                                                                 "name": "createdByType",
                                                                                 "enum": {
@@ -1189,17 +1157,14 @@
                                                                                 }
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "dateTime",
                                                                                 "name": "lastModifiedAt"
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "string",
                                                                                 "name": "lastModifiedBy"
                                                                             },
                                                                             {
-                                                                                "readOnly": true,
                                                                                 "type": "string",
                                                                                 "name": "lastModifiedByType",
                                                                                 "enum": {

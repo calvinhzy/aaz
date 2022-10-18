@@ -149,9 +149,7 @@
                                                                     "type": "object",
                                                                     "name": "configuration",
                                                                     "additionalProps": {
-                                                                        "item": {
-                                                                            "type": "string"
-                                                                        }
+                                                                        "anyType": true
                                                                     }
                                                                 }
                                                             ]
@@ -162,17 +160,14 @@
                                                             "name": "systemData",
                                                             "props": [
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "dateTime",
                                                                     "name": "createdAt"
                                                                 },
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "string",
                                                                     "name": "createdBy"
                                                                 },
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "string",
                                                                     "name": "createdByType",
                                                                     "enum": {
@@ -193,17 +188,14 @@
                                                                     }
                                                                 },
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "dateTime",
                                                                     "name": "lastModifiedAt"
                                                                 },
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "string",
                                                                     "name": "lastModifiedBy"
                                                                 },
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "string",
                                                                     "name": "lastModifiedByType",
                                                                     "enum": {
@@ -494,9 +486,7 @@
                                         "short": "configuration dictionary of the configuration profile."
                                     },
                                     "additionalProps": {
-                                        "item": {
-                                            "type": "string"
-                                        }
+                                        "anyType": true
                                     }
                                 }
                             ]
@@ -577,9 +567,7 @@
                                                                 "name": "configuration",
                                                                 "arg": "$parameters.properties.configuration",
                                                                 "additionalProps": {
-                                                                    "item": {
-                                                                        "type": "string"
-                                                                    }
+                                                                    "anyType": true
                                                                 }
                                                             }
                                                         ]
@@ -635,9 +623,7 @@
                                                                     "type": "object",
                                                                     "name": "configuration",
                                                                     "additionalProps": {
-                                                                        "item": {
-                                                                            "type": "string"
-                                                                        }
+                                                                        "anyType": true
                                                                     }
                                                                 }
                                                             ]
@@ -648,17 +634,14 @@
                                                             "name": "systemData",
                                                             "props": [
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "dateTime",
                                                                     "name": "createdAt"
                                                                 },
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "string",
                                                                     "name": "createdBy"
                                                                 },
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "string",
                                                                     "name": "createdByType",
                                                                     "enum": {
@@ -679,17 +662,14 @@
                                                                     }
                                                                 },
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "dateTime",
                                                                     "name": "lastModifiedAt"
                                                                 },
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "string",
                                                                     "name": "lastModifiedBy"
                                                                 },
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "string",
                                                                     "name": "lastModifiedByType",
                                                                     "enum": {
@@ -839,10 +819,7 @@
                                         "short": "configuration dictionary of the configuration profile."
                                     },
                                     "additionalProps": {
-                                        "item": {
-                                            "nullable": true,
-                                            "type": "string"
-                                        }
+                                        "anyType": true
                                     }
                                 }
                             ]
@@ -936,9 +913,7 @@
                                                                     "type": "object",
                                                                     "name": "configuration",
                                                                     "additionalProps": {
-                                                                        "item": {
-                                                                            "type": "string"
-                                                                        }
+                                                                        "anyType": true
                                                                     }
                                                                 }
                                                             ]
@@ -949,17 +924,14 @@
                                                             "name": "systemData",
                                                             "props": [
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "dateTime",
                                                                     "name": "createdAt"
                                                                 },
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "string",
                                                                     "name": "createdBy"
                                                                 },
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "string",
                                                                     "name": "createdByType",
                                                                     "enum": {
@@ -980,17 +952,14 @@
                                                                     }
                                                                 },
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "dateTime",
                                                                     "name": "lastModifiedAt"
                                                                 },
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "string",
                                                                     "name": "lastModifiedBy"
                                                                 },
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "string",
                                                                     "name": "lastModifiedByType",
                                                                     "enum": {
@@ -1063,9 +1032,7 @@
                                                         "name": "configuration",
                                                         "arg": "$parameters.properties.configuration",
                                                         "additionalProps": {
-                                                            "item": {
-                                                                "type": "string"
-                                                            }
+                                                            "anyType": true
                                                         }
                                                     }
                                                 ]

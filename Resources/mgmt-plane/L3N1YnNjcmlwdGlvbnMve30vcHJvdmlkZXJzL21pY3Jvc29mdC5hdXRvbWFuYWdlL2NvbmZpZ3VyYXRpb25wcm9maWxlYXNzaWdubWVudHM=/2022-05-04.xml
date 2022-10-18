@@ -104,7 +104,7 @@
                   <prop type="array<object>" name="value">
                     <item type="object">
                       <prop readOnly="True" type="ResourceId" name="id"/>
-                      <prop readOnly="True" type="string" name="managedBy"/>
+                      <prop type="string" name="managedBy"/>
                       <prop readOnly="True" type="string" name="name"/>
                       <prop type="object" name="properties">
                         <prop type="string" name="configurationProfile"/>
@@ -112,9 +112,9 @@
                         <prop readOnly="True" type="string" name="targetId"/>
                       </prop>
                       <prop readOnly="True" type="object" name="systemData">
-                        <prop readOnly="True" type="dateTime" name="createdAt"/>
-                        <prop readOnly="True" type="string" name="createdBy"/>
-                        <prop readOnly="True" type="string" name="createdByType">
+                        <prop type="dateTime" name="createdAt"/>
+                        <prop type="string" name="createdBy"/>
+                        <prop type="string" name="createdByType">
                           <enum>
                             <item value="&quot;Application&quot;"/>
                             <item value="&quot;Key&quot;"/>
@@ -122,9 +122,9 @@
                             <item value="&quot;User&quot;"/>
                           </enum>
                         </prop>
-                        <prop readOnly="True" type="dateTime" name="lastModifiedAt"/>
-                        <prop readOnly="True" type="string" name="lastModifiedBy"/>
-                        <prop readOnly="True" type="string" name="lastModifiedByType">
+                        <prop type="dateTime" name="lastModifiedAt"/>
+                        <prop type="string" name="lastModifiedBy"/>
+                        <prop type="string" name="lastModifiedByType">
                           <enum>
                             <item value="&quot;Application&quot;"/>
                             <item value="&quot;Key&quot;"/>
@@ -175,7 +175,7 @@
                   <prop type="array<object>" name="value">
                     <item type="object">
                       <prop readOnly="True" type="ResourceId" name="id"/>
-                      <prop readOnly="True" type="string" name="managedBy"/>
+                      <prop type="string" name="managedBy"/>
                       <prop readOnly="True" type="string" name="name"/>
                       <prop type="object" name="properties">
                         <prop type="string" name="configurationProfile"/>
@@ -183,9 +183,9 @@
                         <prop readOnly="True" type="string" name="targetId"/>
                       </prop>
                       <prop readOnly="True" type="object" name="systemData">
-                        <prop readOnly="True" type="dateTime" name="createdAt"/>
-                        <prop readOnly="True" type="string" name="createdBy"/>
-                        <prop readOnly="True" type="string" name="createdByType">
+                        <prop type="dateTime" name="createdAt"/>
+                        <prop type="string" name="createdBy"/>
+                        <prop type="string" name="createdByType">
                           <enum>
                             <item value="&quot;Application&quot;"/>
                             <item value="&quot;Key&quot;"/>
@@ -193,9 +193,9 @@
                             <item value="&quot;User&quot;"/>
                           </enum>
                         </prop>
-                        <prop readOnly="True" type="dateTime" name="lastModifiedAt"/>
-                        <prop readOnly="True" type="string" name="lastModifiedBy"/>
-                        <prop readOnly="True" type="string" name="lastModifiedByType">
+                        <prop type="dateTime" name="lastModifiedAt"/>
+                        <prop type="string" name="lastModifiedBy"/>
+                        <prop type="string" name="lastModifiedByType">
                           <enum>
                             <item value="&quot;Application&quot;"/>
                             <item value="&quot;Key&quot;"/>
@@ -246,7 +246,7 @@
                   <prop type="array<object>" name="value">
                     <item type="object">
                       <prop readOnly="True" type="ResourceId" name="id"/>
-                      <prop readOnly="True" type="string" name="managedBy"/>
+                      <prop type="string" name="managedBy"/>
                       <prop readOnly="True" type="string" name="name"/>
                       <prop type="object" name="properties">
                         <prop type="string" name="configurationProfile"/>
@@ -254,9 +254,9 @@
                         <prop readOnly="True" type="string" name="targetId"/>
                       </prop>
                       <prop readOnly="True" type="object" name="systemData">
-                        <prop readOnly="True" type="dateTime" name="createdAt"/>
-                        <prop readOnly="True" type="string" name="createdBy"/>
-                        <prop readOnly="True" type="string" name="createdByType">
+                        <prop type="dateTime" name="createdAt"/>
+                        <prop type="string" name="createdBy"/>
+                        <prop type="string" name="createdByType">
                           <enum>
                             <item value="&quot;Application&quot;"/>
                             <item value="&quot;Key&quot;"/>
@@ -264,9 +264,9 @@
                             <item value="&quot;User&quot;"/>
                           </enum>
                         </prop>
-                        <prop readOnly="True" type="dateTime" name="lastModifiedAt"/>
-                        <prop readOnly="True" type="string" name="lastModifiedBy"/>
-                        <prop readOnly="True" type="string" name="lastModifiedByType">
+                        <prop type="dateTime" name="lastModifiedAt"/>
+                        <prop type="string" name="lastModifiedBy"/>
+                        <prop type="string" name="lastModifiedByType">
                           <enum>
                             <item value="&quot;Application&quot;"/>
                             <item value="&quot;Key&quot;"/>
@@ -316,7 +316,7 @@
                   <prop type="array<object>" name="value">
                     <item type="object">
                       <prop readOnly="True" type="ResourceId" name="id"/>
-                      <prop readOnly="True" type="string" name="managedBy"/>
+                      <prop type="string" name="managedBy"/>
                       <prop readOnly="True" type="string" name="name"/>
                       <prop type="object" name="properties">
                         <prop type="string" name="configurationProfile"/>
@@ -324,9 +324,9 @@
                         <prop readOnly="True" type="string" name="targetId"/>
                       </prop>
                       <prop readOnly="True" type="object" name="systemData">
-                        <prop readOnly="True" type="dateTime" name="createdAt"/>
-                        <prop readOnly="True" type="string" name="createdBy"/>
-                        <prop readOnly="True" type="string" name="createdByType">
+                        <prop type="dateTime" name="createdAt"/>
+                        <prop type="string" name="createdBy"/>
+                        <prop type="string" name="createdByType">
                           <enum>
                             <item value="&quot;Application&quot;"/>
                             <item value="&quot;Key&quot;"/>
@@ -334,9 +334,9 @@
                             <item value="&quot;User&quot;"/>
                           </enum>
                         </prop>
-                        <prop readOnly="True" type="dateTime" name="lastModifiedAt"/>
-                        <prop readOnly="True" type="string" name="lastModifiedBy"/>
-                        <prop readOnly="True" type="string" name="lastModifiedByType">
+                        <prop type="dateTime" name="lastModifiedAt"/>
+                        <prop type="string" name="lastModifiedBy"/>
+                        <prop type="string" name="lastModifiedByType">
                           <enum>
                             <item value="&quot;Application&quot;"/>
                             <item value="&quot;Key&quot;"/>
@@ -383,7 +383,7 @@
                   <prop type="array<object>" name="value">
                     <item type="object">
                       <prop readOnly="True" type="ResourceId" name="id"/>
-                      <prop readOnly="True" type="string" name="managedBy"/>
+                      <prop type="string" name="managedBy"/>
                       <prop readOnly="True" type="string" name="name"/>
                       <prop type="object" name="properties">
                         <prop type="string" name="configurationProfile"/>
@@ -391,9 +391,9 @@
                         <prop readOnly="True" type="string" name="targetId"/>
                       </prop>
                       <prop readOnly="True" type="object" name="systemData">
-                        <prop readOnly="True" type="dateTime" name="createdAt"/>
-                        <prop readOnly="True" type="string" name="createdBy"/>
-                        <prop readOnly="True" type="string" name="createdByType">
+                        <prop type="dateTime" name="createdAt"/>
+                        <prop type="string" name="createdBy"/>
+                        <prop type="string" name="createdByType">
                           <enum>
                             <item value="&quot;Application&quot;"/>
                             <item value="&quot;Key&quot;"/>
@@ -401,9 +401,9 @@
                             <item value="&quot;User&quot;"/>
                           </enum>
                         </prop>
-                        <prop readOnly="True" type="dateTime" name="lastModifiedAt"/>
-                        <prop readOnly="True" type="string" name="lastModifiedBy"/>
-                        <prop readOnly="True" type="string" name="lastModifiedByType">
+                        <prop type="dateTime" name="lastModifiedAt"/>
+                        <prop type="string" name="lastModifiedBy"/>
+                        <prop type="string" name="lastModifiedByType">
                           <enum>
                             <item value="&quot;Application&quot;"/>
                             <item value="&quot;Key&quot;"/>
