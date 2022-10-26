@@ -10,7 +10,7 @@
         <arg type="string" var="$Path.clusterName" options="cluster-name">
           <help short="The name of the Arc machine."/>
         </arg>
-        <arg type="string" var="$Path.configurationProfileAssignmentName" options="configuration-profile-assignment-name" required="True">
+        <arg type="string" var="$Path.configurationProfileAssignmentName" options="configuration-profile-assignment-name assignment-name" required="True" group="">
           <help short="The configuration profile assignment name."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True"/>
