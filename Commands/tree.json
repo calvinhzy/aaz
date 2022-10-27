@@ -585,6 +585,52 @@
               },
               "report": {
                 "commands": {
+                  "list-arc": {
+                    "help": {
+                      "short": "List a list of reports within a given configuration profile assignment"
+                    },
+                    "names": [
+                      "automanage",
+                      "configuration-profile-assignment",
+                      "report",
+                      "list-arc"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2022-05-04",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.hybridcompute/machines/{}/providers/microsoft.automanage/configurationprofileassignments/{}/reports",
+                            "plane": "mgmt-plane",
+                            "version": "2022-05-04"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "list-cluster": {
+                    "help": {
+                      "short": "List a list of HCI reports within a given configuration profile assignment"
+                    },
+                    "names": [
+                      "automanage",
+                      "configuration-profile-assignment",
+                      "report",
+                      "list-cluster"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2022-05-04",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.azurestackhci/clusters/{}/providers/microsoft.automanage/configurationprofileassignments/{}/reports",
+                            "plane": "mgmt-plane",
+                            "version": "2022-05-04"
+                          }
+                        ]
+                      }
+                    ]
+                  },
                   "list-for-arc": {
                     "help": {
                       "short": "List a list of reports within a given configuration profile assignment"
@@ -636,6 +682,75 @@
                       }
                     ]
                   },
+                  "list-vm": {
+                    "help": {
+                      "short": "List a list of VM reports within a given configuration profile assignment"
+                    },
+                    "names": [
+                      "automanage",
+                      "configuration-profile-assignment",
+                      "report",
+                      "list-vm"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2022-05-04",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}/providers/microsoft.automanage/configurationprofileassignments/{}/reports",
+                            "plane": "mgmt-plane",
+                            "version": "2022-05-04"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "show-arc": {
+                    "help": {
+                      "short": "Get information about a report associated with a configuration profile assignment run"
+                    },
+                    "names": [
+                      "automanage",
+                      "configuration-profile-assignment",
+                      "report",
+                      "show-arc"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2022-05-04",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.hybridcompute/machines/{}/providers/microsoft.automanage/configurationprofileassignments/{}/reports/{}",
+                            "plane": "mgmt-plane",
+                            "version": "2022-05-04"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "show-cluster": {
+                    "help": {
+                      "short": "Get information about a HCI report associated with a configuration profile assignment run"
+                    },
+                    "names": [
+                      "automanage",
+                      "configuration-profile-assignment",
+                      "report",
+                      "show-cluster"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2022-05-04",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.azurestackhci/clusters/{}/providers/microsoft.automanage/configurationprofileassignments/{}/reports/{}",
+                            "plane": "mgmt-plane",
+                            "version": "2022-05-04"
+                          }
+                        ]
+                      }
+                    ]
+                  },
                   "show-for-arc": {
                     "help": {
                       "short": "Get information about a report associated with a configuration profile assignment run"
@@ -678,6 +793,29 @@
                             "plane": "mgmt-plane",
                             "version": "2022-05-04"
                           },
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}/providers/microsoft.automanage/configurationprofileassignments/{}/reports/{}",
+                            "plane": "mgmt-plane",
+                            "version": "2022-05-04"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "show-vm": {
+                    "help": {
+                      "short": "Get information about a VM report associated with a configuration profile assignment run"
+                    },
+                    "names": [
+                      "automanage",
+                      "configuration-profile-assignment",
+                      "report",
+                      "show-vm"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2022-05-04",
+                        "resources": [
                           {
                             "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}/providers/microsoft.automanage/configurationprofileassignments/{}/reports/{}",
                             "plane": "mgmt-plane",

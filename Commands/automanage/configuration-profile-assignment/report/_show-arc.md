@@ -1,4 +1,4 @@
-# [Command] _automanage configuration-profile-assignment report show-for-arc_
+# [Command] _automanage configuration-profile-assignment report show-arc_
 
 Get information about a report associated with a configuration profile assignment run
 

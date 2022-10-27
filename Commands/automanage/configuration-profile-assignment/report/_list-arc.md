@@ -1,4 +1,4 @@
-# [Command] _automanage configuration-profile-assignment report list-for-arc_
+# [Command] _automanage configuration-profile-assignment report list-arc_
 
 List a list of reports within a given configuration profile assignment
 
