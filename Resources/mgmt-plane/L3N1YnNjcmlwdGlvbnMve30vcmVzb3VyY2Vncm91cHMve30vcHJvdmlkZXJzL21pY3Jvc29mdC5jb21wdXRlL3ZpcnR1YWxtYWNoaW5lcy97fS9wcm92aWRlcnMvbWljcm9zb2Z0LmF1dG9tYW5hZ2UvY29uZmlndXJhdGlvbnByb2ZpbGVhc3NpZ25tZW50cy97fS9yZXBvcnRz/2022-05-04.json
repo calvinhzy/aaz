@@ -276,8 +276,7 @@
                                                                                 "type": "string",
                                                                                 "name": "type"
                                                                             }
-                                                                        ],
-                                                                        "clientFlatten": true
+                                                                        ]
                                                                     },
                                                                     {
                                                                         "readOnly": true,

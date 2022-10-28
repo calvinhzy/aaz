@@ -44,7 +44,7 @@
                 <schema type="object">
                   <prop readOnly="True" type="ResourceId" name="id"/>
                   <prop readOnly="True" type="string" name="name"/>
-                  <prop type="object" name="properties" clientFlatten="True">
+                  <prop type="object" name="properties">
                     <prop readOnly="True" type="string" name="configurationProfile"/>
                     <prop readOnly="True" type="duration" name="duration"/>
                     <prop type="string" name="endTime"/>
