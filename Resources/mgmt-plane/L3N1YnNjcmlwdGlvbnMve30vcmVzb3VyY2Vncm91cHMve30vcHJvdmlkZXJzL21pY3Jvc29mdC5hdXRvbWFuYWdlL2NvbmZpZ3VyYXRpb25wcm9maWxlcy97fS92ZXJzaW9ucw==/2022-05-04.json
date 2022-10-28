@@ -29,9 +29,11 @@
                                     "type": "string",
                                     "var": "$Path.configurationProfileName",
                                     "options": [
+                                        "profile-name",
                                         "configuration-profile-name"
                                     ],
                                     "required": true,
+                                    "group": "",
                                     "help": {
                                         "short": "Name of the configuration profile."
                                     }

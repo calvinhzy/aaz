@@ -5,7 +5,7 @@
     <command name="show" version="2022-05-04">
       <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.automanage/configurationprofiles/{}/versions/{}" version="2022-05-04" swagger="mgmt-plane/automanage/ResourceProviders/Microsoft.Automanage/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuQXV0b21hbmFnZS9jb25maWd1cmF0aW9uUHJvZmlsZXMve2NvbmZpZ3VyYXRpb25Qcm9maWxlTmFtZX0vdmVyc2lvbnMve3ZlcnNpb25OYW1lfQ==/V/MjAyMi0wNS0wNA=="/>
       <argGroup name="">
-        <arg type="string" var="$Path.configurationProfileName" options="configuration-profile-name" required="True" idPart="name">
+        <arg type="string" var="$Path.configurationProfileName" options="configuration-profile-name profile-name" required="True" group="" idPart="name">
           <help short="The configuration profile name."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
@@ -92,7 +92,7 @@
     <command name="delete" version="2022-05-04" confirmation="Are you sure you want to perform this operation?">
       <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.automanage/configurationprofiles/{}/versions/{}" version="2022-05-04" swagger="mgmt-plane/automanage/ResourceProviders/Microsoft.Automanage/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuQXV0b21hbmFnZS9jb25maWd1cmF0aW9uUHJvZmlsZXMve2NvbmZpZ3VyYXRpb25Qcm9maWxlTmFtZX0vdmVyc2lvbnMve3ZlcnNpb25OYW1lfQ==/V/MjAyMi0wNS0wNA=="/>
       <argGroup name="">
-        <arg type="string" var="$Path.configurationProfileName" options="configuration-profile-name" required="True" idPart="name">
+        <arg type="string" var="$Path.configurationProfileName" options="configuration-profile-name profile-name" required="True" group="" idPart="name">
           <help short="Name of the configuration profile"/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
@@ -136,7 +136,7 @@
     <command name="create" version="2022-05-04">
       <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.automanage/configurationprofiles/{}/versions/{}" version="2022-05-04" swagger="mgmt-plane/automanage/ResourceProviders/Microsoft.Automanage/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuQXV0b21hbmFnZS9jb25maWd1cmF0aW9uUHJvZmlsZXMve2NvbmZpZ3VyYXRpb25Qcm9maWxlTmFtZX0vdmVyc2lvbnMve3ZlcnNpb25OYW1lfQ==/V/MjAyMi0wNS0wNA=="/>
       <argGroup name="">
-        <arg type="string" var="$Path.configurationProfileName" options="configuration-profile-name" required="True" idPart="name">
+        <arg type="string" var="$Path.configurationProfileName" options="configuration-profile-name profile-name" required="True" group="" idPart="name">
           <help short="Name of the configuration profile."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
@@ -257,7 +257,7 @@
     <command name="update" version="2022-05-04">
       <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.automanage/configurationprofiles/{}/versions/{}" version="2022-05-04" swagger="mgmt-plane/automanage/ResourceProviders/Microsoft.Automanage/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuQXV0b21hbmFnZS9jb25maWd1cmF0aW9uUHJvZmlsZXMve2NvbmZpZ3VyYXRpb25Qcm9maWxlTmFtZX0vdmVyc2lvbnMve3ZlcnNpb25OYW1lfQ==/V/MjAyMi0wNS0wNA=="/>
       <argGroup name="">
-        <arg type="string" var="$Path.configurationProfileName" options="configuration-profile-name" required="True" idPart="name">
+        <arg type="string" var="$Path.configurationProfileName" options="configuration-profile-name profile-name" required="True" group="" idPart="name">
           <help short="The configuration profile name."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>

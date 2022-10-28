@@ -29,9 +29,11 @@
                                     "type": "string",
                                     "var": "$Path.configurationProfileName",
                                     "options": [
+                                        "profile-name",
                                         "configuration-profile-name"
                                     ],
                                     "required": true,
+                                    "group": "",
                                     "idPart": "name",
                                     "help": {
                                         "short": "The configuration profile name."
@@ -294,9 +296,11 @@
                                     "type": "string",
                                     "var": "$Path.configurationProfileName",
                                     "options": [
+                                        "profile-name",
                                         "configuration-profile-name"
                                     ],
                                     "required": true,
+                                    "group": "",
                                     "idPart": "name",
                                     "help": {
                                         "short": "Name of the configuration profile"
@@ -443,9 +447,11 @@
                                     "type": "string",
                                     "var": "$Path.configurationProfileName",
                                     "options": [
+                                        "profile-name",
                                         "configuration-profile-name"
                                     ],
                                     "required": true,
+                                    "group": "",
                                     "idPart": "name",
                                     "help": {
                                         "short": "Name of the configuration profile."
@@ -804,9 +810,11 @@
                                     "type": "string",
                                     "var": "$Path.configurationProfileName",
                                     "options": [
+                                        "profile-name",
                                         "configuration-profile-name"
                                     ],
                                     "required": true,
+                                    "group": "",
                                     "idPart": "name",
                                     "help": {
                                         "short": "The configuration profile name."

@@ -42,9 +42,11 @@
                                     "type": "string",
                                     "var": "$Path.configurationProfileAssignmentName",
                                     "options": [
+                                        "assignment-name",
                                         "configuration-profile-assignment-name"
                                     ],
                                     "required": true,
+                                    "group": "",
                                     "idPart": "child_name_1",
                                     "help": {
                                         "short": "The configuration profile assignment name."
