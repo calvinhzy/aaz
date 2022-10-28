@@ -9,10 +9,10 @@
     ],
     "commandGroups": [
         {
-            "name": "automanage configuration-profile-assignment report",
+            "name": "automanage configuration-profile-assignment arc report",
             "commands": [
                 {
-                    "name": "show-arc",
+                    "name": "show",
                     "version": "2022-05-04",
                     "resources": [
                         {

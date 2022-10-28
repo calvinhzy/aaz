@@ -2,6 +2,11 @@
 
 Manage association between a VM and Automanage configuration profile
 
+## Subgroups
+
+- [report](/Commands/automanage/configuration-profile-assignment/vm/report/readme.md)
+: Manage report within a given VM configuration profile assignment
+
 ## Commands
 
 - [create](/Commands/automanage/configuration-profile-assignment/vm/_create.md)

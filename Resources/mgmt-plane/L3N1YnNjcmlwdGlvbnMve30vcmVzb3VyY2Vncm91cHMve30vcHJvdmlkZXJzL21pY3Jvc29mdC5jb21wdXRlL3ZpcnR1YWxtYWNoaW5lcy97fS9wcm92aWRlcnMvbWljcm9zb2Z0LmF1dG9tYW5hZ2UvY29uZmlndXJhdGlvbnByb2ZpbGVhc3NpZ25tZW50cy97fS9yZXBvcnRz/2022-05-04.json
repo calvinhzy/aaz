@@ -9,10 +9,10 @@
     ],
     "commandGroups": [
         {
-            "name": "automanage configuration-profile-assignment report",
+            "name": "automanage configuration-profile-assignment vm report",
             "commands": [
                 {
-                    "name": "list-vm",
+                    "name": "list",
                     "version": "2022-05-04",
                     "resources": [
                         {

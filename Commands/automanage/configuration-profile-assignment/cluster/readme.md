@@ -2,6 +2,11 @@
 
 Manage association between an AzureStackHCI cluster and Automanage configuration profile
 
+## Subgroups
+
+- [report](/Commands/automanage/configuration-profile-assignment/cluster/report/readme.md)
+: Manage report within a given AzureStackHCI cluster configuration profile assignment
+
 ## Commands
 
 - [create](/Commands/automanage/configuration-profile-assignment/cluster/_create.md)

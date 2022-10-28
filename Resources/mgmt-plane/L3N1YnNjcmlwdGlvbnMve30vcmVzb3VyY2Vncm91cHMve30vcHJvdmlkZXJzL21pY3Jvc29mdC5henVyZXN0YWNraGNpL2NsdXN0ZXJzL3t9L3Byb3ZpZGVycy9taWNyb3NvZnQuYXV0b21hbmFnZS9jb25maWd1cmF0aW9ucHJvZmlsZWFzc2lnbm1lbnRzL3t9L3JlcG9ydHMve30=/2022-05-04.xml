@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <CodeGen plane="mgmt-plane">
   <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.azurestackhci/clusters/{}/providers/microsoft.automanage/configurationprofileassignments/{}/reports/{}" version="2022-05-04" swagger="mgmt-plane/automanage/ResourceProviders/Microsoft.Automanage/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuQXp1cmVTdGFja0hjaS9jbHVzdGVycy97Y2x1c3Rlck5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuQXV0b21hbmFnZS9jb25maWd1cmF0aW9uUHJvZmlsZUFzc2lnbm1lbnRzL3tjb25maWd1cmF0aW9uUHJvZmlsZUFzc2lnbm1lbnROYW1lfS9yZXBvcnRzL3tyZXBvcnROYW1lfQ==/V/MjAyMi0wNS0wNA=="/>
-  <commandGroup name="automanage configuration-profile-assignment report">
-    <command name="show-cluster" version="2022-05-04" confirmation="">
+  <commandGroup name="automanage configuration-profile-assignment cluster report">
+    <command name="show" version="2022-05-04" confirmation="">
       <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.azurestackhci/clusters/{}/providers/microsoft.automanage/configurationprofileassignments/{}/reports/{}" version="2022-05-04" swagger="mgmt-plane/automanage/ResourceProviders/Microsoft.Automanage/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuQXp1cmVTdGFja0hjaS9jbHVzdGVycy97Y2x1c3Rlck5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuQXV0b21hbmFnZS9jb25maWd1cmF0aW9uUHJvZmlsZUFzc2lnbm1lbnRzL3tjb25maWd1cmF0aW9uUHJvZmlsZUFzc2lnbm1lbnROYW1lfS9yZXBvcnRzL3tyZXBvcnROYW1lfQ==/V/MjAyMi0wNS0wNA=="/>
       <argGroup name="">
-        <arg type="string" var="$Path.clusterName" options="cluster-name" required="True" idPart="name">
-          <help short="The name of the Arc machine."/>
+        <arg type="string" var="$Path.clusterName" options="cluster-name" required="True" group="" idPart="name">
+          <help short="The name of the HCI cluster."/>
         </arg>
         <arg type="string" var="$Path.configurationProfileAssignmentName" options="configuration-profile-assignment-name" required="True" idPart="child_name_1">
           <help short="The configuration profile assignment name."/>

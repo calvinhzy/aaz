@@ -9,10 +9,10 @@
     ],
     "commandGroups": [
         {
-            "name": "automanage configuration-profile-assignment report",
+            "name": "automanage configuration-profile-assignment cluster report",
             "commands": [
                 {
-                    "name": "show-cluster",
+                    "name": "show",
                     "version": "2022-05-04",
                     "resources": [
                         {
@@ -32,9 +32,10 @@
                                         "cluster-name"
                                     ],
                                     "required": true,
+                                    "group": "",
                                     "idPart": "name",
                                     "help": {
-                                        "short": "The name of the Arc machine."
+                                        "short": "The name of the HCI cluster."
                                     }
                                 },
                                 {

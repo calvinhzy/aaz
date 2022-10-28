@@ -2,6 +2,11 @@
 
 Manage association between an ARC machine and Automanage configuration profile
 
+## Subgroups
+
+- [report](/Commands/automanage/configuration-profile-assignment/arc/report/readme.md)
+: Manage report within a given ARC machine configuration profile assignment
+
 ## Commands
 
 - [create](/Commands/automanage/configuration-profile-assignment/arc/_create.md)
