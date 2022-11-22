@@ -32,7 +32,7 @@
                         <format template="/subscriptions/{}/providers/Microsoft.Automanage/servicePrincipals/default"/>
                       </prop>
                       <prop readOnly="True" type="string" name="name"/>
-                      <prop type="object" name="properties" clientFlatten="True">
+                      <prop type="object" name="properties">
                         <prop readOnly="True" type="boolean" name="authorizationSet"/>
                         <prop readOnly="True" type="string" name="servicePrincipalId"/>
                       </prop>

@@ -123,8 +123,7 @@
                                                                         "anyType": true
                                                                     }
                                                                 }
-                                                            ],
-                                                            "clientFlatten": true
+                                                            ]
                                                         },
                                                         {
                                                             "readOnly": true,

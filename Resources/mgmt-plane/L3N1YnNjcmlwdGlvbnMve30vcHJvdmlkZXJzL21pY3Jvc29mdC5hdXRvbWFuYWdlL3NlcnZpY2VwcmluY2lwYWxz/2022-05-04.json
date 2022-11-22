@@ -118,8 +118,7 @@
                                                                                 "type": "string",
                                                                                 "name": "servicePrincipalId"
                                                                             }
-                                                                        ],
-                                                                        "clientFlatten": true
+                                                                        ]
                                                                     },
                                                                     {
                                                                         "readOnly": true,
