@@ -683,6 +683,11 @@
                                 "responses": [
                                     {
                                         "statusCode": [
+                                            200
+                                        ]
+                                    },
+                                    {
+                                        "statusCode": [
                                             202
                                         ]
                                     },
@@ -817,8 +822,9 @@
                                                         "multi-vm-sync-status"
                                                     ],
                                                     "required": true,
+                                                    "group": "",
                                                     "help": {
-                                                        "short": "A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'."
+                                                        "short": "A value indicating whether multi-VM sync has to be enabled. Value should be 'Enable' or 'Disable'."
                                                     },
                                                     "enum": {
                                                         "items": [
@@ -2408,8 +2414,9 @@
                                                     "options": [
                                                         "multi-vm-sync-status"
                                                     ],
+                                                    "group": "",
                                                     "help": {
-                                                        "short": "A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'."
+                                                        "short": "A value indicating whether multi-VM sync has to be enabled. Value should be 'Enable' or 'Disable'."
                                                     },
                                                     "enum": {
                                                         "items": [

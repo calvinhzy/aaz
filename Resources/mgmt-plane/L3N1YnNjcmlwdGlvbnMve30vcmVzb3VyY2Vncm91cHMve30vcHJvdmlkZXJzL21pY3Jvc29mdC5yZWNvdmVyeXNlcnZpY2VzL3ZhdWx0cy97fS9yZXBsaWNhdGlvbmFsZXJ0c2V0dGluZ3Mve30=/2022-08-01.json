@@ -301,7 +301,7 @@
                                     ],
                                     "group": "Properties",
                                     "help": {
-                                        "short": "A value indicating whether to send email to subscription administrator."
+                                        "short": "A value indicating whether to send email to subscription administrator. Allowed values: \"Send\", \"DoNotSend\""
                                     }
                                 }
                             ]
@@ -575,7 +575,7 @@
                                     ],
                                     "group": "Properties",
                                     "help": {
-                                        "short": "A value indicating whether to send email to subscription administrator."
+                                        "short": "A value indicating whether to send email to subscription administrator. Allowed values: \"Send\", \"DoNotSend\""
                                     }
                                 }
                             ]

@@ -188,6 +188,7 @@
               </const>
             </query>
           </request>
+          <response statusCode="200"/>
           <response statusCode="202"/>
           <response statusCode="204"/>
           <response isError="True">
@@ -222,8 +223,8 @@
             <arg type="integer32" var="$input.properties.providerSpecificInput.A2A.crashConsistentFrequencyInMinutes" options="crash-consistent-frequency-in-minutes">
               <help short="The crash consistent snapshot frequency (in minutes)."/>
             </arg>
-            <arg type="string" var="$input.properties.providerSpecificInput.A2A.multiVmSyncStatus" options="multi-vm-sync-status" required="True">
-              <help short="A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'."/>
+            <arg type="string" var="$input.properties.providerSpecificInput.A2A.multiVmSyncStatus" options="multi-vm-sync-status" required="True" group="">
+              <help short="A value indicating whether multi-VM sync has to be enabled. Value should be 'Enable' or 'Disable'."/>
               <enum>
                 <item name="Disable" value="&quot;Disable&quot;"/>
                 <item name="Enable" value="&quot;Enable&quot;"/>
@@ -669,8 +670,8 @@
             <arg nullable="True" type="integer32" var="$input.properties.providerSpecificInput.A2A.crashConsistentFrequencyInMinutes" options="crash-consistent-frequency-in-minutes">
               <help short="The crash consistent snapshot frequency (in minutes)."/>
             </arg>
-            <arg type="string" var="$input.properties.providerSpecificInput.A2A.multiVmSyncStatus" options="multi-vm-sync-status">
-              <help short="A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'."/>
+            <arg type="string" var="$input.properties.providerSpecificInput.A2A.multiVmSyncStatus" options="multi-vm-sync-status" group="">
+              <help short="A value indicating whether multi-VM sync has to be enabled. Value should be 'Enable' or 'Disable'."/>
               <enum>
                 <item name="Disable" value="&quot;Disable&quot;"/>
                 <item name="Enable" value="&quot;Enable&quot;"/>

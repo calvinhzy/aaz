@@ -82,7 +82,7 @@
           <help short="The locale for the email notification."/>
         </arg>
         <arg type="string" var="$request.properties.sendToOwners" options="send-to-owners" group="Properties">
-          <help short="A value indicating whether to send email to subscription administrator."/>
+          <help short="A value indicating whether to send email to subscription administrator. Allowed values: &quot;Send&quot;, &quot;DoNotSend&quot;"/>
         </arg>
       </argGroup>
       <operation operationId="ReplicationAlertSettings_Create">
@@ -166,7 +166,7 @@
           <help short="The locale for the email notification."/>
         </arg>
         <arg nullable="True" type="string" var="$request.properties.sendToOwners" options="send-to-owners" group="Properties">
-          <help short="A value indicating whether to send email to subscription administrator."/>
+          <help short="A value indicating whether to send email to subscription administrator. Allowed values: &quot;Send&quot;, &quot;DoNotSend&quot;"/>
         </arg>
       </argGroup>
       <operation operationId="ReplicationAlertSettings_Get">
