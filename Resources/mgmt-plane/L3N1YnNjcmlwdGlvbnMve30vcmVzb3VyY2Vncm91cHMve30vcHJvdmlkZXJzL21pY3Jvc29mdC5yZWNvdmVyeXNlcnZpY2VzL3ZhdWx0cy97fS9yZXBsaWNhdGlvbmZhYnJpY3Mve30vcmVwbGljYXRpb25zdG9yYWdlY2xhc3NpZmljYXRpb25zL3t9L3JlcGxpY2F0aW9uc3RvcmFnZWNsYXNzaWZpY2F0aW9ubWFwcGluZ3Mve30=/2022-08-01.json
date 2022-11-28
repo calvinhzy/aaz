@@ -9,7 +9,7 @@
     ],
     "commandGroups": [
         {
-            "name": "site-recovery vault fabric storage-classification storage-classification-mapping",
+            "name": "site-recovery fabric storage-classification storage-classification-mapping",
             "commands": [
                 {
                     "name": "show",

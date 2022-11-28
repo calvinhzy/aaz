@@ -9,7 +9,7 @@
     ],
     "commandGroups": [
         {
-            "name": "site-recovery vault fabric protection-container migration-item",
+            "name": "site-recovery fabric protection-container migration-item",
             "commands": [
                 {
                     "name": "resume-replication",

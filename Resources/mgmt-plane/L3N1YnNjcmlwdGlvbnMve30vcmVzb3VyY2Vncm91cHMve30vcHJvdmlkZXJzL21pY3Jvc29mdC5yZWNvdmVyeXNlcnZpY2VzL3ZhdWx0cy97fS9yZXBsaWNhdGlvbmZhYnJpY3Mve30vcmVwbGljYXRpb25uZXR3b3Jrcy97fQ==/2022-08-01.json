@@ -9,7 +9,7 @@
     ],
     "commandGroups": [
         {
-            "name": "site-recovery vault fabric network",
+            "name": "site-recovery fabric network",
             "commands": [
                 {
                     "name": "show",

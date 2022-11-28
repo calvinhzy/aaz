@@ -9,7 +9,7 @@
     ],
     "commandGroups": [
         {
-            "name": "site-recovery vault fabric protection-container protectable-item",
+            "name": "site-recovery fabric protection-container protectable-item",
             "commands": [
                 {
                     "name": "show",

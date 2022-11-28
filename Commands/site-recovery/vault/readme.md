@@ -10,9 +10,6 @@ Manage Vault
 - [event](/Commands/site-recovery/vault/event/readme.md)
 : Manage Vault Event
 
-- [fabric](/Commands/site-recovery/vault/fabric/readme.md)
-: Manage Vault Fabric
-
 - [health](/Commands/site-recovery/vault/health/readme.md)
 : Manage the health details of the vault.
 

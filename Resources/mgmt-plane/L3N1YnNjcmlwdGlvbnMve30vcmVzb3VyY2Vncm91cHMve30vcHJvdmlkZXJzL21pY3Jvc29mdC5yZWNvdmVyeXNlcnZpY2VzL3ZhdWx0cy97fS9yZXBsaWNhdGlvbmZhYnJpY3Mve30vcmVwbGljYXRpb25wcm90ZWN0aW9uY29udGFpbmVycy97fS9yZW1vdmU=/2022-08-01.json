@@ -9,7 +9,7 @@
     ],
     "commandGroups": [
         {
-            "name": "site-recovery vault fabric protection-container",
+            "name": "site-recovery fabric protection-container",
             "commands": [
                 {
                     "name": "remove",

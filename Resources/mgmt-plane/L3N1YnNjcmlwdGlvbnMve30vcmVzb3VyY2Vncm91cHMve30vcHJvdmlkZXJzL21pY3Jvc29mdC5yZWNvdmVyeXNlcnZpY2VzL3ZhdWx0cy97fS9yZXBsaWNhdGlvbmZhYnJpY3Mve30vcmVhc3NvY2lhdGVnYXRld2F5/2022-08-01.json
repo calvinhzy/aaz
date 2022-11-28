@@ -9,7 +9,7 @@
     ],
     "commandGroups": [
         {
-            "name": "site-recovery vault fabric",
+            "name": "site-recovery fabric",
             "commands": [
                 {
                     "name": "reassociate-gateway",
