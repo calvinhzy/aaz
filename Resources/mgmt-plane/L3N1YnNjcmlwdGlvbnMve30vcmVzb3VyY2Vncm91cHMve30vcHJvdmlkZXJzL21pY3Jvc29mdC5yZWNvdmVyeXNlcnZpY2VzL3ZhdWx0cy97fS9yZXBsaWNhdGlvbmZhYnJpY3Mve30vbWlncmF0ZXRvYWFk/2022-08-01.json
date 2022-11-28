@@ -12,7 +12,7 @@
             "name": "site-recovery fabric",
             "commands": [
                 {
-                    "name": "migratetoaad",
+                    "name": "migrate-to-aad",
                     "version": "2022-08-01",
                     "resources": [
                         {
@@ -144,7 +144,8 @@
                                 ]
                             }
                         }
-                    ]
+                    ],
+                    "confirmation": ""
                 }
             ]
         }

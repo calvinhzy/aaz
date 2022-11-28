@@ -11008,14 +11008,14 @@
                   }
                 ]
               },
-              "migratetoaad": {
+              "migrate-to-aad": {
                 "help": {
                   "short": "The operation to migrate an Azure Site Recovery fabric to AAD."
                 },
                 "names": [
                   "site-recovery",
                   "fabric",
-                  "migratetoaad"
+                  "migrate-to-aad"
                 ],
                 "versions": [
                   {

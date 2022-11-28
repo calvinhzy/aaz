@@ -1,4 +1,4 @@
-# [Command] _site-recovery fabric migratetoaad_
+# [Command] _site-recovery fabric migrate-to-aad_
 
 The operation to migrate an Azure Site Recovery fabric to AAD.
 

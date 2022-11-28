@@ -36,7 +36,7 @@ Manage Vault Fabric
 - [list](/Commands/site-recovery/fabric/_list.md)
 : List a list of the Azure Site Recovery fabrics in the vault.
 
-- [migratetoaad](/Commands/site-recovery/fabric/_migratetoaad.md)
+- [migrate-to-aad](/Commands/site-recovery/fabric/_migrate-to-aad.md)
 : The operation to migrate an Azure Site Recovery fabric to AAD.
 
 - [reassociate-gateway](/Commands/site-recovery/fabric/_reassociate-gateway.md)
