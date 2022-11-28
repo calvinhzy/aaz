@@ -1,6 +1,6 @@
 # [Command] _site-recovery vault policy update_
 
-Update operation to create a replication policy.
+Update operation to update a replication policy.
 
 ## Versions
 

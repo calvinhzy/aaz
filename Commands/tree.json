@@ -11777,7 +11777,7 @@
                   },
                   "update": {
                     "help": {
-                      "short": "Update operation to create a replication policy."
+                      "short": "Update operation to update a replication policy."
                     },
                     "names": [
                       "site-recovery",

@@ -17,4 +17,4 @@ Manage the replication policies for a vault.
 : Get the details of a replication policy.
 
 - [update](/Commands/site-recovery/vault/policy/_update.md)
-: Update operation to create a replication policy.
+: Update operation to update a replication policy.
