@@ -259,7 +259,7 @@
         </http>
       </operation>
       <operation>
-        <instanceUpdate instance="$Instance">
+        <instanceUpdate ref="$Instance">
           <json>
             <schema type="object" name="pairingInput" required="True" clientFlatten="True">
               <prop type="object" name="properties">

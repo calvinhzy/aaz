@@ -11162,6 +11162,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery replication-eligibility list -g {rg} --virtual-machine-name {vm_name}"
+                        ],
+                        "name": "List replication eligibility"
+                      }
+                    ],
                     "name": "2022-08-01",
                     "resources": [
                       {
@@ -11184,6 +11192,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery replication-eligibility show-default -g {rg} --virtual-machine-name {vm_name}"
+                        ],
+                        "name": "Show default replication-eligibility"
+                      }
+                    ],
                     "name": "2022-08-01",
                     "resources": [
                       {
@@ -11220,6 +11236,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery vault alert-setting create -n defaultAlertSetting -g {rg} --resource-name {vault_name} --custom-email-addresses email@address.com --locale en_US --send-to-owners Send"
+                            ],
+                            "name": "alert-setting create"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
@@ -11243,6 +11267,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery vault alert-setting list -g {rg} --resource-name {vault_name}"
+                            ],
+                            "name": "alert-setting list"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
@@ -11266,6 +11298,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery vault alert-setting show -n defaultAlertSetting -g {rg} --resource-name {vault_name}"
+                            ],
+                            "name": "alert-setting show"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
@@ -11289,6 +11329,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery vault alert-setting update -n defaultAlertSetting -g {rg} --resource-name {vault_name} --custom-email-addresses email2@address.com --locale fr_FR --send-to-owners DoNotSend"
+                            ],
+                            "name": "alert-setting update"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
@@ -11324,6 +11372,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery vault event list -g {rg} --resource-name {vault_name}"
+                            ],
+                            "name": "event list"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
@@ -11347,6 +11403,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery vault event show -g {rg} --resource-name {vault_name} -n {event_name}"
+                            ],
+                            "name": "event show"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
@@ -11382,6 +11446,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery vault health refresh-default -g {rg} --resource-name {vault_name}"
+                            ],
+                            "name": "health refresh-default"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
@@ -11405,6 +11477,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery vault health show -g {rg} --resource-name {vault_name}"
+                            ],
+                            "name": "health show"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
@@ -11463,6 +11543,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery vault job export -g {rg} --resource-name {vault_name}"
+                            ],
+                            "name": "job export"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
@@ -11486,6 +11574,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery vault job list -g {rg} --resource-name {vault_name}"
+                            ],
+                            "name": "job list"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
@@ -11555,6 +11651,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery vault job show -g {rg} --resource-name {vault_name} --job-name {job_name}"
+                            ],
+                            "name": "job show"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
@@ -11590,6 +11694,20 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery vault policy create -g {rg} --resource-name {vault_name} -n {policy_name_rcm} --provider-specific-input {{in-mage-rcm:{{app-consistent-frequency-in-minutes:0,crash-consistent-frequency-in-minutes:5,enable-multi-vm-sync:true,recovery-point-history-in-minutes:2880}}}}"
+                            ],
+                            "name": "policy create of type in-mage-rcm"
+                          },
+                          {
+                            "commands": [
+                              "site-recovery vault policy create -g {rg} --resource-name {vault_name} -n {policy_name_rcm_failback} --provider-specific-input {{in-mage-rcm-failback:{{app-consistent-frequency-in-minutes:60,crash-consistent-frequency-in-minutes:5}}}}"
+                            ],
+                            "name": "policy create for type in-mage-rcm-failback"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
@@ -11613,6 +11731,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery vault policy delete -g {rg} --resource-name {vault_name} -n {policy_name_rcm}"
+                            ],
+                            "name": "policy delete"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
@@ -11636,6 +11762,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery vault policy list -g {rg} --resource-name {vault_name}"
+                            ],
+                            "name": "policy list"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
@@ -11659,6 +11793,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery vault policy show -g {rg} --resource-name {vault_name} -n {policy_name_rcm}"
+                            ],
+                            "name": "policy show"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
@@ -11682,6 +11824,20 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery vault policy update --debug -g {rg} --resource-name {vault_name} -n {policy_name_rcm} --provider-specific-input {{in-mage-rcm:{{app-consistent-frequency-in-minutes:0,crash-consistent-frequency-in-minutes:5,enable-multi-vm-sync:true,recovery-point-history-in-minutes:1440}}}}"
+                            ],
+                            "name": "policy update for type in-mage-rcm"
+                          },
+                          {
+                            "commands": [
+                              "site-recovery vault policy update -g {rg} --resource-name {vault_name} -n {policy_name_rcm_failback} --provider-specific-input {{in-mage-rcm-failback:{{app-consistent-frequency-in-minutes:0,crash-consistent-frequency-in-minutes:10}}}}"
+                            ],
+                            "name": "policy update for type in-mage-rcm-failback"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
@@ -12212,6 +12368,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery vault list-appliance -g {rg} --resource-name {vault_name}"
+                        ],
+                        "name": "list-appliance for vault"
+                      }
+                    ],
                     "name": "2022-08-01",
                     "resources": [
                       {
@@ -12234,6 +12398,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery vault list-migration-item -g {rg} --resource-name {vault_name}"
+                        ],
+                        "name": "list-migration-item"
+                      }
+                    ],
                     "name": "2022-08-01",
                     "resources": [
                       {
@@ -12256,6 +12428,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery vault list-network -g {rg} --resource-name {vault_name}"
+                        ],
+                        "name": "list-network"
+                      }
+                    ],
                     "name": "2022-08-01",
                     "resources": [
                       {
@@ -12278,6 +12458,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery vault list-network-mapping -g {rg} --resource-name {vault_name}"
+                        ],
+                        "name": "list-network-mapping"
+                      }
+                    ],
                     "name": "2022-08-01",
                     "resources": [
                       {
@@ -12300,6 +12488,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery vault list-protected-item -g {rg} --resource-name {vault_name}"
+                        ],
+                        "name": "list-protected-item"
+                      }
+                    ],
                     "name": "2022-08-01",
                     "resources": [
                       {
@@ -12322,6 +12518,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery vault list-protection-container -g {rg} --resource-name {vault_name}"
+                        ],
+                        "name": "list-protection-container"
+                      }
+                    ],
                     "name": "2022-08-01",
                     "resources": [
                       {
@@ -12344,6 +12548,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery vault list-protection-container-mapping -g {rg} --resource-name {vault_name}"
+                        ],
+                        "name": "list-protection-container-mapping"
+                      }
+                    ],
                     "name": "2022-08-01",
                     "resources": [
                       {
@@ -12366,6 +12578,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery vault list-recovery-services-provider -g {rg} --resource-name {vault_name}"
+                        ],
+                        "name": "list-recovery-services-provider"
+                      }
+                    ],
                     "name": "2022-08-01",
                     "resources": [
                       {
@@ -12388,6 +12608,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery vault list-storage-classification -g {rg} --resource-name {vault_name}"
+                        ],
+                        "name": "list-storage-classification"
+                      }
+                    ],
                     "name": "2022-08-01",
                     "resources": [
                       {
@@ -12410,6 +12638,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery vault list-storage-classification-mapping -g {rg} --resource-name {vault_name}"
+                        ],
+                        "name": "list-storage-classification-mapping"
+                      }
+                    ],
                     "name": "2022-08-01",
                     "resources": [
                       {
@@ -12432,6 +12668,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery vault list-v-center -g {rg} --resource-name {vault_name}"
+                        ],
+                        "name": "list-v-center"
+                      }
+                    ],
                     "name": "2022-08-01",
                     "resources": [
                       {
@@ -12454,6 +12698,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery vault show-supported-operating-system -g {rg} --resource-name {vault_name}"
+                        ],
+                        "name": "show-supported-operating-system"
+                      }
+                    ],
                     "name": "2022-08-01",
                     "resources": [
                       {
