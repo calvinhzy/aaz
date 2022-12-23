@@ -53,9 +53,10 @@
                                     "type": "string",
                                     "var": "$Path.resourceName",
                                     "options": [
-                                        "resource-name"
+                                        "vault-name"
                                     ],
                                     "required": true,
+                                    "group": "",
                                     "idPart": "name",
                                     "help": {
                                         "short": "The name of the recovery services vault."
@@ -246,9 +247,10 @@
                                     "type": "string",
                                     "var": "$Path.resourceName",
                                     "options": [
-                                        "resource-name"
+                                        "vault-name"
                                     ],
                                     "required": true,
+                                    "group": "",
                                     "idPart": "name",
                                     "help": {
                                         "short": "The name of the recovery services vault."
@@ -516,9 +518,10 @@
                                     "type": "string",
                                     "var": "$Path.resourceName",
                                     "options": [
-                                        "resource-name"
+                                        "vault-name"
                                     ],
                                     "required": true,
+                                    "group": "",
                                     "idPart": "name",
                                     "help": {
                                         "short": "The name of the recovery services vault."

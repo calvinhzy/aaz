@@ -9,7 +9,7 @@
           <help short="fabric name to renew certs for."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True"/>
-        <arg type="string" var="$Path.resourceName" options="resource-name" required="True">
+        <arg type="string" var="$Path.resourceName" options="vault-name" required="True" group="">
           <help short="The name of the recovery services vault."/>
         </arg>
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True"/>

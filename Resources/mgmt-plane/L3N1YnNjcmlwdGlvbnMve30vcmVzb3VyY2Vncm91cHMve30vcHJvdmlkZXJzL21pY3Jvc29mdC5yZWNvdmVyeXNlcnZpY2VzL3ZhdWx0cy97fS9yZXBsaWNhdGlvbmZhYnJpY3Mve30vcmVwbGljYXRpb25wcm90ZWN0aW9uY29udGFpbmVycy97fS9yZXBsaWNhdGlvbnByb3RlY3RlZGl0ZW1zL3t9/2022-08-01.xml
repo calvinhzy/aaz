@@ -15,7 +15,7 @@
           <help short="Replication protected item name."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
-        <arg type="string" var="$Path.resourceName" options="resource-name" required="True" idPart="name">
+        <arg type="string" var="$Path.resourceName" options="vault-name" required="True" group="" idPart="name">
           <help short="The name of the recovery services vault."/>
         </arg>
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
@@ -1130,7 +1130,7 @@
           <help short="Replication protected item name."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
-        <arg type="string" var="$Path.resourceName" options="resource-name" required="True" idPart="name">
+        <arg type="string" var="$Path.resourceName" options="vault-name" required="True" group="" idPart="name">
           <help short="The name of the recovery services vault."/>
         </arg>
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
@@ -1178,7 +1178,7 @@
           <help short="A name for the replication protected item."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
-        <arg type="string" var="$Path.resourceName" options="resource-name" required="True" idPart="name">
+        <arg type="string" var="$Path.resourceName" options="vault-name" required="True" group="" idPart="name">
           <help short="The name of the recovery services vault."/>
         </arg>
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
@@ -3149,7 +3149,7 @@
           <help short="Replication protected item name."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
-        <arg type="string" var="$Path.resourceName" options="resource-name" required="True" idPart="name">
+        <arg type="string" var="$Path.resourceName" options="vault-name" required="True" group="" idPart="name">
           <help short="The name of the recovery services vault."/>
         </arg>
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>

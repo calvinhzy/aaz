@@ -9,7 +9,7 @@
           <help short="Fabric name."/>
         </arg>
         <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True"/>
-        <arg type="string" var="$Path.resourceName" options="resource-name" required="True">
+        <arg type="string" var="$Path.resourceName" options="vault-name" required="True" group="">
           <help short="The name of the recovery services vault."/>
         </arg>
         <arg type="string" var="$Path.storageClassificationName" options="storage-classification-name storage-classification" required="True">
