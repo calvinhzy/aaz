@@ -10094,163 +10094,6 @@
                       "protection-container",
                       "protected-item"
                     ]
-                  },
-                  "protection-container-mapping": {
-                    "commands": {
-                      "create": {
-                        "help": {
-                          "short": "Create operation to create a protection container mapping."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "protection-container-mapping",
-                          "create"
-                        ],
-                        "versions": [
-                          {
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotectioncontainermappings/{}",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "delete": {
-                        "help": {
-                          "short": "Delete operation to purge(force delete) a protection container mapping."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "protection-container-mapping",
-                          "delete"
-                        ],
-                        "versions": [
-                          {
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotectioncontainermappings/{}",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "list": {
-                        "help": {
-                          "short": "List the protection container mappings for a protection container."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "protection-container-mapping",
-                          "list"
-                        ],
-                        "versions": [
-                          {
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotectioncontainermappings",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "remove": {
-                        "help": {
-                          "short": "The operation to delete or remove a protection container mapping."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "protection-container-mapping",
-                          "remove"
-                        ],
-                        "versions": [
-                          {
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotectioncontainermappings/{}/remove",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "show": {
-                        "help": {
-                          "short": "Get the details of a protection container mapping."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "protection-container-mapping",
-                          "show"
-                        ],
-                        "versions": [
-                          {
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotectioncontainermappings/{}",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "update": {
-                        "help": {
-                          "short": "Update operation to create a protection container mapping."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "protection-container-mapping",
-                          "update"
-                        ],
-                        "versions": [
-                          {
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotectioncontainermappings/{}",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    },
-                    "help": {
-                      "short": "Manage a protection container mapping for a protection container."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "fabric",
-                      "protection-container",
-                      "protection-container-mapping"
-                    ]
                   }
                 },
                 "commands": {
@@ -10423,6 +10266,156 @@
                   "site-recovery",
                   "fabric",
                   "protection-container"
+                ]
+              },
+              "protection-container-mapping": {
+                "commands": {
+                  "create": {
+                    "help": {
+                      "short": "Create operation to create a protection container mapping."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "protection-container-mapping",
+                      "create"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2022-08-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotectioncontainermappings/{}",
+                            "plane": "mgmt-plane",
+                            "version": "2022-08-01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "delete": {
+                    "help": {
+                      "short": "Delete operation to purge(force delete) a protection container mapping."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "protection-container-mapping",
+                      "delete"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2022-08-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotectioncontainermappings/{}",
+                            "plane": "mgmt-plane",
+                            "version": "2022-08-01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "list": {
+                    "help": {
+                      "short": "List the protection container mappings for a protection container."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "protection-container-mapping",
+                      "list"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2022-08-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotectioncontainermappings",
+                            "plane": "mgmt-plane",
+                            "version": "2022-08-01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "remove": {
+                    "help": {
+                      "short": "The operation to delete or remove a protection container mapping."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "protection-container-mapping",
+                      "remove"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2022-08-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotectioncontainermappings/{}/remove",
+                            "plane": "mgmt-plane",
+                            "version": "2022-08-01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "show": {
+                    "help": {
+                      "short": "Get the details of a protection container mapping."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "protection-container-mapping",
+                      "show"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2022-08-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotectioncontainermappings/{}",
+                            "plane": "mgmt-plane",
+                            "version": "2022-08-01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "update": {
+                    "help": {
+                      "short": "Update operation to create a protection container mapping."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "fabric",
+                      "protection-container-mapping",
+                      "update"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2022-08-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotectioncontainermappings/{}",
+                            "plane": "mgmt-plane",
+                            "version": "2022-08-01"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "help": {
+                  "short": "Manage a protection container mapping for a protection container."
+                },
+                "names": [
+                  "site-recovery",
+                  "fabric",
+                  "protection-container-mapping"
                 ]
               },
               "recovery-services-provider": {
@@ -11142,7 +11135,7 @@
               }
             },
             "help": {
-              "short": "Manage Vault Fabric"
+              "short": "Manage Fabric"
             },
             "names": [
               "site-recovery",

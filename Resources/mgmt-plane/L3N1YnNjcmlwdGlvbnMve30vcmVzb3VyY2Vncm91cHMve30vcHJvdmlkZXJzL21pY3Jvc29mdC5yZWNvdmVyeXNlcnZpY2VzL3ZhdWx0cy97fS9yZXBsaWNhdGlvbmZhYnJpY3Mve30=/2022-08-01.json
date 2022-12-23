@@ -2089,6 +2089,11 @@
                                 "responses": [
                                     {
                                         "statusCode": [
+                                            200
+                                        ]
+                                    },
+                                    {
+                                        "statusCode": [
                                             202
                                         ]
                                     },

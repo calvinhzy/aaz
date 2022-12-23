@@ -1,6 +1,6 @@
-# [Command] _site-recovery fabric protection-container protection-container-mapping show_
+# [Command] _site-recovery fabric protection-container-mapping create_
 
-Get the details of a protection container mapping.
+Create operation to create a protection container mapping.
 
 ## Versions
 

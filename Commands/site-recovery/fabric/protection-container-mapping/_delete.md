@@ -1,4 +1,4 @@
-# [Command] _site-recovery fabric protection-container protection-container-mapping delete_
+# [Command] _site-recovery fabric protection-container-mapping delete_
 
 Delete operation to purge(force delete) a protection container mapping.
 

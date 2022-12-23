@@ -1,6 +1,6 @@
 # [Group] _site-recovery fabric_
 
-Manage Vault Fabric
+Manage Fabric
 
 ## Subgroups
 
@@ -12,6 +12,9 @@ Manage Vault Fabric
 
 - [protection-container](/Commands/site-recovery/fabric/protection-container/readme.md)
 : Manage Vault Fabric Protection Container
+
+- [protection-container-mapping](/Commands/site-recovery/fabric/protection-container-mapping/readme.md)
+: Manage a protection container mapping for a protection container.
 
 - [recovery-services-provider](/Commands/site-recovery/fabric/recovery-services-provider/readme.md)
 : Manage recovery services providers for the specified fabric.

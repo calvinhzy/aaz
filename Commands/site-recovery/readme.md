@@ -5,7 +5,7 @@ Manage Site Recovery Service
 ## Subgroups
 
 - [fabric](/Commands/site-recovery/fabric/readme.md)
-: Manage Vault Fabric
+: Manage Fabric
 
 - [replication-eligibility](/Commands/site-recovery/replication-eligibility/readme.md)
 : Manage Replication Eligibility
