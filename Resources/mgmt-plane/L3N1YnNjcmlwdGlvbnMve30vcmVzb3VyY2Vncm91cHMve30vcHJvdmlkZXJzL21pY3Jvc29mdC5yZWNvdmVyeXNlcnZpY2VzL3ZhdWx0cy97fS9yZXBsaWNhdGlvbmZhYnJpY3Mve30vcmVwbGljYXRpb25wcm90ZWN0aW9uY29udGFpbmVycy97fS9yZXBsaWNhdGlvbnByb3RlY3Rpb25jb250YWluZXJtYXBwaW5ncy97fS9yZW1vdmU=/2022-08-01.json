@@ -32,6 +32,7 @@
                                         "fabric-name"
                                     ],
                                     "required": true,
+                                    "idPart": "child_name_1",
                                     "help": {
                                         "short": "Fabric name."
                                     }
@@ -43,6 +44,7 @@
                                         "mapping-name"
                                     ],
                                     "required": true,
+                                    "idPart": "child_name_3",
                                     "help": {
                                         "short": "Protection container mapping name."
                                     }
@@ -55,6 +57,7 @@
                                         "protection-container-name"
                                     ],
                                     "required": true,
+                                    "idPart": "child_name_2",
                                     "help": {
                                         "short": "Protection container name."
                                     }
@@ -66,7 +69,8 @@
                                         "g",
                                         "resource-group"
                                     ],
-                                    "required": true
+                                    "required": true,
+                                    "idPart": "resource_group"
                                 },
                                 {
                                     "type": "string",
@@ -76,6 +80,7 @@
                                     ],
                                     "required": true,
                                     "group": "",
+                                    "idPart": "name",
                                     "help": {
                                         "short": "The name of the recovery services vault."
                                     }
@@ -86,7 +91,8 @@
                                     "options": [
                                         "subscription"
                                     ],
-                                    "required": true
+                                    "required": true,
+                                    "idPart": "subscription"
                                 }
                             ]
                         },
