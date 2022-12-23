@@ -9,7 +9,7 @@
     ],
     "commandGroups": [
         {
-            "name": "site-recovery fabric protection-container-mapping",
+            "name": "site-recovery protection-container-mapping",
             "commands": [
                 {
                     "name": "remove",

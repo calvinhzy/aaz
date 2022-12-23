@@ -7,6 +7,9 @@ Manage Site Recovery Service
 - [fabric](/Commands/site-recovery/fabric/readme.md)
 : Manage Fabric
 
+- [protection-container-mapping](/Commands/site-recovery/protection-container-mapping/readme.md)
+: Manage a protection container mapping for a protection container.
+
 - [replication-eligibility](/Commands/site-recovery/replication-eligibility/readme.md)
 : Manage Replication Eligibility
 

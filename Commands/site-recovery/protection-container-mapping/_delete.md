@@ -1,6 +1,6 @@
-# [Command] _site-recovery fabric protection-container-mapping update_
+# [Command] _site-recovery protection-container-mapping delete_
 
-Update operation to create a protection container mapping.
+Delete operation to purge(force delete) a protection container mapping.
 
 ## Versions
 
