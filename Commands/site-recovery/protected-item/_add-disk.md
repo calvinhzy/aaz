@@ -1,4 +1,4 @@
-# [Command] _site-recovery fabric protection-container protected-item add-disk_
+# [Command] _site-recovery protected-item add-disk_
 
 Operation to add disks(s) to the replication protected item.
 

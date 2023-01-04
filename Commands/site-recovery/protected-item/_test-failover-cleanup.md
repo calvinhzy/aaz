@@ -1,4 +1,4 @@
-# [Command] _site-recovery fabric protection-container protected-item test-failover-cleanup_
+# [Command] _site-recovery protected-item test-failover-cleanup_
 
 Operation to clean up the test failover of a replication protected item.
 

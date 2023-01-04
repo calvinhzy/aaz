@@ -1,4 +1,4 @@
-# [Command] _site-recovery fabric protection-container protected-item planned-failover_
+# [Command] _site-recovery protected-item planned-failover_
 
 Operation to initiate a planned failover of the replication protected item.
 

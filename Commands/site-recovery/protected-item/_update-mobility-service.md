@@ -1,4 +1,4 @@
-# [Command] _site-recovery fabric protection-container protected-item update-mobility-service_
+# [Command] _site-recovery protected-item update-mobility-service_
 
 The operation to update(push update) the installed mobility service software on a replication protected item to the latest available version.
 

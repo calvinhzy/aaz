@@ -1,4 +1,4 @@
-# [Command] _site-recovery fabric protection-container protected-item list-target-compute-size_
+# [Command] _site-recovery protected-item list-target-compute-size_
 
 List the available target compute sizes for a replication protected item.
 

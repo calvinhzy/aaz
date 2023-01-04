@@ -1,4 +1,4 @@
-# [Command] _site-recovery fabric protection-container protected-item create_
+# [Command] _site-recovery protected-item create_
 
 Create operation to create an ASR replication protected item (Enable replication).
 

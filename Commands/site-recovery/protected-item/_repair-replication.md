@@ -1,4 +1,4 @@
-# [Command] _site-recovery fabric protection-container protected-item repair-replication_
+# [Command] _site-recovery protected-item repair-replication_
 
 The operation to start resynchronize/repair replication for a replication protected item requiring resynchronization.
 

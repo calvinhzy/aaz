@@ -1,4 +1,4 @@
-# [Command] _site-recovery fabric protection-container protected-item apply-recovery-point_
+# [Command] _site-recovery protected-item apply-recovery-point_
 
 The operation to change the recovery point of a failed over replication protected item.
 

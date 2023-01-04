@@ -1,4 +1,4 @@
-# [Command] _site-recovery fabric protection-container protected-item re-protect_
+# [Command] _site-recovery protected-item re-protect_
 
 Operation to reprotect or reverse replicate a failed over replication protected item.
 

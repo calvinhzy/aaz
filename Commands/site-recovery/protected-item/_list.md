@@ -1,4 +1,4 @@
-# [Command] _site-recovery fabric protection-container protected-item list_
+# [Command] _site-recovery protected-item list_
 
 List the list of ASR replication protected items in the protection container.
 

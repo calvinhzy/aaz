@@ -1,4 +1,4 @@
-# [Command] _site-recovery fabric protection-container protected-item failover-cancel_
+# [Command] _site-recovery protected-item failover-cancel_
 
 Operation to cancel the failover of the replication protected item.
 

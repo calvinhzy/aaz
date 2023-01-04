@@ -1,4 +1,4 @@
-# [Command] _site-recovery fabric protection-container protected-item remove-disk_
+# [Command] _site-recovery protected-item remove-disk_
 
 Operation to remove disk(s) from the replication protected item.
 

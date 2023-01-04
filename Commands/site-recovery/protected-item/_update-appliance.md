@@ -1,4 +1,4 @@
-# [Command] _site-recovery fabric protection-container protected-item update-appliance_
+# [Command] _site-recovery protected-item update-appliance_
 
 The operation to update appliance of an ASR replication protected item.
 

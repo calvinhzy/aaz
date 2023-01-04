@@ -1,4 +1,4 @@
-# [Command] _site-recovery fabric protection-container protected-item recovery-point show_
+# [Command] _site-recovery protected-item recovery-point show_
 
 Get the details of specified recovery point.
 

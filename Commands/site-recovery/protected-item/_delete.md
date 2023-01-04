@@ -1,4 +1,4 @@
-# [Command] _site-recovery fabric protection-container protected-item delete_
+# [Command] _site-recovery protected-item delete_
 
 Delete operation to delete or purge a replication protected item. This operation will force delete the replication protected item. Use the remove operation on replication protected item to perform a clean disable replication for the item.
 

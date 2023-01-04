@@ -1,4 +1,4 @@
-# [Command] _site-recovery fabric protection-container protected-item failover-commit_
+# [Command] _site-recovery protected-item failover-commit_
 
 Operation to commit the failover of the replication protected item.
 

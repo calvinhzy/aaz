@@ -1,6 +1,6 @@
-# [Command] _site-recovery fabric protection-container protected-item show_
+# [Command] _site-recovery protected-item update_
 
-Get the details of an ASR replication protected item.
+Update operation to create an ASR replication protected item (Enable replication).
 
 ## Versions
 

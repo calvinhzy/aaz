@@ -1,4 +1,4 @@
-# [Command] _site-recovery fabric protection-container protected-item remove_
+# [Command] _site-recovery protected-item remove_
 
 The operation to disable replication on a replication protected item. This will also remove the item.
 

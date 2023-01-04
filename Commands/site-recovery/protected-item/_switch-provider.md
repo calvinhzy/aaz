@@ -1,4 +1,4 @@
-# [Command] _site-recovery fabric protection-container protected-item switch-provider_
+# [Command] _site-recovery protected-item switch-provider_
 
 Operation to initiate a switch provider of the replication protected item.
 

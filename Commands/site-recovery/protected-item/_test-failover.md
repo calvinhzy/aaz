@@ -1,4 +1,4 @@
-# [Command] _site-recovery fabric protection-container protected-item test-failover_
+# [Command] _site-recovery protected-item test-failover_
 
 Operation to perform a test failover of the replication protected item.
 

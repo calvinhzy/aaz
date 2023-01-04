@@ -1,4 +1,4 @@
-# [Command] _site-recovery fabric protection-container protected-item recovery-point list_
+# [Command] _site-recovery protected-item recovery-point list_
 
 List the available recovery points for a replication protected item.
 

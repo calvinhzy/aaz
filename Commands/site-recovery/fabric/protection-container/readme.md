@@ -10,9 +10,6 @@ Manage Vault Fabric Protection Container
 - [protectable-item](/Commands/site-recovery/fabric/protection-container/protectable-item/readme.md)
 : Manage Vault Fabric Protection Container Protectable Item
 
-- [protected-item](/Commands/site-recovery/fabric/protection-container/protected-item/readme.md)
-: Manage Vault Fabric Protection Container Protected Item
-
 ## Commands
 
 - [create](/Commands/site-recovery/fabric/protection-container/_create.md)

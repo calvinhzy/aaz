@@ -1,4 +1,4 @@
-# [Command] _site-recovery fabric protection-container protected-item resolve-health-error_
+# [Command] _site-recovery protected-item resolve-health-error_
 
 Operation to resolve health issues of the replication protected item.
 
