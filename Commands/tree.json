@@ -9487,613 +9487,6 @@
                       "protection-container",
                       "protectable-item"
                     ]
-                  },
-                  "protected-item": {
-                    "commandGroups": {
-                      "recovery-point": {
-                        "commands": {
-                          "list": {
-                            "help": {
-                              "short": "List the available recovery points for a replication protected item."
-                            },
-                            "names": [
-                              "site-recovery",
-                              "fabric",
-                              "protection-container",
-                              "protected-item",
-                              "recovery-point",
-                              "list"
-                            ],
-                            "versions": [
-                              {
-                                "name": "2022-08-01",
-                                "resources": [
-                                  {
-                                    "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/recoverypoints",
-                                    "plane": "mgmt-plane",
-                                    "version": "2022-08-01"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          "show": {
-                            "help": {
-                              "short": "Get the details of specified recovery point."
-                            },
-                            "names": [
-                              "site-recovery",
-                              "fabric",
-                              "protection-container",
-                              "protected-item",
-                              "recovery-point",
-                              "show"
-                            ],
-                            "versions": [
-                              {
-                                "name": "2022-08-01",
-                                "resources": [
-                                  {
-                                    "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/recoverypoints/{}",
-                                    "plane": "mgmt-plane",
-                                    "version": "2022-08-01"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        },
-                        "help": {
-                          "short": "Manage the recovery points for a replication protected item."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "protected-item",
-                          "recovery-point"
-                        ]
-                      }
-                    },
-                    "commands": {
-                      "add-disk": {
-                        "help": {
-                          "short": "Operation to add disks(s) to the replication protected item."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "protected-item",
-                          "add-disk"
-                        ],
-                        "versions": [
-                          {
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/adddisks",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "apply-recovery-point": {
-                        "help": {
-                          "short": "The operation to change the recovery point of a failed over replication protected item."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "protected-item",
-                          "apply-recovery-point"
-                        ],
-                        "versions": [
-                          {
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/applyrecoverypoint",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "create": {
-                        "help": {
-                          "short": "Create operation to create an ASR replication protected item (Enable replication)."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "protected-item",
-                          "create"
-                        ],
-                        "versions": [
-                          {
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "delete": {
-                        "help": {
-                          "short": "Delete operation to delete or purge a replication protected item. This operation will force delete the replication protected item. Use the remove operation on replication protected item to perform a clean disable replication for the item."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "protected-item",
-                          "delete"
-                        ],
-                        "versions": [
-                          {
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "failover-cancel": {
-                        "help": {
-                          "short": "Operation to cancel the failover of the replication protected item."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "protected-item",
-                          "failover-cancel"
-                        ],
-                        "versions": [
-                          {
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/failovercancel",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "failover-commit": {
-                        "help": {
-                          "short": "Operation to commit the failover of the replication protected item."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "protected-item",
-                          "failover-commit"
-                        ],
-                        "versions": [
-                          {
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/failovercommit",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "list": {
-                        "help": {
-                          "short": "List the list of ASR replication protected items in the protection container."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "protected-item",
-                          "list"
-                        ],
-                        "versions": [
-                          {
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "list-target-compute-size": {
-                        "help": {
-                          "short": "List the available target compute sizes for a replication protected item."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "protected-item",
-                          "list-target-compute-size"
-                        ],
-                        "versions": [
-                          {
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/targetcomputesizes",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "planned-failover": {
-                        "help": {
-                          "short": "Operation to initiate a planned failover of the replication protected item."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "protected-item",
-                          "planned-failover"
-                        ],
-                        "versions": [
-                          {
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/plannedfailover",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "re-protect": {
-                        "help": {
-                          "short": "Operation to reprotect or reverse replicate a failed over replication protected item."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "protected-item",
-                          "re-protect"
-                        ],
-                        "versions": [
-                          {
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/reprotect",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "remove": {
-                        "help": {
-                          "short": "The operation to disable replication on a replication protected item. This will also remove the item."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "protected-item",
-                          "remove"
-                        ],
-                        "versions": [
-                          {
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/remove",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "remove-disk": {
-                        "help": {
-                          "short": "Operation to remove disk(s) from the replication protected item."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "protected-item",
-                          "remove-disk"
-                        ],
-                        "versions": [
-                          {
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/removedisks",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "repair-replication": {
-                        "help": {
-                          "short": "The operation to start resynchronize/repair replication for a replication protected item requiring resynchronization."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "protected-item",
-                          "repair-replication"
-                        ],
-                        "versions": [
-                          {
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/repairreplication",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "resolve-health-error": {
-                        "help": {
-                          "short": "Operation to resolve health issues of the replication protected item."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "protected-item",
-                          "resolve-health-error"
-                        ],
-                        "versions": [
-                          {
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/resolvehealtherrors",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "show": {
-                        "help": {
-                          "short": "Get the details of an ASR replication protected item."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "protected-item",
-                          "show"
-                        ],
-                        "versions": [
-                          {
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "switch-provider": {
-                        "help": {
-                          "short": "Operation to initiate a switch provider of the replication protected item."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "protected-item",
-                          "switch-provider"
-                        ],
-                        "versions": [
-                          {
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/switchprovider",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "test-failover": {
-                        "help": {
-                          "short": "Operation to perform a test failover of the replication protected item."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "protected-item",
-                          "test-failover"
-                        ],
-                        "versions": [
-                          {
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/testfailover",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "test-failover-cleanup": {
-                        "help": {
-                          "short": "Operation to clean up the test failover of a replication protected item."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "protected-item",
-                          "test-failover-cleanup"
-                        ],
-                        "versions": [
-                          {
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/testfailovercleanup",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "unplanned-failover": {
-                        "help": {
-                          "short": "Operation to initiate a failover of the replication protected item."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "protected-item",
-                          "unplanned-failover"
-                        ],
-                        "versions": [
-                          {
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/unplannedfailover",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "update": {
-                        "help": {
-                          "short": "Update operation to create an ASR replication protected item (Enable replication)."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "protected-item",
-                          "update"
-                        ],
-                        "versions": [
-                          {
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "update-appliance": {
-                        "help": {
-                          "short": "The operation to update appliance of an ASR replication protected item."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "protected-item",
-                          "update-appliance"
-                        ],
-                        "versions": [
-                          {
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/updateappliance",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "update-mobility-service": {
-                        "help": {
-                          "short": "The operation to update(push update) the installed mobility service software on a replication protected item to the latest available version."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "protected-item",
-                          "update-mobility-service"
-                        ],
-                        "versions": [
-                          {
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/updatemobilityservice",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    },
-                    "help": {
-                      "short": "Manage Vault Fabric Protection Container Protected Item"
-                    },
-                    "names": [
-                      "site-recovery",
-                      "fabric",
-                      "protection-container",
-                      "protected-item"
-                    ]
                   }
                 },
                 "commands": {
@@ -10990,6 +10383,561 @@
             "names": [
               "site-recovery",
               "fabric"
+            ]
+          },
+          "protected-item": {
+            "commandGroups": {
+              "recovery-point": {
+                "commands": {
+                  "list": {
+                    "help": {
+                      "short": "List the available recovery points for a replication protected item."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "protected-item",
+                      "recovery-point",
+                      "list"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2022-08-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/recoverypoints",
+                            "plane": "mgmt-plane",
+                            "version": "2022-08-01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "show": {
+                    "help": {
+                      "short": "Get the details of specified recovery point."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "protected-item",
+                      "recovery-point",
+                      "show"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2022-08-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/recoverypoints/{}",
+                            "plane": "mgmt-plane",
+                            "version": "2022-08-01"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "help": {
+                  "short": "Manage the recovery points for a replication protected item."
+                },
+                "names": [
+                  "site-recovery",
+                  "protected-item",
+                  "recovery-point"
+                ]
+              }
+            },
+            "commands": {
+              "add-disk": {
+                "help": {
+                  "short": "Operation to add disks(s) to the replication protected item."
+                },
+                "names": [
+                  "site-recovery",
+                  "protected-item",
+                  "add-disk"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/adddisks",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "apply-recovery-point": {
+                "help": {
+                  "short": "The operation to change the recovery point of a failed over replication protected item."
+                },
+                "names": [
+                  "site-recovery",
+                  "protected-item",
+                  "apply-recovery-point"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/applyrecoverypoint",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "create": {
+                "help": {
+                  "short": "Create operation to create an ASR replication protected item (Enable replication)."
+                },
+                "names": [
+                  "site-recovery",
+                  "protected-item",
+                  "create"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "delete": {
+                "help": {
+                  "short": "Delete operation to delete or purge a replication protected item. This operation will force delete the replication protected item. Use the remove operation on replication protected item to perform a clean disable replication for the item."
+                },
+                "names": [
+                  "site-recovery",
+                  "protected-item",
+                  "delete"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "failover-cancel": {
+                "help": {
+                  "short": "Operation to cancel the failover of the replication protected item."
+                },
+                "names": [
+                  "site-recovery",
+                  "protected-item",
+                  "failover-cancel"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/failovercancel",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "failover-commit": {
+                "help": {
+                  "short": "Operation to commit the failover of the replication protected item."
+                },
+                "names": [
+                  "site-recovery",
+                  "protected-item",
+                  "failover-commit"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/failovercommit",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "list": {
+                "help": {
+                  "short": "List the list of ASR replication protected items in the protection container."
+                },
+                "names": [
+                  "site-recovery",
+                  "protected-item",
+                  "list"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "list-target-compute-size": {
+                "help": {
+                  "short": "List the available target compute sizes for a replication protected item."
+                },
+                "names": [
+                  "site-recovery",
+                  "protected-item",
+                  "list-target-compute-size"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/targetcomputesizes",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "planned-failover": {
+                "help": {
+                  "short": "Operation to initiate a planned failover of the replication protected item."
+                },
+                "names": [
+                  "site-recovery",
+                  "protected-item",
+                  "planned-failover"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/plannedfailover",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "re-protect": {
+                "help": {
+                  "short": "Operation to reprotect or reverse replicate a failed over replication protected item."
+                },
+                "names": [
+                  "site-recovery",
+                  "protected-item",
+                  "re-protect"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/reprotect",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "remove": {
+                "help": {
+                  "short": "The operation to disable replication on a replication protected item. This will also remove the item."
+                },
+                "names": [
+                  "site-recovery",
+                  "protected-item",
+                  "remove"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/remove",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "remove-disk": {
+                "help": {
+                  "short": "Operation to remove disk(s) from the replication protected item."
+                },
+                "names": [
+                  "site-recovery",
+                  "protected-item",
+                  "remove-disk"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/removedisks",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "repair-replication": {
+                "help": {
+                  "short": "The operation to start resynchronize/repair replication for a replication protected item requiring resynchronization."
+                },
+                "names": [
+                  "site-recovery",
+                  "protected-item",
+                  "repair-replication"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/repairreplication",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "resolve-health-error": {
+                "help": {
+                  "short": "Operation to resolve health issues of the replication protected item."
+                },
+                "names": [
+                  "site-recovery",
+                  "protected-item",
+                  "resolve-health-error"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/resolvehealtherrors",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "show": {
+                "help": {
+                  "short": "Get the details of an ASR replication protected item."
+                },
+                "names": [
+                  "site-recovery",
+                  "protected-item",
+                  "show"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "switch-provider": {
+                "help": {
+                  "short": "Operation to initiate a switch provider of the replication protected item."
+                },
+                "names": [
+                  "site-recovery",
+                  "protected-item",
+                  "switch-provider"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/switchprovider",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "test-failover": {
+                "help": {
+                  "short": "Operation to perform a test failover of the replication protected item."
+                },
+                "names": [
+                  "site-recovery",
+                  "protected-item",
+                  "test-failover"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/testfailover",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "test-failover-cleanup": {
+                "help": {
+                  "short": "Operation to clean up the test failover of a replication protected item."
+                },
+                "names": [
+                  "site-recovery",
+                  "protected-item",
+                  "test-failover-cleanup"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/testfailovercleanup",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "unplanned-failover": {
+                "help": {
+                  "short": "Operation to initiate a failover of the replication protected item."
+                },
+                "names": [
+                  "site-recovery",
+                  "protected-item",
+                  "unplanned-failover"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/unplannedfailover",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "update": {
+                "help": {
+                  "short": "Update operation to create an ASR replication protected item (Enable replication)."
+                },
+                "names": [
+                  "site-recovery",
+                  "protected-item",
+                  "update"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "update-appliance": {
+                "help": {
+                  "short": "The operation to update appliance of an ASR replication protected item."
+                },
+                "names": [
+                  "site-recovery",
+                  "protected-item",
+                  "update-appliance"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/updateappliance",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "update-mobility-service": {
+                "help": {
+                  "short": "The operation to update(push update) the installed mobility service software on a replication protected item to the latest available version."
+                },
+                "names": [
+                  "site-recovery",
+                  "protected-item",
+                  "update-mobility-service"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/updatemobilityservice",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage Vault Fabric Protection Container Protected Item"
+            },
+            "names": [
+              "site-recovery",
+              "protected-item"
             ]
           },
           "protection-container-mapping": {
