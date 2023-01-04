@@ -795,8 +795,12 @@
                                             "type": "object",
                                             "var": "$input.properties.providerSpecificInput.A2A",
                                             "options": [
-                                                "a2-a"
+                                                "a2a"
                                             ],
+                                            "group": "",
+                                            "help": {
+                                                "short": "A2A"
+                                            },
                                             "args": [
                                                 {
                                                     "type": "integer32",
@@ -2386,8 +2390,12 @@
                                             "type": "object",
                                             "var": "$input.properties.replicationProviderSettings.A2A",
                                             "options": [
-                                                "a2-a"
+                                                "a2a"
                                             ],
+                                            "group": "",
+                                            "help": {
+                                                "short": "A2A"
+                                            },
                                             "args": [
                                                 {
                                                     "type": "integer32",

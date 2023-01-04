@@ -848,8 +848,12 @@
                                             "type": "object",
                                             "var": "$creationInput.properties.providerSpecificInput.A2A",
                                             "options": [
-                                                "a2-a"
+                                                "a2a"
                                             ],
+                                            "group": "",
+                                            "help": {
+                                                "short": "A2A"
+                                            },
                                             "args": [
                                                 {
                                                     "type": "string",
@@ -1708,8 +1712,12 @@
                                             "type": "object",
                                             "var": "$creationInput.properties.providerSpecificInput.A2A",
                                             "options": [
-                                                "a2-a"
+                                                "a2a"
                                             ],
+                                            "group": "",
+                                            "help": {
+                                                "short": "A2A"
+                                            },
                                             "args": [
                                                 {
                                                     "nullable": true,

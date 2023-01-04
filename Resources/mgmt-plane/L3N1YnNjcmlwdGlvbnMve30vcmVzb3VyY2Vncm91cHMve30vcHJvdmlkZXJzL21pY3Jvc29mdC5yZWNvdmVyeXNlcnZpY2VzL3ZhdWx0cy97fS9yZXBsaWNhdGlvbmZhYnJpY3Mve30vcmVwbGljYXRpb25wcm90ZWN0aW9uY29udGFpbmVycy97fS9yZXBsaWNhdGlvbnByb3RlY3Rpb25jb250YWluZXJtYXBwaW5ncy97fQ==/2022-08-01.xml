@@ -235,7 +235,8 @@
         </arg>
         <arg type="object" var="$creationInput.properties.providerSpecificInput" options="provider-specific-input provider-input" group="Properties">
           <help short="Provider specific input for pairing."/>
-          <arg type="object" var="$creationInput.properties.providerSpecificInput.A2A" options="a2-a">
+          <arg type="object" var="$creationInput.properties.providerSpecificInput.A2A" options="a2a" group="">
+            <help short="A2A"/>
             <arg type="string" var="$creationInput.properties.providerSpecificInput.A2A.agentAutoUpdateStatus" options="agent-auto-update-status">
               <help short="A value indicating whether the auto update is enabled."/>
               <enum>
@@ -490,7 +491,8 @@
         </arg>
         <arg nullable="True" type="object" var="$creationInput.properties.providerSpecificInput" options="provider-specific-input provider-input" group="Properties">
           <help short="Provider specific input for pairing."/>
-          <arg type="object" var="$creationInput.properties.providerSpecificInput.A2A" options="a2-a">
+          <arg type="object" var="$creationInput.properties.providerSpecificInput.A2A" options="a2a" group="">
+            <help short="A2A"/>
             <arg nullable="True" type="string" var="$creationInput.properties.providerSpecificInput.A2A.agentAutoUpdateStatus" options="agent-auto-update-status">
               <help short="A value indicating whether the auto update is enabled."/>
               <enum>

@@ -26,7 +26,8 @@
         </arg>
         <arg type="object" var="$failoverInput.properties.providerSpecificDetails" options="provider-specific-details provider-details" group="Properties">
           <help short="Provider specific settings."/>
-          <arg type="object" var="$failoverInput.properties.providerSpecificDetails.A2A" options="a2-a">
+          <arg type="object" var="$failoverInput.properties.providerSpecificDetails.A2A" options="a2a" group="">
+            <help short="A2A"/>
             <arg type="string" var="$failoverInput.properties.providerSpecificDetails.A2A.cloudServiceCreationOption" options="cloud-service-creation-option">
               <help short="A value indicating whether to use recovery cloud service for failover or not."/>
             </arg>

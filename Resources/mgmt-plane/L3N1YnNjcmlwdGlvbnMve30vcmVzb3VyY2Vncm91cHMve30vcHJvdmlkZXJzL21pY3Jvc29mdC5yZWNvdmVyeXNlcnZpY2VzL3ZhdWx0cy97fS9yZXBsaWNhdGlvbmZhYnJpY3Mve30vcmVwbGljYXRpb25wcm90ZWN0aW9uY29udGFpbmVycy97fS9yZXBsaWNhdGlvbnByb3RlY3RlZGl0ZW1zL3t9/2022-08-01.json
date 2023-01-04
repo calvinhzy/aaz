@@ -4150,8 +4150,12 @@
                                             "type": "object",
                                             "var": "$input.properties.providerSpecificDetails.A2A",
                                             "options": [
-                                                "a2-a"
+                                                "a2a"
                                             ],
+                                            "group": "",
+                                            "help": {
+                                                "short": "A2A"
+                                            },
                                             "args": [
                                                 {
                                                     "type": "@DiskEncryptionInfo_create",
@@ -10879,8 +10883,12 @@
                                             "type": "object",
                                             "var": "$input.properties.providerSpecificDetails.A2A",
                                             "options": [
-                                                "a2-a"
+                                                "a2a"
                                             ],
+                                            "group": "",
+                                            "help": {
+                                                "short": "A2A"
+                                            },
                                             "args": [
                                                 {
                                                     "nullable": true,
