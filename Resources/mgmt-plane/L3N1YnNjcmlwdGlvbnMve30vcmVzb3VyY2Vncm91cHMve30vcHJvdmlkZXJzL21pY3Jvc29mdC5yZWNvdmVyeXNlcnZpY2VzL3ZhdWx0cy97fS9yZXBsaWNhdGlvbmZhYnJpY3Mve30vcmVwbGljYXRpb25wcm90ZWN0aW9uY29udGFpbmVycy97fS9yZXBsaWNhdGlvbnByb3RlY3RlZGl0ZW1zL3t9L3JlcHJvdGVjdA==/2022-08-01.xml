@@ -26,7 +26,8 @@
         </arg>
         <arg type="object" var="$reprotectInput.properties.providerSpecificDetails" options="provider-specific-details provider-details" group="Properties">
           <help short="Provider specific reverse replication input."/>
-          <arg type="object" var="$reprotectInput.properties.providerSpecificDetails.A2A" options="a2-a">
+          <arg type="object" var="$reprotectInput.properties.providerSpecificDetails.A2A" options="a2a" group="">
+            <help short="A2A"/>
             <arg type="string" var="$reprotectInput.properties.providerSpecificDetails.A2A.policyId" options="policy-id">
               <help short="The Policy Id."/>
             </arg>

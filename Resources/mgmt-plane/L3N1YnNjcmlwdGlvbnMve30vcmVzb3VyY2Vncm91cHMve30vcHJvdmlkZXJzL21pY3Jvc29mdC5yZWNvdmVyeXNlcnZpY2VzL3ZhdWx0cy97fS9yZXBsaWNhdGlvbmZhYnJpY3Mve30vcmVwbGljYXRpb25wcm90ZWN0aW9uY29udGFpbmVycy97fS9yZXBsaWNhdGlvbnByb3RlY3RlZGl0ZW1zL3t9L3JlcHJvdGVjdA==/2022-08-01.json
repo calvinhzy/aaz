@@ -121,8 +121,12 @@
                                             "type": "object",
                                             "var": "$reprotectInput.properties.providerSpecificDetails.A2A",
                                             "options": [
-                                                "a2-a"
+                                                "a2a"
                                             ],
+                                            "group": "",
+                                            "help": {
+                                                "short": "A2A"
+                                            },
                                             "args": [
                                                 {
                                                     "type": "string",
