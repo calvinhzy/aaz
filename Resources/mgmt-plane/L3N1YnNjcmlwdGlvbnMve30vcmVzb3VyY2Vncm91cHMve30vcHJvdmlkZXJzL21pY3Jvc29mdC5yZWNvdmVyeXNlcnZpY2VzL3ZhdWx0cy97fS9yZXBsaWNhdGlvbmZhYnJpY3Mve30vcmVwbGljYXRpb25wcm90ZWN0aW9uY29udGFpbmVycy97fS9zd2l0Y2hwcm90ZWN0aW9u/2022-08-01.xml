@@ -20,7 +20,8 @@
       <argGroup name="Properties">
         <arg type="object" var="$switchInput.properties.providerSpecificDetails" options="provider-specific-details provider-details" group="Properties">
           <help short="Provider specific switch protection input."/>
-          <arg type="object" var="$switchInput.properties.providerSpecificDetails.A2A" options="a2-a">
+          <arg type="object" var="$switchInput.properties.providerSpecificDetails.A2A" options="a2a" group="">
+            <help short="A2A"/>
             <arg type="@DiskEncryptionInfo_create" var="$switchInput.properties.providerSpecificDetails.A2A.diskEncryptionInfo" options="disk-encryption-info">
               <help short="The recovery disk encryption information."/>
             </arg>
