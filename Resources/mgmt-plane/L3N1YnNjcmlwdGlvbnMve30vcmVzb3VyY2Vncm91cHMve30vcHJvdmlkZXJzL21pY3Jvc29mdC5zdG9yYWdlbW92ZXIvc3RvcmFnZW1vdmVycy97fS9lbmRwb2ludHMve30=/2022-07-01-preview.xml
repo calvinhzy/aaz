@@ -450,7 +450,7 @@
         </http>
       </operation>
       <operation>
-        <instanceUpdate instance="$Instance">
+        <instanceUpdate ref="$Instance">
           <json>
             <schema type="object" name="endpoint" required="True" clientFlatten="True">
               <prop type="object" name="properties" required="True">

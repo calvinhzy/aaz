@@ -3862,8 +3862,7 @@
                         "plane": "mgmt-plane",
                         "version": "2022-07-01-preview"
                       }
-                    ],
-                    "stage": "Preview"
+                    ]
                   }
                 ]
               },
@@ -3885,8 +3884,7 @@
                         "plane": "mgmt-plane",
                         "version": "2022-07-01-preview"
                       }
-                    ],
-                    "stage": "Preview"
+                    ]
                   }
                 ]
               },
@@ -3908,8 +3906,7 @@
                         "plane": "mgmt-plane",
                         "version": "2022-07-01-preview"
                       }
-                    ],
-                    "stage": "Preview"
+                    ]
                   }
                 ]
               },
@@ -3931,8 +3928,7 @@
                         "plane": "mgmt-plane",
                         "version": "2022-07-01-preview"
                       }
-                    ],
-                    "stage": "Preview"
+                    ]
                   }
                 ]
               },
@@ -3954,8 +3950,7 @@
                         "plane": "mgmt-plane",
                         "version": "2022-07-01-preview"
                       }
-                    ],
-                    "stage": "Preview"
+                    ]
                   }
                 ]
               }
@@ -3988,8 +3983,7 @@
                         "plane": "mgmt-plane",
                         "version": "2022-07-01-preview"
                       }
-                    ],
-                    "stage": "Preview"
+                    ]
                   }
                 ]
               },
@@ -4011,8 +4005,7 @@
                         "plane": "mgmt-plane",
                         "version": "2022-07-01-preview"
                       }
-                    ],
-                    "stage": "Preview"
+                    ]
                   }
                 ]
               },
@@ -4034,8 +4027,7 @@
                         "plane": "mgmt-plane",
                         "version": "2022-07-01-preview"
                       }
-                    ],
-                    "stage": "Preview"
+                    ]
                   }
                 ]
               },
@@ -4057,8 +4049,7 @@
                         "plane": "mgmt-plane",
                         "version": "2022-07-01-preview"
                       }
-                    ],
-                    "stage": "Preview"
+                    ]
                   }
                 ]
               },
@@ -4080,8 +4071,7 @@
                         "plane": "mgmt-plane",
                         "version": "2022-07-01-preview"
                       }
-                    ],
-                    "stage": "Preview"
+                    ]
                   }
                 ]
               }
@@ -4114,8 +4104,7 @@
                         "plane": "mgmt-plane",
                         "version": "2022-07-01-preview"
                       }
-                    ],
-                    "stage": "Preview"
+                    ]
                   }
                 ]
               },
@@ -4137,8 +4126,7 @@
                         "plane": "mgmt-plane",
                         "version": "2022-07-01-preview"
                       }
-                    ],
-                    "stage": "Preview"
+                    ]
                   }
                 ]
               },
@@ -4160,8 +4148,7 @@
                         "plane": "mgmt-plane",
                         "version": "2022-07-01-preview"
                       }
-                    ],
-                    "stage": "Preview"
+                    ]
                   }
                 ]
               },
@@ -4183,8 +4170,7 @@
                         "plane": "mgmt-plane",
                         "version": "2022-07-01-preview"
                       }
-                    ],
-                    "stage": "Preview"
+                    ]
                   }
                 ]
               },
@@ -4206,8 +4192,7 @@
                         "plane": "mgmt-plane",
                         "version": "2022-07-01-preview"
                       }
-                    ],
-                    "stage": "Preview"
+                    ]
                   }
                 ]
               },
@@ -4229,8 +4214,7 @@
                         "plane": "mgmt-plane",
                         "version": "2022-07-01-preview"
                       }
-                    ],
-                    "stage": "Preview"
+                    ]
                   }
                 ]
               },
@@ -4252,8 +4236,7 @@
                         "plane": "mgmt-plane",
                         "version": "2022-07-01-preview"
                       }
-                    ],
-                    "stage": "Preview"
+                    ]
                   }
                 ]
               }
@@ -4286,8 +4269,7 @@
                         "plane": "mgmt-plane",
                         "version": "2022-07-01-preview"
                       }
-                    ],
-                    "stage": "Preview"
+                    ]
                   }
                 ]
               },
@@ -4309,8 +4291,7 @@
                         "plane": "mgmt-plane",
                         "version": "2022-07-01-preview"
                       }
-                    ],
-                    "stage": "Preview"
+                    ]
                   }
                 ]
               }
@@ -4343,8 +4324,7 @@
                         "plane": "mgmt-plane",
                         "version": "2022-07-01-preview"
                       }
-                    ],
-                    "stage": "Preview"
+                    ]
                   }
                 ]
               },
@@ -4366,8 +4346,7 @@
                         "plane": "mgmt-plane",
                         "version": "2022-07-01-preview"
                       }
-                    ],
-                    "stage": "Preview"
+                    ]
                   }
                 ]
               },
@@ -4389,8 +4368,7 @@
                         "plane": "mgmt-plane",
                         "version": "2022-07-01-preview"
                       }
-                    ],
-                    "stage": "Preview"
+                    ]
                   }
                 ]
               },
@@ -4412,8 +4390,7 @@
                         "plane": "mgmt-plane",
                         "version": "2022-07-01-preview"
                       }
-                    ],
-                    "stage": "Preview"
+                    ]
                   }
                 ]
               },
@@ -4435,8 +4412,7 @@
                         "plane": "mgmt-plane",
                         "version": "2022-07-01-preview"
                       }
-                    ],
-                    "stage": "Preview"
+                    ]
                   }
                 ]
               }
@@ -4468,8 +4444,7 @@
                     "plane": "mgmt-plane",
                     "version": "2022-07-01-preview"
                   }
-                ],
-                "stage": "Preview"
+                ]
               }
             ]
           },
@@ -4490,8 +4465,7 @@
                     "plane": "mgmt-plane",
                     "version": "2022-07-01-preview"
                   }
-                ],
-                "stage": "Preview"
+                ]
               }
             ]
           },
@@ -4517,8 +4491,7 @@
                     "plane": "mgmt-plane",
                     "version": "2022-07-01-preview"
                   }
-                ],
-                "stage": "Preview"
+                ]
               }
             ]
           },
@@ -4539,8 +4512,7 @@
                     "plane": "mgmt-plane",
                     "version": "2022-07-01-preview"
                   }
-                ],
-                "stage": "Preview"
+                ]
               }
             ]
           },
@@ -4561,8 +4533,7 @@
                     "plane": "mgmt-plane",
                     "version": "2022-07-01-preview"
                   }
-                ],
-                "stage": "Preview"
+                ]
               }
             ]
           }
