@@ -32,6 +32,7 @@
                                         "fabric-name"
                                     ],
                                     "required": true,
+                                    "idPart": "child_name_1",
                                     "help": {
                                         "short": "Unique fabric ARM name."
                                     }
@@ -44,6 +45,7 @@
                                         "protection-container-name"
                                     ],
                                     "required": true,
+                                    "idPart": "child_name_2",
                                     "help": {
                                         "short": "The name of the protection container."
                                     }
@@ -55,7 +57,8 @@
                                         "g",
                                         "resource-group"
                                     ],
-                                    "required": true
+                                    "required": true,
+                                    "idPart": "resource_group"
                                 },
                                 {
                                     "type": "string",
@@ -65,6 +68,7 @@
                                     ],
                                     "required": true,
                                     "group": "",
+                                    "idPart": "name",
                                     "help": {
                                         "short": "The name of the recovery services vault."
                                     }
@@ -75,7 +79,8 @@
                                     "options": [
                                         "subscription"
                                     ],
-                                    "required": true
+                                    "required": true,
+                                    "idPart": "subscription"
                                 }
                             ]
                         }
@@ -140,6 +145,11 @@
                                     }
                                 },
                                 "responses": [
+                                    {
+                                        "statusCode": [
+                                            200
+                                        ]
+                                    },
                                     {
                                         "statusCode": [
                                             202
