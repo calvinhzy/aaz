@@ -1,4 +1,4 @@
-# [Command] _site-recovery fabric network network-mapping create_
+# [Command] _site-recovery fabric network-mapping create_
 
 Create operation to create an ASR network mapping.
 

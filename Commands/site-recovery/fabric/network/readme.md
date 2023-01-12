@@ -2,11 +2,6 @@
 
 Manage Vault Fabric Network
 
-## Subgroups
-
-- [network-mapping](/Commands/site-recovery/fabric/network/network-mapping/readme.md)
-: Manage Vault Fabric Network Mapping
-
 ## Commands
 
 - [list](/Commands/site-recovery/fabric/network/_list.md)

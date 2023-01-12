@@ -10,6 +10,9 @@ Manage Fabric
 - [network](/Commands/site-recovery/fabric/network/readme.md)
 : Manage Vault Fabric Network
 
+- [network-mapping](/Commands/site-recovery/fabric/network-mapping/readme.md)
+: Manage Vault Fabric Network Mapping
+
 - [protection-container](/Commands/site-recovery/fabric/protection-container/readme.md)
 : Manage Vault Fabric Protection Container
 

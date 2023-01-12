@@ -1,4 +1,4 @@
-# [Command] _site-recovery fabric network network-mapping list_
+# [Command] _site-recovery fabric network-mapping list_
 
 List all ASR network mappings for the specified network.
 

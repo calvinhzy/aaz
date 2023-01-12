@@ -1,6 +1,6 @@
-# [Command] _site-recovery fabric network network-mapping delete_
+# [Command] _site-recovery fabric network-mapping show_
 
-Delete operation to delete a network mapping.
+Get the details of an ASR network mapping.
 
 ## Versions
 
