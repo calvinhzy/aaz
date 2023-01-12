@@ -4,6 +4,9 @@ Manage Vault Fabric Protection Container
 
 ## Subgroups
 
+- [mapping](/Commands/site-recovery/fabric/protection-container/mapping/readme.md)
+: Manage a protection container mapping for a protection container.
+
 - [migration-item](/Commands/site-recovery/fabric/protection-container/migration-item/readme.md)
 : Manage Vault Fabric Protection Container Migration Item
 

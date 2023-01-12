@@ -1,6 +1,6 @@
-# [Command] _site-recovery protection-container-mapping update_
+# [Command] _site-recovery fabric protection-container mapping show_
 
-Update operation to create a protection container mapping.
+Get the details of a protection container mapping.
 
 ## Versions
 

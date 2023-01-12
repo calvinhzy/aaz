@@ -1,4 +1,4 @@
-# [Command] _site-recovery protection-container-mapping create_
+# [Command] _site-recovery fabric protection-container mapping create_
 
 Create operation to create a protection container mapping.
 

@@ -1,6 +1,6 @@
-# [Command] _site-recovery protection-container-mapping show_
+# [Command] _site-recovery fabric protection-container mapping delete_
 
-Get the details of a protection container mapping.
+Delete operation to purge(force delete) a protection container mapping.
 
 ## Versions
 

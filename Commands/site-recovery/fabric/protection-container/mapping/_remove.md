@@ -1,4 +1,4 @@
-# [Command] _site-recovery protection-container-mapping remove_
+# [Command] _site-recovery fabric protection-container mapping remove_
 
 The operation to delete or remove a protection container mapping.
 

@@ -10,9 +10,6 @@ Manage Site Recovery Service
 - [protected-item](/Commands/site-recovery/protected-item/readme.md)
 : Manage Vault Fabric Protection Container Protected Item
 
-- [protection-container-mapping](/Commands/site-recovery/protection-container-mapping/readme.md)
-: Manage a protection container mapping for a protection container.
-
 - [replication-eligibility](/Commands/site-recovery/replication-eligibility/readme.md)
 : Manage Replication Eligibility
 

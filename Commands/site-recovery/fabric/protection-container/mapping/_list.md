@@ -1,4 +1,4 @@
-# [Command] _site-recovery protection-container-mapping list_
+# [Command] _site-recovery fabric protection-container mapping list_
 
 List the protection container mappings for a protection container.
 
