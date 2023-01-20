@@ -10,7 +10,7 @@ Manage Automanage best practice
 ## Commands
 
 - [list](/Commands/automanage/best-practice/_list.md)
-: List a list of Automanage best practices
+: List Automanage best practices
 
 - [show](/Commands/automanage/best-practice/_show.md)
 : Get information about a Automanage best practice

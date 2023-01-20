@@ -16,7 +16,7 @@ Manage configuration profile
 : Delete a configuration profile
 
 - [list](/Commands/automanage/configuration-profile/_list.md)
-: List a list of configuration profile within a subscription
+: List configuration profiles within a subscription
 
 - [show](/Commands/automanage/configuration-profile/_show.md)
 : Get information about a configuration profile

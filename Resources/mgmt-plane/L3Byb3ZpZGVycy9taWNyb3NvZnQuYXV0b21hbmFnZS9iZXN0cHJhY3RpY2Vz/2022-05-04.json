@@ -182,7 +182,8 @@
                             "ref": "$Instance.value",
                             "clientFlatten": true
                         }
-                    ]
+                    ],
+                    "confirmation": ""
                 }
             ]
         }

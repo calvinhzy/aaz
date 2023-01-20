@@ -5,7 +5,7 @@ Manage report within a given AzureStackHCI cluster configuration profile assignm
 ## Commands
 
 - [list](/Commands/automanage/configuration-profile-assignment/cluster/report/_list.md)
-: List a list of reports within a given AzureStackHCI cluster configuration profile assignment
+: List reports within a given AzureStackHCI cluster configuration profile assignment
 
 - [show](/Commands/automanage/configuration-profile-assignment/cluster/report/_show.md)
 : Get information about a report associated with a AzureStackHCI cluster configuration profile assignment run

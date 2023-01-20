@@ -2,7 +2,7 @@
 <CodeGen plane="mgmt-plane">
   <resource id="/providers/microsoft.automanage/bestpractices/{}/versions" version="2022-05-04" swagger="mgmt-plane/automanage/ResourceProviders/Microsoft.Automanage/Paths/L3Byb3ZpZGVycy9NaWNyb3NvZnQuQXV0b21hbmFnZS9iZXN0UHJhY3RpY2VzL3tiZXN0UHJhY3RpY2VOYW1lfS92ZXJzaW9ucw==/V/MjAyMi0wNS0wNA=="/>
   <commandGroup name="automanage best-practice version">
-    <command name="list" version="2022-05-04">
+    <command name="list" version="2022-05-04" confirmation="">
       <resource id="/providers/microsoft.automanage/bestpractices/{}/versions" version="2022-05-04" swagger="mgmt-plane/automanage/ResourceProviders/Microsoft.Automanage/Paths/L3Byb3ZpZGVycy9NaWNyb3NvZnQuQXV0b21hbmFnZS9iZXN0UHJhY3RpY2VzL3tiZXN0UHJhY3RpY2VOYW1lfS92ZXJzaW9ucw==/V/MjAyMi0wNS0wNA=="/>
       <argGroup name="">
         <arg type="string" var="$Path.bestPracticeName" options="best-practice-name" required="True">

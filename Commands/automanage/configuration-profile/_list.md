@@ -1,6 +1,6 @@
 # [Command] _automanage configuration-profile list_
 
-List a list of configuration profile within a subscription
+List configuration profiles within a subscription
 
 ## Versions
 
@@ -8,3 +8,10 @@ List a list of configuration profile within a subscription
 
 <!-- mgmt-plane /subscriptions/{}/providers/microsoft.automanage/configurationprofiles 2022-05-04 -->
 <!-- mgmt-plane /subscriptions/{}/resourcegroups/{}/providers/microsoft.automanage/configurationprofiles 2022-05-04 -->
+
+#### examples
+
+- list configuration-profile
+    ```bash
+        automanage configuration-profile list -g {rg}
+    ```

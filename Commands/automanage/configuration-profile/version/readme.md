@@ -11,7 +11,7 @@ Manage configuration profile version
 : Delete a configuration profile version
 
 - [list](/Commands/automanage/configuration-profile/version/_list.md)
-: List a list of configuration profile version for a configuration profile 
+: List configuration profile versions for a configuration profile
 
 - [show](/Commands/automanage/configuration-profile/version/_show.md)
 : Get information about a configuration profile version

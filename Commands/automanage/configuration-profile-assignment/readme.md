@@ -19,4 +19,4 @@ Manage configuration profile assignment
 ## Commands
 
 - [list](/Commands/automanage/configuration-profile-assignment/_list.md)
-: List list of configuration profile assignments under a given subscription
+: List configuration profile assignments under a given subscription

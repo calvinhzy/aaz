@@ -9,7 +9,7 @@
                 "commands": {
                   "list": {
                     "help": {
-                      "short": "List a list of Automanage best practices versions"
+                      "short": "List Automanage best practice versions"
                     },
                     "names": [
                       "automanage",
@@ -19,6 +19,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "automanage best-practice version list --best-practice-name {}"
+                            ],
+                            "name": "List best-practice versions"
+                          }
+                        ],
                         "name": "2022-05-04",
                         "resources": [
                           {
@@ -42,6 +50,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "automanage best-practice version show --best-practice-name {} --version-name {}"
+                            ],
+                            "name": "show a best-practice version"
+                          }
+                        ],
                         "name": "2022-05-04",
                         "resources": [
                           {
@@ -67,7 +83,7 @@
             "commands": {
               "list": {
                 "help": {
-                  "short": "List a list of Automanage best practices"
+                  "short": "List Automanage best practices"
                 },
                 "names": [
                   "automanage",
@@ -76,6 +92,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "automanage best-practice list"
+                        ],
+                        "name": "List best practices"
+                      }
+                    ],
                     "name": "2022-05-04",
                     "resources": [
                       {
@@ -98,6 +122,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "automanage best-practice show --best-practice-name {}"
+                        ],
+                        "name": "Show best-practice"
+                      }
+                    ],
                     "name": "2022-05-04",
                     "resources": [
                       {
@@ -134,6 +166,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "automanage configuration-profile version create --profile-name {profile_name} -g {rg} -n {version_name} --configuration {\"Antimalware/Enable\":false}"
+                            ],
+                            "name": "create configuration-profile version"
+                          }
+                        ],
                         "name": "2022-05-04",
                         "resources": [
                           {
@@ -157,6 +197,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "automanage configuration-profile version delete --profile-name {profile_name} -g {rg} -n {version_name}"
+                            ],
+                            "name": "delete configuration-profile version"
+                          }
+                        ],
                         "name": "2022-05-04",
                         "resources": [
                           {
@@ -170,7 +218,7 @@
                   },
                   "list": {
                     "help": {
-                      "short": "List a list of configuration profile version for a configuration profile "
+                      "short": "List configuration profile versions for a configuration profile"
                     },
                     "names": [
                       "automanage",
@@ -180,6 +228,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "automanage configuration-profile version list --profile-name {profile_name} -g {rg}"
+                            ],
+                            "name": "list configuration-profile version"
+                          }
+                        ],
                         "name": "2022-05-04",
                         "resources": [
                           {
@@ -203,6 +259,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "automanage configuration-profile version show --profile-name {profile_name} -g {rg} -n {version_name}"
+                            ],
+                            "name": "show configuration-profile version"
+                          }
+                        ],
                         "name": "2022-05-04",
                         "resources": [
                           {
@@ -226,6 +290,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "automanage configuration-profile version update --profile-name {profile_name} -g {rg} -n {version_name} --configuration {\"Antimalware/Enable\":true}"
+                            ],
+                            "name": "update configuration-profile version"
+                          }
+                        ],
                         "name": "2022-05-04",
                         "resources": [
                           {
@@ -260,6 +332,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "automanage configuration-profile create -n {profile_name} -g {rg} --configuration {\"Antimalware/Enable\":false,\"Backup/Enable\":false,\"VMInsights/Enable\":true,\"AzureSecurityCenter/Enable\":true,\"UpdateManagement/Enable\":true,\"ChangeTrackingAndInventory/Enable\":true,\"GuestConfiguration/Enable\":true,\"LogAnalytics/Enable\":true,\"BootDiagnostics/Enable\":true}"
+                        ],
+                        "name": "create configuration-profile"
+                      }
+                    ],
                     "name": "2022-05-04",
                     "resources": [
                       {
@@ -282,6 +362,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "automanage configuration-profile delete -n {profile_name} -g {rg}"
+                        ],
+                        "name": "delete configuration-profile"
+                      }
+                    ],
                     "name": "2022-05-04",
                     "resources": [
                       {
@@ -295,7 +383,7 @@
               },
               "list": {
                 "help": {
-                  "short": "List a list of configuration profile within a subscription"
+                  "short": "List configuration profiles within a subscription"
                 },
                 "names": [
                   "automanage",
@@ -304,6 +392,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "automanage configuration-profile list -g {rg}"
+                        ],
+                        "name": "list configuration-profile"
+                      }
+                    ],
                     "name": "2022-05-04",
                     "resources": [
                       {
@@ -331,6 +427,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "automanage configuration-profile show -n {profile_name} -g {rg}"
+                        ],
+                        "name": "show configuration-profile"
+                      }
+                    ],
                     "name": "2022-05-04",
                     "resources": [
                       {
@@ -353,6 +457,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "automanage configuration-profile update -n {profile_name} -g {rg} --configuration {\"Antimalware/Enable\":true,\"VMInsights/Enable\":false}"
+                        ],
+                        "name": "update configuration-profile"
+                      }
+                    ],
                     "name": "2022-05-04",
                     "resources": [
                       {
@@ -381,7 +493,7 @@
                     "commands": {
                       "list": {
                         "help": {
-                          "short": "List a list of reports within a given ARC machine configuration profile assignment"
+                          "short": "List reports within a given ARC machine configuration profile assignment"
                         },
                         "names": [
                           "automanage",
@@ -392,6 +504,14 @@
                         ],
                         "versions": [
                           {
+                            "examples": [
+                              {
+                                "commands": [
+                                  "automanage configuration-profile-assignment arc report list --assignment-name default -g {rg} --machine-name {arc_name}"
+                                ],
+                                "name": "list configuration-profile-assignment for arc report"
+                              }
+                            ],
                             "name": "2022-05-04",
                             "resources": [
                               {
@@ -416,6 +536,14 @@
                         ],
                         "versions": [
                           {
+                            "examples": [
+                              {
+                                "commands": [
+                                  "automanage configuration-profile-assignment arc report show -n {report_name} --assignment-name default -g {rg} --machine-name {arc_name}"
+                                ],
+                                "name": "show configuration-profile-assignment for arc report"
+                              }
+                            ],
                             "name": "2022-05-04",
                             "resources": [
                               {
@@ -452,6 +580,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "automanage configuration-profile-assignment arc create -n default -g {rg} --machine-name {arc_name} --configuration-profile {profile_id}"
+                            ],
+                            "name": "create configuration-profile-assignment for arc"
+                          }
+                        ],
                         "name": "2022-05-04",
                         "resources": [
                           {
@@ -475,6 +611,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "automanage configuration-profile-assignment arc delete -n default -g {rg} --machine-name {arc_name}"
+                            ],
+                            "name": "delete configuration-profile-assignment for arc"
+                          }
+                        ],
                         "name": "2022-05-04",
                         "resources": [
                           {
@@ -498,6 +642,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "automanage configuration-profile-assignment arc show -n default -g {rg} --machine-name {arc_name}"
+                            ],
+                            "name": "show configuration-profile-assignment for arc"
+                          }
+                        ],
                         "name": "2022-05-04",
                         "resources": [
                           {
@@ -521,6 +673,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "automanage configuration-profile-assignment arc update --n default -g {rg} --machine-name {arc_name} --configuration-profile {profile_id_2}"
+                            ],
+                            "name": "update configuration-profile-assignment for arc"
+                          }
+                        ],
                         "name": "2022-05-04",
                         "resources": [
                           {
@@ -548,7 +708,7 @@
                     "commands": {
                       "list": {
                         "help": {
-                          "short": "List a list of reports within a given AzureStackHCI cluster configuration profile assignment"
+                          "short": "List reports within a given AzureStackHCI cluster configuration profile assignment"
                         },
                         "names": [
                           "automanage",
@@ -559,6 +719,14 @@
                         ],
                         "versions": [
                           {
+                            "examples": [
+                              {
+                                "commands": [
+                                  "automanage configuration-profile-assignment cluster report list --assignment-name default -g {rg} --cluster-name {cluster_name}"
+                                ],
+                                "name": "list configuration-profile-assignment cluster report"
+                              }
+                            ],
                             "name": "2022-05-04",
                             "resources": [
                               {
@@ -583,6 +751,14 @@
                         ],
                         "versions": [
                           {
+                            "examples": [
+                              {
+                                "commands": [
+                                  "automanage configuration-profile-assignment cluster report show -n {report_name} --assignment-name default -g {rg} --cluster-name {cluster_name}"
+                                ],
+                                "name": "show configuration-profile-assignment cluster report"
+                              }
+                            ],
                             "name": "2022-05-04",
                             "resources": [
                               {
@@ -619,6 +795,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "automanage configuration-profile-assignment cluster create -n default -g {rg} --cluster-name {cluster_name} --configuration-profile {profile_id}"
+                            ],
+                            "name": "create configuration-profile-assignment for cluster"
+                          }
+                        ],
                         "name": "2022-05-04",
                         "resources": [
                           {
@@ -642,6 +826,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "automanage configuration-profile-assignment cluster delete -n default -g {rg} --cluster-name {cluster_name}"
+                            ],
+                            "name": "delete configuration-profile-assignment cluster"
+                          }
+                        ],
                         "name": "2022-05-04",
                         "resources": [
                           {
@@ -665,6 +857,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "automanage configuration-profile-assignment cluster show -n default -g {rg} --cluster-name {cluster_name}"
+                            ],
+                            "name": "show configuration-profile-assignment for cluster"
+                          }
+                        ],
                         "name": "2022-05-04",
                         "resources": [
                           {
@@ -688,6 +888,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "automanage configuration-profile-assignment cluster update --n default -g {rg} --cluster-name {cluster_name} --configuration-profile {profile_id_2}"
+                            ],
+                            "name": "update configuration-profile-assignment cluster"
+                          }
+                        ],
                         "name": "2022-05-04",
                         "resources": [
                           {
@@ -967,7 +1175,7 @@
                     "commands": {
                       "list": {
                         "help": {
-                          "short": "List a list of reports within a given VM configuration profile assignment"
+                          "short": "List reports within a given VM configuration profile assignment"
                         },
                         "names": [
                           "automanage",
@@ -978,6 +1186,14 @@
                         ],
                         "versions": [
                           {
+                            "examples": [
+                              {
+                                "commands": [
+                                  "automanage configuration-profile-assignment vm report list --assignment-name default -g {rg} --vm-name {vm_name}"
+                                ],
+                                "name": "list configuration-profile-assignment vm report"
+                              }
+                            ],
                             "name": "2022-05-04",
                             "resources": [
                               {
@@ -1002,6 +1218,14 @@
                         ],
                         "versions": [
                           {
+                            "examples": [
+                              {
+                                "commands": [
+                                  "automanage configuration-profile-assignment vm report show -n {report_name} --assignment-name default -g {rg} --vm-name {vm_name}"
+                                ],
+                                "name": "show configuration-profile-assignment vm report"
+                              }
+                            ],
                             "name": "2022-05-04",
                             "resources": [
                               {
@@ -1038,6 +1262,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "automanage configuration-profile-assignment vm create -n default -g {rg} --vm-name {vm_name} --configuration-profile {profile_id}"
+                            ],
+                            "name": "create configuration-profile-assignment for vm"
+                          }
+                        ],
                         "name": "2022-05-04",
                         "resources": [
                           {
@@ -1061,6 +1293,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "automanage configuration-profile-assignment vm delete -n default -g {rg} --vm-name {vm_name}"
+                            ],
+                            "name": "delete configuration-profile-assignment for vm"
+                          }
+                        ],
                         "name": "2022-05-04",
                         "resources": [
                           {
@@ -1084,6 +1324,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "automanage configuration-profile-assignment vm show -n default -g {rg} --vm-name {vm_name}"
+                            ],
+                            "name": "show configuration-profile-assignment vm"
+                          }
+                        ],
                         "name": "2022-05-04",
                         "resources": [
                           {
@@ -1107,6 +1355,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "automanage configuration-profile-assignment vm update --n default -g {rg} --vm-name {vm_name} --configuration-profile {profile_id_2}"
+                            ],
+                            "name": "update configuration-profile-assignment vm"
+                          }
+                        ],
                         "name": "2022-05-04",
                         "resources": [
                           {
@@ -1132,7 +1388,7 @@
             "commands": {
               "list": {
                 "help": {
-                  "short": "List list of configuration profile assignments under a given subscription"
+                  "short": "List configuration profile assignments under a given subscription"
                 },
                 "names": [
                   "automanage",
@@ -1141,6 +1397,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "automanage configuration-profile-assignment list -g {rg}"
+                        ],
+                        "name": "list configuration-profile-assignment"
+                      }
+                    ],
                     "name": "2022-05-04",
                     "resources": [
                       {
@@ -1194,6 +1458,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "automanage service-principal list"
+                        ],
+                        "name": "list service-principal"
+                      }
+                    ],
                     "name": "2022-05-04",
                     "resources": [
                       {
@@ -1216,6 +1488,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "automanage service-principal show-default"
+                        ],
+                        "name": "Show default service-principal"
+                      }
+                    ],
                     "name": "2022-05-04",
                     "resources": [
                       {

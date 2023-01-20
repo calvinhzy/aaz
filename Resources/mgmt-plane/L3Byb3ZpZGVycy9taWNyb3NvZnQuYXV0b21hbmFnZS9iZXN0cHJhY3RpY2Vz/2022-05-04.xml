@@ -2,7 +2,7 @@
 <CodeGen plane="mgmt-plane">
   <resource id="/providers/microsoft.automanage/bestpractices" version="2022-05-04" swagger="mgmt-plane/automanage/ResourceProviders/Microsoft.Automanage/Paths/L3Byb3ZpZGVycy9NaWNyb3NvZnQuQXV0b21hbmFnZS9iZXN0UHJhY3RpY2Vz/V/MjAyMi0wNS0wNA=="/>
   <commandGroup name="automanage best-practice">
-    <command name="list" version="2022-05-04">
+    <command name="list" version="2022-05-04" confirmation="">
       <resource id="/providers/microsoft.automanage/bestpractices" version="2022-05-04" swagger="mgmt-plane/automanage/ResourceProviders/Microsoft.Automanage/Paths/L3Byb3ZpZGVycy9NaWNyb3NvZnQuQXV0b21hbmFnZS9iZXN0UHJhY3RpY2Vz/V/MjAyMi0wNS0wNA=="/>
       <operation operationId="BestPractices_ListByTenant">
         <http path="/providers/Microsoft.Automanage/bestPractices">
