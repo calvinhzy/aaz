@@ -916,6 +916,25 @@
                                         },
                                         {
                                             "type": "object",
+                                            "var": "$creationInput.properties.providerSpecificInput.HyperVReplicaAzure",
+                                            "options": [
+                                                "hyper-v-replica-azure"
+                                            ],
+                                            "args": [
+                                                {
+                                                    "type": "string",
+                                                    "var": "$creationInput.properties.providerSpecificInput.HyperVReplicaAzure.location",
+                                                    "options": [
+                                                        "location"
+                                                    ],
+                                                    "help": {
+                                                        "short": "The Location."
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
                                             "var": "$creationInput.properties.providerSpecificInput.VMwareCbt",
                                             "options": [
                                                 "v-mware-cbt"
@@ -1098,6 +1117,10 @@
                                                                                     "value": "A2A"
                                                                                 },
                                                                                 {
+                                                                                    "arg": "$creationInput.properties.providerSpecificInput.HyperVReplicaAzure",
+                                                                                    "value": "HyperVReplicaAzure"
+                                                                                },
+                                                                                {
                                                                                     "arg": "$creationInput.properties.providerSpecificInput.VMwareCbt",
                                                                                     "value": "VMwareCbt"
                                                                                 }
@@ -1147,6 +1170,17 @@
                                                                                         }
                                                                                     ]
                                                                                 }
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "property": "instanceType",
+                                                                        "value": "HyperVReplicaAzure",
+                                                                        "props": [
+                                                                            {
+                                                                                "type": "string",
+                                                                                "name": "location",
+                                                                                "arg": "$creationInput.properties.providerSpecificInput.HyperVReplicaAzure.location"
                                                                             }
                                                                         ]
                                                                     },
@@ -1780,6 +1814,26 @@
                                         },
                                         {
                                             "type": "object",
+                                            "var": "$creationInput.properties.providerSpecificInput.HyperVReplicaAzure",
+                                            "options": [
+                                                "hyper-v-replica-azure"
+                                            ],
+                                            "args": [
+                                                {
+                                                    "nullable": true,
+                                                    "type": "string",
+                                                    "var": "$creationInput.properties.providerSpecificInput.HyperVReplicaAzure.location",
+                                                    "options": [
+                                                        "location"
+                                                    ],
+                                                    "help": {
+                                                        "short": "The Location."
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
                                             "var": "$creationInput.properties.providerSpecificInput.VMwareCbt",
                                             "options": [
                                                 "v-mware-cbt"
@@ -2342,6 +2396,10 @@
                                                                             "value": "A2A"
                                                                         },
                                                                         {
+                                                                            "arg": "$creationInput.properties.providerSpecificInput.HyperVReplicaAzure",
+                                                                            "value": "HyperVReplicaAzure"
+                                                                        },
+                                                                        {
                                                                             "arg": "$creationInput.properties.providerSpecificInput.VMwareCbt",
                                                                             "value": "VMwareCbt"
                                                                         }
@@ -2391,6 +2449,17 @@
                                                                                 }
                                                                             ]
                                                                         }
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "property": "instanceType",
+                                                                "value": "HyperVReplicaAzure",
+                                                                "props": [
+                                                                    {
+                                                                        "type": "string",
+                                                                        "name": "location",
+                                                                        "arg": "$creationInput.properties.providerSpecificInput.HyperVReplicaAzure.location"
                                                                     }
                                                                 ]
                                                             },

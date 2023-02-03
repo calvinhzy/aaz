@@ -256,6 +256,11 @@
               </enum>
             </arg>
           </arg>
+          <arg type="object" var="$creationInput.properties.providerSpecificInput.HyperVReplicaAzure" options="hyper-v-replica-azure">
+            <arg type="string" var="$creationInput.properties.providerSpecificInput.HyperVReplicaAzure.location" options="location">
+              <help short="The Location."/>
+            </arg>
+          </arg>
           <arg type="object" var="$creationInput.properties.providerSpecificInput.VMwareCbt" options="v-mware-cbt">
             <arg type="string" var="$creationInput.properties.providerSpecificInput.VMwareCbt.keyVaultId" options="key-vault-id">
               <help short="The target key vault ARM Id."/>
@@ -307,6 +312,7 @@
                       <prop type="string" name="instanceType" required="True">
                         <enum>
                           <item arg="$creationInput.properties.providerSpecificInput.A2A" value="&quot;A2A&quot;"/>
+                          <item arg="$creationInput.properties.providerSpecificInput.HyperVReplicaAzure" value="&quot;HyperVReplicaAzure&quot;"/>
                           <item arg="$creationInput.properties.providerSpecificInput.VMwareCbt" value="&quot;VMwareCbt&quot;"/>
                         </enum>
                       </prop>
@@ -325,6 +331,9 @@
                             <item value="&quot;SystemAssignedIdentity&quot;"/>
                           </enum>
                         </prop>
+                      </discriminator>
+                      <discriminator property="instanceType" value="HyperVReplicaAzure">
+                        <prop type="string" name="location" arg="$creationInput.properties.providerSpecificInput.HyperVReplicaAzure.location"/>
                       </discriminator>
                       <discriminator property="instanceType" value="VMwareCbt">
                         <prop type="string" name="keyVaultId" arg="$creationInput.properties.providerSpecificInput.VMwareCbt.keyVaultId"/>
@@ -511,6 +520,11 @@
               </enum>
             </arg>
           </arg>
+          <arg type="object" var="$creationInput.properties.providerSpecificInput.HyperVReplicaAzure" options="hyper-v-replica-azure">
+            <arg nullable="True" type="string" var="$creationInput.properties.providerSpecificInput.HyperVReplicaAzure.location" options="location">
+              <help short="The Location."/>
+            </arg>
+          </arg>
           <arg type="object" var="$creationInput.properties.providerSpecificInput.VMwareCbt" options="v-mware-cbt">
             <arg nullable="True" type="string" var="$creationInput.properties.providerSpecificInput.VMwareCbt.keyVaultId" options="key-vault-id">
               <help short="The target key vault ARM Id."/>
@@ -686,6 +700,7 @@
                   <prop type="string" name="instanceType" required="True">
                     <enum>
                       <item arg="$creationInput.properties.providerSpecificInput.A2A" value="&quot;A2A&quot;"/>
+                      <item arg="$creationInput.properties.providerSpecificInput.HyperVReplicaAzure" value="&quot;HyperVReplicaAzure&quot;"/>
                       <item arg="$creationInput.properties.providerSpecificInput.VMwareCbt" value="&quot;VMwareCbt&quot;"/>
                     </enum>
                   </prop>
@@ -704,6 +719,9 @@
                         <item value="&quot;SystemAssignedIdentity&quot;"/>
                       </enum>
                     </prop>
+                  </discriminator>
+                  <discriminator property="instanceType" value="HyperVReplicaAzure">
+                    <prop type="string" name="location" arg="$creationInput.properties.providerSpecificInput.HyperVReplicaAzure.location"/>
                   </discriminator>
                   <discriminator property="instanceType" value="VMwareCbt">
                     <prop type="string" name="keyVaultId" arg="$creationInput.properties.providerSpecificInput.VMwareCbt.keyVaultId"/>

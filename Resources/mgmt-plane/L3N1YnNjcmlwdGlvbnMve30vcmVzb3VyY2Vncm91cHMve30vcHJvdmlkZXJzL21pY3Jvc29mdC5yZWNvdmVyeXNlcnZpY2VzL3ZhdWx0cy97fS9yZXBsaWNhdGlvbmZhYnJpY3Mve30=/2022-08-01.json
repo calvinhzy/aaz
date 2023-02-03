@@ -2217,6 +2217,25 @@
                                         },
                                         {
                                             "type": "object",
+                                            "var": "$input.properties.customDetails.HyperVSite",
+                                            "options": [
+                                                "hyper-v-site"
+                                            ],
+                                            "args": [
+                                                {
+                                                    "type": "string",
+                                                    "var": "$input.properties.customDetails.HyperVSite.location",
+                                                    "options": [
+                                                        "location"
+                                                    ],
+                                                    "help": {
+                                                        "short": "The Location."
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
                                             "var": "$input.properties.customDetails.InMageRcm",
                                             "options": [
                                                 "in-mage-rcm"
@@ -2438,6 +2457,10 @@
                                                                                     "value": "Azure"
                                                                                 },
                                                                                 {
+                                                                                    "arg": "$input.properties.customDetails.HyperVSite",
+                                                                                    "value": "HyperVSite"
+                                                                                },
+                                                                                {
                                                                                     "arg": "$input.properties.customDetails.InMageRcm",
                                                                                     "value": "InMageRcm"
                                                                                 },
@@ -2458,6 +2481,17 @@
                                                                                 "type": "string",
                                                                                 "name": "location",
                                                                                 "arg": "$input.properties.customDetails.Azure.location"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "property": "instanceType",
+                                                                        "value": "HyperVSite",
+                                                                        "props": [
+                                                                            {
+                                                                                "type": "string",
+                                                                                "name": "location",
+                                                                                "arg": "$input.properties.customDetails.HyperVSite.location"
                                                                             }
                                                                         ]
                                                                     },
@@ -4473,6 +4507,26 @@
                                                     "nullable": true,
                                                     "type": "string",
                                                     "var": "$input.properties.customDetails.Azure.location",
+                                                    "options": [
+                                                        "location"
+                                                    ],
+                                                    "help": {
+                                                        "short": "The Location."
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "var": "$input.properties.customDetails.HyperVSite",
+                                            "options": [
+                                                "hyper-v-site"
+                                            ],
+                                            "args": [
+                                                {
+                                                    "nullable": true,
+                                                    "type": "string",
+                                                    "var": "$input.properties.customDetails.HyperVSite.location",
                                                     "options": [
                                                         "location"
                                                     ],
@@ -6521,6 +6575,10 @@
                                                                             "value": "Azure"
                                                                         },
                                                                         {
+                                                                            "arg": "$input.properties.customDetails.HyperVSite",
+                                                                            "value": "HyperVSite"
+                                                                        },
+                                                                        {
                                                                             "arg": "$input.properties.customDetails.InMageRcm",
                                                                             "value": "InMageRcm"
                                                                         },
@@ -6541,6 +6599,17 @@
                                                                         "type": "string",
                                                                         "name": "location",
                                                                         "arg": "$input.properties.customDetails.Azure.location"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "property": "instanceType",
+                                                                "value": "HyperVSite",
+                                                                "props": [
+                                                                    {
+                                                                        "type": "string",
+                                                                        "name": "location",
+                                                                        "arg": "$input.properties.customDetails.HyperVSite.location"
                                                                     }
                                                                 ]
                                                             },

@@ -642,6 +642,11 @@
               <help short="The Location."/>
             </arg>
           </arg>
+          <arg type="object" var="$input.properties.customDetails.HyperVSite" options="hyper-v-site">
+            <arg type="string" var="$input.properties.customDetails.HyperVSite.location" options="location">
+              <help short="The Location."/>
+            </arg>
+          </arg>
           <arg type="object" var="$input.properties.customDetails.InMageRcm" options="in-mage-rcm">
             <arg type="string" var="$input.properties.customDetails.InMageRcm.physicalSiteId" options="physical-site-id" required="True">
               <help short="The ARM Id of the physical site."/>
@@ -704,12 +709,16 @@
                       <prop type="string" name="instanceType" required="True">
                         <enum>
                           <item arg="$input.properties.customDetails.Azure" value="&quot;Azure&quot;"/>
+                          <item arg="$input.properties.customDetails.HyperVSite" value="&quot;HyperVSite&quot;"/>
                           <item arg="$input.properties.customDetails.InMageRcm" value="&quot;InMageRcm&quot;"/>
                           <item arg="$input.properties.customDetails.VMwareV2" value="&quot;VMwareV2&quot;"/>
                         </enum>
                       </prop>
                       <discriminator property="instanceType" value="Azure">
                         <prop type="string" name="location" arg="$input.properties.customDetails.Azure.location"/>
+                      </discriminator>
+                      <discriminator property="instanceType" value="HyperVSite">
+                        <prop type="string" name="location" arg="$input.properties.customDetails.HyperVSite.location"/>
                       </discriminator>
                       <discriminator property="instanceType" value="InMageRcm">
                         <prop type="string" name="physicalSiteId" arg="$input.properties.customDetails.InMageRcm.physicalSiteId" required="True"/>
@@ -1299,6 +1308,11 @@
           <help short="Fabric provider specific creation input."/>
           <arg type="object" var="$input.properties.customDetails.Azure" options="azure">
             <arg nullable="True" type="string" var="$input.properties.customDetails.Azure.location" options="location">
+              <help short="The Location."/>
+            </arg>
+          </arg>
+          <arg type="object" var="$input.properties.customDetails.HyperVSite" options="hyper-v-site">
+            <arg nullable="True" type="string" var="$input.properties.customDetails.HyperVSite.location" options="location">
               <help short="The Location."/>
             </arg>
           </arg>
@@ -1911,12 +1925,16 @@
                   <prop type="string" name="instanceType" required="True">
                     <enum>
                       <item arg="$input.properties.customDetails.Azure" value="&quot;Azure&quot;"/>
+                      <item arg="$input.properties.customDetails.HyperVSite" value="&quot;HyperVSite&quot;"/>
                       <item arg="$input.properties.customDetails.InMageRcm" value="&quot;InMageRcm&quot;"/>
                       <item arg="$input.properties.customDetails.VMwareV2" value="&quot;VMwareV2&quot;"/>
                     </enum>
                   </prop>
                   <discriminator property="instanceType" value="Azure">
                     <prop type="string" name="location" arg="$input.properties.customDetails.Azure.location"/>
+                  </discriminator>
+                  <discriminator property="instanceType" value="HyperVSite">
+                    <prop type="string" name="location" arg="$input.properties.customDetails.HyperVSite.location"/>
                   </discriminator>
                   <discriminator property="instanceType" value="InMageRcm">
                     <prop type="string" name="physicalSiteId" arg="$input.properties.customDetails.InMageRcm.physicalSiteId" required="True"/>
