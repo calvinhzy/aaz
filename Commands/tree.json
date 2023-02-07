@@ -3877,6 +3877,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "storage-mover agent list -g {rg} --storage-mover-name {mover_name}"
+                        ],
+                        "name": "agent list"
+                      }
+                    ],
                     "name": "2022-07-01-preview",
                     "resources": [
                       {
@@ -3899,6 +3907,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "storage-mover agent show -g {rg} -n {agent_name} --storage-mover-name {mover_name}"
+                        ],
+                        "name": "agent show"
+                      }
+                    ],
                     "name": "2022-07-01-preview",
                     "resources": [
                       {
@@ -3921,6 +3937,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "storage-mover agent unregister -g {rg} -n {agent_name} --storage-mover-name {mover_name}"
+                        ],
+                        "name": "agent unregister"
+                      }
+                    ],
                     "name": "2022-07-01-preview",
                     "resources": [
                       {
@@ -3943,6 +3967,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "storage-mover agent update -g {rg} -n {agent_name} --storage-mover-name {mover_name} --description 123"
+                        ],
+                        "name": "agent update"
+                      }
+                    ],
                     "name": "2022-07-01-preview",
                     "resources": [
                       {
@@ -3998,6 +4030,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "storage-mover endpoint delete -g {rg} --storage-mover-name {mover_name} -n {endpoint_nfs}"
+                        ],
+                        "name": "endpoint delete"
+                      }
+                    ],
                     "name": "2022-07-01-preview",
                     "resources": [
                       {
@@ -4020,6 +4060,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "storage-mover endpoint list -g {rg} --storage-mover-name {mover_name}"
+                        ],
+                        "name": "endpoint list"
+                      }
+                    ],
                     "name": "2022-07-01-preview",
                     "resources": [
                       {
@@ -4042,6 +4090,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "storage-mover endpoint show -g {rg} --storage-mover-name {mover_name} -n {endpoint_nfs}"
+                        ],
+                        "name": "endpoint show"
+                      }
+                    ],
                     "name": "2022-07-01-preview",
                     "resources": [
                       {
@@ -4317,6 +4373,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "storage-mover project create -g {rg} --storage-mover-name {mover_name} -n {project_name} --description ProjectDesc"
+                        ],
+                        "name": "project create"
+                      }
+                    ],
                     "name": "2022-07-01-preview",
                     "resources": [
                       {
@@ -4339,6 +4403,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "storage-mover project delete -g {rg} --storage-mover-name {mover_name} -n {project_name}"
+                        ],
+                        "name": "project delete"
+                      }
+                    ],
                     "name": "2022-07-01-preview",
                     "resources": [
                       {
@@ -4361,6 +4433,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "storage-mover project list -g {rg} --storage-mover-name {mover_name}"
+                        ],
+                        "name": "project list"
+                      }
+                    ],
                     "name": "2022-07-01-preview",
                     "resources": [
                       {
@@ -4383,6 +4463,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "storage-mover project show -g {rg} --storage-mover-name {mover_name} -n {project_name}"
+                        ],
+                        "name": "project show"
+                      }
+                    ],
                     "name": "2022-07-01-preview",
                     "resources": [
                       {
@@ -4405,6 +4493,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "storage-mover project update -g {rg} --storage-mover-name {mover_name} -n {project_name} --description ProjectDesc2"
+                        ],
+                        "name": "project update"
+                      }
+                    ],
                     "name": "2022-07-01-preview",
                     "resources": [
                       {
@@ -4437,6 +4533,14 @@
             ],
             "versions": [
               {
+                "examples": [
+                  {
+                    "commands": [
+                      "storage-mover create -g {rg} -n {mover_name} -l eastus2 --tags {{key1:value1}} --description ExampleDesc"
+                    ],
+                    "name": "storage-mover create"
+                  }
+                ],
                 "name": "2022-07-01-preview",
                 "resources": [
                   {
@@ -4458,6 +4562,14 @@
             ],
             "versions": [
               {
+                "examples": [
+                  {
+                    "commands": [
+                      "storage-mover delete -g {rg} -n {mover_name}"
+                    ],
+                    "name": "storage-mover delete"
+                  }
+                ],
                 "name": "2022-07-01-preview",
                 "resources": [
                   {
@@ -4479,6 +4591,14 @@
             ],
             "versions": [
               {
+                "examples": [
+                  {
+                    "commands": [
+                      "storage-mover list -g {rg}"
+                    ],
+                    "name": "storage-mover list"
+                  }
+                ],
                 "name": "2022-07-01-preview",
                 "resources": [
                   {
@@ -4505,6 +4625,14 @@
             ],
             "versions": [
               {
+                "examples": [
+                  {
+                    "commands": [
+                      "storage-mover show -g {rg} -n {mover_name}"
+                    ],
+                    "name": "storage-mover show"
+                  }
+                ],
                 "name": "2022-07-01-preview",
                 "resources": [
                   {
@@ -4526,6 +4654,14 @@
             ],
             "versions": [
               {
+                "examples": [
+                  {
+                    "commands": [
+                      "storage-mover update -g {rg} -n {mover_name} -l eastus2 --tags {{key2:value2}} --description ExampleDesc2"
+                    ],
+                    "name": "storage-mover update"
+                  }
+                ],
                 "name": "2022-07-01-preview",
                 "resources": [
                   {

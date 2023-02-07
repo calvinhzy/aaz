@@ -8,3 +8,10 @@ Lists all Storage Movers in a subscription.
 
 <!-- mgmt-plane /subscriptions/{}/providers/microsoft.storagemover/storagemovers 2022-07-01-preview -->
 <!-- mgmt-plane /subscriptions/{}/resourcegroups/{}/providers/microsoft.storagemover/storagemovers 2022-07-01-preview -->
+
+#### examples
+
+- storage-mover list
+    ```bash
+        storage-mover list -g {rg}
+    ```
