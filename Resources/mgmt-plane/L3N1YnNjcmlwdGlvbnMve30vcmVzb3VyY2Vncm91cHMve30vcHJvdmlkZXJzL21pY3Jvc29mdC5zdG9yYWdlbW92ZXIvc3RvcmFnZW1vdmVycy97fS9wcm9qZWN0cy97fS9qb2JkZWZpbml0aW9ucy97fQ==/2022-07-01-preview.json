@@ -300,17 +300,14 @@
                                                             "name": "systemData",
                                                             "props": [
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "dateTime",
                                                                     "name": "createdAt"
                                                                 },
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "string",
                                                                     "name": "createdBy"
                                                                 },
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "string",
                                                                     "name": "createdByType",
                                                                     "enum": {
@@ -331,17 +328,14 @@
                                                                     }
                                                                 },
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "dateTime",
                                                                     "name": "lastModifiedAt"
                                                                 },
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "string",
                                                                     "name": "lastModifiedBy"
                                                                 },
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "string",
                                                                     "name": "lastModifiedByType",
                                                                     "enum": {
@@ -1024,17 +1018,14 @@
                                                             "name": "systemData",
                                                             "props": [
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "dateTime",
                                                                     "name": "createdAt"
                                                                 },
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "string",
                                                                     "name": "createdBy"
                                                                 },
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "string",
                                                                     "name": "createdByType",
                                                                     "enum": {
@@ -1055,17 +1046,14 @@
                                                                     }
                                                                 },
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "dateTime",
                                                                     "name": "lastModifiedAt"
                                                                 },
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "string",
                                                                     "name": "lastModifiedBy"
                                                                 },
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "string",
                                                                     "name": "lastModifiedByType",
                                                                     "enum": {
@@ -1196,7 +1184,6 @@
                             "name": "Properties",
                             "args": [
                                 {
-                                    "nullable": true,
                                     "type": "string",
                                     "var": "$jobDefinition.properties.agentName",
                                     "options": [
@@ -1231,7 +1218,6 @@
                                     }
                                 },
                                 {
-                                    "nullable": true,
                                     "type": "string",
                                     "var": "$jobDefinition.properties.description",
                                     "options": [
@@ -1241,39 +1227,17 @@
                                     "help": {
                                         "short": "A description for the Job Definition."
                                     }
-                                },
-                                {
-                                    "type": "string",
-                                    "var": "$jobDefinition.properties.sourceName",
-                                    "options": [
-                                        "source-name"
-                                    ],
-                                    "group": "Properties",
-                                    "help": {
-                                        "short": "The name of the source Endpoint."
-                                    }
-                                },
-                                {
-                                    "type": "string",
-                                    "var": "$jobDefinition.properties.targetName",
-                                    "options": [
-                                        "target-name"
-                                    ],
-                                    "group": "Properties",
-                                    "help": {
-                                        "short": "The name of the target Endpoint."
-                                    }
                                 }
                             ]
                         }
                     ],
                     "operations": [
                         {
-                            "operationId": "JobDefinitions_Get",
+                            "operationId": "JobDefinitions_Update",
                             "http": {
                                 "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageMover/storageMovers/{storageMoverName}/projects/{projectName}/jobDefinitions/{jobDefinitionName}",
                                 "request": {
-                                    "method": "get",
+                                    "method": "patch",
                                     "path": {
                                         "params": [
                                             {
@@ -1331,6 +1295,50 @@
                                                 }
                                             }
                                         ]
+                                    },
+                                    "body": {
+                                        "json": {
+                                            "schema": {
+                                                "type": "object",
+                                                "name": "jobDefinition",
+                                                "required": true,
+                                                "props": [
+                                                    {
+                                                        "type": "object",
+                                                        "name": "properties",
+                                                        "props": [
+                                                            {
+                                                                "type": "string",
+                                                                "name": "agentName",
+                                                                "arg": "$jobDefinition.properties.agentName"
+                                                            },
+                                                            {
+                                                                "type": "string",
+                                                                "name": "copyMode",
+                                                                "arg": "$jobDefinition.properties.copyMode",
+                                                                "enum": {
+                                                                    "items": [
+                                                                        {
+                                                                            "value": "Additive"
+                                                                        },
+                                                                        {
+                                                                            "value": "Mirror"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "string",
+                                                                "name": "description",
+                                                                "arg": "$jobDefinition.properties.description"
+                                                            }
+                                                        ],
+                                                        "clientFlatten": true
+                                                    }
+                                                ],
+                                                "clientFlatten": true
+                                            }
+                                        }
                                     }
                                 },
                                 "responses": [
@@ -1482,17 +1490,14 @@
                                                             "name": "systemData",
                                                             "props": [
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "dateTime",
                                                                     "name": "createdAt"
                                                                 },
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "string",
                                                                     "name": "createdBy"
                                                                 },
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "string",
                                                                     "name": "createdByType",
                                                                     "enum": {
@@ -1513,17 +1518,14 @@
                                                                     }
                                                                 },
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "dateTime",
                                                                     "name": "lastModifiedAt"
                                                                 },
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "string",
                                                                     "name": "lastModifiedBy"
                                                                 },
                                                                 {
-                                                                    "readOnly": true,
                                                                     "type": "string",
                                                                     "name": "lastModifiedByType",
                                                                     "enum": {
@@ -1550,166 +1552,7 @@
                                                             "type": "string",
                                                             "name": "type"
                                                         }
-                                                    ],
-                                                    "cls": "JobDefinition_read"
-                                                }
-                                            }
-                                        }
-                                    },
-                                    {
-                                        "isError": true,
-                                        "body": {
-                                            "json": {
-                                                "schema": {
-                                                    "type": "@MgmtErrorFormat"
-                                                }
-                                            }
-                                        }
-                                    }
-                                ]
-                            }
-                        },
-                        {
-                            "instanceUpdate": {
-                                "ref": "$Instance",
-                                "json": {
-                                    "schema": {
-                                        "type": "object",
-                                        "name": "jobDefinition",
-                                        "required": true,
-                                        "props": [
-                                            {
-                                                "type": "object",
-                                                "name": "properties",
-                                                "required": true,
-                                                "props": [
-                                                    {
-                                                        "type": "string",
-                                                        "name": "agentName",
-                                                        "arg": "$jobDefinition.properties.agentName"
-                                                    },
-                                                    {
-                                                        "type": "string",
-                                                        "name": "copyMode",
-                                                        "arg": "$jobDefinition.properties.copyMode",
-                                                        "required": true,
-                                                        "enum": {
-                                                            "items": [
-                                                                {
-                                                                    "value": "Additive"
-                                                                },
-                                                                {
-                                                                    "value": "Mirror"
-                                                                }
-                                                            ]
-                                                        }
-                                                    },
-                                                    {
-                                                        "type": "string",
-                                                        "name": "description",
-                                                        "arg": "$jobDefinition.properties.description"
-                                                    },
-                                                    {
-                                                        "type": "string",
-                                                        "name": "sourceName",
-                                                        "arg": "$jobDefinition.properties.sourceName",
-                                                        "required": true
-                                                    },
-                                                    {
-                                                        "type": "string",
-                                                        "name": "targetName",
-                                                        "arg": "$jobDefinition.properties.targetName",
-                                                        "required": true
-                                                    }
-                                                ],
-                                                "clientFlatten": true
-                                            }
-                                        ],
-                                        "clientFlatten": true
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "operationId": "JobDefinitions_CreateOrUpdate",
-                            "http": {
-                                "path": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.StorageMover/storageMovers/{storageMoverName}/projects/{projectName}/jobDefinitions/{jobDefinitionName}",
-                                "request": {
-                                    "method": "put",
-                                    "path": {
-                                        "params": [
-                                            {
-                                                "type": "string",
-                                                "name": "jobDefinitionName",
-                                                "arg": "$Path.jobDefinitionName",
-                                                "required": true
-                                            },
-                                            {
-                                                "type": "string",
-                                                "name": "projectName",
-                                                "arg": "$Path.projectName",
-                                                "required": true
-                                            },
-                                            {
-                                                "type": "string",
-                                                "name": "resourceGroupName",
-                                                "arg": "$Path.resourceGroupName",
-                                                "required": true,
-                                                "format": {
-                                                    "maxLength": 90,
-                                                    "minLength": 1
-                                                }
-                                            },
-                                            {
-                                                "type": "string",
-                                                "name": "storageMoverName",
-                                                "arg": "$Path.storageMoverName",
-                                                "required": true
-                                            },
-                                            {
-                                                "type": "string",
-                                                "name": "subscriptionId",
-                                                "arg": "$Path.subscriptionId",
-                                                "required": true,
-                                                "format": {
-                                                    "minLength": 1
-                                                }
-                                            }
-                                        ]
-                                    },
-                                    "query": {
-                                        "consts": [
-                                            {
-                                                "readOnly": true,
-                                                "const": true,
-                                                "default": {
-                                                    "value": "2022-07-01-preview"
-                                                },
-                                                "type": "string",
-                                                "name": "api-version",
-                                                "required": true,
-                                                "format": {
-                                                    "minLength": 1
-                                                }
-                                            }
-                                        ]
-                                    },
-                                    "body": {
-                                        "json": {
-                                            "ref": "$Instance"
-                                        }
-                                    }
-                                },
-                                "responses": [
-                                    {
-                                        "statusCode": [
-                                            200
-                                        ],
-                                        "body": {
-                                            "json": {
-                                                "var": "$Instance",
-                                                "schema": {
-                                                    "type": "@JobDefinition_read"
+                                                    ]
                                                 }
                                             }
                                         }
@@ -1734,7 +1577,8 @@
                             "ref": "$Instance",
                             "clientFlatten": true
                         }
-                    ]
+                    ],
+                    "confirmation": ""
                 }
             ]
         }
