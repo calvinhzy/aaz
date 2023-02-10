@@ -4183,6 +4183,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "storage-mover job-definition delete -g {rg} -n {job_definition} --project-name {project_name} --storage-mover-name {mover_name}"
+                        ],
+                        "name": "job-definition delete"
+                      }
+                    ],
                     "name": "2022-07-01-preview",
                     "resources": [
                       {
@@ -4205,6 +4213,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "storage-mover job-definition list -g {rg} --project-name {project_name} --storage-mover-name {mover_name}"
+                        ],
+                        "name": "job-definition list"
+                      }
+                    ],
                     "name": "2022-07-01-preview",
                     "resources": [
                       {
@@ -4257,6 +4273,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "storage-mover job-definition start-job -g {rg} --job-definition-name {job_definition} --project-name {project_name} --storage-mover-name {mover_name}"
+                        ],
+                        "name": "job-definition start-job"
+                      }
+                    ],
                     "name": "2022-07-01-preview",
                     "resources": [
                       {
@@ -4279,6 +4303,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "storage-mover job-definition stop-job -g {rg} --job-definition-name {job_definition} --project-name {project_name} --storage-mover-name {mover_name}"
+                        ],
+                        "name": "job-definition stop-job"
+                      }
+                    ],
                     "name": "2022-07-01-preview",
                     "resources": [
                       {
@@ -4301,6 +4333,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "storage-mover job-definition update -g {rg} -n {job_definition} --project-name {project_name} --storage-mover-name {mover_name} --copy-mode Mirror --agent-name {agent_name} --description JobDefinitionDescription2"
+                        ],
+                        "name": "job-definition update"
+                      }
+                    ],
                     "name": "2022-07-01-preview",
                     "resources": [
                       {
@@ -4334,6 +4374,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "storage-mover job-run list -g {rg} --job-definition-name {job_definition} --project-name {project_name} --storage-mover-name {mover_name}"
+                        ],
+                        "name": "job-run list"
+                      }
+                    ],
                     "name": "2022-07-01-preview",
                     "resources": [
                       {
@@ -4356,6 +4404,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "storage-mover job-run show -n {job_name} -g {rg} --job-definition-name {job_definition} --project-name {project_name} --storage-mover-name {mover_name}"
+                        ],
+                        "name": "job-run show"
+                      }
+                    ],
                     "name": "2022-07-01-preview",
                     "resources": [
                       {
