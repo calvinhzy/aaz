@@ -23,4 +23,4 @@ Manage Job Definition resource, which contains configuration for a single unit o
 : Requests the Agent of any active instance of this Job Definition to stop.
 
 - [update](/Commands/storage-mover/job-definition/_update.md)
-: Update properties for a Job Definition resource. Properties not specified in the request body will be unchanged.
+: Updates a Job Definition resource, which contains configuration for a single unit of managed data transfer.
