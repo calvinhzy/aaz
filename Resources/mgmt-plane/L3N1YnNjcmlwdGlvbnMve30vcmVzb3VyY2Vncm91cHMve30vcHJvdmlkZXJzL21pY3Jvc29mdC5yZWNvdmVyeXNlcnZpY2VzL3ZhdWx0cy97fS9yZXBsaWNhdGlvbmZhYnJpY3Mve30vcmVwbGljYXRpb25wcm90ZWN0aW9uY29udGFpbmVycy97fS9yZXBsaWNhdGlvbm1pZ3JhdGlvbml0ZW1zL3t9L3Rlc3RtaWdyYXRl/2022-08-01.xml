@@ -5,20 +5,20 @@
     <command name="test-migrate" version="2022-08-01">
       <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationmigrationitems/{}/testmigrate" version="2022-08-01" swagger="mgmt-plane/recoveryservicessiterecovery/ResourceProviders/Microsoft.RecoveryServices/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuUmVjb3ZlcnlTZXJ2aWNlcy92YXVsdHMve3Jlc291cmNlTmFtZX0vcmVwbGljYXRpb25GYWJyaWNzL3tmYWJyaWNOYW1lfS9yZXBsaWNhdGlvblByb3RlY3Rpb25Db250YWluZXJzL3twcm90ZWN0aW9uQ29udGFpbmVyTmFtZX0vcmVwbGljYXRpb25NaWdyYXRpb25JdGVtcy97bWlncmF0aW9uSXRlbU5hbWV9L3Rlc3RNaWdyYXRl/V/MjAyMi0wOC0wMQ=="/>
       <argGroup name="">
-        <arg type="string" var="$Path.fabricName" options="fabric-name" required="True">
+        <arg type="string" var="$Path.fabricName" options="fabric-name" required="True" idPart="child_name_1">
           <help short="Fabric name."/>
         </arg>
-        <arg type="string" var="$Path.migrationItemName" options="migration-item-name" required="True">
+        <arg type="string" var="$Path.migrationItemName" options="migration-item-name" required="True" idPart="child_name_3">
           <help short="Migration item name."/>
         </arg>
-        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name protection-container" required="True">
+        <arg type="string" var="$Path.protectionContainerName" options="protection-container-name protection-container" required="True" idPart="child_name_2">
           <help short="Protection container name."/>
         </arg>
-        <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True"/>
-        <arg type="string" var="$Path.resourceName" options="vault-name" required="True" group="">
+        <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
+        <arg type="string" var="$Path.resourceName" options="vault-name" required="True" group="" idPart="name">
           <help short="The name of the recovery services vault."/>
         </arg>
-        <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True"/>
+        <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
       </argGroup>
       <argGroup name="Properties">
         <arg type="object" var="$testMigrateInput.properties.providerSpecificDetails" options="provider-specific-details provider-details" required="True" group="Properties">
@@ -92,7 +92,7 @@
                       <discriminator property="instanceType" value="VMwareCbt">
                         <prop type="string" name="networkId" arg="$testMigrateInput.properties.providerSpecificDetails.VMwareCbt.networkId" required="True"/>
                         <prop type="string" name="recoveryPointId" arg="$testMigrateInput.properties.providerSpecificDetails.VMwareCbt.recoveryPointId" required="True"/>
-                        <prop type="array<object>" name="vmNics" arg="$testMigrateInput.properties.providerSpecificDetails.VMwareCbt.vmNics">
+                        <prop type="array<object>" name="vmNics" arg="$testMigrateInput.properties.providerSpecificDetails.VMwareCbt.vmNics" identifiers="nicId">
                           <item type="object">
                             <prop type="string" name="isPrimaryNic" arg="$testMigrateInput.properties.providerSpecificDetails.VMwareCbt.vmNics[].isPrimaryNic" required="True"/>
                             <prop type="string" name="isSelectedForMigration" arg="$testMigrateInput.properties.providerSpecificDetails.VMwareCbt.vmNics[].isSelectedForMigration"/>

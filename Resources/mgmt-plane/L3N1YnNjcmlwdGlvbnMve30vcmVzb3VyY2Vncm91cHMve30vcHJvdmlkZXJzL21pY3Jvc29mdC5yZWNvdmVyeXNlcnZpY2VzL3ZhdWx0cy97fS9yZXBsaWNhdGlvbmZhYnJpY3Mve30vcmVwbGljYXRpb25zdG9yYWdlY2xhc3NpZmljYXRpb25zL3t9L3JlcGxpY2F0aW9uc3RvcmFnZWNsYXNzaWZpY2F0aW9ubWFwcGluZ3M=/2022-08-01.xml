@@ -5,17 +5,17 @@
     <command name="list" version="2022-08-01">
       <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationstorageclassifications/{}/replicationstorageclassificationmappings" version="2022-08-01" swagger="mgmt-plane/recoveryservicessiterecovery/ResourceProviders/Microsoft.RecoveryServices/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuUmVjb3ZlcnlTZXJ2aWNlcy92YXVsdHMve3Jlc291cmNlTmFtZX0vcmVwbGljYXRpb25GYWJyaWNzL3tmYWJyaWNOYW1lfS9yZXBsaWNhdGlvblN0b3JhZ2VDbGFzc2lmaWNhdGlvbnMve3N0b3JhZ2VDbGFzc2lmaWNhdGlvbk5hbWV9L3JlcGxpY2F0aW9uU3RvcmFnZUNsYXNzaWZpY2F0aW9uTWFwcGluZ3M=/V/MjAyMi0wOC0wMQ=="/>
       <argGroup name="">
-        <arg type="string" var="$Path.fabricName" options="fabric-name" required="True">
+        <arg type="string" var="$Path.fabricName" options="fabric-name" required="True" idPart="child_name_1">
           <help short="Fabric name."/>
         </arg>
-        <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True"/>
-        <arg type="string" var="$Path.resourceName" options="vault-name" required="True" group="">
+        <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" required="True" idPart="resource_group"/>
+        <arg type="string" var="$Path.resourceName" options="vault-name" required="True" group="" idPart="name">
           <help short="The name of the recovery services vault."/>
         </arg>
-        <arg type="string" var="$Path.storageClassificationName" options="storage-classification-name storage-classification" required="True">
+        <arg type="string" var="$Path.storageClassificationName" options="storage-classification-name storage-classification" required="True" idPart="child_name_2">
           <help short="Storage classification name."/>
         </arg>
-        <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True"/>
+        <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
       </argGroup>
       <operation operationId="ReplicationStorageClassificationMappings_ListByReplicationStorageClassifications">
         <http path="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RecoveryServices/vaults/{resourceName}/replicationFabrics/{fabricName}/replicationStorageClassifications/{storageClassificationName}/replicationStorageClassificationMappings">
