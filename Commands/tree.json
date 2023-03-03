@@ -10338,6 +10338,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery fabric create -n {fabric1_name} -g {rg} --vault-name {vault_name} --custom-details '{azure:{location:eastus}}'"
+                        ],
+                        "name": "fabric create for A2A"
+                      }
+                    ],
                     "name": "2022-08-01",
                     "resources": [
                       {
@@ -11637,13 +11645,13 @@
                         "examples": [
                           {
                             "commands": [
-                              "site-recovery vault policy create -g {rg} --resource-name {vault_name} -n {policy_name_rcm} --provider-specific-input {{in-mage-rcm:{{app-consistent-frequency-in-minutes:0,crash-consistent-frequency-in-minutes:5,enable-multi-vm-sync:true,recovery-point-history-in-minutes:2880}}}}"
+                              "site-recovery vault policy create -g {rg} --resource-name {vault_name} -n {policy_name_rcm} --provider-specific-input '{in-mage-rcm:{app-consistent-frequency-in-minutes:0,crash-consistent-frequency-in-minutes:5,enable-multi-vm-sync:true,recovery-point-history-in-minutes:2880}}'"
                             ],
                             "name": "policy create of type in-mage-rcm"
                           },
                           {
                             "commands": [
-                              "site-recovery vault policy create -g {rg} --resource-name {vault_name} -n {policy_name_rcm_failback} --provider-specific-input {{in-mage-rcm-failback:{{app-consistent-frequency-in-minutes:60,crash-consistent-frequency-in-minutes:5}}}}"
+                              "site-recovery vault policy create -g {rg} --resource-name {vault_name} -n {policy_name_rcm_failback} --provider-specific-input '{in-mage-rcm-failback:{app-consistent-frequency-in-minutes:60,crash-consistent-frequency-in-minutes:5}}'"
                             ],
                             "name": "policy create for type in-mage-rcm-failback"
                           }
@@ -11767,13 +11775,13 @@
                         "examples": [
                           {
                             "commands": [
-                              "site-recovery vault policy update --debug -g {rg} --resource-name {vault_name} -n {policy_name_rcm} --provider-specific-input {{in-mage-rcm:{{app-consistent-frequency-in-minutes:0,crash-consistent-frequency-in-minutes:5,enable-multi-vm-sync:true,recovery-point-history-in-minutes:1440}}}}"
+                              "site-recovery vault policy update --debug -g {rg} --resource-name {vault_name} -n {policy_name_rcm} --provider-specific-input '{in-mage-rcm:{app-consistent-frequency-in-minutes:0,crash-consistent-frequency-in-minutes:5,enable-multi-vm-sync:true,recovery-point-history-in-minutes:1440}}'"
                             ],
                             "name": "policy update for type in-mage-rcm"
                           },
                           {
                             "commands": [
-                              "site-recovery vault policy update -g {rg} --resource-name {vault_name} -n {policy_name_rcm_failback} --provider-specific-input {{in-mage-rcm-failback:{{app-consistent-frequency-in-minutes:0,crash-consistent-frequency-in-minutes:10}}}}"
+                              "site-recovery vault policy update -g {rg} --resource-name {vault_name} -n {policy_name_rcm_failback} --provider-specific-input '{in-mage-rcm-failback:{app-consistent-frequency-in-minutes:0,crash-consistent-frequency-in-minutes:10}}'"
                             ],
                             "name": "policy update for type in-mage-rcm-failback"
                           }
