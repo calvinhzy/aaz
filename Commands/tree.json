@@ -8961,6 +8961,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery fabric network-mapping create -g {rg} --fabric-name {fabric1_name} -n {network_mapping1_name} --network-name azureNetwork --vault-name {vault_name} --recovery-network-id {vnet2_id} --fabric-details '{azure-to-azure:{primary-network-id:{vnetvm_id}}}' --recovery-fabric-name {fabric2_name}"
+                            ],
+                            "name": "network-mapping create for A2A fabric"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
@@ -9091,6 +9099,14 @@
                         ],
                         "versions": [
                           {
+                            "examples": [
+                              {
+                                "commands": [
+                                  "site-recovery fabric protection-container mapping create -g {rg} --fabric-name {fabric1_name} -n {container_mapping1_name} --protection-container {container1_name} --vault-name {vault_name} --policy-id {policy_id} --provider-input '{a2a:{agent-auto-update-status:Disabled}}' --target-container {container2_id}"
+                                ],
+                                "name": "protection-container mapping create for A2A"
+                              }
+                            ],
                             "name": "2022-08-01",
                             "resources": [
                               {
@@ -9115,6 +9131,14 @@
                         ],
                         "versions": [
                           {
+                            "examples": [
+                              {
+                                "commands": [
+                                  "site-recovery fabric protection-container mapping delete -g {rg} --fabric-name {fabric1_name} -n {container_mapping1_name} --protection-container {container1_name} --vault-name {vault_name}"
+                                ],
+                                "name": "protection-container mapping delete"
+                              }
+                            ],
                             "name": "2022-08-01",
                             "resources": [
                               {
@@ -9651,6 +9675,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery fabric protection-container create -g {rg} --fabric-name {fabric1_name} -n {container1_name} --vault-name {vault_name} --provider-input '[{instance-type:A2A}]'"
+                            ],
+                            "name": "protection-container create for A2A"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
@@ -9720,6 +9752,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery fabric protection-container remove -g {rg} --fabric-name {fabric1_name} -n {container1_name} --vault-name {vault_name}"
+                            ],
+                            "name": "protection-container remove"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
@@ -9743,6 +9783,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery fabric protection-container show -g {rg} --fabric-name {fabric1_name} -n {container1_name} --vault-name {vault_name}"
+                            ],
+                            "name": "protection-container show"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
@@ -9766,6 +9814,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery fabric protection-container switch-protection --fabric-name {fabric1_name} -n {container1_name} --protected-item {protected_item_name} -g {rg} --vault-name {vault_name} --provider-details '{a2a:{policy-id:{policy_id},recovery-container-id:{container1_id},recovery-resource-group-id:{vm_rg_id},vm-managed-disks:[{disk-id:{recovery_os_disk},primary-staging-azure-storage-account-id:{storage2_id},recovery-resource-group-id:{vm_rg_id}}]}}'"
+                            ],
+                            "name": "protection-container switch-protection for A2A"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
@@ -10368,6 +10424,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery fabric delete -n {fabric1_name} -g {rg} --vault-name {vault_name}"
+                        ],
+                        "name": "fabric delete"
+                      }
+                    ],
                     "name": "2022-08-01",
                     "resources": [
                       {
@@ -10500,6 +10564,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery fabric show -n {fabric1_name} -g {rg} --vault-name {vault_name}"
+                        ],
+                        "name": "fabric show"
+                      }
+                    ],
                     "name": "2022-08-01",
                     "resources": [
                       {
@@ -10659,6 +10731,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery protected-item create -g {rg} --fabric-name {fabric1_name} -n {protected_item_name} --protection-container {container1_name} --vault-name {vault_name} --policy-id {policy_id} --provider-details '{a2a:{fabric-object-id:{vm_id},vm-managed-disks:[{disk-id:{os_disk},primary-staging-azure-storage-account-id:{storage1_id},recovery-resource-group-id:{rg_id}}],recovery-azure-network-id:{vnet2_id},recovery-container-id:{container2_id},recovery-resource-group-id:{rg_id},recovery-subnet-name:{vnet2_subnet}}}'"
+                        ],
+                        "name": "protected-item create for A2A"
+                      }
+                    ],
                     "name": "2022-08-01",
                     "resources": [
                       {
@@ -10681,6 +10761,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery protected-item delete -g {rg} --fabric-name {fabric2_name} -n {protected_item_name} --protection-container {container2_name} --vault-name {vault_name}"
+                        ],
+                        "name": "protected-item delete"
+                      }
+                    ],
                     "name": "2022-08-01",
                     "resources": [
                       {
@@ -10725,6 +10813,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery protected-item failover-commit --fabric-name {fabric1_name} --protection-container {container1_name} -n {protected_item_name} -g {rg} --vault-name {vault_name}"
+                        ],
+                        "name": "protected-item failover-commit"
+                      }
+                    ],
                     "name": "2022-08-01",
                     "resources": [
                       {
@@ -10923,6 +11019,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery protected-item show -g {rg} --fabric-name {fabric1_name} -n {protected_item_name} --protection-container {container1_name} --vault-name {vault_name}"
+                        ],
+                        "name": "protected-item show"
+                      }
+                    ],
                     "name": "2022-08-01",
                     "resources": [
                       {
@@ -11011,6 +11115,20 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery protected-item unplanned-failover --fabric-name {fabric1_name} --protection-container {container1_name} -n {protected_item_name} -g {rg} --vault-name {vault_name} --failover-direction PrimaryToRecovery --provider-details '{a2a:{}}' --source-site-operations NotRequired"
+                        ],
+                        "name": "protected-item unplanned-failover for A2A"
+                      },
+                      {
+                        "commands": [
+                          "site-recovery protected-item unplanned-failover --fabric-name {fabric2_name} --protection-container {container2_name} -n {protected_item_name} -g {rg} --vault-name {vault_name} --failover-direction PrimaryToRecovery --provider-details '{a2a:{}}' --source-site-operations NotRequired"
+                        ],
+                        "name": "protected-item failback for A2A"
+                      }
+                    ],
                     "name": "2022-08-01",
                     "resources": [
                       {
@@ -11925,6 +12043,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery vault recovery-plan create -n {recovery_plan_name} -g {rg} --vault-name {vault_name} --groups '[{group-type:Boot,replication-protected-items:[{id:{protected_item_id},virtual-machine-id:{vm_id}}]}]' --primary-fabric-id {fabric1_id} --recovery-fabric-id {fabric2_id} --failover-deployment-model ResourceManager"
+                            ],
+                            "name": "recovery-plan create"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
@@ -11948,6 +12074,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery vault recovery-plan delete -n {recovery_plan_name} -g {rg} --vault-name {vault_name}"
+                            ],
+                            "name": "recovery-plan delete"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
@@ -12017,6 +12151,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery vault recovery-plan list -g {rg} --vault-name {vault_name}"
+                            ],
+                            "name": "recovery-plan list"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
@@ -12086,6 +12228,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery vault recovery-plan show -n {recovery_plan_name} -g {rg} --vault-name {vault_name}"
+                            ],
+                            "name": "recovery-plan show"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
