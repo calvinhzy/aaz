@@ -55867,6 +55867,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery fabric list -g {rg} --vault-name {vault_name}"
+                        ],
+                        "name": "fabric list"
+                      }
+                    ],
                     "name": "2022-08-01",
                     "resources": [
                       {
@@ -55889,6 +55897,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery fabric remove -n {fabric_source_name} -g {rg} --vault-name {vault_name}"
+                        ],
+                        "name": "fabric remove"
+                      }
+                    ],
                     "name": "2022-08-01",
                     "resources": [
                       {
@@ -55941,6 +55957,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery fabric update -n {fabric_source_name} -g {rg} --vault-name {vault_name} --custom-details '{azure:{location:eastus}}'"
+                        ],
+                        "name": "fabric update"
+                      }
+                    ],
                     "name": "2022-08-01",
                     "resources": [
                       {
