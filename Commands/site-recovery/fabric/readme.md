@@ -21,9 +21,6 @@ Manage Fabric
 - [list](/Commands/site-recovery/fabric/_list.md)
 : List a list of the Azure Site Recovery fabrics in the vault.
 
-- [remove](/Commands/site-recovery/fabric/_remove.md)
-: The operation to delete or remove an Azure Site Recovery fabric.
-
 - [show](/Commands/site-recovery/fabric/_show.md)
 : Get the details of an Azure Site Recovery fabric.
 

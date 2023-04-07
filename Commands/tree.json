@@ -55347,6 +55347,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery fabric network-mapping delete -g {rg} --fabric-name {fabric_source_name} -n {network_mapping_src_to_recovery_name} --network-name azureNetwork --vault-name {vault_name}'"
+                            ],
+                            "name": "network-mapping delete"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
@@ -55370,6 +55378,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery fabric network-mapping list -g {rg} --fabric-name {fabric_source_name} --network-name azureNetwork --vault-name {vault_name}"
+                            ],
+                            "name": "network-mapping list"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
@@ -55393,6 +55409,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery fabric network-mapping show -g {rg} --fabric-name {fabric_source_name} -n {network_mapping_src_to_recovery_name} --network-name azureNetwork --vault-name {vault_name}"
+                            ],
+                            "name": "network-mapping show"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
@@ -55416,6 +55440,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery fabric network-mapping update -g {rg} --fabric-name {fabric_recovery_name} -n {network_mapping_src_to_recovery_name} --network-name azureNetwork --vault-name {vault_name} --recovery-network-id {vnetvm_id} --fabric-details '{azure-to-azure:{primary-network-id:{vnet_recovery_id}}}' --recovery-fabric-name {fabric_source_name}"
+                            ],
+                            "name": "network-mapping update"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
@@ -55518,6 +55550,14 @@
                         ],
                         "versions": [
                           {
+                            "examples": [
+                              {
+                                "commands": [
+                                  "site-recovery fabric protection-container mapping list -g {rg} --fabric-name {fabric_source_name} --protection-container {container_source_name} --vault-name {vault_name}"
+                                ],
+                                "name": "protection-container mapping list"
+                              }
+                            ],
                             "name": "2022-08-01",
                             "resources": [
                               {
@@ -55566,6 +55606,14 @@
                         ],
                         "versions": [
                           {
+                            "examples": [
+                              {
+                                "commands": [
+                                  "site-recovery fabric protection-container mapping show -g {rg} --fabric-name {fabric_source_name} -n {container_mapping_source_name} --protection-container {container_source_name} --vault-name {vault_name}"
+                                ],
+                                "name": "protection-container mapping show"
+                              }
+                            ],
                             "name": "2022-08-01",
                             "resources": [
                               {
@@ -55590,6 +55638,14 @@
                         ],
                         "versions": [
                           {
+                            "examples": [
+                              {
+                                "commands": [
+                                  "site-recovery fabric protection-container mapping update -g {rg} --fabric-name {fabric_source_name} -n {container_mapping_source_name} --protection-container {container_source_name} --vault-name {vault_name} --policy-id {policy_id} --provider-input '{a2a:{agent-auto-update-status:Enabled}}' --target-container {container_recovery_id}"
+                                ],
+                                "name": "protection-container mapping update"
+                              }
+                            ],
                             "name": "2022-08-01",
                             "resources": [
                               {
@@ -55657,6 +55713,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery fabric protection-container list -g {rg} --fabric-name {fabric_source_name} --vault-name {vault_name}"
+                            ],
+                            "name": "protection-container list"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
@@ -55773,6 +55837,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery fabric protection-container update -g {rg} --fabric-name {fabric_source_name} -n {container_source_name} --vault-name {vault_name} --provider-input [{{instance-type:A2ACrossClusterMigration}}"
+                            ],
+                            "name": "protection-container update"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
@@ -55879,36 +55951,6 @@
                     "resources": [
                       {
                         "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics",
-                        "plane": "mgmt-plane",
-                        "version": "2022-08-01"
-                      }
-                    ]
-                  }
-                ]
-              },
-              "remove": {
-                "help": {
-                  "short": "The operation to delete or remove an Azure Site Recovery fabric."
-                },
-                "names": [
-                  "site-recovery",
-                  "fabric",
-                  "remove"
-                ],
-                "versions": [
-                  {
-                    "examples": [
-                      {
-                        "commands": [
-                          "site-recovery fabric remove -n {fabric_source_name} -g {rg} --vault-name {vault_name}"
-                        ],
-                        "name": "fabric remove"
-                      }
-                    ],
-                    "name": "2022-08-01",
-                    "resources": [
-                      {
-                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/remove",
                         "plane": "mgmt-plane",
                         "version": "2022-08-01"
                       }
