@@ -8,7 +8,7 @@
         <arg type="string" var="$Path.fabricName" options="fabric-name" required="True" idPart="child_name_1">
           <help short="Fabric name."/>
         </arg>
-        <arg type="string" var="$Path.mappingName" options="mapping-name" required="True" idPart="child_name_3">
+        <arg type="string" var="$Path.mappingName" options="mapping-name name n" required="True" group="" idPart="child_name_3">
           <help short="Protection container mapping name."/>
         </arg>
         <arg type="string" var="$Path.protectionContainerName" options="protection-container-name protection-container" required="True" idPart="child_name_2">
@@ -57,6 +57,7 @@
               </json>
             </body>
           </request>
+          <response statusCode="200"/>
           <response statusCode="202"/>
           <response statusCode="204"/>
           <response isError="True">

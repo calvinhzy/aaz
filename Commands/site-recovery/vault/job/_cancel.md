@@ -7,3 +7,10 @@ The operation to cancel an Azure Site Recovery job.
 ### [2022-08-01](/Resources/mgmt-plane/L3N1YnNjcmlwdGlvbnMve30vcmVzb3VyY2Vncm91cHMve30vcHJvdmlkZXJzL21pY3Jvc29mdC5yZWNvdmVyeXNlcnZpY2VzL3ZhdWx0cy97fS9yZXBsaWNhdGlvbmpvYnMve30vY2FuY2Vs/2022-08-01.xml) **Stable**
 
 <!-- mgmt-plane /subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationjobs/{}/cancel 2022-08-01 -->
+
+#### examples
+
+- job cancel
+    ```bash
+        site-recovery vault job cancel --job-name {id} -g {rg} --resource-name {vault_name}
+    ```

@@ -56697,6 +56697,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery vault job cancel --job-name {id} -g {rg} --resource-name {vault_name}"
+                            ],
+                            "name": "job cancel"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
@@ -56782,6 +56790,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery vault job restart --job-name {id} -g {rg} --resource-name {vault_name}"
+                            ],
+                            "name": "job restart"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
@@ -56805,6 +56821,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery vault job restart --job-name {id} -g {rg} --resource-name {vault_name}"
+                            ],
+                            "name": "job restart"
+                          }
+                        ],
                         "name": "2022-08-01",
                         "resources": [
                           {
