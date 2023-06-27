@@ -34,8 +34,8 @@
             <body>
               <json var="$Instance">
                 <schema type="object">
-                  <prop readOnly="True" type="string" name="primaryKey" secret="True"/>
-                  <prop readOnly="True" type="string" name="secondaryKey" secret="True"/>
+                  <prop readOnly="True" type="string" name="primaryKey"/>
+                  <prop readOnly="True" type="string" name="secondaryKey"/>
                 </schema>
               </json>
             </body>
