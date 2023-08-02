@@ -1,4 +1,4 @@
-# [Command] _site-recovery vault job restart_
+# [Command] _site-recovery job restart_
 
 The operation to restart an Azure Site Recovery job.
 
@@ -12,5 +12,5 @@ The operation to restart an Azure Site Recovery job.
 
 - job restart
     ```bash
-        site-recovery vault job restart --job-name job_id -g rg --vault-name vault_name
+        site-recovery job restart --job-name job_id -g rg --vault-name vault_name
     ```

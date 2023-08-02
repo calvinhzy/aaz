@@ -1,4 +1,4 @@
-# [Command] _site-recovery vault job cancel_
+# [Command] _site-recovery job cancel_
 
 The operation to cancel an Azure Site Recovery job.
 
@@ -12,5 +12,5 @@ The operation to cancel an Azure Site Recovery job.
 
 - job cancel
     ```bash
-        site-recovery vault job cancel --job-name job_id -g rg --vault-name vault_name
+        site-recovery job cancel --job-name job_id -g rg --vault-name vault_name
     ```

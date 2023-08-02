@@ -1,4 +1,4 @@
-# [Command] _site-recovery vault event show_
+# [Command] _site-recovery event show_
 
 Get operation to get the details of an Azure Site recovery event.
 
@@ -12,5 +12,5 @@ Get operation to get the details of an Azure Site recovery event.
 
 - event show
     ```bash
-        site-recovery vault event show -g rg --vault-name vault_name -n event_name
+        site-recovery event show -g rg --vault-name vault_name -n event_name
     ```

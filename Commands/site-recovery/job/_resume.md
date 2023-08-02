@@ -1,4 +1,4 @@
-# [Command] _site-recovery vault job resume_
+# [Command] _site-recovery job resume_
 
 The operation to resume an Azure Site Recovery job.
 
@@ -10,7 +10,7 @@ The operation to resume an Azure Site Recovery job.
 
 #### examples
 
-- job restart
+- job resume
     ```bash
-        site-recovery vault job restart --job-name job_id -g rg --vault-name vault_name
+        site-recovery job resume --job-name job_id -g rg --vault-name vault_name
     ```

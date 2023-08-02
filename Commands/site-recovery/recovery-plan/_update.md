@@ -1,4 +1,4 @@
-# [Command] _site-recovery vault recovery-plan update_
+# [Command] _site-recovery recovery-plan update_
 
 Update operation to create a recovery plan.
 
@@ -12,5 +12,5 @@ Update operation to create a recovery plan.
 
 - recovery-plan update
     ```bash
-        site-recovery vault recovery-plan update -n recovery_plan_name -g rg --vault-name vault_name --groups '[{group-type:Boot,replication-protected-items:[{id:protected_item_id,virtual-machine-id:vm_id}]}]' --primary-fabric-id fabric1_id --recovery-fabric-id fabric2_id --failover-deployment-model ResourceManager
+        site-recovery recovery-plan update -n recovery_plan_name -g rg --vault-name vault_name --groups '[{group-type:Boot,replication-protected-items:[{id:protected_item_id,virtual-machine-id:vm_id}]}]' --primary-fabric-id fabric1_id --recovery-fabric-id fabric2_id --failover-deployment-model ResourceManager
     ```

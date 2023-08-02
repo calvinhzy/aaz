@@ -1,4 +1,4 @@
-# [Command] _site-recovery vault recovery-plan list_
+# [Command] _site-recovery recovery-plan list_
 
 List the recovery plans in the vault.
 
@@ -12,5 +12,5 @@ List the recovery plans in the vault.
 
 - recovery-plan list
     ```bash
-        site-recovery vault recovery-plan list -g rg --vault-name vault_name
+        site-recovery recovery-plan list -g rg --vault-name vault_name
     ```

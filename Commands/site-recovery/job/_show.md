@@ -1,4 +1,4 @@
-# [Command] _site-recovery vault job show_
+# [Command] _site-recovery job show_
 
 Get the details of an Azure Site Recovery job.
 
@@ -12,5 +12,5 @@ Get the details of an Azure Site Recovery job.
 
 - job show
     ```bash
-        site-recovery vault job show -g rg --vault-name vault_name --job-name job_id
+        site-recovery job show -g rg --vault-name vault_name --job-name job_id
     ```

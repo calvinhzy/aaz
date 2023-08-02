@@ -1,4 +1,4 @@
-# [Command] _site-recovery vault event list_
+# [Command] _site-recovery event list_
 
 List the list of Azure Site Recovery events for the vault.
 
@@ -12,5 +12,5 @@ List the list of Azure Site Recovery events for the vault.
 
 - event list
     ```bash
-        site-recovery vault event list -g rg --vault-name vault_name
+        site-recovery event list -g rg --vault-name vault_name
     ```

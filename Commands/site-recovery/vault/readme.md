@@ -4,17 +4,8 @@ Manage Vault
 
 ## Subgroups
 
-- [event](/Commands/site-recovery/vault/event/readme.md)
-: Manage Vault Event
-
 - [health](/Commands/site-recovery/vault/health/readme.md)
 : Manage the health details of the vault.
-
-- [job](/Commands/site-recovery/vault/job/readme.md)
-: Manage Azure Site Recovery Jobs for the vault.
-
-- [recovery-plan](/Commands/site-recovery/vault/recovery-plan/readme.md)
-: Manage the recovery plans in the vault.
 
 ## Commands
 

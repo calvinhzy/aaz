@@ -1,4 +1,4 @@
-# [Command] _site-recovery vault job list_
+# [Command] _site-recovery job list_
 
 List the list of Azure Site Recovery Jobs for the vault.
 
@@ -12,5 +12,5 @@ List the list of Azure Site Recovery Jobs for the vault.
 
 - job list
     ```bash
-        site-recovery vault job list -g rg --vault-name vault_name
+        site-recovery job list -g rg --vault-name vault_name
     ```

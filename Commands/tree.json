@@ -55431,6 +55431,77 @@
               "alert-setting"
             ]
           },
+          "event": {
+            "commands": {
+              "list": {
+                "help": {
+                  "short": "List the list of Azure Site Recovery events for the vault."
+                },
+                "names": [
+                  "site-recovery",
+                  "event",
+                  "list"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery event list -g rg --vault-name vault_name"
+                        ],
+                        "name": "event list"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationevents",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "show": {
+                "help": {
+                  "short": "Get operation to get the details of an Azure Site recovery event."
+                },
+                "names": [
+                  "site-recovery",
+                  "event",
+                  "show"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery event show -g rg --vault-name vault_name -n event_name"
+                        ],
+                        "name": "event show"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationevents/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage the events of the vault."
+            },
+            "names": [
+              "site-recovery",
+              "event"
+            ]
+          },
           "fabric": {
             "commands": {
               "create": {
@@ -55620,6 +55691,197 @@
             "names": [
               "site-recovery",
               "fabric"
+            ]
+          },
+          "job": {
+            "commands": {
+              "cancel": {
+                "help": {
+                  "short": "The operation to cancel an Azure Site Recovery job."
+                },
+                "names": [
+                  "site-recovery",
+                  "job",
+                  "cancel"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery job cancel --job-name job_id -g rg --vault-name vault_name"
+                        ],
+                        "name": "job cancel"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationjobs/{}/cancel",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "export": {
+                "help": {
+                  "short": "The operation to export the details of the Azure Site Recovery jobs of the vault."
+                },
+                "names": [
+                  "site-recovery",
+                  "job",
+                  "export"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery job export -g rg --vault-name vault_name"
+                        ],
+                        "name": "job export"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationjobs/export",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "list": {
+                "help": {
+                  "short": "List the list of Azure Site Recovery Jobs for the vault."
+                },
+                "names": [
+                  "site-recovery",
+                  "job",
+                  "list"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery job list -g rg --vault-name vault_name"
+                        ],
+                        "name": "job list"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationjobs",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "restart": {
+                "help": {
+                  "short": "The operation to restart an Azure Site Recovery job."
+                },
+                "names": [
+                  "site-recovery",
+                  "job",
+                  "restart"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery job restart --job-name job_id -g rg --vault-name vault_name"
+                        ],
+                        "name": "job restart"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationjobs/{}/restart",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "resume": {
+                "help": {
+                  "short": "The operation to resume an Azure Site Recovery job."
+                },
+                "names": [
+                  "site-recovery",
+                  "job",
+                  "resume"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery job resume --job-name job_id -g rg --vault-name vault_name"
+                        ],
+                        "name": "job resume"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationjobs/{}/resume",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "show": {
+                "help": {
+                  "short": "Get the details of an Azure Site Recovery job."
+                },
+                "names": [
+                  "site-recovery",
+                  "job",
+                  "show"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery job show -g rg --vault-name vault_name --job-name job_id"
+                        ],
+                        "name": "job show"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationjobs/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage Azure Site Recovery Jobs for the vault."
+            },
+            "names": [
+              "site-recovery",
+              "job"
             ]
           },
           "network-mapping": {
@@ -56665,6 +56927,167 @@
               "protection-container"
             ]
           },
+          "recovery-plan": {
+            "commands": {
+              "create": {
+                "help": {
+                  "short": "Create operation to create a recovery plan."
+                },
+                "names": [
+                  "site-recovery",
+                  "recovery-plan",
+                  "create"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery recovery-plan create -n recovery_plan_name -g rg --vault-name vault_name --groups '[{group-type:Boot,replication-protected-items:[{id:protected_item_id,virtual-machine-id:vm_id}]}]' --primary-fabric-id fabric1_id --recovery-fabric-id fabric2_id --failover-deployment-model ResourceManager"
+                        ],
+                        "name": "recovery-plan create"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationrecoveryplans/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "delete": {
+                "help": {
+                  "short": "Delete a recovery plan."
+                },
+                "names": [
+                  "site-recovery",
+                  "recovery-plan",
+                  "delete"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery recovery-plan delete -n recovery_plan_name -g rg --vault-name vault_name"
+                        ],
+                        "name": "recovery-plan delete"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationrecoveryplans/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "list": {
+                "help": {
+                  "short": "List the recovery plans in the vault."
+                },
+                "names": [
+                  "site-recovery",
+                  "recovery-plan",
+                  "list"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery recovery-plan list -g rg --vault-name vault_name"
+                        ],
+                        "name": "recovery-plan list"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationrecoveryplans",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "show": {
+                "help": {
+                  "short": "Get the details of the recovery plan."
+                },
+                "names": [
+                  "site-recovery",
+                  "recovery-plan",
+                  "show"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery recovery-plan show -n recovery_plan_name -g rg --vault-name vault_name"
+                        ],
+                        "name": "recovery-plan show"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationrecoveryplans/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "update": {
+                "help": {
+                  "short": "Update operation to create a recovery plan."
+                },
+                "names": [
+                  "site-recovery",
+                  "recovery-plan",
+                  "update"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery recovery-plan update -n recovery_plan_name -g rg --vault-name vault_name --groups '[{group-type:Boot,replication-protected-items:[{id:protected_item_id,virtual-machine-id:vm_id}]}]' --primary-fabric-id fabric1_id --recovery-fabric-id fabric2_id --failover-deployment-model ResourceManager"
+                        ],
+                        "name": "recovery-plan update"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationrecoveryplans/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage the recovery plans in the vault."
+            },
+            "names": [
+              "site-recovery",
+              "recovery-plan"
+            ]
+          },
           "replication-eligibility": {
             "commands": {
               "list": {
@@ -56738,80 +57161,6 @@
           },
           "vault": {
             "commandGroups": {
-              "event": {
-                "commands": {
-                  "list": {
-                    "help": {
-                      "short": "List the list of Azure Site Recovery events for the vault."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "vault",
-                      "event",
-                      "list"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery vault event list -g rg --vault-name vault_name"
-                            ],
-                            "name": "event list"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationevents",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "show": {
-                    "help": {
-                      "short": "Get operation to get the details of an Azure Site recovery event."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "vault",
-                      "event",
-                      "show"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery vault event show -g rg --vault-name vault_name -n event_name"
-                            ],
-                            "name": "event show"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationevents/{}",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                },
-                "help": {
-                  "short": "Manage Vault Event"
-                },
-                "names": [
-                  "site-recovery",
-                  "vault",
-                  "event"
-                ]
-              },
               "health": {
                 "commands": {
                   "refresh-default": {
@@ -56884,371 +57233,6 @@
                   "site-recovery",
                   "vault",
                   "health"
-                ]
-              },
-              "job": {
-                "commands": {
-                  "cancel": {
-                    "help": {
-                      "short": "The operation to cancel an Azure Site Recovery job."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "vault",
-                      "job",
-                      "cancel"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery vault job cancel --job-name job_id -g rg --vault-name vault_name"
-                            ],
-                            "name": "job cancel"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationjobs/{}/cancel",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "export": {
-                    "help": {
-                      "short": "The operation to export the details of the Azure Site Recovery jobs of the vault."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "vault",
-                      "job",
-                      "export"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery vault job export -g rg --vault-name vault_name"
-                            ],
-                            "name": "job export"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationjobs/export",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "list": {
-                    "help": {
-                      "short": "List the list of Azure Site Recovery Jobs for the vault."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "vault",
-                      "job",
-                      "list"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery vault job list -g rg --vault-name vault_name"
-                            ],
-                            "name": "job list"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationjobs",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "restart": {
-                    "help": {
-                      "short": "The operation to restart an Azure Site Recovery job."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "vault",
-                      "job",
-                      "restart"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery vault job restart --job-name job_id -g rg --vault-name vault_name"
-                            ],
-                            "name": "job restart"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationjobs/{}/restart",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "resume": {
-                    "help": {
-                      "short": "The operation to resume an Azure Site Recovery job."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "vault",
-                      "job",
-                      "resume"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery vault job restart --job-name job_id -g rg --vault-name vault_name"
-                            ],
-                            "name": "job restart"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationjobs/{}/resume",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "show": {
-                    "help": {
-                      "short": "Get the details of an Azure Site Recovery job."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "vault",
-                      "job",
-                      "show"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery vault job show -g rg --vault-name vault_name --job-name job_id"
-                            ],
-                            "name": "job show"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationjobs/{}",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                },
-                "help": {
-                  "short": "Manage Azure Site Recovery Jobs for the vault."
-                },
-                "names": [
-                  "site-recovery",
-                  "vault",
-                  "job"
-                ]
-              },
-              "recovery-plan": {
-                "commands": {
-                  "create": {
-                    "help": {
-                      "short": "Create operation to create a recovery plan."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "vault",
-                      "recovery-plan",
-                      "create"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery vault recovery-plan create -n recovery_plan_name -g rg --vault-name vault_name --groups '[{group-type:Boot,replication-protected-items:[{id:protected_item_id,virtual-machine-id:vm_id}]}]' --primary-fabric-id fabric1_id --recovery-fabric-id fabric2_id --failover-deployment-model ResourceManager"
-                            ],
-                            "name": "recovery-plan create"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationrecoveryplans/{}",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "delete": {
-                    "help": {
-                      "short": "Delete a recovery plan."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "vault",
-                      "recovery-plan",
-                      "delete"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery vault recovery-plan delete -n recovery_plan_name -g rg --vault-name vault_name"
-                            ],
-                            "name": "recovery-plan delete"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationrecoveryplans/{}",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "list": {
-                    "help": {
-                      "short": "List the recovery plans in the vault."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "vault",
-                      "recovery-plan",
-                      "list"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery vault recovery-plan list -g rg --vault-name vault_name"
-                            ],
-                            "name": "recovery-plan list"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationrecoveryplans",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "show": {
-                    "help": {
-                      "short": "Get the details of the recovery plan."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "vault",
-                      "recovery-plan",
-                      "show"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery vault recovery-plan show -n recovery_plan_name -g rg --vault-name vault_name"
-                            ],
-                            "name": "recovery-plan show"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationrecoveryplans/{}",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "update": {
-                    "help": {
-                      "short": "Update operation to create a recovery plan."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "vault",
-                      "recovery-plan",
-                      "update"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery vault recovery-plan update -n recovery_plan_name -g rg --vault-name vault_name --groups '[{group-type:Boot,replication-protected-items:[{id:protected_item_id,virtual-machine-id:vm_id}]}]' --primary-fabric-id fabric1_id --recovery-fabric-id fabric2_id --failover-deployment-model ResourceManager"
-                            ],
-                            "name": "recovery-plan update"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationrecoveryplans/{}",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                },
-                "help": {
-                  "short": "Manage the recovery plans in the vault."
-                },
-                "names": [
-                  "site-recovery",
-                  "vault",
-                  "recovery-plan"
                 ]
               }
             },

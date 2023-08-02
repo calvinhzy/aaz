@@ -1,6 +1,6 @@
-# [Command] _site-recovery vault recovery-plan delete_
+# [Command] _site-recovery recovery-plan show_
 
-Delete a recovery plan.
+Get the details of the recovery plan.
 
 ## Versions
 
@@ -10,7 +10,7 @@ Delete a recovery plan.
 
 #### examples
 
-- recovery-plan delete
+- recovery-plan show
     ```bash
-        site-recovery vault recovery-plan delete -n recovery_plan_name -g rg --vault-name vault_name
+        site-recovery recovery-plan show -n recovery_plan_name -g rg --vault-name vault_name
     ```
