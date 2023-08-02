@@ -1,6 +1,6 @@
-# [Command] _site-recovery vault policy show_
+# [Command] _site-recovery policy delete_
 
-Get the details of a replication policy.
+Delete operation to delete a replication policy.
 
 ## Versions
 
@@ -10,7 +10,7 @@ Get the details of a replication policy.
 
 #### examples
 
-- policy show
+- policy delete
     ```bash
-        site-recovery vault policy show -g rg --vault-name vault_name -n policy_name_rcm
+        site-recovery policy delete -g rg --vault-name vault_name -n policy_name_rcm
     ```

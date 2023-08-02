@@ -55652,6 +55652,185 @@
               "network-mapping"
             ]
           },
+          "policy": {
+            "commands": {
+              "create": {
+                "help": {
+                  "short": "Create operation to create a replication policy."
+                },
+                "names": [
+                  "site-recovery",
+                  "policy",
+                  "create"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery policy create -g rg --vault-name vault_name -n policy_name_rcm --provider-specific-input '{in-mage-rcm:{app-consistent-frequency-in-minutes:0,crash-consistent-frequency-in-minutes:5,enable-multi-vm-sync:true,recovery-point-history-in-minutes:2880}}'"
+                        ],
+                        "name": "policy create of type in-mage-rcm"
+                      },
+                      {
+                        "commands": [
+                          "site-recovery policy create -g rg --vault-name vault_name -n policy_name_rcm_failback --provider-specific-input '{in-mage-rcm-failback:{app-consistent-frequency-in-minutes:60,crash-consistent-frequency-in-minutes:5}}'"
+                        ],
+                        "name": "policy create for type in-mage-rcm-failback"
+                      },
+                      {
+                        "commands": [
+                          "site-recovery policy create -g rg --vault-name vault_name -n policy_name --provider-specific-input {a2a:{multi-vm-sync-status:Enable}}"
+                        ],
+                        "name": "policy create for A2A"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationpolicies/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "delete": {
+                "help": {
+                  "short": "Delete operation to delete a replication policy."
+                },
+                "names": [
+                  "site-recovery",
+                  "policy",
+                  "delete"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery policy delete -g rg --vault-name vault_name -n policy_name_rcm"
+                        ],
+                        "name": "policy delete"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationpolicies/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "list": {
+                "help": {
+                  "short": "List the replication policies for a vault."
+                },
+                "names": [
+                  "site-recovery",
+                  "policy",
+                  "list"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery policy list -g rg --vault-name vault_name"
+                        ],
+                        "name": "policy list"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationpolicies",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "show": {
+                "help": {
+                  "short": "Get the details of a replication policy."
+                },
+                "names": [
+                  "site-recovery",
+                  "policy",
+                  "show"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery policy show -g rg --vault-name vault_name -n policy_name_rcm"
+                        ],
+                        "name": "policy show"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationpolicies/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "update": {
+                "help": {
+                  "short": "Update operation to update a replication policy."
+                },
+                "names": [
+                  "site-recovery",
+                  "policy",
+                  "update"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery policy update -g rg --vault-name vault_name -n policy_name_rcm --provider-specific-input '{in-mage-rcm:{app-consistent-frequency-in-minutes:0,crash-consistent-frequency-in-minutes:5,enable-multi-vm-sync:true,recovery-point-history-in-minutes:1440}}'"
+                        ],
+                        "name": "policy update for type in-mage-rcm"
+                      },
+                      {
+                        "commands": [
+                          "site-recovery policy update -g rg --vault-name vault_name -n policy_name_rcm_failback --provider-specific-input '{in-mage-rcm-failback:{app-consistent-frequency-in-minutes:0,crash-consistent-frequency-in-minutes:10}}'"
+                        ],
+                        "name": "policy update for type in-mage-rcm-failback"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationpolicies/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage the replication policies for a vault."
+            },
+            "names": [
+              "site-recovery",
+              "policy"
+            ]
+          },
           "protectable-item": {
             "commands": {
               "list": {
@@ -56908,191 +57087,6 @@
                   "site-recovery",
                   "vault",
                   "job"
-                ]
-              },
-              "policy": {
-                "commands": {
-                  "create": {
-                    "help": {
-                      "short": "Create operation to create a replication policy."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "vault",
-                      "policy",
-                      "create"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery vault policy create -g rg --vault-name vault_name -n policy_name_rcm --provider-specific-input '{in-mage-rcm:{app-consistent-frequency-in-minutes:0,crash-consistent-frequency-in-minutes:5,enable-multi-vm-sync:true,recovery-point-history-in-minutes:2880}}'"
-                            ],
-                            "name": "policy create of type in-mage-rcm"
-                          },
-                          {
-                            "commands": [
-                              "site-recovery vault policy create -g rg --vault-name vault_name -n policy_name_rcm_failback --provider-specific-input '{in-mage-rcm-failback:{app-consistent-frequency-in-minutes:60,crash-consistent-frequency-in-minutes:5}}'"
-                            ],
-                            "name": "policy create for type in-mage-rcm-failback"
-                          },
-                          {
-                            "commands": [
-                              "site-recovery vault policy create -g rg --vault-name vault_name -n policy_name --provider-specific-input {a2a:{multi-vm-sync-status:Enable}}"
-                            ],
-                            "name": "policy create for A2A"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationpolicies/{}",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "delete": {
-                    "help": {
-                      "short": "Delete operation to delete a replication policy."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "vault",
-                      "policy",
-                      "delete"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery vault policy delete -g rg --vault-name vault_name -n policy_name_rcm"
-                            ],
-                            "name": "policy delete"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationpolicies/{}",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "list": {
-                    "help": {
-                      "short": "List the replication policies for a vault."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "vault",
-                      "policy",
-                      "list"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery vault policy list -g rg --vault-name vault_name"
-                            ],
-                            "name": "policy list"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationpolicies",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "show": {
-                    "help": {
-                      "short": "Get the details of a replication policy."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "vault",
-                      "policy",
-                      "show"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery vault policy show -g rg --vault-name vault_name -n policy_name_rcm"
-                            ],
-                            "name": "policy show"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationpolicies/{}",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "update": {
-                    "help": {
-                      "short": "Update operation to update a replication policy."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "vault",
-                      "policy",
-                      "update"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery vault policy update -g rg --vault-name vault_name -n policy_name_rcm --provider-specific-input '{in-mage-rcm:{app-consistent-frequency-in-minutes:0,crash-consistent-frequency-in-minutes:5,enable-multi-vm-sync:true,recovery-point-history-in-minutes:1440}}'"
-                            ],
-                            "name": "policy update for type in-mage-rcm"
-                          },
-                          {
-                            "commands": [
-                              "site-recovery vault policy update -g rg --vault-name vault_name -n policy_name_rcm_failback --provider-specific-input '{in-mage-rcm-failback:{app-consistent-frequency-in-minutes:0,crash-consistent-frequency-in-minutes:10}}'"
-                            ],
-                            "name": "policy update for type in-mage-rcm-failback"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationpolicies/{}",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                },
-                "help": {
-                  "short": "Manage the replication policies for a vault."
-                },
-                "names": [
-                  "site-recovery",
-                  "vault",
-                  "policy"
                 ]
               },
               "recovery-plan": {

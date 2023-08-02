@@ -16,9 +16,6 @@ Manage Vault
 - [job](/Commands/site-recovery/vault/job/readme.md)
 : Manage Azure Site Recovery Jobs for the vault.
 
-- [policy](/Commands/site-recovery/vault/policy/readme.md)
-: Manage the replication policies for a vault.
-
 - [recovery-plan](/Commands/site-recovery/vault/recovery-plan/readme.md)
 : Manage the recovery plans in the vault.
 

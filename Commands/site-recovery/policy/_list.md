@@ -1,4 +1,4 @@
-# [Command] _site-recovery vault policy list_
+# [Command] _site-recovery policy list_
 
 List the replication policies for a vault.
 
@@ -12,5 +12,5 @@ List the replication policies for a vault.
 
 - policy list
     ```bash
-        site-recovery vault policy list -g rg --vault-name vault_name
+        site-recovery policy list -g rg --vault-name vault_name
     ```

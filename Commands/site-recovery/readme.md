@@ -10,6 +10,9 @@ Manage Site Recovery Service
 - [network-mapping](/Commands/site-recovery/network-mapping/readme.md)
 : Manage Network Mapping
 
+- [policy](/Commands/site-recovery/policy/readme.md)
+: Manage the replication policies for a vault.
+
 - [protectable-item](/Commands/site-recovery/protectable-item/readme.md)
 : Manage Protectable Item
 
