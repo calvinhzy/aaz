@@ -1,4 +1,4 @@
-# [Command] _site-recovery fabric protection-container protectable-item show_
+# [Command] _site-recovery protectable-item show_
 
 Get operation to get the details of a protectable item.
 

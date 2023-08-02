@@ -1,4 +1,4 @@
-# [Command] _site-recovery fabric protection-container protectable-item list_
+# [Command] _site-recovery protectable-item list_
 
 List the protectable items in a protection container.
 

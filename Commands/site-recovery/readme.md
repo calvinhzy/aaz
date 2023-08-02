@@ -7,6 +7,9 @@ Manage Site Recovery Service
 - [fabric](/Commands/site-recovery/fabric/readme.md)
 : Manage Fabric
 
+- [protectable-item](/Commands/site-recovery/protectable-item/readme.md)
+: Manage Protectable Item
+
 - [protected-item](/Commands/site-recovery/protected-item/readme.md)
 : Manage Protected Item
 
