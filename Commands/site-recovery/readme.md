@@ -7,6 +7,9 @@ Manage Site Recovery Service
 - [fabric](/Commands/site-recovery/fabric/readme.md)
 : Manage Fabric
 
+- [network-mapping](/Commands/site-recovery/network-mapping/readme.md)
+: Manage Network Mapping
+
 - [protectable-item](/Commands/site-recovery/protectable-item/readme.md)
 : Manage Protectable Item
 

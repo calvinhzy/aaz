@@ -1,6 +1,6 @@
-# [Command] _site-recovery fabric network-mapping delete_
+# [Command] _site-recovery network-mapping update_
 
-Delete operation to delete a network mapping.
+Update operation to create an ASR network mapping.
 
 ## Versions
 
@@ -10,7 +10,7 @@ Delete operation to delete a network mapping.
 
 #### examples
 
-- network-mapping delete
+- network-mapping update
     ```bash
-        site-recovery fabric network-mapping delete -g rg --fabric-name fabric_source_name -n network_mapping_src_to_recovery_name --network-name azureNetwork --vault-name vault_name'
+        site-recovery network-mapping update -g rg --fabric-name fabric_recovery_name -n network_mapping_src_to_recovery_name --network-name azureNetwork --vault-name vault_name --recovery-network-id vnetvm_id --fabric-details '{azure-to-azure:{primary-network-id:vnet_recovery_id}}' --recovery-fabric-name fabric_source_name
     ```

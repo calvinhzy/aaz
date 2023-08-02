@@ -4,9 +4,6 @@ Manage Fabric
 
 ## Subgroups
 
-- [network-mapping](/Commands/site-recovery/fabric/network-mapping/readme.md)
-: Manage Network Mapping
-
 - [protection-container](/Commands/site-recovery/fabric/protection-container/readme.md)
 : Manage Protection Container
 

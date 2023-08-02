@@ -55302,173 +55302,6 @@
         "commandGroups": {
           "fabric": {
             "commandGroups": {
-              "network-mapping": {
-                "commands": {
-                  "create": {
-                    "help": {
-                      "short": "Create operation to create an ASR network mapping."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "fabric",
-                      "network-mapping",
-                      "create"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery fabric network-mapping create -g rg --fabric-name fabric1_name -n network_mapping1_name --network-name azureNetwork --vault-name vault_name --recovery-network-id vnet2_id --fabric-details '{azure-to-azure:{primary-network-id:vnetvm_id}}' --recovery-fabric-name fabric2_name"
-                            ],
-                            "name": "network-mapping create for A2A fabric"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationnetworks/{}/replicationnetworkmappings/{}",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "delete": {
-                    "help": {
-                      "short": "Delete operation to delete a network mapping."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "fabric",
-                      "network-mapping",
-                      "delete"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery fabric network-mapping delete -g rg --fabric-name fabric_source_name -n network_mapping_src_to_recovery_name --network-name azureNetwork --vault-name vault_name'"
-                            ],
-                            "name": "network-mapping delete"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationnetworks/{}/replicationnetworkmappings/{}",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "list": {
-                    "help": {
-                      "short": "List all ASR network mappings for the specified network."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "fabric",
-                      "network-mapping",
-                      "list"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery fabric network-mapping list -g rg --fabric-name fabric_source_name --network-name azureNetwork --vault-name vault_name"
-                            ],
-                            "name": "network-mapping list"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationnetworks/{}/replicationnetworkmappings",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "show": {
-                    "help": {
-                      "short": "Get the details of an ASR network mapping."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "fabric",
-                      "network-mapping",
-                      "show"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery fabric network-mapping show -g rg --fabric-name fabric_source_name -n network_mapping_src_to_recovery_name --network-name azureNetwork --vault-name vault_name"
-                            ],
-                            "name": "network-mapping show"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationnetworks/{}/replicationnetworkmappings/{}",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "update": {
-                    "help": {
-                      "short": "Update operation to create an ASR network mapping."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "fabric",
-                      "network-mapping",
-                      "update"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery fabric network-mapping update -g rg --fabric-name fabric_recovery_name -n network_mapping_src_to_recovery_name --network-name azureNetwork --vault-name vault_name --recovery-network-id vnetvm_id --fabric-details '{azure-to-azure:{primary-network-id:vnet_recovery_id}}' --recovery-fabric-name fabric_source_name"
-                            ],
-                            "name": "network-mapping update"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationnetworks/{}/replicationnetworkmappings/{}",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                },
-                "help": {
-                  "short": "Manage Network Mapping"
-                },
-                "names": [
-                  "site-recovery",
-                  "fabric",
-                  "network-mapping"
-                ]
-              },
               "protection-container": {
                 "commandGroups": {
                   "mapping": {
@@ -56063,6 +55896,167 @@
             "names": [
               "site-recovery",
               "fabric"
+            ]
+          },
+          "network-mapping": {
+            "commands": {
+              "create": {
+                "help": {
+                  "short": "Create operation to create an ASR network mapping."
+                },
+                "names": [
+                  "site-recovery",
+                  "network-mapping",
+                  "create"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery network-mapping create -g rg --fabric-name fabric1_name -n network_mapping1_name --network-name azureNetwork --vault-name vault_name --recovery-network-id vnet2_id --fabric-details '{azure-to-azure:{primary-network-id:vnetvm_id}}' --recovery-fabric-name fabric2_name"
+                        ],
+                        "name": "network-mapping create for A2A fabric"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationnetworks/{}/replicationnetworkmappings/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "delete": {
+                "help": {
+                  "short": "Delete operation to delete a network mapping."
+                },
+                "names": [
+                  "site-recovery",
+                  "network-mapping",
+                  "delete"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery network-mapping delete -g rg --fabric-name fabric_source_name -n network_mapping_src_to_recovery_name --network-name azureNetwork --vault-name vault_name'"
+                        ],
+                        "name": "network-mapping delete"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationnetworks/{}/replicationnetworkmappings/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "list": {
+                "help": {
+                  "short": "List all ASR network mappings for the specified network."
+                },
+                "names": [
+                  "site-recovery",
+                  "network-mapping",
+                  "list"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery network-mapping list -g rg --fabric-name fabric_source_name --network-name azureNetwork --vault-name vault_name"
+                        ],
+                        "name": "network-mapping list"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationnetworks/{}/replicationnetworkmappings",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "show": {
+                "help": {
+                  "short": "Get the details of an ASR network mapping."
+                },
+                "names": [
+                  "site-recovery",
+                  "network-mapping",
+                  "show"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery network-mapping show -g rg --fabric-name fabric_source_name -n network_mapping_src_to_recovery_name --network-name azureNetwork --vault-name vault_name"
+                        ],
+                        "name": "network-mapping show"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationnetworks/{}/replicationnetworkmappings/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "update": {
+                "help": {
+                  "short": "Update operation to create an ASR network mapping."
+                },
+                "names": [
+                  "site-recovery",
+                  "network-mapping",
+                  "update"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery network-mapping update -g rg --fabric-name fabric_recovery_name -n network_mapping_src_to_recovery_name --network-name azureNetwork --vault-name vault_name --recovery-network-id vnetvm_id --fabric-details '{azure-to-azure:{primary-network-id:vnet_recovery_id}}' --recovery-fabric-name fabric_source_name"
+                        ],
+                        "name": "network-mapping update"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationnetworks/{}/replicationnetworkmappings/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage Network Mapping"
+            },
+            "names": [
+              "site-recovery",
+              "network-mapping"
             ]
           },
           "protectable-item": {
