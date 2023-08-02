@@ -59,6 +59,9 @@
                         <prop type="string" name="primaryFabricLocation"/>
                         <prop type="string" name="recoveryFabricLocation"/>
                       </discriminator>
+                      <discriminator property="instanceType" value="VmmToAzure">
+                        <prop type="string" name="location"/>
+                      </discriminator>
                     </prop>
                     <prop type="string" name="primaryFabricFriendlyName"/>
                     <prop type="string" name="primaryNetworkFriendlyName"/>
@@ -160,6 +163,11 @@
               <help short="The primary azure vnet Id."/>
             </arg>
           </arg>
+          <arg type="object" var="$input.properties.fabricSpecificDetails.VmmToAzure" options="vmm-to-azure">
+            <arg type="string" var="$input.properties.fabricSpecificDetails.VmmToAzure.location" options="location">
+              <help short="The Location."/>
+            </arg>
+          </arg>
         </arg>
         <arg type="string" var="$input.properties.recoveryFabricName" options="recovery-fabric-name" group="Properties">
           <help short="Recovery fabric Name."/>
@@ -193,12 +201,15 @@
                       <prop type="string" name="instanceType" required="True">
                         <enum>
                           <item arg="$input.properties.fabricSpecificDetails.AzureToAzure" value="&quot;AzureToAzure&quot;"/>
-                          <item value="&quot;VmmToAzure&quot;"/>
+                          <item arg="$input.properties.fabricSpecificDetails.VmmToAzure" value="&quot;VmmToAzure&quot;"/>
                           <item value="&quot;VmmToVmm&quot;"/>
                         </enum>
                       </prop>
                       <discriminator property="instanceType" value="AzureToAzure">
                         <prop type="string" name="primaryNetworkId" arg="$input.properties.fabricSpecificDetails.AzureToAzure.primaryNetworkId" required="True"/>
+                      </discriminator>
+                      <discriminator property="instanceType" value="VmmToAzure">
+                        <prop type="string" name="location" arg="$input.properties.fabricSpecificDetails.VmmToAzure.location"/>
                       </discriminator>
                     </prop>
                     <prop type="string" name="recoveryFabricName" arg="$input.properties.recoveryFabricName"/>
@@ -229,6 +240,9 @@
                       <discriminator property="instanceType" value="AzureToAzure">
                         <prop type="string" name="primaryFabricLocation"/>
                         <prop type="string" name="recoveryFabricLocation"/>
+                      </discriminator>
+                      <discriminator property="instanceType" value="VmmToAzure">
+                        <prop type="string" name="location"/>
                       </discriminator>
                     </prop>
                     <prop type="string" name="primaryFabricFriendlyName"/>
@@ -283,6 +297,11 @@
               <help short="The primary azure vnet Id."/>
             </arg>
           </arg>
+          <arg type="object" var="$input.properties.fabricSpecificDetails.VmmToAzure" options="vmm-to-azure">
+            <arg nullable="True" type="string" var="$input.properties.fabricSpecificDetails.VmmToAzure.location" options="location">
+              <help short="The Location."/>
+            </arg>
+          </arg>
         </arg>
         <arg nullable="True" type="string" var="$input.properties.recoveryFabricName" options="recovery-fabric-name" group="Properties">
           <help short="Recovery fabric Name."/>
@@ -330,6 +349,9 @@
                         <prop type="string" name="primaryFabricLocation"/>
                         <prop type="string" name="recoveryFabricLocation"/>
                       </discriminator>
+                      <discriminator property="instanceType" value="VmmToAzure">
+                        <prop type="string" name="location"/>
+                      </discriminator>
                     </prop>
                     <prop type="string" name="primaryFabricFriendlyName"/>
                     <prop type="string" name="primaryNetworkFriendlyName"/>
@@ -363,12 +385,15 @@
                   <prop type="string" name="instanceType" required="True">
                     <enum>
                       <item arg="$input.properties.fabricSpecificDetails.AzureToAzure" value="&quot;AzureToAzure&quot;"/>
-                      <item value="&quot;VmmToAzure&quot;"/>
+                      <item arg="$input.properties.fabricSpecificDetails.VmmToAzure" value="&quot;VmmToAzure&quot;"/>
                       <item value="&quot;VmmToVmm&quot;"/>
                     </enum>
                   </prop>
                   <discriminator property="instanceType" value="AzureToAzure">
                     <prop type="string" name="primaryNetworkId" arg="$input.properties.fabricSpecificDetails.AzureToAzure.primaryNetworkId" required="True"/>
+                  </discriminator>
+                  <discriminator property="instanceType" value="VmmToAzure">
+                    <prop type="string" name="location" arg="$input.properties.fabricSpecificDetails.VmmToAzure.location"/>
                   </discriminator>
                 </prop>
                 <prop type="string" name="recoveryFabricName" arg="$input.properties.recoveryFabricName"/>

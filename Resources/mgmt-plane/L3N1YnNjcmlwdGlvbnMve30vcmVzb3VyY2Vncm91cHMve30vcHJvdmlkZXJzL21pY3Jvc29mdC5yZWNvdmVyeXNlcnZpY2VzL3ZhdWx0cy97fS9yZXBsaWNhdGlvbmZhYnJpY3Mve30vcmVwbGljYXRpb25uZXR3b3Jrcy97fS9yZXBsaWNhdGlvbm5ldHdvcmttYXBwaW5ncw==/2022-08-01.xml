@@ -58,6 +58,9 @@
                             <prop type="string" name="primaryFabricLocation"/>
                             <prop type="string" name="recoveryFabricLocation"/>
                           </discriminator>
+                          <discriminator property="instanceType" value="VmmToAzure">
+                            <prop type="string" name="location"/>
+                          </discriminator>
                         </prop>
                         <prop type="string" name="primaryFabricFriendlyName"/>
                         <prop type="string" name="primaryNetworkFriendlyName"/>
