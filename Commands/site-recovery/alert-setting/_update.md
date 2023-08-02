@@ -1,6 +1,6 @@
-# [Command] _site-recovery vault alert-setting create_
+# [Command] _site-recovery alert-setting update_
 
-Create an email notification(alert) configuration.
+Update an email notification(alert) configuration.
 
 ## Versions
 
@@ -10,7 +10,7 @@ Create an email notification(alert) configuration.
 
 #### examples
 
-- alert-setting create
+- alert-setting update
     ```bash
-        site-recovery vault alert-setting create -n defaultAlertSetting -g rg --vault-name vault_name --custom-email-addresses email@address.com --locale en_US --send-to-owners Send
+        site-recovery alert-setting update -n defaultAlertSetting -g rg --vault-name vault_name --custom-email-addresses email2@address.com --locale fr_FR --send-to-owners DoNotSend
     ```

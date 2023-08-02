@@ -1,4 +1,4 @@
-# [Command] _site-recovery vault alert-setting list_
+# [Command] _site-recovery alert-setting list_
 
 List the list of email notification(alert) configurations for the vault.
 
@@ -12,5 +12,5 @@ List the list of email notification(alert) configurations for the vault.
 
 - alert-setting list
     ```bash
-        site-recovery vault alert-setting list -g rg --vault-name vault_name
+        site-recovery alert-setting list -g rg --vault-name vault_name
     ```

@@ -4,6 +4,9 @@ Manage Site Recovery Service
 
 ## Subgroups
 
+- [alert-setting](/Commands/site-recovery/alert-setting/readme.md)
+: Manage Alert Setting
+
 - [fabric](/Commands/site-recovery/fabric/readme.md)
 : Manage Fabric
 

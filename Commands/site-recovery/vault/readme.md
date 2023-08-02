@@ -4,9 +4,6 @@ Manage Vault
 
 ## Subgroups
 
-- [alert-setting](/Commands/site-recovery/vault/alert-setting/readme.md)
-: Manage Vault Alert Setting
-
 - [event](/Commands/site-recovery/vault/event/readme.md)
 : Manage Vault Event
 

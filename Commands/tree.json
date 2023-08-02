@@ -55300,6 +55300,137 @@
       },
       "site-recovery": {
         "commandGroups": {
+          "alert-setting": {
+            "commands": {
+              "create": {
+                "help": {
+                  "short": "Create an email notification(alert) configuration."
+                },
+                "names": [
+                  "site-recovery",
+                  "alert-setting",
+                  "create"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery alert-setting create -n defaultAlertSetting -g rg --vault-name vault_name --custom-email-addresses email@address.com --locale en_US --send-to-owners Send"
+                        ],
+                        "name": "alert-setting create"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationalertsettings/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "list": {
+                "help": {
+                  "short": "List the list of email notification(alert) configurations for the vault."
+                },
+                "names": [
+                  "site-recovery",
+                  "alert-setting",
+                  "list"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery alert-setting list -g rg --vault-name vault_name"
+                        ],
+                        "name": "alert-setting list"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationalertsettings",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "show": {
+                "help": {
+                  "short": "Get the details of the specified email notification(alert) configuration."
+                },
+                "names": [
+                  "site-recovery",
+                  "alert-setting",
+                  "show"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery alert-setting show -n defaultAlertSetting -g rg --vault-name vault_name"
+                        ],
+                        "name": "alert-setting show"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationalertsettings/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "update": {
+                "help": {
+                  "short": "Update an email notification(alert) configuration."
+                },
+                "names": [
+                  "site-recovery",
+                  "alert-setting",
+                  "update"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery alert-setting update -n defaultAlertSetting -g rg --vault-name vault_name --custom-email-addresses email2@address.com --locale fr_FR --send-to-owners DoNotSend"
+                        ],
+                        "name": "alert-setting update"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationalertsettings/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage Alert Setting"
+            },
+            "names": [
+              "site-recovery",
+              "alert-setting"
+            ]
+          },
           "fabric": {
             "commands": {
               "create": {
@@ -56607,142 +56738,6 @@
           },
           "vault": {
             "commandGroups": {
-              "alert-setting": {
-                "commands": {
-                  "create": {
-                    "help": {
-                      "short": "Create an email notification(alert) configuration."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "vault",
-                      "alert-setting",
-                      "create"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery vault alert-setting create -n defaultAlertSetting -g rg --vault-name vault_name --custom-email-addresses email@address.com --locale en_US --send-to-owners Send"
-                            ],
-                            "name": "alert-setting create"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationalertsettings/{}",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "list": {
-                    "help": {
-                      "short": "List the list of email notification(alert) configurations for the vault."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "vault",
-                      "alert-setting",
-                      "list"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery vault alert-setting list -g rg --vault-name vault_name"
-                            ],
-                            "name": "alert-setting list"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationalertsettings",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "show": {
-                    "help": {
-                      "short": "Get the details of the specified email notification(alert) configuration."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "vault",
-                      "alert-setting",
-                      "show"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery vault alert-setting show -n defaultAlertSetting -g rg --vault-name vault_name"
-                            ],
-                            "name": "alert-setting show"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationalertsettings/{}",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "update": {
-                    "help": {
-                      "short": "Update an email notification(alert) configuration."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "vault",
-                      "alert-setting",
-                      "update"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery vault alert-setting update -n defaultAlertSetting -g rg --vault-name vault_name --custom-email-addresses email2@address.com --locale fr_FR --send-to-owners DoNotSend"
-                            ],
-                            "name": "alert-setting update"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationalertsettings/{}",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                },
-                "help": {
-                  "short": "Manage Vault Alert Setting"
-                },
-                "names": [
-                  "site-recovery",
-                  "vault",
-                  "alert-setting"
-                ]
-              },
               "event": {
                 "commands": {
                   "list": {
