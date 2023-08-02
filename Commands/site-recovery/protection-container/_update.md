@@ -1,6 +1,6 @@
-# [Command] _site-recovery fabric protection-container show_
+# [Command] _site-recovery protection-container update_
 
-Get the details of a protection container.
+Update to create a protection container.
 
 ## Versions
 
@@ -10,7 +10,7 @@ Get the details of a protection container.
 
 #### examples
 
-- protection-container show
+- protection-container update
     ```bash
-        site-recovery fabric protection-container show -g rg --fabric-name fabric1_name -n container1_name --vault-name vault_name
+        site-recovery protection-container update -g rg --fabric-name fabric_source_name -n container_source_name --vault-name vault_name --provider-input '[{instance-type:A2ACrossClusterMigration}]'
     ```

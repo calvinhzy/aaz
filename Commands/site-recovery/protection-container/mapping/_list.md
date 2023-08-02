@@ -1,4 +1,4 @@
-# [Command] _site-recovery fabric protection-container mapping list_
+# [Command] _site-recovery protection-container mapping list_
 
 List the protection container mappings for a protection container.
 
@@ -12,5 +12,5 @@ List the protection container mappings for a protection container.
 
 - protection-container mapping list
     ```bash
-        site-recovery fabric protection-container mapping list -g rg --fabric-name fabric_source_name --protection-container container_source_name --vault-name vault_name
+        site-recovery protection-container mapping list -g rg --fabric-name fabric_source_name --protection-container container_source_name --vault-name vault_name
     ```

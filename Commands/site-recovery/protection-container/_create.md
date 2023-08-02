@@ -1,6 +1,6 @@
-# [Command] _site-recovery fabric protection-container update_
+# [Command] _site-recovery protection-container create_
 
-Update to create a protection container.
+Create to create a protection container.
 
 ## Versions
 
@@ -10,7 +10,7 @@ Update to create a protection container.
 
 #### examples
 
-- protection-container update
+- protection-container create for A2A
     ```bash
-        site-recovery fabric protection-container update -g rg --fabric-name fabric_source_name -n container_source_name --vault-name vault_name --provider-input '[{instance-type:A2ACrossClusterMigration}]'
+        site-recovery protection-container create -g rg --fabric-name fabric1_name -n container1_name --vault-name vault_name --provider-input '[{instance-type:A2A}]'
     ```

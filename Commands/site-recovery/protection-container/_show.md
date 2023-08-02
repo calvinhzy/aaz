@@ -1,6 +1,6 @@
-# [Command] _site-recovery fabric protection-container create_
+# [Command] _site-recovery protection-container show_
 
-Create to create a protection container.
+Get the details of a protection container.
 
 ## Versions
 
@@ -10,7 +10,7 @@ Create to create a protection container.
 
 #### examples
 
-- protection-container create for A2A
+- protection-container show
     ```bash
-        site-recovery fabric protection-container create -g rg --fabric-name fabric1_name -n container1_name --vault-name vault_name --provider-input '[{instance-type:A2A}]'
+        site-recovery protection-container show -g rg --fabric-name fabric1_name -n container1_name --vault-name vault_name
     ```

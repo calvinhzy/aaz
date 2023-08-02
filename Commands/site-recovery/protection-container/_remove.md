@@ -1,4 +1,4 @@
-# [Command] _site-recovery fabric protection-container remove_
+# [Command] _site-recovery protection-container remove_
 
 Operation to remove a protection container.
 
@@ -12,5 +12,5 @@ Operation to remove a protection container.
 
 - protection-container remove
     ```bash
-        site-recovery fabric protection-container remove -g rg --fabric-name fabric1_name -n container1_name --vault-name vault_name
+        site-recovery protection-container remove -g rg --fabric-name fabric1_name -n container1_name --vault-name vault_name
     ```

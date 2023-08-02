@@ -2,11 +2,6 @@
 
 Manage Fabric
 
-## Subgroups
-
-- [protection-container](/Commands/site-recovery/fabric/protection-container/readme.md)
-: Manage Protection Container
-
 ## Commands
 
 - [create](/Commands/site-recovery/fabric/_create.md)

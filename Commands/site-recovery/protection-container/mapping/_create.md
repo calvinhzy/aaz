@@ -1,6 +1,6 @@
-# [Command] _site-recovery fabric protection-container mapping show_
+# [Command] _site-recovery protection-container mapping create_
 
-Get the details of a protection container mapping.
+Create operation to create a protection container mapping.
 
 ## Versions
 
@@ -10,7 +10,7 @@ Get the details of a protection container mapping.
 
 #### examples
 
-- protection-container mapping show
+- protection-container mapping create for A2A
     ```bash
-        site-recovery fabric protection-container mapping show -g rg --fabric-name fabric_source_name -n container_mapping_source_name --protection-container container_source_name --vault-name vault_name
+        site-recovery protection-container mapping create -g rg --fabric-name fabric1_name -n container_mapping1_name --protection-container container1_name --vault-name vault_name --policy-id policy_id --provider-input '{a2a:{agent-auto-update-status:Disabled}}' --target-container container2_id
     ```

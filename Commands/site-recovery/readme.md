@@ -16,6 +16,9 @@ Manage Site Recovery Service
 - [protected-item](/Commands/site-recovery/protected-item/readme.md)
 : Manage Protected Item
 
+- [protection-container](/Commands/site-recovery/protection-container/readme.md)
+: Manage Protection Container
+
 - [replication-eligibility](/Commands/site-recovery/replication-eligibility/readme.md)
 : Manage Replication Eligibility
 

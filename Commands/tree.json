@@ -55301,413 +55301,6 @@
       "site-recovery": {
         "commandGroups": {
           "fabric": {
-            "commandGroups": {
-              "protection-container": {
-                "commandGroups": {
-                  "mapping": {
-                    "commands": {
-                      "create": {
-                        "help": {
-                          "short": "Create operation to create a protection container mapping."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "mapping",
-                          "create"
-                        ],
-                        "versions": [
-                          {
-                            "examples": [
-                              {
-                                "commands": [
-                                  "site-recovery fabric protection-container mapping create -g rg --fabric-name fabric1_name -n container_mapping1_name --protection-container container1_name --vault-name vault_name --policy-id policy_id --provider-input '{a2a:{agent-auto-update-status:Disabled}}' --target-container container2_id"
-                                ],
-                                "name": "protection-container mapping create for A2A"
-                              }
-                            ],
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotectioncontainermappings/{}",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "delete": {
-                        "help": {
-                          "short": "Delete operation to purge(force delete) a protection container mapping."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "mapping",
-                          "delete"
-                        ],
-                        "versions": [
-                          {
-                            "examples": [
-                              {
-                                "commands": [
-                                  "site-recovery fabric protection-container mapping delete -g rg --fabric-name fabric1_name -n container_mapping1_name --protection-container container1_name --vault-name vault_name"
-                                ],
-                                "name": "protection-container mapping delete"
-                              }
-                            ],
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotectioncontainermappings/{}",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "list": {
-                        "help": {
-                          "short": "List the protection container mappings for a protection container."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "mapping",
-                          "list"
-                        ],
-                        "versions": [
-                          {
-                            "examples": [
-                              {
-                                "commands": [
-                                  "site-recovery fabric protection-container mapping list -g rg --fabric-name fabric_source_name --protection-container container_source_name --vault-name vault_name"
-                                ],
-                                "name": "protection-container mapping list"
-                              }
-                            ],
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotectioncontainermappings",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "remove": {
-                        "help": {
-                          "short": "The operation to delete or remove a protection container mapping."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "mapping",
-                          "remove"
-                        ],
-                        "versions": [
-                          {
-                            "examples": [
-                              {
-                                "commands": [
-                                  "site-recovery fabric protection-container mapping remove -g rg --fabric-name fabric_source_name -n container_mapping_source_name --protection-container container_source_name --vault-name vault_name"
-                                ],
-                                "name": "protection-container mapping remove"
-                              }
-                            ],
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotectioncontainermappings/{}/remove",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "show": {
-                        "help": {
-                          "short": "Get the details of a protection container mapping."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "mapping",
-                          "show"
-                        ],
-                        "versions": [
-                          {
-                            "examples": [
-                              {
-                                "commands": [
-                                  "site-recovery fabric protection-container mapping show -g rg --fabric-name fabric_source_name -n container_mapping_source_name --protection-container container_source_name --vault-name vault_name"
-                                ],
-                                "name": "protection-container mapping show"
-                              }
-                            ],
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotectioncontainermappings/{}",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "update": {
-                        "help": {
-                          "short": "Update operation to create a protection container mapping."
-                        },
-                        "names": [
-                          "site-recovery",
-                          "fabric",
-                          "protection-container",
-                          "mapping",
-                          "update"
-                        ],
-                        "versions": [
-                          {
-                            "examples": [
-                              {
-                                "commands": [
-                                  "site-recovery fabric protection-container mapping update -g rg --fabric-name fabric_source_name -n container_mapping_source_name --protection-container container_source_name --vault-name vault_name --policy-id policy_id --provider-input '{a2a:{agent-auto-update-status:Enabled}}' --target-container container_recovery_id"
-                                ],
-                                "name": "protection-container mapping update"
-                              }
-                            ],
-                            "name": "2022-08-01",
-                            "resources": [
-                              {
-                                "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotectioncontainermappings/{}",
-                                "plane": "mgmt-plane",
-                                "version": "2022-08-01"
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    },
-                    "help": {
-                      "short": "Manage a protection container mapping for a protection container."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "fabric",
-                      "protection-container",
-                      "mapping"
-                    ]
-                  }
-                },
-                "commands": {
-                  "create": {
-                    "help": {
-                      "short": "Create to create a protection container."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "fabric",
-                      "protection-container",
-                      "create"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery fabric protection-container create -g rg --fabric-name fabric1_name -n container1_name --vault-name vault_name --provider-input '[{instance-type:A2A}]'"
-                            ],
-                            "name": "protection-container create for A2A"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "list": {
-                    "help": {
-                      "short": "List the protection containers in the specified fabric."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "fabric",
-                      "protection-container",
-                      "list"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery fabric protection-container list -g rg --fabric-name fabric_source_name --vault-name vault_name"
-                            ],
-                            "name": "protection-container list"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "remove": {
-                    "help": {
-                      "short": "Operation to remove a protection container."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "fabric",
-                      "protection-container",
-                      "remove"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery fabric protection-container remove -g rg --fabric-name fabric1_name -n container1_name --vault-name vault_name"
-                            ],
-                            "name": "protection-container remove"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/remove",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "show": {
-                    "help": {
-                      "short": "Get the details of a protection container."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "fabric",
-                      "protection-container",
-                      "show"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery fabric protection-container show -g rg --fabric-name fabric1_name -n container1_name --vault-name vault_name"
-                            ],
-                            "name": "protection-container show"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "switch-protection": {
-                    "help": {
-                      "short": "Operation to switch protection from one container to another or one replication provider to another."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "fabric",
-                      "protection-container",
-                      "switch-protection"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery fabric protection-container switch-protection --fabric-name fabric1_name -n container1_name --protected-item protected_item_name -g rg --vault-name vault_name --provider-details '{a2a:{policy-id:policy_id,recovery-container-id:container1_id,recovery-resource-group-id:vm_rg_id,vm-managed-disks:[{disk-id:recovery_os_disk,primary-staging-azure-storage-account-id:storage2_id,recovery-resource-group-id:vm_rg_id}]}}'"
-                            ],
-                            "name": "protection-container switch-protection for A2A"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/switchprotection",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "update": {
-                    "help": {
-                      "short": "Update to create a protection container."
-                    },
-                    "names": [
-                      "site-recovery",
-                      "fabric",
-                      "protection-container",
-                      "update"
-                    ],
-                    "versions": [
-                      {
-                        "examples": [
-                          {
-                            "commands": [
-                              "site-recovery fabric protection-container update -g rg --fabric-name fabric_source_name -n container_source_name --vault-name vault_name --provider-input '[{instance-type:A2ACrossClusterMigration}]'"
-                            ],
-                            "name": "protection-container update"
-                          }
-                        ],
-                        "name": "2022-08-01",
-                        "resources": [
-                          {
-                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}",
-                            "plane": "mgmt-plane",
-                            "version": "2022-08-01"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                },
-                "help": {
-                  "short": "Manage Protection Container"
-                },
-                "names": [
-                  "site-recovery",
-                  "fabric",
-                  "protection-container"
-                ]
-              }
-            },
             "commands": {
               "create": {
                 "help": {
@@ -56369,6 +55962,397 @@
             "names": [
               "site-recovery",
               "protected-item"
+            ]
+          },
+          "protection-container": {
+            "commandGroups": {
+              "mapping": {
+                "commands": {
+                  "create": {
+                    "help": {
+                      "short": "Create operation to create a protection container mapping."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "protection-container",
+                      "mapping",
+                      "create"
+                    ],
+                    "versions": [
+                      {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery protection-container mapping create -g rg --fabric-name fabric1_name -n container_mapping1_name --protection-container container1_name --vault-name vault_name --policy-id policy_id --provider-input '{a2a:{agent-auto-update-status:Disabled}}' --target-container container2_id"
+                            ],
+                            "name": "protection-container mapping create for A2A"
+                          }
+                        ],
+                        "name": "2022-08-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotectioncontainermappings/{}",
+                            "plane": "mgmt-plane",
+                            "version": "2022-08-01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "delete": {
+                    "help": {
+                      "short": "Delete operation to purge(force delete) a protection container mapping."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "protection-container",
+                      "mapping",
+                      "delete"
+                    ],
+                    "versions": [
+                      {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery protection-container mapping delete -g rg --fabric-name fabric1_name -n container_mapping1_name --protection-container container1_name --vault-name vault_name"
+                            ],
+                            "name": "protection-container mapping delete"
+                          }
+                        ],
+                        "name": "2022-08-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotectioncontainermappings/{}",
+                            "plane": "mgmt-plane",
+                            "version": "2022-08-01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "list": {
+                    "help": {
+                      "short": "List the protection container mappings for a protection container."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "protection-container",
+                      "mapping",
+                      "list"
+                    ],
+                    "versions": [
+                      {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery protection-container mapping list -g rg --fabric-name fabric_source_name --protection-container container_source_name --vault-name vault_name"
+                            ],
+                            "name": "protection-container mapping list"
+                          }
+                        ],
+                        "name": "2022-08-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotectioncontainermappings",
+                            "plane": "mgmt-plane",
+                            "version": "2022-08-01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "remove": {
+                    "help": {
+                      "short": "The operation to delete or remove a protection container mapping."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "protection-container",
+                      "mapping",
+                      "remove"
+                    ],
+                    "versions": [
+                      {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery protection-container mapping remove -g rg --fabric-name fabric_source_name -n container_mapping_source_name --protection-container container_source_name --vault-name vault_name"
+                            ],
+                            "name": "protection-container mapping remove"
+                          }
+                        ],
+                        "name": "2022-08-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotectioncontainermappings/{}/remove",
+                            "plane": "mgmt-plane",
+                            "version": "2022-08-01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "show": {
+                    "help": {
+                      "short": "Get the details of a protection container mapping."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "protection-container",
+                      "mapping",
+                      "show"
+                    ],
+                    "versions": [
+                      {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery protection-container mapping show -g rg --fabric-name fabric_source_name -n container_mapping_source_name --protection-container container_source_name --vault-name vault_name"
+                            ],
+                            "name": "protection-container mapping show"
+                          }
+                        ],
+                        "name": "2022-08-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotectioncontainermappings/{}",
+                            "plane": "mgmt-plane",
+                            "version": "2022-08-01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "update": {
+                    "help": {
+                      "short": "Update operation to create a protection container mapping."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "protection-container",
+                      "mapping",
+                      "update"
+                    ],
+                    "versions": [
+                      {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery protection-container mapping update -g rg --fabric-name fabric_source_name -n container_mapping_source_name --protection-container container_source_name --vault-name vault_name --policy-id policy_id --provider-input '{a2a:{agent-auto-update-status:Enabled}}' --target-container container_recovery_id"
+                            ],
+                            "name": "protection-container mapping update"
+                          }
+                        ],
+                        "name": "2022-08-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotectioncontainermappings/{}",
+                            "plane": "mgmt-plane",
+                            "version": "2022-08-01"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "help": {
+                  "short": "Manage a protection container mapping for a protection container."
+                },
+                "names": [
+                  "site-recovery",
+                  "protection-container",
+                  "mapping"
+                ]
+              }
+            },
+            "commands": {
+              "create": {
+                "help": {
+                  "short": "Create to create a protection container."
+                },
+                "names": [
+                  "site-recovery",
+                  "protection-container",
+                  "create"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery protection-container create -g rg --fabric-name fabric1_name -n container1_name --vault-name vault_name --provider-input '[{instance-type:A2A}]'"
+                        ],
+                        "name": "protection-container create for A2A"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "list": {
+                "help": {
+                  "short": "List the protection containers in the specified fabric."
+                },
+                "names": [
+                  "site-recovery",
+                  "protection-container",
+                  "list"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery protection-container list -g rg --fabric-name fabric_source_name --vault-name vault_name"
+                        ],
+                        "name": "protection-container list"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "remove": {
+                "help": {
+                  "short": "Operation to remove a protection container."
+                },
+                "names": [
+                  "site-recovery",
+                  "protection-container",
+                  "remove"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery protection-container remove -g rg --fabric-name fabric1_name -n container1_name --vault-name vault_name"
+                        ],
+                        "name": "protection-container remove"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/remove",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "show": {
+                "help": {
+                  "short": "Get the details of a protection container."
+                },
+                "names": [
+                  "site-recovery",
+                  "protection-container",
+                  "show"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery protection-container show -g rg --fabric-name fabric1_name -n container1_name --vault-name vault_name"
+                        ],
+                        "name": "protection-container show"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "switch-protection": {
+                "help": {
+                  "short": "Operation to switch protection from one container to another or one replication provider to another."
+                },
+                "names": [
+                  "site-recovery",
+                  "protection-container",
+                  "switch-protection"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery protection-container switch-protection --fabric-name fabric1_name -n container1_name --protected-item protected_item_name -g rg --vault-name vault_name --provider-details '{a2a:{policy-id:policy_id,recovery-container-id:container1_id,recovery-resource-group-id:vm_rg_id,vm-managed-disks:[{disk-id:recovery_os_disk,primary-staging-azure-storage-account-id:storage2_id,recovery-resource-group-id:vm_rg_id}]}}'"
+                        ],
+                        "name": "protection-container switch-protection for A2A"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/switchprotection",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "update": {
+                "help": {
+                  "short": "Update to create a protection container."
+                },
+                "names": [
+                  "site-recovery",
+                  "protection-container",
+                  "update"
+                ],
+                "versions": [
+                  {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery protection-container update -g rg --fabric-name fabric_source_name -n container_source_name --vault-name vault_name --provider-input '[{instance-type:A2ACrossClusterMigration}]'"
+                        ],
+                        "name": "protection-container update"
+                      }
+                    ],
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage Protection Container"
+            },
+            "names": [
+              "site-recovery",
+              "protection-container"
             ]
           },
           "replication-eligibility": {
