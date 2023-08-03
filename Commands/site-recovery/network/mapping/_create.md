@@ -1,6 +1,6 @@
-# [Command] _site-recovery network-mapping show_
+# [Command] _site-recovery network mapping create_
 
-Get the details of an ASR network mapping.
+Create operation to create an ASR network mapping.
 
 ## Versions
 
@@ -10,7 +10,7 @@ Get the details of an ASR network mapping.
 
 #### examples
 
-- network-mapping show
+- network mapping create for A2A fabric
     ```bash
-        site-recovery network-mapping show -g rg --fabric-name fabric_source_name -n network_mapping_src_to_recovery_name --network-name azureNetwork --vault-name vault_name
+        site-recovery network mapping create -g rg --fabric-name fabric1_name -n network_mapping1_name --network-name azureNetwork --vault-name vault_name --recovery-network-id vnet2_id --fabric-details '{azure-to-azure:{primary-network-id:vnetvm_id}}' --recovery-fabric-name fabric2_name
     ```

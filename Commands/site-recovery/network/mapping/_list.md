@@ -1,4 +1,4 @@
-# [Command] _site-recovery network-mapping list_
+# [Command] _site-recovery network mapping list_
 
 List all ASR network mappings for the specified network.
 
@@ -10,7 +10,7 @@ List all ASR network mappings for the specified network.
 
 #### examples
 
-- network-mapping list
+- network mapping list
     ```bash
-        site-recovery network-mapping list -g rg --fabric-name fabric_source_name --network-name azureNetwork --vault-name vault_name
+        site-recovery network mapping list -g rg --fabric-name fabric_source_name --network-name azureNetwork --vault-name vault_name
     ```

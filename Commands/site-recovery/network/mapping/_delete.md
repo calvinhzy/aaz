@@ -1,6 +1,6 @@
-# [Command] _site-recovery network-mapping create_
+# [Command] _site-recovery network mapping delete_
 
-Create operation to create an ASR network mapping.
+Delete operation to delete a network mapping.
 
 ## Versions
 
@@ -10,7 +10,7 @@ Create operation to create an ASR network mapping.
 
 #### examples
 
-- network-mapping create for A2A fabric
+- network mapping delete
     ```bash
-        site-recovery network-mapping create -g rg --fabric-name fabric1_name -n network_mapping1_name --network-name azureNetwork --vault-name vault_name --recovery-network-id vnet2_id --fabric-details '{azure-to-azure:{primary-network-id:vnetvm_id}}' --recovery-fabric-name fabric2_name
+        site-recovery network mapping delete -g rg --fabric-name fabric_source_name -n network_mapping_src_to_recovery_name --network-name azureNetwork --vault-name vault_name'
     ```

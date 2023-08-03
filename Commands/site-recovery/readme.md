@@ -16,8 +16,11 @@ Manage Site Recovery Service
 - [job](/Commands/site-recovery/job/readme.md)
 : Manage Azure Site Recovery Jobs for the vault.
 
-- [network-mapping](/Commands/site-recovery/network-mapping/readme.md)
-: Manage Network Mapping
+- [logical-network](/Commands/site-recovery/logical-network/readme.md)
+: Manage logical-network
+
+- [network](/Commands/site-recovery/network/readme.md)
+: Manage network
 
 - [policy](/Commands/site-recovery/policy/readme.md)
 : Manage the replication policies for a vault.
