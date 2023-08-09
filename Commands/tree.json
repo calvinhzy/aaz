@@ -56519,6 +56519,28 @@
                   }
                 ]
               },
+              "planned-failover": {
+                "help": {
+                  "short": "Operation to initiate a planned failover of the replication protected item."
+                },
+                "names": [
+                  "site-recovery",
+                  "protected-item",
+                  "planned-failover"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/plannedfailover",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
               "remove": {
                 "help": {
                   "short": "The operation to disable replication on a replication protected item. This will also remove the item."

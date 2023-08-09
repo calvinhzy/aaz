@@ -16,6 +16,9 @@ Manage Protected Item
 - [list](/Commands/site-recovery/protected-item/_list.md)
 : List the list of ASR replication protected items in the protection container.
 
+- [planned-failover](/Commands/site-recovery/protected-item/_planned-failover.md)
+: Operation to initiate a planned failover of the replication protected item.
+
 - [remove](/Commands/site-recovery/protected-item/_remove.md)
 : The operation to disable replication on a replication protected item. This will also remove the item.
 
