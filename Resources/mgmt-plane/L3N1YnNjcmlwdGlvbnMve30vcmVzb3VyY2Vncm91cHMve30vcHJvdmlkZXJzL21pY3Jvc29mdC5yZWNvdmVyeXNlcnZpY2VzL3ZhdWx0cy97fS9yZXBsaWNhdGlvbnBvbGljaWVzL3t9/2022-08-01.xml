@@ -381,7 +381,8 @@
               <help short="The crash consistent snapshot frequency (in minutes)."/>
             </arg>
           </arg>
-          <arg type="object" var="$input.properties.providerSpecificInput.VMwareCbt" options="v-mware-cbt">
+          <arg type="object" var="$input.properties.providerSpecificInput.VMwareCbt" options="vmware-cbt" group="">
+            <help short="vmware-cbt"/>
             <arg type="integer32" var="$input.properties.providerSpecificInput.VMwareCbt.appConsistentFrequencyInMinutes" options="app-consistent-frequency-in-minutes">
               <help short="The app consistent snapshot frequency (in minutes)."/>
             </arg>
@@ -829,7 +830,8 @@
               <help short="The crash consistent snapshot frequency (in minutes)."/>
             </arg>
           </arg>
-          <arg type="object" var="$input.properties.replicationProviderSettings.VMwareCbt" options="v-mware-cbt">
+          <arg type="object" var="$input.properties.replicationProviderSettings.VMwareCbt" options="vmware-cbt" group="">
+            <help short="vmware-cbt"/>
             <arg type="integer32" var="$input.properties.replicationProviderSettings.VMwareCbt.appConsistentFrequencyInMinutes" options="app-consistent-frequency-in-minutes">
               <help short="The app consistent snapshot frequency (in minutes)."/>
             </arg>

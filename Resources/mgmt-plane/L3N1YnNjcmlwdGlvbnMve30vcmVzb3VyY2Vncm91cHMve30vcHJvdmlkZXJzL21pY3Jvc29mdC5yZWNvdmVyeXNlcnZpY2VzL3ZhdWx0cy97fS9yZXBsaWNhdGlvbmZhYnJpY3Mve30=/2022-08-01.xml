@@ -673,7 +673,8 @@
               <help short="The ARM Id of the VMware site."/>
             </arg>
           </arg>
-          <arg type="object" var="$input.properties.customDetails.VMwareV2" options="v-mware-v2">
+          <arg type="object" var="$input.properties.customDetails.VMwareV2" options="vmware-v2" group="">
+            <help short="vmware-v2"/>
             <arg type="string" var="$input.properties.customDetails.VMwareV2.migrationSolutionId" options="migration-solution-id" required="True">
               <help short="The ARM Id of the migration solution."/>
             </arg>
@@ -1342,7 +1343,8 @@
               <help short="The ARM Id of the VMware site."/>
             </arg>
           </arg>
-          <arg type="object" var="$input.properties.customDetails.VMwareV2" options="v-mware-v2">
+          <arg type="object" var="$input.properties.customDetails.VMwareV2" options="vmware-v2" group="">
+            <help short="vmware-v2"/>
             <arg type="string" var="$input.properties.customDetails.VMwareV2.migrationSolutionId" options="migration-solution-id">
               <help short="The ARM Id of the migration solution."/>
             </arg>

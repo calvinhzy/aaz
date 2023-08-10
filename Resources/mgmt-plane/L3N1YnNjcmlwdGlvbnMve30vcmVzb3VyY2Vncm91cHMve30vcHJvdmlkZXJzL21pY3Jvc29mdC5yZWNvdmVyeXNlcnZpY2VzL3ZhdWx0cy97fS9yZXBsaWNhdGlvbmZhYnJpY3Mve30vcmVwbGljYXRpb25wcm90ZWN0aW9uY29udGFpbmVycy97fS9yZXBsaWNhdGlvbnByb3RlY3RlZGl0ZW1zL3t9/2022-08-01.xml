@@ -1311,7 +1311,8 @@
               </item>
             </arg>
           </arg>
-          <arg type="object" var="$input.properties.providerSpecificDetails.A2ACrossClusterMigration" options="a2-a-cross-cluster-migration">
+          <arg type="object" var="$input.properties.providerSpecificDetails.A2ACrossClusterMigration" options="a2a-cross-cluster-migration" group="">
+            <help short="a2a-cross-cluster-migration"/>
             <arg type="string" var="$input.properties.providerSpecificDetails.A2ACrossClusterMigration.fabricObjectId" options="fabric-object-id">
               <help short="The fabric specific object Id of the virtual machine."/>
             </arg>
@@ -3283,7 +3284,8 @@
               </item>
             </arg>
           </arg>
-          <arg type="object" var="$input.properties.providerSpecificDetails.A2ACrossClusterMigration" options="a2-a-cross-cluster-migration">
+          <arg type="object" var="$input.properties.providerSpecificDetails.A2ACrossClusterMigration" options="a2a-cross-cluster-migration" group="">
+            <help short="a2a-cross-cluster-migration"/>
             <arg nullable="True" type="string" var="$input.properties.providerSpecificDetails.A2ACrossClusterMigration.fabricObjectId" options="fabric-object-id">
               <help short="The fabric specific object Id of the virtual machine."/>
             </arg>

@@ -348,7 +348,8 @@
         <arg type="array<object>" var="$input.properties.providerSpecificInput" options="provider-specific-input provider-input" group="Properties">
           <help short="The provider specific input."/>
           <item type="object">
-            <arg type="object" var="$input.properties.providerSpecificInput[].A2A" options="a2-a">
+            <arg type="object" var="$input.properties.providerSpecificInput[].A2A" options="a2a" group="">
+              <help short="a2a"/>
               <arg type="object" var="$input.properties.providerSpecificInput[].A2A.primaryExtendedLocation" options="primary-extended-location" cls="ExtendedLocation_create">
                 <help short="The primary extended location."/>
                 <arg type="string" var="@ExtendedLocation_create.name" options="name" required="True">
@@ -796,7 +797,8 @@
         <arg nullable="True" type="array<object>" var="$input.properties.providerSpecificInput" options="provider-specific-input provider-input" group="Properties">
           <help short="The provider specific input."/>
           <item nullable="True" type="object">
-            <arg type="object" var="$input.properties.providerSpecificInput[].A2A" options="a2-a">
+            <arg type="object" var="$input.properties.providerSpecificInput[].A2A" options="a2a" group="">
+              <help short="a2a"/>
               <arg nullable="True" type="object" var="$input.properties.providerSpecificInput[].A2A.primaryExtendedLocation" options="primary-extended-location" cls="ExtendedLocation_update">
                 <help short="The primary extended location."/>
                 <arg type="string" var="@ExtendedLocation_update.name" options="name">

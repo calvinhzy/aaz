@@ -261,7 +261,8 @@
               <help short="The Location."/>
             </arg>
           </arg>
-          <arg type="object" var="$creationInput.properties.providerSpecificInput.VMwareCbt" options="v-mware-cbt">
+          <arg type="object" var="$creationInput.properties.providerSpecificInput.VMwareCbt" options="vmware-cbt" group="">
+            <help short="vmware-cbt"/>
             <arg type="string" var="$creationInput.properties.providerSpecificInput.VMwareCbt.keyVaultId" options="key-vault-id">
               <help short="The target key vault ARM Id."/>
             </arg>
@@ -525,7 +526,8 @@
               <help short="The Location."/>
             </arg>
           </arg>
-          <arg type="object" var="$creationInput.properties.providerSpecificInput.VMwareCbt" options="v-mware-cbt">
+          <arg type="object" var="$creationInput.properties.providerSpecificInput.VMwareCbt" options="vmware-cbt" group="">
+            <help short="vmware-cbt"/>
             <arg nullable="True" type="string" var="$creationInput.properties.providerSpecificInput.VMwareCbt.keyVaultId" options="key-vault-id">
               <help short="The target key vault ARM Id."/>
             </arg>
