@@ -14,3 +14,8 @@ Create to create a protection container.
     ```bash
         site-recovery protection-container create -g rg --fabric-name fabric1_name -n container1_name --vault-name vault_name --provider-input '[{instance-type:A2A}]'
     ```
+
+- protection-container create for hyper-v-replica-azure
+    ```bash
+        site-recovery protection-container mapping create -g "rg" --fabric-name "fabric_name" -n "container_mapping_name" --protection-container "container_name" --vault-name "vault_name" --policy-id "policy_id" --target-container \"Microsoft Azure\" --provider-input '{hyper-v-replica-azure:""}'
+    ```

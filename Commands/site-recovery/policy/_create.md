@@ -24,3 +24,8 @@ Create operation to create a replication policy.
     ```bash
         site-recovery policy create -g rg --vault-name vault_name -n policy_name --provider-specific-input {a2a:{multi-vm-sync-status:Enable}}
     ```
+
+- policy create for hyper-v-replica-azure
+    ```bash
+        site-recovery policy create -g "rg" --vault-name "vault_name" -n "policy_name" --provider-specific-input '{hyper-v-replica-azure:{application-consistent-snapshot-frequency-in-hours:1,recovery-point-history-duration:2,replication-interval:300}}'
+    ```

@@ -56194,6 +56194,12 @@
                           "site-recovery policy create -g rg --vault-name vault_name -n policy_name --provider-specific-input {a2a:{multi-vm-sync-status:Enable}}"
                         ],
                         "name": "policy create for A2A"
+                      },
+                      {
+                        "commands": [
+                          "site-recovery policy create -g \"rg\" --vault-name \"vault_name\" -n \"policy_name\" --provider-specific-input '{hyper-v-replica-azure:{application-consistent-snapshot-frequency-in-hours:1,recovery-point-history-duration:2,replication-interval:300}}'"
+                        ],
+                        "name": "policy create for hyper-v-replica-azure"
                       }
                     ],
                     "name": "2022-08-01",
@@ -56416,6 +56422,12 @@
                           "site-recovery protected-item create -g rg --fabric-name fabric1_name -n protected_item_name --protection-container container1_name --vault-name vault_name --policy-id policy_id --provider-details '{a2a:{fabric-object-id:vm_id,vm-managed-disks:[{disk-id:os_disk,primary-staging-azure-storage-account-id:storage1_id,recovery-resource-group-id:rg_id}],recovery-azure-network-id:vnet2_id,recovery-container-id:container2_id,recovery-resource-group-id:rg_id,recovery-subnet-name:vnet2_subnet}}'"
                         ],
                         "name": "protected-item create for A2A"
+                      },
+                      {
+                        "commands": [
+                          "site-recovery protected-item create -g \"rg\" --fabric-name \"fabric_name\" -n \"protected_item_name\" --protection-container \"container_name\" --vault-name \"vault_name\" --policy-id \"policy_id\" --protectable-item-id \"protectable_item_id\" --provider-details '{hyper-v-replica-azure:{disks-to-include:[\"vhd_id\"],enable-rdp-on-target-option:Never,os-type:Windows,target-azure-network-id:\"vnet_id\",target-azure-subnet-id:\"subnet_id\",target-azure-v2-resource-group-id:\"rg_id\",target-azure-vm-name:\"hypervvm_name\",target-storage-account-id:\"storage_id\",use-managed-disks:false,vhd-id:\"vhd_id\"}}'"
+                        ],
+                        "name": "protected-item create for hyper-v-replica-azure"
                       }
                     ],
                     "name": "2022-08-01",
@@ -56530,6 +56542,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery protected-item planned-failover --fabric-name \"fabric_name\" --protection-container \"container_name\" -n \"protected_item_name\" -g \"rg\" --vault-name \"vault_name\" --failover-direction RecoveryToPrimary --provider-details '{hyper-v-replica-azure-failback:{data-sync-option:ForSynchronization,recovery-vm-creation-option:NoAction}}'"
+                        ],
+                        "name": "failback hyper-v-replica-azure"
+                      }
+                    ],
                     "name": "2022-08-01",
                     "resources": [
                       {
@@ -56624,6 +56644,12 @@
                           "site-recovery protected-item unplanned-failover --fabric-name fabric2_name --protection-container container2_name -n protected_item_name -g rg --vault-name vault_name --failover-direction PrimaryToRecovery --provider-details '{a2a:{}}' --source-site-operations NotRequired"
                         ],
                         "name": "protected-item failback for A2A"
+                      },
+                      {
+                        "commands": [
+                          "site-recovery protected-item unplanned-failover --fabric-name \"fabric_name\" --protection-container \"container_name\" -n \"protected_item_name\" -g \"rg\" --vault-name \"vault_name\" --failover-direction PrimaryToRecovery --provider-details '{hyper-v-replica-azure:\"\"}' --source-site-operations NotRequired"
+                        ],
+                        "name": "protected-item failover hyper-v-replica-azure"
                       }
                     ],
                     "name": "2022-08-01",
@@ -56895,6 +56921,12 @@
                           "site-recovery protection-container create -g rg --fabric-name fabric1_name -n container1_name --vault-name vault_name --provider-input '[{instance-type:A2A}]'"
                         ],
                         "name": "protection-container create for A2A"
+                      },
+                      {
+                        "commands": [
+                          "site-recovery protection-container mapping create -g \"rg\" --fabric-name \"fabric_name\" -n \"container_mapping_name\" --protection-container \"container_name\" --vault-name \"vault_name\" --policy-id \"policy_id\" --target-container \\\"Microsoft Azure\\\" --provider-input '{hyper-v-replica-azure:\"\"}'"
+                        ],
+                        "name": "protection-container create for hyper-v-replica-azure"
                       }
                     ],
                     "name": "2022-08-01",
@@ -57085,7 +57117,13 @@
                         "commands": [
                           "site-recovery recovery-plan create -n recovery_plan_name -g rg --vault-name vault_name --groups '[{group-type:Boot,replication-protected-items:[{id:protected_item_id,virtual-machine-id:vm_id}]}]' --primary-fabric-id fabric1_id --recovery-fabric-id fabric2_id --failover-deployment-model ResourceManager"
                         ],
-                        "name": "recovery-plan create"
+                        "name": "recovery-plan create A2A"
+                      },
+                      {
+                        "commands": [
+                          "site-recovery recovery-plan create -n \"recovery_plan_name\" -g \"rg\" --vault-name \"vault_name\" --groups '[{group-type:Boot,replication-protected-items:[{id:\"protected_item_id\",virtual-machine-id:\"protectable_item_id\"}]}]' --primary-fabric-id \"fabric_id\" --recovery-fabric-id \\\"Microsoft Azure\\\" --failover-deployment-model ResourceManager"
+                        ],
+                        "name": "recovery-plan create hyper-v-replica-azure"
                       }
                     ],
                     "name": "2022-08-01",
