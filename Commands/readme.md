@@ -80,6 +80,9 @@
 - [logic](/Commands/logic/readme.md)
 : Manage logic
 
+- [maintenance](/Commands/maintenance/readme.md)
+: Manage Maintenance
+
 - [mobile-network](/Commands/mobile-network/readme.md)
 : Manage mobile network
 
@@ -160,6 +163,9 @@
 
 - [stack-hci](/Commands/stack-hci/readme.md)
 : Manage Azure Stack HCI.
+
+- [storage](/Commands/storage/readme.md)
+: Manage Azure Cloud Storage resources.
 
 - [storage-mover](/Commands/storage-mover/readme.md)
 : Manage top-level Storage Mover resource.
