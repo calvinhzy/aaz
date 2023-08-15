@@ -4,6 +4,9 @@ Manage network-manager with network.
 
 ## Subgroups
 
+- [connect-config](/Commands/network/manager/connect-config/readme.md)
+: Manage connectivity configuration with network.
+
 - [security-admin-config](/Commands/network/manager/security-admin-config/readme.md)
 : Manage security admin configuration with network.
 

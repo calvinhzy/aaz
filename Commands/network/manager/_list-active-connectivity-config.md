@@ -10,7 +10,7 @@ Lists active connectivity configurations in a network manager.
 
 #### examples
 
-- Get Azure Virtual Network Manager Active Configuration
+- List Azure Virtual Network Manager Active Configuration
     ```bash
         network manager list-active-connectivity-config --network-manager-name "testNetworkManager" --resource-group "myResourceGroup"
     ```

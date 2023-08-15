@@ -10,7 +10,7 @@ Lists active security admin rules in a network manager.
 
 #### examples
 
-- Get Azure Virtual Network Manager Active Security Admin Rule
+- List Azure Virtual Network Manager Active Security Admin Rule
     ```bash
         network manager list-active-security-admin-rule --network-manager-name "testNetworkManager" --resource-group "myResourceGroup" --region "eastus2euap"
     ```

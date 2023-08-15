@@ -10,7 +10,7 @@ List all effective security admin rules applied on a virtual network.
 
 #### examples
 
-- Get Azure Virtual Network Manager Effective Security Admin Rule
+- List Azure Virtual Network Manager Effective Security Admin Rule
     ```bash
         network manager list-effective-security-admin-rule --virtual-network-name "myVirtualNetwork" --resource-group "myResourceGroup"
     ```

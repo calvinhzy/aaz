@@ -10,7 +10,7 @@ List all effective connectivity configurations applied on a virtual network.
 
 #### examples
 
-- Get Azure Virtual Network Manager Effective Configuration
+- List Azure Virtual Network Manager Effective Configuration
     ```bash
         network manager list-effective-connectivity-config --virtual-network-name "myVirtualNetwork" --resource-group "myResourceGroup"
     ```

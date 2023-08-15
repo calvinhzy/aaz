@@ -10,7 +10,7 @@ Post List of Network Manager Deployment Status.
 
 #### examples
 
-- Post Azure Virtual Network Manager Deployment Status
+- List Azure Virtual Network Manager Deployment Status
     ```bash
         network manager list-deploy-status --network-manager-name "testNetworkManager" --deployment-types "Connectivity" "SecurityAdmin" --regions "eastus" "westus" --resource-group "resoureGroupSample"
     ```

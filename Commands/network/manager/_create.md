@@ -10,7 +10,7 @@ Create a Network Manager.
 
 #### examples
 
-- Create Azure Virtual Network Manager
+- Create/Update Azure Virtual Network Manager
     ```bash
         network manager create --name "TestNetworkManager" -l eastus2euap --description "My Test Network Manager" --scope-accesses "SecurityAdmin" "Connectivity" --network-manager-scopes management-groups="/providers/Microsoft.Management/testmg" subscriptions="/subscriptions/00000000-0000-0000-0000-000000000000" --resource-group "rg1"
     ```
