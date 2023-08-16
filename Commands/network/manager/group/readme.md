@@ -2,6 +2,11 @@
 
 Manage networkgroup with network.
 
+## Subgroups
+
+- [static-member](/Commands/network/manager/group/static-member/readme.md)
+: Manage static members with network manager group.
+
 ## Commands
 
 - [create](/Commands/network/manager/group/_create.md)
