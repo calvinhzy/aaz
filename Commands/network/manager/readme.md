@@ -7,6 +7,9 @@ Manage network-manager with network.
 - [connect-config](/Commands/network/manager/connect-config/readme.md)
 : Manage connectivity configuration with network.
 
+- [connection](/Commands/network/manager/connection/readme.md)
+: Manage connection with network manager.
+
 - [group](/Commands/network/manager/group/readme.md)
 : Manage networkgroup with network.
 
