@@ -10,6 +10,9 @@ Manage network-manager with network.
 - [group](/Commands/network/manager/group/readme.md)
 : Manage networkgroup with network.
 
+- [scope-connection](/Commands/network/manager/scope-connection/readme.md)
+: Manage scope connection with network.
+
 - [security-admin-config](/Commands/network/manager/security-admin-config/readme.md)
 : Manage security admin configuration with network.
 
