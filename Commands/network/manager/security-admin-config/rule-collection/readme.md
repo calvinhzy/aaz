@@ -2,6 +2,11 @@
 
 Manage admin rule collection with network.
 
+## Subgroups
+
+- [rule](/Commands/network/manager/security-admin-config/rule-collection/rule/readme.md)
+: Manage admin rule with network.
+
 ## Commands
 
 - [create](/Commands/network/manager/security-admin-config/rule-collection/_create.md)
