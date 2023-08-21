@@ -261,6 +261,11 @@
               <help short="The Location."/>
             </arg>
           </arg>
+          <arg type="object" var="$creationInput.properties.providerSpecificInput.InMageRcm" options="in-mage-rcm">
+            <arg type="string" var="$creationInput.properties.providerSpecificInput.InMageRcm.enableAgentAutoUpgrade" options="enable-agent-auto-upgrade" required="True">
+              <help short="A value indicating whether agent auto upgrade has to be enabled."/>
+            </arg>
+          </arg>
           <arg type="object" var="$creationInput.properties.providerSpecificInput.VMwareCbt" options="vmware-cbt" group="">
             <help short="vmware-cbt"/>
             <arg type="string" var="$creationInput.properties.providerSpecificInput.VMwareCbt.keyVaultId" options="key-vault-id">
@@ -314,6 +319,7 @@
                         <enum>
                           <item arg="$creationInput.properties.providerSpecificInput.A2A" value="&quot;A2A&quot;"/>
                           <item arg="$creationInput.properties.providerSpecificInput.HyperVReplicaAzure" value="&quot;HyperVReplicaAzure&quot;"/>
+                          <item arg="$creationInput.properties.providerSpecificInput.InMageRcm" value="&quot;InMageRcm&quot;"/>
                           <item arg="$creationInput.properties.providerSpecificInput.VMwareCbt" value="&quot;VMwareCbt&quot;"/>
                         </enum>
                       </prop>
@@ -335,6 +341,9 @@
                       </discriminator>
                       <discriminator property="instanceType" value="HyperVReplicaAzure">
                         <prop type="string" name="location" arg="$creationInput.properties.providerSpecificInput.HyperVReplicaAzure.location"/>
+                      </discriminator>
+                      <discriminator property="instanceType" value="InMageRcm">
+                        <prop type="string" name="enableAgentAutoUpgrade" arg="$creationInput.properties.providerSpecificInput.InMageRcm.enableAgentAutoUpgrade" required="True"/>
                       </discriminator>
                       <discriminator property="instanceType" value="VMwareCbt">
                         <prop type="string" name="keyVaultId" arg="$creationInput.properties.providerSpecificInput.VMwareCbt.keyVaultId"/>
@@ -526,6 +535,11 @@
               <help short="The Location."/>
             </arg>
           </arg>
+          <arg type="object" var="$creationInput.properties.providerSpecificInput.InMageRcm" options="in-mage-rcm">
+            <arg type="string" var="$creationInput.properties.providerSpecificInput.InMageRcm.enableAgentAutoUpgrade" options="enable-agent-auto-upgrade">
+              <help short="A value indicating whether agent auto upgrade has to be enabled."/>
+            </arg>
+          </arg>
           <arg type="object" var="$creationInput.properties.providerSpecificInput.VMwareCbt" options="vmware-cbt" group="">
             <help short="vmware-cbt"/>
             <arg nullable="True" type="string" var="$creationInput.properties.providerSpecificInput.VMwareCbt.keyVaultId" options="key-vault-id">
@@ -703,6 +717,7 @@
                     <enum>
                       <item arg="$creationInput.properties.providerSpecificInput.A2A" value="&quot;A2A&quot;"/>
                       <item arg="$creationInput.properties.providerSpecificInput.HyperVReplicaAzure" value="&quot;HyperVReplicaAzure&quot;"/>
+                      <item arg="$creationInput.properties.providerSpecificInput.InMageRcm" value="&quot;InMageRcm&quot;"/>
                       <item arg="$creationInput.properties.providerSpecificInput.VMwareCbt" value="&quot;VMwareCbt&quot;"/>
                     </enum>
                   </prop>
@@ -724,6 +739,9 @@
                   </discriminator>
                   <discriminator property="instanceType" value="HyperVReplicaAzure">
                     <prop type="string" name="location" arg="$creationInput.properties.providerSpecificInput.HyperVReplicaAzure.location"/>
+                  </discriminator>
+                  <discriminator property="instanceType" value="InMageRcm">
+                    <prop type="string" name="enableAgentAutoUpgrade" arg="$creationInput.properties.providerSpecificInput.InMageRcm.enableAgentAutoUpgrade" required="True"/>
                   </discriminator>
                   <discriminator property="instanceType" value="VMwareCbt">
                     <prop type="string" name="keyVaultId" arg="$creationInput.properties.providerSpecificInput.VMwareCbt.keyVaultId"/>
