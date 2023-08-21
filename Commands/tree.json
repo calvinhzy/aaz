@@ -55961,6 +55961,12 @@
                               "site-recovery network mapping create -g rg --fabric-name fabric1_name -n network_mapping1_name --network-name azureNetwork --vault-name vault_name --recovery-network-id vnet2_id --fabric-details '{azure-to-azure:{primary-network-id:vnetvm_id}}' --recovery-fabric-name fabric2_name"
                             ],
                             "name": "network mapping create for A2A fabric"
+                          },
+                          {
+                            "commands": [
+                              "site-recovery network mapping create -g \"rg\" --fabric-name \"fabric_name\" -n \"network_mapping_name\" --network-name \"vnet_source_name\" --vault-name \"vault_name\" --recovery-network-id \"vnet_recovery_id\" --fabric-details '{vmm-to-azure:\"\"}'"
+                            ],
+                            "name": "network mapping create for H2A E2A (VMM)"
                           }
                         ],
                         "name": "2022-08-01",
@@ -56361,6 +56367,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery protectable-item list --fabric-name \"fabric\" --protection-container \"container_name\" -g \"rg_name\" --vault-name \"vault_name\""
+                        ],
+                        "name": "protectable-item list"
+                      }
+                    ],
                     "name": "2022-08-01",
                     "resources": [
                       {
@@ -56383,6 +56397,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery protectable-item show --fabric-name \"fabric\" --protection-container \"container_name\" -g \"rg_name\" --vault-name \"vault_name\" -n \"protectable_item_name\""
+                        ],
+                        "name": "protectable-item show"
+                      }
+                    ],
                     "name": "2022-08-01",
                     "resources": [
                       {
@@ -56724,6 +56746,12 @@
                               "site-recovery protection-container mapping create -g rg --fabric-name fabric1_name -n container_mapping1_name --protection-container container1_name --vault-name vault_name --policy-id policy_id --provider-input '{a2a:{agent-auto-update-status:Disabled}}' --target-container container2_id"
                             ],
                             "name": "protection-container mapping create for A2A"
+                          },
+                          {
+                            "commands": [
+                              "site-recovery protection-container mapping create -g \"rg\" --fabric-name \"fabric_name\" -n \"container_mapping_name\" --protection-container \"container_name\" --vault-name \"vault_name\" --policy-id \"policy_id\" --target-container \"Microsoft Azure\" --provider-input '{hyper-v-replica-azure:\"\"}'"
+                            ],
+                            "name": "protection-container mapping create for H2A"
                           }
                         ],
                         "name": "2022-08-01",

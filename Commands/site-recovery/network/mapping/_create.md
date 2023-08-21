@@ -14,3 +14,8 @@ Create operation to create an ASR network mapping.
     ```bash
         site-recovery network mapping create -g rg --fabric-name fabric1_name -n network_mapping1_name --network-name azureNetwork --vault-name vault_name --recovery-network-id vnet2_id --fabric-details '{azure-to-azure:{primary-network-id:vnetvm_id}}' --recovery-fabric-name fabric2_name
     ```
+
+- network mapping create for H2A E2A (VMM)
+    ```bash
+        site-recovery network mapping create -g "rg" --fabric-name "fabric_name" -n "network_mapping_name" --network-name "vnet_source_name" --vault-name "vault_name" --recovery-network-id "vnet_recovery_id" --fabric-details '{vmm-to-azure:""}'
+    ```

@@ -14,3 +14,8 @@ Create operation to create a protection container mapping.
     ```bash
         site-recovery protection-container mapping create -g rg --fabric-name fabric1_name -n container_mapping1_name --protection-container container1_name --vault-name vault_name --policy-id policy_id --provider-input '{a2a:{agent-auto-update-status:Disabled}}' --target-container container2_id
     ```
+
+- protection-container mapping create for H2A
+    ```bash
+        site-recovery protection-container mapping create -g "rg" --fabric-name "fabric_name" -n "container_mapping_name" --protection-container "container_name" --vault-name "vault_name" --policy-id "policy_id" --target-container "Microsoft Azure" --provider-input '{hyper-v-replica-azure:""}'
+    ```
