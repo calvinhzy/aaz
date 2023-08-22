@@ -37,6 +37,9 @@ Manage Site Recovery Service
 - [recovery-plan](/Commands/site-recovery/recovery-plan/readme.md)
 : Manage the recovery plans in the vault.
 
+- [recovery-services-provider](/Commands/site-recovery/recovery-services-provider/readme.md)
+: Manage fabric recovery-services-provider
+
 - [replication-eligibility](/Commands/site-recovery/replication-eligibility/readme.md)
 : Manage Replication Eligibility
 

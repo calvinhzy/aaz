@@ -57294,6 +57294,39 @@
               "recovery-plan"
             ]
           },
+          "recovery-services-provider": {
+            "commands": {
+              "list": {
+                "help": {
+                  "short": "List the registered recovery services providers for the specified fabric."
+                },
+                "names": [
+                  "site-recovery",
+                  "recovery-services-provider",
+                  "list"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationrecoveryservicesproviders",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage fabric recovery-services-provider"
+            },
+            "names": [
+              "site-recovery",
+              "recovery-services-provider"
+            ]
+          },
           "replication-eligibility": {
             "commands": {
               "list": {
