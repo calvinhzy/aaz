@@ -57881,6 +57881,41 @@
                   "vmware-site",
                   "machine"
                 ]
+              },
+              "run-as-account": {
+                "commands": {
+                  "list": {
+                    "help": {
+                      "short": "List to get run as accounts."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "vmware-site",
+                      "run-as-account",
+                      "list"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2020-01-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.offazure/vmwaresites/{}/runasaccounts",
+                            "plane": "mgmt-plane",
+                            "version": "2020-01-01"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "help": {
+                  "short": "Manage vmware-site run-as-account"
+                },
+                "names": [
+                  "site-recovery",
+                  "vmware-site",
+                  "run-as-account"
+                ]
               }
             },
             "help": {
