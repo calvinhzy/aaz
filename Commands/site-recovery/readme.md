@@ -45,3 +45,6 @@ Manage Site Recovery Service
 
 - [vault](/Commands/site-recovery/vault/readme.md)
 : Manage Vault
+
+- [vmware-site](/Commands/site-recovery/vmware-site/readme.md)
+: Manage vmware-site

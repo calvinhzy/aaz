@@ -57844,6 +57844,52 @@
               "site-recovery",
               "vault"
             ]
+          },
+          "vmware-site": {
+            "commandGroups": {
+              "machine": {
+                "commands": {
+                  "list": {
+                    "help": {
+                      "short": "List to get machine."
+                    },
+                    "names": [
+                      "site-recovery",
+                      "vmware-site",
+                      "machine",
+                      "list"
+                    ],
+                    "versions": [
+                      {
+                        "name": "2020-01-01",
+                        "resources": [
+                          {
+                            "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.offazure/vmwaresites/{}/machines",
+                            "plane": "mgmt-plane",
+                            "version": "2020-01-01"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "help": {
+                  "short": "Manage vmware-site machines"
+                },
+                "names": [
+                  "site-recovery",
+                  "vmware-site",
+                  "machine"
+                ]
+              }
+            },
+            "help": {
+              "short": "Manage vmware-site"
+            },
+            "names": [
+              "site-recovery",
+              "vmware-site"
+            ]
           }
         },
         "help": {
