@@ -56613,6 +56613,28 @@
                   }
                 ]
               },
+              "reprotect": {
+                "help": {
+                  "short": "Operation to reprotect or reverse replicate a failed over replication protected item."
+                },
+                "names": [
+                  "site-recovery",
+                  "protected-item",
+                  "reprotect"
+                ],
+                "versions": [
+                  {
+                    "name": "2022-08-01",
+                    "resources": [
+                      {
+                        "id": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.recoveryservices/vaults/{}/replicationfabrics/{}/replicationprotectioncontainers/{}/replicationprotecteditems/{}/reprotect",
+                        "plane": "mgmt-plane",
+                        "version": "2022-08-01"
+                      }
+                    ]
+                  }
+                ]
+              },
               "show": {
                 "help": {
                   "short": "Get the details of an ASR replication protected item."

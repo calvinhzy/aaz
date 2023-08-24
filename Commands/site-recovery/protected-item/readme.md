@@ -22,6 +22,9 @@ Manage Protected Item
 - [remove](/Commands/site-recovery/protected-item/_remove.md)
 : The operation to disable replication on a replication protected item. This will also remove the item.
 
+- [reprotect](/Commands/site-recovery/protected-item/_reprotect.md)
+: Operation to reprotect or reverse replicate a failed over replication protected item.
+
 - [show](/Commands/site-recovery/protected-item/_show.md)
 : Get the details of an ASR replication protected item.
 
