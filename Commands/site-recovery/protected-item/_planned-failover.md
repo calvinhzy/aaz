@@ -14,3 +14,8 @@ Operation to initiate a planned failover of the replication protected item.
     ```bash
         site-recovery protected-item planned-failover --fabric-name "fabric_name" --protection-container "container_name" -n "protected_item_name" -g "rg" --vault-name "vault_name" --failover-direction RecoveryToPrimary --provider-details '{hyper-v-replica-azure-failback:{data-sync-option:ForSynchronization,recovery-vm-creation-option:NoAction}}'
     ```
+
+- failback v2arcm
+    ```bash
+        site-recovery protected-item planned-failover --fabric-name "fabric_name" --protection-container "container_name" -n "protected_item_name" -g "rg" --vault-name "vault_name" --provider-details '{in-mage-rcm-failback:{recovery-point-type:CrashConsistent}}'
+    ```

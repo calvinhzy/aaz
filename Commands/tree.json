@@ -56185,7 +56185,7 @@
                     "examples": [
                       {
                         "commands": [
-                          "site-recovery policy create -g rg --vault-name vault_name -n policy_name_rcm --provider-specific-input '{in-mage-rcm:{app-consistent-frequency-in-minutes:0,crash-consistent-frequency-in-minutes:5,enable-multi-vm-sync:true,recovery-point-history-in-minutes:2880}}'"
+                          "site-recovery policy create -g \"rg\" --vault-name \"vault_name\" -n \"policy_name\" --provider-specific-input '{in-mage-rcm:{app-consistent-frequency-in-minutes:0,crash-consistent-frequency-in-minutes:5,enable-multi-vm-sync:true,recovery-point-history-in-minutes:1440}}'"
                         ],
                         "name": "policy create of type in-mage-rcm"
                       },
@@ -56450,6 +56450,12 @@
                           "site-recovery protected-item create -g \"rg\" --fabric-name \"fabric_name\" -n \"protected_item_name\" --protection-container \"container_name\" --vault-name \"vault_name\" --policy-id \"policy_id\" --protectable-item-id \"protectable_item_id\" --provider-details '{hyper-v-replica-azure:{disks-to-include:[\"vhd_id\"],enable-rdp-on-target-option:Never,os-type:Windows,target-azure-network-id:\"vnet_id\",target-azure-subnet-id:\"subnet_id\",target-azure-v2-resource-group-id:\"rg_id\",target-azure-vm-name:\"hypervvm_name\",target-storage-account-id:\"storage_id\",use-managed-disks:false,vhd-id:\"vhd_id\"}}'"
                         ],
                         "name": "protected-item create for hyper-v-replica-azure"
+                      },
+                      {
+                        "commands": [
+                          "site-recovery protected-item create -g \"rg\" --fabric-name \"fabric_name\" -n \"protected_item_name\" --protection-container \"container_name\" --vault-name \"vault_name\" --policy-id \"policy_id\" --provider-details '{in-mage-rcm:{fabric-discovery-machine-id:\"fabric_discovery_machine_id\",process-server-id:\"process_server_id\",run-as-account-id:\"run_as_account_id\",target-resource-group-id:\"rg_id\",target-boot-diagnostics-storage-account-id:\"storage_id\",target-network-id:\"vnet_id\",target-subnet-name:MySubnet,target-vm-name:\"target_vm_name\",disks-default:{disk-type:Premium_LRS,log-storage-account-id:\"storage_id\"}}}'"
+                        ],
+                        "name": "protected-item create for v2arcm"
                       }
                     ],
                     "name": "2022-08-01",
@@ -56570,6 +56576,12 @@
                           "site-recovery protected-item planned-failover --fabric-name \"fabric_name\" --protection-container \"container_name\" -n \"protected_item_name\" -g \"rg\" --vault-name \"vault_name\" --failover-direction RecoveryToPrimary --provider-details '{hyper-v-replica-azure-failback:{data-sync-option:ForSynchronization,recovery-vm-creation-option:NoAction}}'"
                         ],
                         "name": "failback hyper-v-replica-azure"
+                      },
+                      {
+                        "commands": [
+                          "site-recovery protected-item planned-failover --fabric-name \"fabric_name\" --protection-container \"container_name\" -n \"protected_item_name\" -g \"rg\" --vault-name \"vault_name\" --provider-details '{in-mage-rcm-failback:{recovery-point-type:CrashConsistent}}'"
+                        ],
+                        "name": "failback v2arcm"
                       }
                     ],
                     "name": "2022-08-01",
@@ -56624,6 +56636,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery protected-item reprotect --fabric-name \"fabric_name\" --protection-container \"container_name\" -n \"protected_item_name\" -g \"rg\" --vault-name \"vault_name\" --failover-direction RecoveryToPrimary --provider-details '{in-mage-rcm:{datastore-name:\"datastore_name\",log-storage-account-id:\"storage_id\",reprotect-agent-id:\"reprotect_agent_id\"}}'"
+                        ],
+                        "name": "reprotect for v2arcm after failover"
+                      }
+                    ],
                     "name": "2022-08-01",
                     "resources": [
                       {
@@ -56694,6 +56714,12 @@
                           "site-recovery protected-item unplanned-failover --fabric-name \"fabric_name\" --protection-container \"container_name\" -n \"protected_item_name\" -g \"rg\" --vault-name \"vault_name\" --failover-direction PrimaryToRecovery --provider-details '{hyper-v-replica-azure:\"\"}' --source-site-operations NotRequired"
                         ],
                         "name": "protected-item failover hyper-v-replica-azure"
+                      },
+                      {
+                        "commands": [
+                          "site-recovery protected-item unplanned-failover --fabric-name \"fabric_name\" --protection-container \"container_name\" -n \"protected_item_name\" -g \"rg\" --vault-name \"vault_name\" --failover-direction PrimaryToRecovery --provider-details '{in-mage-rcm:{perform-shutdown:true}}' --source-site-operations NotRequired"
+                        ],
+                        "name": "protected-item unplanned-failover for v2arcm"
                       }
                     ],
                     "name": "2022-08-01",
@@ -56774,6 +56800,12 @@
                               "site-recovery protection-container mapping create -g \"rg\" --fabric-name \"fabric_name\" -n \"container_mapping_name\" --protection-container \"container_name\" --vault-name \"vault_name\" --policy-id \"policy_id\" --target-container \"Microsoft Azure\" --provider-input '{hyper-v-replica-azure:\"\"}'"
                             ],
                             "name": "protection-container mapping create for H2A"
+                          },
+                          {
+                            "commands": [
+                              "site-recovery protection-container mapping create -g \"rg\" --fabric-name \"fabric_name\" -n \"container_mapping_name\" --protection-container \"container_name\" --vault-name \"vault_name\" --policy-id \"policy_id\" --target-container \"Microsoft Azure\" --provider-input '{in-mage-rcm:{enable-agent-auto-upgrade:true}}'"
+                            ],
+                            "name": "protection-container mapping create for V2A RCM"
                           }
                         ],
                         "name": "2022-08-01",
@@ -57174,6 +57206,12 @@
                           "site-recovery recovery-plan create -n \"recovery_plan_name\" -g \"rg\" --vault-name \"vault_name\" --groups '[{group-type:Boot,replication-protected-items:[{id:\"protected_item_id\",virtual-machine-id:\"protectable_item_id\"}]}]' --primary-fabric-id \"fabric_id\" --recovery-fabric-id \\\"Microsoft Azure\\\" --failover-deployment-model ResourceManager"
                         ],
                         "name": "recovery-plan create hyper-v-replica-azure"
+                      },
+                      {
+                        "commands": [
+                          "site-recovery recovery-plan create -n \"recovery_plan_name\" -g \"rg\" --vault-name \"vault_name\" --groups '[{group-type:Boot,replication-protected-items:[{id:\"protected_item_id\",virtual-machine-id:\"vm_id\"}]}]' --primary-fabric-id \"fabric_id\" --recovery-fabric-id \"Microsoft Azure\" --failover-deployment-model ResourceManager"
+                        ],
+                        "name": "recovery-plan create for v2arcm"
                       }
                     ],
                     "name": "2022-08-01",
@@ -57329,6 +57367,14 @@
                 ],
                 "versions": [
                   {
+                    "examples": [
+                      {
+                        "commands": [
+                          "site-recovery recovery-services-provider list --fabric-name \"fabric_name\" -g \"rg\" --vault-name \"vault_name\""
+                        ],
+                        "name": "recovery-services-provider list for v2arcm"
+                      }
+                    ],
                     "name": "2022-08-01",
                     "resources": [
                       {
@@ -57883,6 +57929,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery vmware-site machine list -g \"rg\" --site-name \"site_name\""
+                            ],
+                            "name": "vmware-site machine list for v2arcm"
+                          }
+                        ],
                         "name": "2020-01-01",
                         "resources": [
                           {
@@ -57918,6 +57972,14 @@
                     ],
                     "versions": [
                       {
+                        "examples": [
+                          {
+                            "commands": [
+                              "site-recovery vmware-site run-as-account list -g \"rg\" --site-name \"site_name\""
+                            ],
+                            "name": "vmware-site run-as-account list"
+                          }
+                        ],
                         "name": "2020-01-01",
                         "resources": [
                           {

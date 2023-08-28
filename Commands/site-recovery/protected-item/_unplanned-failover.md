@@ -24,3 +24,8 @@ Operation to initiate a failover of the replication protected item.
     ```bash
         site-recovery protected-item unplanned-failover --fabric-name "fabric_name" --protection-container "container_name" -n "protected_item_name" -g "rg" --vault-name "vault_name" --failover-direction PrimaryToRecovery --provider-details '{hyper-v-replica-azure:""}' --source-site-operations NotRequired
     ```
+
+- protected-item unplanned-failover for v2arcm
+    ```bash
+        site-recovery protected-item unplanned-failover --fabric-name "fabric_name" --protection-container "container_name" -n "protected_item_name" -g "rg" --vault-name "vault_name" --failover-direction PrimaryToRecovery --provider-details '{in-mage-rcm:{perform-shutdown:true}}' --source-site-operations NotRequired
+    ```
