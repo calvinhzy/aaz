@@ -320,7 +320,8 @@
               <item type="string"/>
             </arg>
           </arg>
-          <arg type="object" var="$input.properties.providerSpecificInput.InMage" options="in-mage">
+          <arg type="object" var="$input.properties.providerSpecificInput.InMage" options="in-mage" hide="True" group="">
+            <help short="in-mage"/>
             <arg type="integer32" var="$input.properties.providerSpecificInput.InMage.appConsistentFrequencyInMinutes" options="app-consistent-frequency-in-minutes">
               <help short="The app consistent snapshot frequency (in minutes)."/>
             </arg>
@@ -338,7 +339,8 @@
               <help short="The recovery point threshold in minutes."/>
             </arg>
           </arg>
-          <arg type="object" var="$input.properties.providerSpecificInput.InMageAzureV2" options="in-mage-azure-v2">
+          <arg type="object" var="$input.properties.providerSpecificInput.InMageAzureV2" options="in-mage-azure-v2" hide="True" group="">
+            <help short="in-mage-azure-v2"/>
             <arg type="integer32" var="$input.properties.providerSpecificInput.InMageAzureV2.appConsistentFrequencyInMinutes" options="app-consistent-frequency-in-minutes">
               <help short="The app consistent snapshot frequency (in minutes)."/>
             </arg>
@@ -769,7 +771,8 @@
               <item type="string"/>
             </arg>
           </arg>
-          <arg type="object" var="$input.properties.replicationProviderSettings.InMage" options="in-mage">
+          <arg type="object" var="$input.properties.replicationProviderSettings.InMage" options="in-mage" hide="True" group="">
+            <help short="in-mage"/>
             <arg type="integer32" var="$input.properties.replicationProviderSettings.InMage.appConsistentFrequencyInMinutes" options="app-consistent-frequency-in-minutes">
               <help short="The app consistent snapshot frequency (in minutes)."/>
             </arg>
@@ -787,7 +790,8 @@
               <help short="The recovery point threshold in minutes."/>
             </arg>
           </arg>
-          <arg type="object" var="$input.properties.replicationProviderSettings.InMageAzureV2" options="in-mage-azure-v2">
+          <arg type="object" var="$input.properties.replicationProviderSettings.InMageAzureV2" options="in-mage-azure-v2" hide="True" group="">
+            <help short="in-mage-azure-v2"/>
             <arg type="integer32" var="$input.properties.replicationProviderSettings.InMageAzureV2.appConsistentFrequencyInMinutes" options="app-consistent-frequency-in-minutes">
               <help short="The app consistent snapshot frequency (in minutes)."/>
             </arg>

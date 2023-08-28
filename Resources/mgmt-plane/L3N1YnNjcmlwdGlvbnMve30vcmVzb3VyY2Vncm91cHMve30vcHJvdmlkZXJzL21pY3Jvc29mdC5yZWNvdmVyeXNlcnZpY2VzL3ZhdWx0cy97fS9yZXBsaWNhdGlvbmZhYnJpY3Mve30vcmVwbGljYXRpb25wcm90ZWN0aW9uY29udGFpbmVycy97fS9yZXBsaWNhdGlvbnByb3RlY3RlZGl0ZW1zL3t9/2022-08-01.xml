@@ -1454,7 +1454,8 @@
               <help short="The VM Name."/>
             </arg>
           </arg>
-          <arg type="object" var="$input.properties.providerSpecificDetails.InMage" options="in-mage">
+          <arg type="object" var="$input.properties.providerSpecificDetails.InMage" options="in-mage" hide="True" group="">
+            <help short="in-mage"/>
             <arg type="string" var="$input.properties.providerSpecificDetails.InMage.datastoreName" options="datastore-name">
               <help short="The target datastore name."/>
             </arg>
@@ -1506,7 +1507,8 @@
               <help short="The VM Name."/>
             </arg>
           </arg>
-          <arg type="object" var="$input.properties.providerSpecificDetails.InMageAzureV2" options="in-mage-azure-v2">
+          <arg type="object" var="$input.properties.providerSpecificDetails.InMageAzureV2" options="in-mage-azure-v2" hide="True" group="">
+            <help short="in-mage-azure-v2"/>
             <arg type="string" var="$input.properties.providerSpecificDetails.InMageAzureV2.diskEncryptionSetId" options="disk-encryption-set-id">
               <help short="The DiskEncryptionSet ARM Id."/>
             </arg>
@@ -3427,7 +3429,8 @@
               <help short="The VM Name."/>
             </arg>
           </arg>
-          <arg type="object" var="$input.properties.providerSpecificDetails.InMage" options="in-mage">
+          <arg type="object" var="$input.properties.providerSpecificDetails.InMage" options="in-mage" hide="True" group="">
+            <help short="in-mage"/>
             <arg nullable="True" type="string" var="$input.properties.providerSpecificDetails.InMage.datastoreName" options="datastore-name">
               <help short="The target datastore name."/>
             </arg>
@@ -3479,7 +3482,8 @@
               <help short="The VM Name."/>
             </arg>
           </arg>
-          <arg type="object" var="$input.properties.providerSpecificDetails.InMageAzureV2" options="in-mage-azure-v2">
+          <arg type="object" var="$input.properties.providerSpecificDetails.InMageAzureV2" options="in-mage-azure-v2" hide="True" group="">
+            <help short="in-mage-azure-v2"/>
             <arg nullable="True" type="string" var="$input.properties.providerSpecificDetails.InMageAzureV2.diskEncryptionSetId" options="disk-encryption-set-id">
               <help short="The DiskEncryptionSet ARM Id."/>
             </arg>
