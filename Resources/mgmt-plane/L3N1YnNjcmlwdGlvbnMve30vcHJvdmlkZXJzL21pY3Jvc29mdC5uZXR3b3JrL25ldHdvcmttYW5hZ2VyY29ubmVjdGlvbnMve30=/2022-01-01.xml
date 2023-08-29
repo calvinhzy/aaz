@@ -5,7 +5,7 @@
     <command name="show" version="2022-01-01">
       <resource id="/subscriptions/{}/providers/microsoft.network/networkmanagerconnections/{}" version="2022-01-01" swagger="mgmt-plane/network/ResourceProviders/Microsoft.Network/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9wcm92aWRlcnMvTWljcm9zb2Z0Lk5ldHdvcmsvbmV0d29ya01hbmFnZXJDb25uZWN0aW9ucy97bmV0d29ya01hbmFnZXJDb25uZWN0aW9uTmFtZX0=/V/MjAyMi0wMS0wMQ=="/>
       <argGroup name="">
-        <arg type="string" var="$Path.networkManagerConnectionName" options="network-manager-connection-name connection-name name n" required="True" group="" idPart="name">
+        <arg type="string" var="$Path.networkManagerConnectionName" options="connection-name name n" required="True" group="" idPart="name">
           <help short="Name for the network manager connection."/>
         </arg>
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
@@ -84,7 +84,7 @@
     <command name="delete" version="2022-01-01" confirmation="Are you sure you want to perform this operation?">
       <resource id="/subscriptions/{}/providers/microsoft.network/networkmanagerconnections/{}" version="2022-01-01" swagger="mgmt-plane/network/ResourceProviders/Microsoft.Network/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9wcm92aWRlcnMvTWljcm9zb2Z0Lk5ldHdvcmsvbmV0d29ya01hbmFnZXJDb25uZWN0aW9ucy97bmV0d29ya01hbmFnZXJDb25uZWN0aW9uTmFtZX0=/V/MjAyMi0wMS0wMQ=="/>
       <argGroup name="">
-        <arg type="string" var="$Path.networkManagerConnectionName" options="network-manager-connection-name connection-name name n" required="True" group="" idPart="name">
+        <arg type="string" var="$Path.networkManagerConnectionName" options="connection-name name n" required="True" group="" idPart="name">
           <help short="Name for the network manager connection."/>
         </arg>
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
@@ -117,7 +117,7 @@
     <command name="create" version="2022-01-01">
       <resource id="/subscriptions/{}/providers/microsoft.network/networkmanagerconnections/{}" version="2022-01-01" swagger="mgmt-plane/network/ResourceProviders/Microsoft.Network/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9wcm92aWRlcnMvTWljcm9zb2Z0Lk5ldHdvcmsvbmV0d29ya01hbmFnZXJDb25uZWN0aW9ucy97bmV0d29ya01hbmFnZXJDb25uZWN0aW9uTmFtZX0=/V/MjAyMi0wMS0wMQ=="/>
       <argGroup name="">
-        <arg type="string" var="$Path.networkManagerConnectionName" options="network-manager-connection-name connection-name name n" required="True" group="" idPart="name">
+        <arg type="string" var="$Path.networkManagerConnectionName" options="connection-name name n" required="True" group="" idPart="name">
           <help short="Name for the network manager connection."/>
         </arg>
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
@@ -214,7 +214,7 @@
     <command name="update" version="2022-01-01">
       <resource id="/subscriptions/{}/providers/microsoft.network/networkmanagerconnections/{}" version="2022-01-01" swagger="mgmt-plane/network/ResourceProviders/Microsoft.Network/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9wcm92aWRlcnMvTWljcm9zb2Z0Lk5ldHdvcmsvbmV0d29ya01hbmFnZXJDb25uZWN0aW9ucy97bmV0d29ya01hbmFnZXJDb25uZWN0aW9uTmFtZX0=/V/MjAyMi0wMS0wMQ=="/>
       <argGroup name="">
-        <arg type="string" var="$Path.networkManagerConnectionName" options="network-manager-connection-name connection-name name n" required="True" group="" idPart="name">
+        <arg type="string" var="$Path.networkManagerConnectionName" options="connection-name name n" required="True" group="" idPart="name">
           <help short="Name for the network manager connection."/>
         </arg>
         <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>

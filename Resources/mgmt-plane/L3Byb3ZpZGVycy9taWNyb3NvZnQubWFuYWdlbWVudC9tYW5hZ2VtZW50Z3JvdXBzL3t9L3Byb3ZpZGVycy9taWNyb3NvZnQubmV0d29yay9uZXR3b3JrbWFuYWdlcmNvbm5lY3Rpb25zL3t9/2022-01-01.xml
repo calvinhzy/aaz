@@ -8,7 +8,7 @@
         <arg type="string" var="$Path.managementGroupId" options="management-group-id" required="True">
           <help short="The management group Id which uniquely identify the Microsoft Azure management group."/>
         </arg>
-        <arg type="string" var="$Path.networkManagerConnectionName" options="network-manager-connection-name connection-name name n" required="True" group="">
+        <arg type="string" var="$Path.networkManagerConnectionName" options="connection-name name n" required="True" group="">
           <help short="Name for the network manager connection."/>
         </arg>
       </argGroup>
@@ -89,7 +89,7 @@
         <arg type="string" var="$Path.managementGroupId" options="management-group-id" required="True">
           <help short="The management group Id which uniquely identify the Microsoft Azure management group."/>
         </arg>
-        <arg type="string" var="$Path.networkManagerConnectionName" options="network-manager-connection-name connection-name name n" required="True" group="">
+        <arg type="string" var="$Path.networkManagerConnectionName" options="connection-name name n" required="True" group="">
           <help short="Name for the network manager connection."/>
         </arg>
       </argGroup>
@@ -124,7 +124,7 @@
         <arg type="string" var="$Path.managementGroupId" options="management-group-id" required="True">
           <help short="The management group Id which uniquely identify the Microsoft Azure management group."/>
         </arg>
-        <arg type="string" var="$Path.networkManagerConnectionName" options="network-manager-connection-name connection-name name n" required="True" group="">
+        <arg type="string" var="$Path.networkManagerConnectionName" options="connection-name name n" required="True" group="">
           <help short="Name for the network manager connection."/>
         </arg>
       </argGroup>
@@ -223,7 +223,7 @@
         <arg type="string" var="$Path.managementGroupId" options="management-group-id" required="True">
           <help short="The management group Id which uniquely identify the Microsoft Azure management group."/>
         </arg>
-        <arg type="string" var="$Path.networkManagerConnectionName" options="network-manager-connection-name connection-name name n" required="True" group="">
+        <arg type="string" var="$Path.networkManagerConnectionName" options="connection-name name n" required="True" group="">
           <help short="Name for the network manager connection."/>
         </arg>
       </argGroup>
