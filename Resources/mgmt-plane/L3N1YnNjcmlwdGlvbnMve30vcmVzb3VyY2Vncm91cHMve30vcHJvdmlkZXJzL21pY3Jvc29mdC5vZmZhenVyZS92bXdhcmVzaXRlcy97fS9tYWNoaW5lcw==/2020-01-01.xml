@@ -13,8 +13,12 @@
         <arg type="string" var="$Query.continuationToken" options="continuation-token">
           <help short="Optional parameter for continuation token."/>
         </arg>
-        <arg type="string" var="$Query.filter" options="filter"/>
-        <arg type="integer32" var="$Query.top" options="top"/>
+        <arg type="string" var="$Query.filter" options="filter" group="">
+          <help short="filter"/>
+        </arg>
+        <arg type="integer32" var="$Query.top" options="top" group="">
+          <help short="list a set number of machines"/>
+        </arg>
         <arg type="integer32" var="$Query.totalRecordCount" options="total-record-count">
           <help short="Total count of machines in the given site."/>
         </arg>
