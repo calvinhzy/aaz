@@ -1,0 +1,1071 @@
+<?xml version='1.0' encoding='utf-8'?>
+<CodeGen plane="mgmt-plane">
+  <resource id="/subscriptions/{}/providers/microsoft.storage/storageaccounts" version="2025-06-01" swagger="mgmt-plane/storage/ResourceProviders/Microsoft.Storage/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9wcm92aWRlcnMvTWljcm9zb2Z0LlN0b3JhZ2Uvc3RvcmFnZUFjY291bnRz/V/MjAyNS0wNi0wMQ=="/>
+  <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.storage/storageaccounts" version="2025-06-01" swagger="mgmt-plane/storage/ResourceProviders/Microsoft.Storage/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuU3RvcmFnZS9zdG9yYWdlQWNjb3VudHM=/V/MjAyNS0wNi0wMQ=="/>
+  <commandGroup name="storage account">
+    <command name="list" version="2025-06-01" confirmation="">
+      <resource id="/subscriptions/{}/providers/microsoft.storage/storageaccounts" version="2025-06-01" swagger="mgmt-plane/storage/ResourceProviders/Microsoft.Storage/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9wcm92aWRlcnMvTWljcm9zb2Z0LlN0b3JhZ2Uvc3RvcmFnZUFjY291bnRz/V/MjAyNS0wNi0wMQ=="/>
+      <resource id="/subscriptions/{}/resourcegroups/{}/providers/microsoft.storage/storageaccounts" version="2025-06-01" swagger="mgmt-plane/storage/ResourceProviders/Microsoft.Storage/Paths/L3N1YnNjcmlwdGlvbnMve3N1YnNjcmlwdGlvbklkfS9yZXNvdXJjZUdyb3Vwcy97cmVzb3VyY2VHcm91cE5hbWV9L3Byb3ZpZGVycy9NaWNyb3NvZnQuU3RvcmFnZS9zdG9yYWdlQWNjb3VudHM=/V/MjAyNS0wNi0wMQ=="/>
+      <argGroup name="">
+        <arg type="ResourceGroupName" var="$Path.resourceGroupName" options="resource-group g" idPart="resource_group"/>
+        <arg type="SubscriptionId" var="$Path.subscriptionId" options="subscription" required="True" idPart="subscription"/>
+      </argGroup>
+      <condition var="$Condition_StorageAccounts_List">
+        <operator type="and">
+          <operator type="hasValue" arg="$Path.subscriptionId"/>
+          <operator type="not">
+            <operator type="hasValue" arg="$Path.resourceGroupName"/>
+          </operator>
+        </operator>
+      </condition>
+      <condition var="$Condition_StorageAccounts_ListByResourceGroup">
+        <operator type="and">
+          <operator type="hasValue" arg="$Path.resourceGroupName"/>
+          <operator type="hasValue" arg="$Path.subscriptionId"/>
+        </operator>
+      </condition>
+      <operation when="$Condition_StorageAccounts_List" operationId="StorageAccounts_List">
+        <http path="/subscriptions/{subscriptionId}/providers/Microsoft.Storage/storageAccounts">
+          <request method="get">
+            <path>
+              <param type="string" name="subscriptionId" arg="$Path.subscriptionId" required="True">
+                <format minLength="1"/>
+              </param>
+            </path>
+            <query>
+              <const readOnly="True" const="True" type="string" name="api-version" required="True">
+                <default value="&quot;2025-06-01&quot;"/>
+                <format minLength="1"/>
+              </const>
+            </query>
+          </request>
+          <response statusCode="200">
+            <body>
+              <json var="$Instance">
+                <schema type="object">
+                  <prop readOnly="True" type="string" name="nextLink"/>
+                  <prop readOnly="True" type="array<object>" name="value">
+                    <item type="object">
+                      <prop type="object" name="extendedLocation">
+                        <prop type="string" name="name"/>
+                        <prop type="string" name="type">
+                          <enum>
+                            <item value="&quot;EdgeZone&quot;"/>
+                          </enum>
+                        </prop>
+                      </prop>
+                      <prop readOnly="True" type="ResourceId" name="id">
+                        <format template="/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Storage/storageAccounts/{}"/>
+                      </prop>
+                      <prop type="IdentityObject" name="identity">
+                        <prop readOnly="True" type="string" name="principalId"/>
+                        <prop readOnly="True" type="string" name="tenantId"/>
+                        <prop type="string" name="type" required="True">
+                          <enum>
+                            <item value="&quot;None&quot;"/>
+                            <item value="&quot;SystemAssigned&quot;"/>
+                            <item value="&quot;SystemAssigned,UserAssigned&quot;"/>
+                            <item value="&quot;UserAssigned&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="object" name="userAssignedIdentities">
+                          <additionalProp>
+                            <item type="object">
+                              <prop readOnly="True" type="string" name="clientId"/>
+                              <prop readOnly="True" type="string" name="principalId"/>
+                            </item>
+                          </additionalProp>
+                        </prop>
+                      </prop>
+                      <prop readOnly="True" type="string" name="kind">
+                        <enum>
+                          <item value="&quot;BlobStorage&quot;"/>
+                          <item value="&quot;BlockBlobStorage&quot;"/>
+                          <item value="&quot;FileStorage&quot;"/>
+                          <item value="&quot;Storage&quot;"/>
+                          <item value="&quot;StorageV2&quot;"/>
+                        </enum>
+                      </prop>
+                      <prop type="ResourceLocation" name="location" required="True"/>
+                      <prop readOnly="True" type="string" name="name"/>
+                      <prop type="object" name="placement">
+                        <prop type="string" name="zonePlacementPolicy">
+                          <enum>
+                            <item value="&quot;Any&quot;"/>
+                            <item value="&quot;None&quot;"/>
+                          </enum>
+                        </prop>
+                      </prop>
+                      <prop type="object" name="properties" clientFlatten="True">
+                        <prop readOnly="True" type="string" name="accessTier">
+                          <enum>
+                            <item value="&quot;Cold&quot;"/>
+                            <item value="&quot;Cool&quot;"/>
+                            <item value="&quot;Hot&quot;"/>
+                            <item value="&quot;Premium&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop readOnly="True" type="boolean" name="accountMigrationInProgress"/>
+                        <prop type="boolean" name="allowBlobPublicAccess"/>
+                        <prop type="boolean" name="allowCrossTenantReplication"/>
+                        <prop type="boolean" name="allowSharedKeyAccess"/>
+                        <prop type="string" name="allowedCopyScope">
+                          <enum>
+                            <item value="&quot;AAD&quot;"/>
+                            <item value="&quot;PrivateLink&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="object" name="azureFilesIdentityBasedAuthentication">
+                          <prop type="object" name="activeDirectoryProperties">
+                            <prop type="string" name="accountType">
+                              <enum>
+                                <item value="&quot;Computer&quot;"/>
+                                <item value="&quot;User&quot;"/>
+                              </enum>
+                            </prop>
+                            <prop type="string" name="azureStorageSid"/>
+                            <prop type="string" name="domainGuid"/>
+                            <prop type="string" name="domainName"/>
+                            <prop type="string" name="domainSid"/>
+                            <prop type="string" name="forestName"/>
+                            <prop type="string" name="netBiosDomainName"/>
+                            <prop type="string" name="samAccountName"/>
+                          </prop>
+                          <prop type="string" name="defaultSharePermission">
+                            <enum>
+                              <item value="&quot;None&quot;"/>
+                              <item value="&quot;StorageFileDataSmbShareContributor&quot;"/>
+                              <item value="&quot;StorageFileDataSmbShareElevatedContributor&quot;"/>
+                              <item value="&quot;StorageFileDataSmbShareReader&quot;"/>
+                            </enum>
+                          </prop>
+                          <prop type="string" name="directoryServiceOptions" required="True">
+                            <enum>
+                              <item value="&quot;AADDS&quot;"/>
+                              <item value="&quot;AADKERB&quot;"/>
+                              <item value="&quot;AD&quot;"/>
+                              <item value="&quot;None&quot;"/>
+                            </enum>
+                          </prop>
+                          <prop type="object" name="smbOAuthSettings">
+                            <prop type="boolean" name="isSmbOAuthEnabled"/>
+                          </prop>
+                        </prop>
+                        <prop readOnly="True" type="object" name="blobRestoreStatus">
+                          <prop readOnly="True" type="string" name="failureReason"/>
+                          <prop readOnly="True" type="object" name="parameters">
+                            <prop type="array<object>" name="blobRanges" required="True">
+                              <item type="object">
+                                <prop type="string" name="endRange" required="True"/>
+                                <prop type="string" name="startRange" required="True"/>
+                              </item>
+                            </prop>
+                            <prop type="dateTime" name="timeToRestore" required="True">
+                              <format protocol="iso"/>
+                            </prop>
+                          </prop>
+                          <prop readOnly="True" type="string" name="restoreId"/>
+                          <prop readOnly="True" type="string" name="status">
+                            <enum>
+                              <item value="&quot;Complete&quot;"/>
+                              <item value="&quot;Failed&quot;"/>
+                              <item value="&quot;InProgress&quot;"/>
+                            </enum>
+                          </prop>
+                        </prop>
+                        <prop readOnly="True" type="dateTime" name="creationTime">
+                          <format protocol="iso"/>
+                        </prop>
+                        <prop readOnly="True" type="object" name="customDomain">
+                          <prop type="string" name="name" required="True"/>
+                          <prop type="boolean" name="useSubDomainName"/>
+                        </prop>
+                        <prop type="boolean" name="defaultToOAuthAuthentication"/>
+                        <prop type="string" name="dnsEndpointType">
+                          <enum>
+                            <item value="&quot;AzureDnsZone&quot;"/>
+                            <item value="&quot;Standard&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="object" name="dualStackEndpointPreference">
+                          <prop type="boolean" name="publishIpv6Endpoint"/>
+                        </prop>
+                        <prop type="boolean" name="enableExtendedGroups"/>
+                        <prop readOnly="True" type="object" name="encryption">
+                          <prop type="object" name="identity">
+                            <prop type="string" name="federatedIdentityClientId"/>
+                            <prop type="string" name="userAssignedIdentity"/>
+                          </prop>
+                          <prop type="string" name="keySource">
+                            <default value="&quot;Microsoft.Storage&quot;"/>
+                            <enum>
+                              <item value="&quot;Microsoft.Keyvault&quot;"/>
+                              <item value="&quot;Microsoft.Storage&quot;"/>
+                            </enum>
+                          </prop>
+                          <prop type="object" name="keyvaultproperties">
+                            <prop readOnly="True" type="dateTime" name="currentVersionedKeyExpirationTimestamp">
+                              <format protocol="iso"/>
+                            </prop>
+                            <prop readOnly="True" type="string" name="currentVersionedKeyIdentifier"/>
+                            <prop type="string" name="keyname"/>
+                            <prop type="string" name="keyvaulturi"/>
+                            <prop type="string" name="keyversion"/>
+                            <prop readOnly="True" type="dateTime" name="lastKeyRotationTimestamp">
+                              <format protocol="iso"/>
+                            </prop>
+                          </prop>
+                          <prop type="boolean" name="requireInfrastructureEncryption"/>
+                          <prop type="object" name="services">
+                            <prop type="object" name="blob" cls="EncryptionService_read">
+                              <prop type="boolean" name="enabled"/>
+                              <prop type="string" name="keyType">
+                                <enum>
+                                  <item value="&quot;Account&quot;"/>
+                                  <item value="&quot;Service&quot;"/>
+                                </enum>
+                              </prop>
+                              <prop readOnly="True" type="dateTime" name="lastEnabledTime">
+                                <format protocol="iso"/>
+                              </prop>
+                            </prop>
+                            <prop type="@EncryptionService_read" name="file"/>
+                            <prop type="@EncryptionService_read" name="queue"/>
+                            <prop type="@EncryptionService_read" name="table"/>
+                          </prop>
+                        </prop>
+                        <prop readOnly="True" type="boolean" name="failoverInProgress"/>
+                        <prop type="object" name="geoPriorityReplicationStatus">
+                          <prop type="boolean" name="isBlobEnabled"/>
+                        </prop>
+                        <prop readOnly="True" type="object" name="geoReplicationStats">
+                          <prop readOnly="True" type="boolean" name="canFailover"/>
+                          <prop readOnly="True" type="boolean" name="canPlannedFailover"/>
+                          <prop readOnly="True" type="dateTime" name="lastSyncTime">
+                            <format protocol="iso"/>
+                          </prop>
+                          <prop readOnly="True" type="string" name="postFailoverRedundancy">
+                            <enum>
+                              <item value="&quot;Standard_LRS&quot;"/>
+                              <item value="&quot;Standard_ZRS&quot;"/>
+                            </enum>
+                          </prop>
+                          <prop readOnly="True" type="string" name="postPlannedFailoverRedundancy">
+                            <enum>
+                              <item value="&quot;Standard_GRS&quot;"/>
+                              <item value="&quot;Standard_GZRS&quot;"/>
+                              <item value="&quot;Standard_RAGRS&quot;"/>
+                              <item value="&quot;Standard_RAGZRS&quot;"/>
+                            </enum>
+                          </prop>
+                          <prop readOnly="True" type="string" name="status">
+                            <enum>
+                              <item value="&quot;Bootstrap&quot;"/>
+                              <item value="&quot;Live&quot;"/>
+                              <item value="&quot;Unavailable&quot;"/>
+                            </enum>
+                          </prop>
+                        </prop>
+                        <prop type="object" name="immutableStorageWithVersioning">
+                          <prop type="boolean" name="enabled"/>
+                          <prop type="object" name="immutabilityPolicy">
+                            <prop type="boolean" name="allowProtectedAppendWrites"/>
+                            <prop type="integer32" name="immutabilityPeriodSinceCreationInDays">
+                              <format maximum="146000" minimum="1"/>
+                            </prop>
+                            <prop type="string" name="state">
+                              <enum>
+                                <item value="&quot;Disabled&quot;"/>
+                                <item value="&quot;Locked&quot;"/>
+                                <item value="&quot;Unlocked&quot;"/>
+                              </enum>
+                            </prop>
+                          </prop>
+                        </prop>
+                        <prop type="boolean" name="isHnsEnabled"/>
+                        <prop type="boolean" name="isLocalUserEnabled"/>
+                        <prop type="boolean" name="isNfsV3Enabled"/>
+                        <prop type="boolean" name="isSftpEnabled"/>
+                        <prop readOnly="True" type="boolean" name="isSkuConversionBlocked"/>
+                        <prop readOnly="True" type="object" name="keyCreationTime">
+                          <prop type="dateTime" name="key1">
+                            <format protocol="iso"/>
+                          </prop>
+                          <prop type="dateTime" name="key2">
+                            <format protocol="iso"/>
+                          </prop>
+                        </prop>
+                        <prop readOnly="True" type="object" name="keyPolicy">
+                          <prop type="integer32" name="keyExpirationPeriodInDays" required="True"/>
+                        </prop>
+                        <prop type="string" name="largeFileSharesState">
+                          <enum>
+                            <item value="&quot;Disabled&quot;"/>
+                            <item value="&quot;Enabled&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop readOnly="True" type="dateTime" name="lastGeoFailoverTime">
+                          <format protocol="iso"/>
+                        </prop>
+                        <prop type="string" name="minimumTlsVersion">
+                          <enum>
+                            <item value="&quot;TLS1_0&quot;"/>
+                            <item value="&quot;TLS1_1&quot;"/>
+                            <item value="&quot;TLS1_2&quot;"/>
+                            <item value="&quot;TLS1_3&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop readOnly="True" type="object" name="networkAcls">
+                          <prop type="string" name="bypass">
+                            <default value="&quot;AzureServices&quot;"/>
+                            <enum>
+                              <item value="&quot;AzureServices&quot;"/>
+                              <item value="&quot;Logging&quot;"/>
+                              <item value="&quot;Metrics&quot;"/>
+                              <item value="&quot;None&quot;"/>
+                            </enum>
+                          </prop>
+                          <prop type="string" name="defaultAction" required="True">
+                            <default value="&quot;Allow&quot;"/>
+                            <enum>
+                              <item value="&quot;Allow&quot;"/>
+                              <item value="&quot;Deny&quot;"/>
+                            </enum>
+                          </prop>
+                          <prop type="array<object>" name="ipRules">
+                            <item type="object" cls="IPRule_read">
+                              <prop type="string" name="action">
+                                <default value="&quot;Allow&quot;"/>
+                                <enum>
+                                  <item value="&quot;Allow&quot;"/>
+                                </enum>
+                              </prop>
+                              <prop type="string" name="value" required="True"/>
+                            </item>
+                          </prop>
+                          <prop type="array<@IPRule_read>" name="ipv6Rules">
+                            <item type="@IPRule_read"/>
+                          </prop>
+                          <prop type="array<object>" name="resourceAccessRules">
+                            <item type="object">
+                              <prop type="string" name="resourceId"/>
+                              <prop type="string" name="tenantId"/>
+                            </item>
+                          </prop>
+                          <prop type="array<object>" name="virtualNetworkRules">
+                            <item type="object">
+                              <prop type="string" name="action">
+                                <default value="&quot;Allow&quot;"/>
+                                <enum>
+                                  <item value="&quot;Allow&quot;"/>
+                                </enum>
+                              </prop>
+                              <prop type="string" name="id" required="True"/>
+                              <prop type="string" name="state">
+                                <enum>
+                                  <item value="&quot;Deprovisioning&quot;"/>
+                                  <item value="&quot;Failed&quot;"/>
+                                  <item value="&quot;NetworkSourceDeleted&quot;"/>
+                                  <item value="&quot;Provisioning&quot;"/>
+                                  <item value="&quot;Succeeded&quot;"/>
+                                </enum>
+                              </prop>
+                            </item>
+                          </prop>
+                        </prop>
+                        <prop readOnly="True" type="object" name="primaryEndpoints" cls="Endpoints_read">
+                          <prop readOnly="True" type="string" name="blob"/>
+                          <prop readOnly="True" type="string" name="dfs"/>
+                          <prop readOnly="True" type="string" name="file"/>
+                          <prop type="object" name="internetEndpoints" cls="StorageAccountInternetEndpoints_read">
+                            <prop readOnly="True" type="string" name="blob"/>
+                            <prop readOnly="True" type="string" name="dfs"/>
+                            <prop readOnly="True" type="string" name="file"/>
+                            <prop readOnly="True" type="string" name="web"/>
+                          </prop>
+                          <prop type="object" name="ipv6Endpoints">
+                            <prop readOnly="True" type="string" name="blob"/>
+                            <prop readOnly="True" type="string" name="dfs"/>
+                            <prop readOnly="True" type="string" name="file"/>
+                            <prop type="@StorageAccountInternetEndpoints_read" name="internetEndpoints"/>
+                            <prop type="@StorageAccountMicrosoftEndpoints_read" name="microsoftEndpoints"/>
+                            <prop readOnly="True" type="string" name="queue"/>
+                            <prop readOnly="True" type="string" name="table"/>
+                            <prop readOnly="True" type="string" name="web"/>
+                          </prop>
+                          <prop type="object" name="microsoftEndpoints" cls="StorageAccountMicrosoftEndpoints_read">
+                            <prop readOnly="True" type="string" name="blob"/>
+                            <prop readOnly="True" type="string" name="dfs"/>
+                            <prop readOnly="True" type="string" name="file"/>
+                            <prop readOnly="True" type="string" name="queue"/>
+                            <prop readOnly="True" type="string" name="table"/>
+                            <prop readOnly="True" type="string" name="web"/>
+                          </prop>
+                          <prop readOnly="True" type="string" name="queue"/>
+                          <prop readOnly="True" type="string" name="table"/>
+                          <prop readOnly="True" type="string" name="web"/>
+                        </prop>
+                        <prop readOnly="True" type="string" name="primaryLocation"/>
+                        <prop readOnly="True" type="array<object>" name="privateEndpointConnections">
+                          <item type="object">
+                            <prop readOnly="True" type="ResourceId" name="id">
+                              <format template="/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Storage/storageAccounts/{}/privateEndpointConnections/{}"/>
+                            </prop>
+                            <prop readOnly="True" type="string" name="name"/>
+                            <prop type="object" name="properties" clientFlatten="True">
+                              <prop type="object" name="privateEndpoint">
+                                <prop readOnly="True" type="string" name="id"/>
+                              </prop>
+                              <prop type="object" name="privateLinkServiceConnectionState" required="True">
+                                <prop type="string" name="actionRequired"/>
+                                <prop type="string" name="description"/>
+                                <prop type="string" name="status">
+                                  <enum>
+                                    <item value="&quot;Approved&quot;"/>
+                                    <item value="&quot;Pending&quot;"/>
+                                    <item value="&quot;Rejected&quot;"/>
+                                  </enum>
+                                </prop>
+                              </prop>
+                              <prop readOnly="True" type="string" name="provisioningState">
+                                <enum>
+                                  <item value="&quot;Creating&quot;"/>
+                                  <item value="&quot;Deleting&quot;"/>
+                                  <item value="&quot;Failed&quot;"/>
+                                  <item value="&quot;Succeeded&quot;"/>
+                                </enum>
+                              </prop>
+                            </prop>
+                            <prop readOnly="True" type="string" name="type"/>
+                          </item>
+                        </prop>
+                        <prop readOnly="True" type="string" name="provisioningState">
+                          <enum>
+                            <item value="&quot;Creating&quot;"/>
+                            <item value="&quot;ResolvingDNS&quot;"/>
+                            <item value="&quot;Succeeded&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="string" name="publicNetworkAccess">
+                          <enum>
+                            <item value="&quot;Disabled&quot;"/>
+                            <item value="&quot;Enabled&quot;"/>
+                            <item value="&quot;SecuredByPerimeter&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="object" name="routingPreference">
+                          <prop type="boolean" name="publishInternetEndpoints"/>
+                          <prop type="boolean" name="publishMicrosoftEndpoints"/>
+                          <prop type="string" name="routingChoice">
+                            <enum>
+                              <item value="&quot;InternetRouting&quot;"/>
+                              <item value="&quot;MicrosoftRouting&quot;"/>
+                            </enum>
+                          </prop>
+                        </prop>
+                        <prop readOnly="True" type="object" name="sasPolicy">
+                          <prop type="string" name="expirationAction" required="True">
+                            <default value="&quot;Log&quot;"/>
+                            <enum>
+                              <item value="&quot;Block&quot;"/>
+                              <item value="&quot;Log&quot;"/>
+                            </enum>
+                          </prop>
+                          <prop type="string" name="sasExpirationPeriod" required="True"/>
+                        </prop>
+                        <prop readOnly="True" type="@Endpoints_read" name="secondaryEndpoints"/>
+                        <prop readOnly="True" type="string" name="secondaryLocation"/>
+                        <prop readOnly="True" type="string" name="statusOfPrimary">
+                          <enum>
+                            <item value="&quot;available&quot;"/>
+                            <item value="&quot;unavailable&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop readOnly="True" type="string" name="statusOfSecondary">
+                          <enum>
+                            <item value="&quot;available&quot;"/>
+                            <item value="&quot;unavailable&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="object" name="storageAccountSkuConversionStatus">
+                          <prop readOnly="True" type="string" name="endTime"/>
+                          <prop readOnly="True" type="string" name="skuConversionStatus">
+                            <enum>
+                              <item value="&quot;Failed&quot;"/>
+                              <item value="&quot;InProgress&quot;"/>
+                              <item value="&quot;Succeeded&quot;"/>
+                            </enum>
+                          </prop>
+                          <prop readOnly="True" type="string" name="startTime"/>
+                          <prop type="string" name="targetSkuName">
+                            <enum>
+                              <item value="&quot;PremiumV2_LRS&quot;"/>
+                              <item value="&quot;PremiumV2_ZRS&quot;"/>
+                              <item value="&quot;Premium_LRS&quot;"/>
+                              <item value="&quot;Premium_ZRS&quot;"/>
+                              <item value="&quot;StandardV2_GRS&quot;"/>
+                              <item value="&quot;StandardV2_GZRS&quot;"/>
+                              <item value="&quot;StandardV2_LRS&quot;"/>
+                              <item value="&quot;StandardV2_ZRS&quot;"/>
+                              <item value="&quot;Standard_GRS&quot;"/>
+                              <item value="&quot;Standard_GZRS&quot;"/>
+                              <item value="&quot;Standard_LRS&quot;"/>
+                              <item value="&quot;Standard_RAGRS&quot;"/>
+                              <item value="&quot;Standard_RAGZRS&quot;"/>
+                              <item value="&quot;Standard_ZRS&quot;"/>
+                            </enum>
+                          </prop>
+                        </prop>
+                        <prop type="boolean" name="supportsHttpsTrafficOnly"/>
+                      </prop>
+                      <prop readOnly="True" type="object" name="sku">
+                        <prop type="string" name="name" required="True">
+                          <enum>
+                            <item value="&quot;PremiumV2_LRS&quot;"/>
+                            <item value="&quot;PremiumV2_ZRS&quot;"/>
+                            <item value="&quot;Premium_LRS&quot;"/>
+                            <item value="&quot;Premium_ZRS&quot;"/>
+                            <item value="&quot;StandardV2_GRS&quot;"/>
+                            <item value="&quot;StandardV2_GZRS&quot;"/>
+                            <item value="&quot;StandardV2_LRS&quot;"/>
+                            <item value="&quot;StandardV2_ZRS&quot;"/>
+                            <item value="&quot;Standard_GRS&quot;"/>
+                            <item value="&quot;Standard_GZRS&quot;"/>
+                            <item value="&quot;Standard_LRS&quot;"/>
+                            <item value="&quot;Standard_RAGRS&quot;"/>
+                            <item value="&quot;Standard_RAGZRS&quot;"/>
+                            <item value="&quot;Standard_ZRS&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop readOnly="True" type="string" name="tier">
+                          <enum>
+                            <item value="&quot;Premium&quot;"/>
+                            <item value="&quot;Standard&quot;"/>
+                          </enum>
+                        </prop>
+                      </prop>
+                      <prop type="object" name="tags">
+                        <additionalProp>
+                          <item type="string"/>
+                        </additionalProp>
+                      </prop>
+                      <prop readOnly="True" type="string" name="type"/>
+                      <prop type="array<string>" name="zones">
+                        <item type="string"/>
+                      </prop>
+                    </item>
+                  </prop>
+                </schema>
+              </json>
+            </body>
+          </response>
+          <response isError="True">
+            <body>
+              <json>
+                <schema type="@MgmtErrorFormat"/>
+              </json>
+            </body>
+          </response>
+        </http>
+      </operation>
+      <operation when="$Condition_StorageAccounts_ListByResourceGroup" operationId="StorageAccounts_ListByResourceGroup">
+        <http path="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts">
+          <request method="get">
+            <path>
+              <param type="string" name="resourceGroupName" arg="$Path.resourceGroupName" required="True">
+                <format pattern="^[-\w\._\(\)]+$" maxLength="90" minLength="1"/>
+              </param>
+              <param type="string" name="subscriptionId" arg="$Path.subscriptionId" required="True">
+                <format minLength="1"/>
+              </param>
+            </path>
+            <query>
+              <const readOnly="True" const="True" type="string" name="api-version" required="True">
+                <default value="&quot;2025-06-01&quot;"/>
+                <format minLength="1"/>
+              </const>
+            </query>
+          </request>
+          <response statusCode="200">
+            <body>
+              <json var="$Instance">
+                <schema type="object">
+                  <prop readOnly="True" type="string" name="nextLink"/>
+                  <prop readOnly="True" type="array<object>" name="value">
+                    <item type="object">
+                      <prop type="object" name="extendedLocation">
+                        <prop type="string" name="name"/>
+                        <prop type="string" name="type">
+                          <enum>
+                            <item value="&quot;EdgeZone&quot;"/>
+                          </enum>
+                        </prop>
+                      </prop>
+                      <prop readOnly="True" type="ResourceId" name="id">
+                        <format template="/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Storage/storageAccounts/{}"/>
+                      </prop>
+                      <prop type="IdentityObject" name="identity">
+                        <prop readOnly="True" type="string" name="principalId"/>
+                        <prop readOnly="True" type="string" name="tenantId"/>
+                        <prop type="string" name="type" required="True">
+                          <enum>
+                            <item value="&quot;None&quot;"/>
+                            <item value="&quot;SystemAssigned&quot;"/>
+                            <item value="&quot;SystemAssigned,UserAssigned&quot;"/>
+                            <item value="&quot;UserAssigned&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="object" name="userAssignedIdentities">
+                          <additionalProp>
+                            <item type="object">
+                              <prop readOnly="True" type="string" name="clientId"/>
+                              <prop readOnly="True" type="string" name="principalId"/>
+                            </item>
+                          </additionalProp>
+                        </prop>
+                      </prop>
+                      <prop readOnly="True" type="string" name="kind">
+                        <enum>
+                          <item value="&quot;BlobStorage&quot;"/>
+                          <item value="&quot;BlockBlobStorage&quot;"/>
+                          <item value="&quot;FileStorage&quot;"/>
+                          <item value="&quot;Storage&quot;"/>
+                          <item value="&quot;StorageV2&quot;"/>
+                        </enum>
+                      </prop>
+                      <prop type="ResourceLocation" name="location" required="True"/>
+                      <prop readOnly="True" type="string" name="name"/>
+                      <prop type="object" name="placement">
+                        <prop type="string" name="zonePlacementPolicy">
+                          <enum>
+                            <item value="&quot;Any&quot;"/>
+                            <item value="&quot;None&quot;"/>
+                          </enum>
+                        </prop>
+                      </prop>
+                      <prop type="object" name="properties" clientFlatten="True">
+                        <prop readOnly="True" type="string" name="accessTier">
+                          <enum>
+                            <item value="&quot;Cold&quot;"/>
+                            <item value="&quot;Cool&quot;"/>
+                            <item value="&quot;Hot&quot;"/>
+                            <item value="&quot;Premium&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop readOnly="True" type="boolean" name="accountMigrationInProgress"/>
+                        <prop type="boolean" name="allowBlobPublicAccess"/>
+                        <prop type="boolean" name="allowCrossTenantReplication"/>
+                        <prop type="boolean" name="allowSharedKeyAccess"/>
+                        <prop type="string" name="allowedCopyScope">
+                          <enum>
+                            <item value="&quot;AAD&quot;"/>
+                            <item value="&quot;PrivateLink&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="object" name="azureFilesIdentityBasedAuthentication">
+                          <prop type="object" name="activeDirectoryProperties">
+                            <prop type="string" name="accountType">
+                              <enum>
+                                <item value="&quot;Computer&quot;"/>
+                                <item value="&quot;User&quot;"/>
+                              </enum>
+                            </prop>
+                            <prop type="string" name="azureStorageSid"/>
+                            <prop type="string" name="domainGuid"/>
+                            <prop type="string" name="domainName"/>
+                            <prop type="string" name="domainSid"/>
+                            <prop type="string" name="forestName"/>
+                            <prop type="string" name="netBiosDomainName"/>
+                            <prop type="string" name="samAccountName"/>
+                          </prop>
+                          <prop type="string" name="defaultSharePermission">
+                            <enum>
+                              <item value="&quot;None&quot;"/>
+                              <item value="&quot;StorageFileDataSmbShareContributor&quot;"/>
+                              <item value="&quot;StorageFileDataSmbShareElevatedContributor&quot;"/>
+                              <item value="&quot;StorageFileDataSmbShareReader&quot;"/>
+                            </enum>
+                          </prop>
+                          <prop type="string" name="directoryServiceOptions" required="True">
+                            <enum>
+                              <item value="&quot;AADDS&quot;"/>
+                              <item value="&quot;AADKERB&quot;"/>
+                              <item value="&quot;AD&quot;"/>
+                              <item value="&quot;None&quot;"/>
+                            </enum>
+                          </prop>
+                          <prop type="object" name="smbOAuthSettings">
+                            <prop type="boolean" name="isSmbOAuthEnabled"/>
+                          </prop>
+                        </prop>
+                        <prop readOnly="True" type="object" name="blobRestoreStatus">
+                          <prop readOnly="True" type="string" name="failureReason"/>
+                          <prop readOnly="True" type="object" name="parameters">
+                            <prop type="array<object>" name="blobRanges" required="True">
+                              <item type="object">
+                                <prop type="string" name="endRange" required="True"/>
+                                <prop type="string" name="startRange" required="True"/>
+                              </item>
+                            </prop>
+                            <prop type="dateTime" name="timeToRestore" required="True">
+                              <format protocol="iso"/>
+                            </prop>
+                          </prop>
+                          <prop readOnly="True" type="string" name="restoreId"/>
+                          <prop readOnly="True" type="string" name="status">
+                            <enum>
+                              <item value="&quot;Complete&quot;"/>
+                              <item value="&quot;Failed&quot;"/>
+                              <item value="&quot;InProgress&quot;"/>
+                            </enum>
+                          </prop>
+                        </prop>
+                        <prop readOnly="True" type="dateTime" name="creationTime">
+                          <format protocol="iso"/>
+                        </prop>
+                        <prop readOnly="True" type="object" name="customDomain">
+                          <prop type="string" name="name" required="True"/>
+                          <prop type="boolean" name="useSubDomainName"/>
+                        </prop>
+                        <prop type="boolean" name="defaultToOAuthAuthentication"/>
+                        <prop type="string" name="dnsEndpointType">
+                          <enum>
+                            <item value="&quot;AzureDnsZone&quot;"/>
+                            <item value="&quot;Standard&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="object" name="dualStackEndpointPreference">
+                          <prop type="boolean" name="publishIpv6Endpoint"/>
+                        </prop>
+                        <prop type="boolean" name="enableExtendedGroups"/>
+                        <prop readOnly="True" type="object" name="encryption">
+                          <prop type="object" name="identity">
+                            <prop type="string" name="federatedIdentityClientId"/>
+                            <prop type="string" name="userAssignedIdentity"/>
+                          </prop>
+                          <prop type="string" name="keySource">
+                            <default value="&quot;Microsoft.Storage&quot;"/>
+                            <enum>
+                              <item value="&quot;Microsoft.Keyvault&quot;"/>
+                              <item value="&quot;Microsoft.Storage&quot;"/>
+                            </enum>
+                          </prop>
+                          <prop type="object" name="keyvaultproperties">
+                            <prop readOnly="True" type="dateTime" name="currentVersionedKeyExpirationTimestamp">
+                              <format protocol="iso"/>
+                            </prop>
+                            <prop readOnly="True" type="string" name="currentVersionedKeyIdentifier"/>
+                            <prop type="string" name="keyname"/>
+                            <prop type="string" name="keyvaulturi"/>
+                            <prop type="string" name="keyversion"/>
+                            <prop readOnly="True" type="dateTime" name="lastKeyRotationTimestamp">
+                              <format protocol="iso"/>
+                            </prop>
+                          </prop>
+                          <prop type="boolean" name="requireInfrastructureEncryption"/>
+                          <prop type="object" name="services">
+                            <prop type="@EncryptionService_read" name="blob"/>
+                            <prop type="@EncryptionService_read" name="file"/>
+                            <prop type="@EncryptionService_read" name="queue"/>
+                            <prop type="@EncryptionService_read" name="table"/>
+                          </prop>
+                        </prop>
+                        <prop readOnly="True" type="boolean" name="failoverInProgress"/>
+                        <prop type="object" name="geoPriorityReplicationStatus">
+                          <prop type="boolean" name="isBlobEnabled"/>
+                        </prop>
+                        <prop readOnly="True" type="object" name="geoReplicationStats">
+                          <prop readOnly="True" type="boolean" name="canFailover"/>
+                          <prop readOnly="True" type="boolean" name="canPlannedFailover"/>
+                          <prop readOnly="True" type="dateTime" name="lastSyncTime">
+                            <format protocol="iso"/>
+                          </prop>
+                          <prop readOnly="True" type="string" name="postFailoverRedundancy">
+                            <enum>
+                              <item value="&quot;Standard_LRS&quot;"/>
+                              <item value="&quot;Standard_ZRS&quot;"/>
+                            </enum>
+                          </prop>
+                          <prop readOnly="True" type="string" name="postPlannedFailoverRedundancy">
+                            <enum>
+                              <item value="&quot;Standard_GRS&quot;"/>
+                              <item value="&quot;Standard_GZRS&quot;"/>
+                              <item value="&quot;Standard_RAGRS&quot;"/>
+                              <item value="&quot;Standard_RAGZRS&quot;"/>
+                            </enum>
+                          </prop>
+                          <prop readOnly="True" type="string" name="status">
+                            <enum>
+                              <item value="&quot;Bootstrap&quot;"/>
+                              <item value="&quot;Live&quot;"/>
+                              <item value="&quot;Unavailable&quot;"/>
+                            </enum>
+                          </prop>
+                        </prop>
+                        <prop type="object" name="immutableStorageWithVersioning">
+                          <prop type="boolean" name="enabled"/>
+                          <prop type="object" name="immutabilityPolicy">
+                            <prop type="boolean" name="allowProtectedAppendWrites"/>
+                            <prop type="integer32" name="immutabilityPeriodSinceCreationInDays">
+                              <format maximum="146000" minimum="1"/>
+                            </prop>
+                            <prop type="string" name="state">
+                              <enum>
+                                <item value="&quot;Disabled&quot;"/>
+                                <item value="&quot;Locked&quot;"/>
+                                <item value="&quot;Unlocked&quot;"/>
+                              </enum>
+                            </prop>
+                          </prop>
+                        </prop>
+                        <prop type="boolean" name="isHnsEnabled"/>
+                        <prop type="boolean" name="isLocalUserEnabled"/>
+                        <prop type="boolean" name="isNfsV3Enabled"/>
+                        <prop type="boolean" name="isSftpEnabled"/>
+                        <prop readOnly="True" type="boolean" name="isSkuConversionBlocked"/>
+                        <prop readOnly="True" type="object" name="keyCreationTime">
+                          <prop type="dateTime" name="key1">
+                            <format protocol="iso"/>
+                          </prop>
+                          <prop type="dateTime" name="key2">
+                            <format protocol="iso"/>
+                          </prop>
+                        </prop>
+                        <prop readOnly="True" type="object" name="keyPolicy">
+                          <prop type="integer32" name="keyExpirationPeriodInDays" required="True"/>
+                        </prop>
+                        <prop type="string" name="largeFileSharesState">
+                          <enum>
+                            <item value="&quot;Disabled&quot;"/>
+                            <item value="&quot;Enabled&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop readOnly="True" type="dateTime" name="lastGeoFailoverTime">
+                          <format protocol="iso"/>
+                        </prop>
+                        <prop type="string" name="minimumTlsVersion">
+                          <enum>
+                            <item value="&quot;TLS1_0&quot;"/>
+                            <item value="&quot;TLS1_1&quot;"/>
+                            <item value="&quot;TLS1_2&quot;"/>
+                            <item value="&quot;TLS1_3&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop readOnly="True" type="object" name="networkAcls">
+                          <prop type="string" name="bypass">
+                            <default value="&quot;AzureServices&quot;"/>
+                            <enum>
+                              <item value="&quot;AzureServices&quot;"/>
+                              <item value="&quot;Logging&quot;"/>
+                              <item value="&quot;Metrics&quot;"/>
+                              <item value="&quot;None&quot;"/>
+                            </enum>
+                          </prop>
+                          <prop type="string" name="defaultAction" required="True">
+                            <default value="&quot;Allow&quot;"/>
+                            <enum>
+                              <item value="&quot;Allow&quot;"/>
+                              <item value="&quot;Deny&quot;"/>
+                            </enum>
+                          </prop>
+                          <prop type="array<@IPRule_read>" name="ipRules">
+                            <item type="@IPRule_read"/>
+                          </prop>
+                          <prop type="array<@IPRule_read>" name="ipv6Rules">
+                            <item type="@IPRule_read"/>
+                          </prop>
+                          <prop type="array<object>" name="resourceAccessRules">
+                            <item type="object">
+                              <prop type="string" name="resourceId"/>
+                              <prop type="string" name="tenantId"/>
+                            </item>
+                          </prop>
+                          <prop type="array<object>" name="virtualNetworkRules">
+                            <item type="object">
+                              <prop type="string" name="action">
+                                <default value="&quot;Allow&quot;"/>
+                                <enum>
+                                  <item value="&quot;Allow&quot;"/>
+                                </enum>
+                              </prop>
+                              <prop type="string" name="id" required="True"/>
+                              <prop type="string" name="state">
+                                <enum>
+                                  <item value="&quot;Deprovisioning&quot;"/>
+                                  <item value="&quot;Failed&quot;"/>
+                                  <item value="&quot;NetworkSourceDeleted&quot;"/>
+                                  <item value="&quot;Provisioning&quot;"/>
+                                  <item value="&quot;Succeeded&quot;"/>
+                                </enum>
+                              </prop>
+                            </item>
+                          </prop>
+                        </prop>
+                        <prop readOnly="True" type="@Endpoints_read" name="primaryEndpoints"/>
+                        <prop readOnly="True" type="string" name="primaryLocation"/>
+                        <prop readOnly="True" type="array<object>" name="privateEndpointConnections">
+                          <item type="object">
+                            <prop readOnly="True" type="ResourceId" name="id">
+                              <format template="/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Storage/storageAccounts/{}/privateEndpointConnections/{}"/>
+                            </prop>
+                            <prop readOnly="True" type="string" name="name"/>
+                            <prop type="object" name="properties" clientFlatten="True">
+                              <prop type="object" name="privateEndpoint">
+                                <prop readOnly="True" type="string" name="id"/>
+                              </prop>
+                              <prop type="object" name="privateLinkServiceConnectionState" required="True">
+                                <prop type="string" name="actionRequired"/>
+                                <prop type="string" name="description"/>
+                                <prop type="string" name="status">
+                                  <enum>
+                                    <item value="&quot;Approved&quot;"/>
+                                    <item value="&quot;Pending&quot;"/>
+                                    <item value="&quot;Rejected&quot;"/>
+                                  </enum>
+                                </prop>
+                              </prop>
+                              <prop readOnly="True" type="string" name="provisioningState">
+                                <enum>
+                                  <item value="&quot;Creating&quot;"/>
+                                  <item value="&quot;Deleting&quot;"/>
+                                  <item value="&quot;Failed&quot;"/>
+                                  <item value="&quot;Succeeded&quot;"/>
+                                </enum>
+                              </prop>
+                            </prop>
+                            <prop readOnly="True" type="string" name="type"/>
+                          </item>
+                        </prop>
+                        <prop readOnly="True" type="string" name="provisioningState">
+                          <enum>
+                            <item value="&quot;Creating&quot;"/>
+                            <item value="&quot;ResolvingDNS&quot;"/>
+                            <item value="&quot;Succeeded&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="string" name="publicNetworkAccess">
+                          <enum>
+                            <item value="&quot;Disabled&quot;"/>
+                            <item value="&quot;Enabled&quot;"/>
+                            <item value="&quot;SecuredByPerimeter&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="object" name="routingPreference">
+                          <prop type="boolean" name="publishInternetEndpoints"/>
+                          <prop type="boolean" name="publishMicrosoftEndpoints"/>
+                          <prop type="string" name="routingChoice">
+                            <enum>
+                              <item value="&quot;InternetRouting&quot;"/>
+                              <item value="&quot;MicrosoftRouting&quot;"/>
+                            </enum>
+                          </prop>
+                        </prop>
+                        <prop readOnly="True" type="object" name="sasPolicy">
+                          <prop type="string" name="expirationAction" required="True">
+                            <default value="&quot;Log&quot;"/>
+                            <enum>
+                              <item value="&quot;Block&quot;"/>
+                              <item value="&quot;Log&quot;"/>
+                            </enum>
+                          </prop>
+                          <prop type="string" name="sasExpirationPeriod" required="True"/>
+                        </prop>
+                        <prop readOnly="True" type="@Endpoints_read" name="secondaryEndpoints"/>
+                        <prop readOnly="True" type="string" name="secondaryLocation"/>
+                        <prop readOnly="True" type="string" name="statusOfPrimary">
+                          <enum>
+                            <item value="&quot;available&quot;"/>
+                            <item value="&quot;unavailable&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop readOnly="True" type="string" name="statusOfSecondary">
+                          <enum>
+                            <item value="&quot;available&quot;"/>
+                            <item value="&quot;unavailable&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop type="object" name="storageAccountSkuConversionStatus">
+                          <prop readOnly="True" type="string" name="endTime"/>
+                          <prop readOnly="True" type="string" name="skuConversionStatus">
+                            <enum>
+                              <item value="&quot;Failed&quot;"/>
+                              <item value="&quot;InProgress&quot;"/>
+                              <item value="&quot;Succeeded&quot;"/>
+                            </enum>
+                          </prop>
+                          <prop readOnly="True" type="string" name="startTime"/>
+                          <prop type="string" name="targetSkuName">
+                            <enum>
+                              <item value="&quot;PremiumV2_LRS&quot;"/>
+                              <item value="&quot;PremiumV2_ZRS&quot;"/>
+                              <item value="&quot;Premium_LRS&quot;"/>
+                              <item value="&quot;Premium_ZRS&quot;"/>
+                              <item value="&quot;StandardV2_GRS&quot;"/>
+                              <item value="&quot;StandardV2_GZRS&quot;"/>
+                              <item value="&quot;StandardV2_LRS&quot;"/>
+                              <item value="&quot;StandardV2_ZRS&quot;"/>
+                              <item value="&quot;Standard_GRS&quot;"/>
+                              <item value="&quot;Standard_GZRS&quot;"/>
+                              <item value="&quot;Standard_LRS&quot;"/>
+                              <item value="&quot;Standard_RAGRS&quot;"/>
+                              <item value="&quot;Standard_RAGZRS&quot;"/>
+                              <item value="&quot;Standard_ZRS&quot;"/>
+                            </enum>
+                          </prop>
+                        </prop>
+                        <prop type="boolean" name="supportsHttpsTrafficOnly"/>
+                      </prop>
+                      <prop readOnly="True" type="object" name="sku">
+                        <prop type="string" name="name" required="True">
+                          <enum>
+                            <item value="&quot;PremiumV2_LRS&quot;"/>
+                            <item value="&quot;PremiumV2_ZRS&quot;"/>
+                            <item value="&quot;Premium_LRS&quot;"/>
+                            <item value="&quot;Premium_ZRS&quot;"/>
+                            <item value="&quot;StandardV2_GRS&quot;"/>
+                            <item value="&quot;StandardV2_GZRS&quot;"/>
+                            <item value="&quot;StandardV2_LRS&quot;"/>
+                            <item value="&quot;StandardV2_ZRS&quot;"/>
+                            <item value="&quot;Standard_GRS&quot;"/>
+                            <item value="&quot;Standard_GZRS&quot;"/>
+                            <item value="&quot;Standard_LRS&quot;"/>
+                            <item value="&quot;Standard_RAGRS&quot;"/>
+                            <item value="&quot;Standard_RAGZRS&quot;"/>
+                            <item value="&quot;Standard_ZRS&quot;"/>
+                          </enum>
+                        </prop>
+                        <prop readOnly="True" type="string" name="tier">
+                          <enum>
+                            <item value="&quot;Premium&quot;"/>
+                            <item value="&quot;Standard&quot;"/>
+                          </enum>
+                        </prop>
+                      </prop>
+                      <prop type="object" name="tags">
+                        <additionalProp>
+                          <item type="string"/>
+                        </additionalProp>
+                      </prop>
+                      <prop readOnly="True" type="string" name="type"/>
+                      <prop type="array<string>" name="zones">
+                        <item type="string"/>
+                      </prop>
+                    </item>
+                  </prop>
+                </schema>
+              </json>
+            </body>
+          </response>
+          <response isError="True">
+            <body>
+              <json>
+                <schema type="@MgmtErrorFormat"/>
+              </json>
+            </body>
+          </response>
+        </http>
+      </operation>
+      <output type="array" ref="$Instance.value" clientFlatten="True" nextLink="$Instance.nextLink"/>
+    </command>
+  </commandGroup>
+</CodeGen>
